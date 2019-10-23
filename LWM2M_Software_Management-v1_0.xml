@@ -150,7 +150,7 @@ If used with no argument or argument is 0, the Package is removed i from the Dev
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-4</RangeEnumeration>
+				<RangeEnumeration>0..4</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Indicates current state with respect to this software update. This value is set by the LwM2M Client.
 0: INITIAL
@@ -190,7 +190,7 @@ The default value is false.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-200</RangeEnumeration>
+				<RangeEnumeration>0..200</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Contains the result of downloading or installing/uninstalling the software
 0: Initial value. Prior to download any new package in the Device, Update Result MUST be reset to this initial value. One side effect of executing the Uninstall resource is to reset Update Result to this initial value “0”.

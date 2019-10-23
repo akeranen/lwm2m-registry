@@ -94,7 +94,7 @@ Applicable for 3GPP2 networks where SMSC is not available from a smart card, or 
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units>minutes</Units>
 				<Description><![CDATA[Time period for which the device shall disconnect from cellular radio (PS detach, CS detach if applicable).
 Can be used to handle network overload situations. 

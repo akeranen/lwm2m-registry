@@ -75,7 +75,7 @@ LEGAL DISCLAIMER
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>1-65535</RangeEnumeration>
+				<RangeEnumeration>1..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Used as link to associate server Object Instance.]]></Description>
 			</Item>

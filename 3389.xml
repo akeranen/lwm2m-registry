@@ -52,7 +52,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Identifier of the application group]]></Description>
 			</Item>
@@ -62,7 +62,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Identifier of the security group]]></Description>
 			</Item>

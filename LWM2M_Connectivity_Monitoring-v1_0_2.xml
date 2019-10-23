@@ -77,7 +77,7 @@ The goal of the Connectivity Monitoring Object is to carry information reflectin
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-50</RangeEnumeration>
+				<RangeEnumeration>0..50</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Indicates the network bearer used for the current LwM2M communication session from the network bearer list below. 
 The number range is split into three categories:
@@ -110,7 +110,7 @@ More specifically:
         <MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-50</RangeEnumeration>
+				<RangeEnumeration>0..50</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Indicates a list of current available network bearer. Each Resource Instance has a value from the network bearer list.]]></Description>
 			</Item>
@@ -169,7 +169,7 @@ Note: This IP Address doesn’t indicate the Server IP address.]]></Description>
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-100</RangeEnumeration>
+				<RangeEnumeration>0..100</RangeEnumeration>
 				<Units>%</Units>
 				<Description><![CDATA[The percentage indicating the average utilization of the link to the next-hop IP router.]]></Description>
 			</Item>
@@ -204,7 +204,7 @@ Parameter definitions in [3GPP 25.331].]]></Description>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
-        <RangeEnumeration>0-999</RangeEnumeration>
+        <RangeEnumeration>0..999</RangeEnumeration>
         <Units>%</Units>
         <Description><![CDATA[Serving Mobile Network Code. This is applicable when the Network Bearer Resource value is referring to a cellular network.
 As specified in TS [3GPP 23.003].]]></Description>
@@ -215,7 +215,7 @@ As specified in TS [3GPP 23.003].]]></Description>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
-        <RangeEnumeration>0-999</RangeEnumeration>
+        <RangeEnumeration>0..999</RangeEnumeration>
         <Units></Units>
         <Description><![CDATA[Serving Mobile Country Code. This is applicable when the Network Bearer Resource value is referring to a cellular network.
 As specified in TS [3GPP 23.003].]]></Description>

@@ -77,7 +77,7 @@ LEGAL DISCLAIMER
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>1-65534</RangeEnumeration>
+				<RangeEnumeration>1..65534</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The Object ID and The Object Instance ID are applied for.]]></Description>
 			</Item>
@@ -87,7 +87,7 @@ LEGAL DISCLAIMER
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[See Table 20: LwM2M Identifiers.]]></Description>
 			</Item>
@@ -116,7 +116,7 @@ Other bits are reserved for future use.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Short Server ID of a certain LwM2M Server; only such an LwM2M Server can manage the Resources of this Object Instance. 
 The specific value MAX_ID=65535 means this Access Control Object Instance is created and modified during a Bootstrap phase only.]]></Description>

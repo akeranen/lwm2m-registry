@@ -184,7 +184,7 @@ Allows the profile to be remotely activated or deactivated.]]></Description>
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-111</RangeEnumeration>
+				<RangeEnumeration>0..111</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Reject cause, see [3GPP-TS_24.008, 3GPP-TS_24.301]]]></Description>
 			</Item>
@@ -274,7 +274,7 @@ Allows the profile to be remotely activated or deactivated.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>1-9</RangeEnumeration>
+				<RangeEnumeration>1..9</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[For LTE and NB-IoT only
 QCI=Quality of service Class Identifier

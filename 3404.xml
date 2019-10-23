@@ -52,7 +52,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The ID that is used to recall the scene. This needs to be unique within one application group.]]></Description>
 			</Item>
@@ -62,7 +62,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The application group ID the scene definition applies to.]]></Description>
 			</Item>
@@ -82,7 +82,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-60000</RangeEnumeration>
+				<RangeEnumeration>0..60000</RangeEnumeration>
 				<Units>ms</Units>
 				<Description><![CDATA[Defines the transition time to be used for changing to this scene. ]]></Description>
 			</Item>

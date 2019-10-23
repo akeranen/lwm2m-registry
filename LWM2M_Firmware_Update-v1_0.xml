@@ -111,7 +111,7 @@ This Resource is only executable when the value of the State Resource is Downloa
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-3</RangeEnumeration>
+				<RangeEnumeration>0..3</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Indicates current state with respect to this firmware update. This value is set by the LwM2M Client.
 0: Idle (before downloading or after successful updating)
@@ -131,7 +131,7 @@ Firmware Update mechanisms are illustrated below in Figure 29 of the LwM2M versi
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-9</RangeEnumeration>
+				<RangeEnumeration>0..9</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Contains the result of downloading or updating the firmware
 0: Initial value. Once the updating process is initiated (Download /Update), this Resource MUST be reset to Initial value.

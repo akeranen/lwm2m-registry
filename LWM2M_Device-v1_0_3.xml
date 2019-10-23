@@ -134,7 +134,7 @@ When this Resource is executed, “De-register” operation MAY be sent to the L
         <MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-7</RangeEnumeration>
+				<RangeEnumeration>0..7</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[0 – DC power
 1 – Internal Battery
@@ -171,7 +171,7 @@ The same Resource Instance ID MUST be used to associate a given Power Source (Re
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
         <Units>%</Units>
         <Description><![CDATA[Contains the current battery level as a percentage (with a range from 0 to 100). This value is only valid for the Device internal Battery if present (one Available Power Sources Resource Instance is 1).]]></Description>
       </Item>
@@ -191,7 +191,7 @@ The same Resource Instance ID MUST be used to associate a given Power Source (Re
         <MultipleInstances>Multiple</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
-        <RangeEnumeration>0-8</RangeEnumeration>
+        <RangeEnumeration>0..8</RangeEnumeration>
         <Units></Units>
         <Description><![CDATA[0=No error
 1=Low battery power
@@ -291,7 +291,7 @@ Both pieces of Software are together managed by LwM2M Firmware Update Object (Ob
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-6</RangeEnumeration>
+				<RangeEnumeration>0..6</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[This value is only valid for the Device Internal Battery if present (one Available Power Sources Resource Instance value is 1).
 Battery

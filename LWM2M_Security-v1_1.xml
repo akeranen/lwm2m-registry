@@ -95,7 +95,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-4</RangeEnumeration>
+				<RangeEnumeration>0..4</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Determines which security mode is used
 0: Pre-Shared Key mode
@@ -140,7 +140,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-255</RangeEnumeration>
+				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Determines which SMS security mode is used: 
 0: Reserved for future use
@@ -187,7 +187,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>1-65534</RangeEnumeration>
+				<RangeEnumeration>1..65534</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[This identifier uniquely identifies each LwM2M Server configured for the LwM2M Client.
 This Resource MUST be set when the Bootstrap-Server Resource has a value of 'false'. 
@@ -221,7 +221,7 @@ If the value is set to 0, or if this resource is not instantiated, the Bootstrap
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-3</RangeEnumeration>
+				<RangeEnumeration>0..3</RangeEnumeration>
 				<Units>s</Units>
 				<Description><![CDATA[The Matching Type Resource specifies how the certificate or raw public key in in the Server Public Key is presented. Four values are currently defined:
                 0: Exact match. This is the default value and also corresponds to the functionality of LwM2M v1.0. Hence, if this resource is not present then the content of the Server Public Key Resource corresponds to this value.<br>
@@ -245,7 +245,7 @@ If the value is set to 0, or if this resource is not instantiated, the Bootstrap
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-3</RangeEnumeration>
+				<RangeEnumeration>0..3</RangeEnumeration>
 				<Units>s</Units>
 				<Description><![CDATA[The Certificate Usage Resource specifies the semantic of the certificate or 
                 raw public key stored in the Server Public Key Resource, which is used to match 

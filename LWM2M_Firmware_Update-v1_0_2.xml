@@ -87,7 +87,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-255</RangeEnumeration>
+				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units>bytes</Units>
 				<Description><![CDATA[URI from where the device can download the firmware package by an alternative mechanism. As soon the device has received the Package URI it performs the download at the next practical opportunity. 
 The URI format is defined in RFC 3986. For example, coaps://example.org/firmware is a syntactically valid URI. The URI scheme determines the protocol to be used. For CoAP this endpoint MAY be a LwM2M Server but does not necessarily need to be. A CoAP server implementing block-wise transfer is sufficient as a server hosting a firmware repository and the expectation is that this server merely serves as a separate file server making firmware images available to LwM2M Clients.]]></Description>
@@ -109,7 +109,7 @@ This Resource is only executable when the value of the State Resource is Downloa
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-3</RangeEnumeration>
+				<RangeEnumeration>0..3</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Indicates current state with respect to this firmware update. This value is set by the LwM2M Client.
 0: Idle (before downloading or after successful updating)
@@ -129,7 +129,7 @@ The firmware update state machine is illustrated in Figure 29 of the LwM2M versi
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-9</RangeEnumeration>
+				<RangeEnumeration>0..9</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Contains the result of downloading or updating the firmware
 0: Initial value. Once the updating process is initiated (Download /Update), this Resource MUST be reset to Initial value.
@@ -149,7 +149,7 @@ The firmware update state machine is illustrated in Figure 29 of the LwM2M versi
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-255</RangeEnumeration>
+				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units>bytes</Units>
 				<Description><![CDATA[Name of the Firmware Package]]></Description>
 			</Item>
@@ -159,7 +159,7 @@ The firmware update state machine is illustrated in Figure 29 of the LwM2M versi
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-255</RangeEnumeration>
+				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units>bytes</Units>
 				<Description><![CDATA[Version of the Firmware package]]></Description>
 			</Item>
@@ -169,7 +169,7 @@ The firmware update state machine is illustrated in Figure 29 of the LwM2M versi
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-5</RangeEnumeration>
+				<RangeEnumeration>0..5</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[This resource indicates what protocols the LwM2M Client implements to retrieve firmware images. The LwM2M server uses this information to decide what URI to include in the Package URI. A LwM2M Server MUST NOT include a URI in the Package URI object that uses a protocol that is unsupported by the LwM2M client.
 For example, if a LwM2M client indicates that it supports CoAP and CoAPS then a LwM2M Server must not provide an HTTP URI in the Packet URI.
@@ -188,7 +188,7 @@ Additional values MAY be defined in the future. Any value not understood by the 
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-2</RangeEnumeration>
+				<RangeEnumeration>0..2</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The LwM2M Client uses this resource to indicate its support for transferring firmware images to the client either via the Package Resource (=push) or via the Package URI Resource (=pull) mechanism.
 0 – Pull only

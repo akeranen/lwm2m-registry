@@ -165,7 +165,7 @@ Note: This IP Address doesn’t indicate the Server IP address.]]></Description>
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-100</RangeEnumeration>
+				<RangeEnumeration>0..100</RangeEnumeration>
 				<Units>%</Units>
 				<Description><![CDATA[The average utilization of the link to the next-hop IP router in %.]]></Description>
 			</Item>
