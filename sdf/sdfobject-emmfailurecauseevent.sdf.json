@@ -1,0 +1,32 @@
+{
+  "info": {
+    "title": "OMA emmFailureCauseEvent (Object ID 3364)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "emmFailureCauseEvent": {
+      "label": "emmFailureCauseEvent",
+      "description": "Triggered at EMM failure - failure cause is logged",
+      "oma:id": 3364,
+      "sdfProperty": {
+        "EMMCause": {
+          "label": "EMMCause",
+          "description": "EMM Failure Causes - 3GPP 24.301",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/emmFailureCauseEvent/sdfProperty/EMMCause"
+      ]
+    }
+  }
+}

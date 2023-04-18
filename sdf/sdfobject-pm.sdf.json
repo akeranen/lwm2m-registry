@@ -1,0 +1,64 @@
+{
+  "info": {
+    "title": "OMA PM (Object ID 10357)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "PM": {
+      "label": "PM",
+      "description": "This LWM2M Object contains the referrence to all PM objects.",
+      "oma:id": 10357,
+      "sdfProperty": {
+        "Robot_PM": {
+          "label": "Robot PM",
+          "description": "Contains the reference to the Robot PM.",
+          "oma:id": 100,
+          "writable": false,
+          "type": "object",
+          "sdfType": "object-link"
+        },
+        "RCU_PM": {
+          "label": "RCU PM",
+          "description": "Contains the reference to the RCU PM.",
+          "oma:id": 101,
+          "writable": false,
+          "type": "object",
+          "sdfType": "object-link"
+        },
+        "CCU_PM": {
+          "label": "CCU PM",
+          "description": "Contains the reference to CCU PMs.",
+          "oma:id": 102,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "sdfType": "object-link"
+          }
+        },
+        "SCA_PM": {
+          "label": "SCA PM",
+          "description": "Contains the reference to SCA PMs.",
+          "oma:id": 103,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "sdfType": "object-link"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/PM/sdfProperty/Robot_PM",
+        "#/sdfObject/PM/sdfProperty/RCU_PM"
+      ]
+    }
+  }
+}

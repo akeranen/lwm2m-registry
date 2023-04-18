@@ -1,0 +1,42 @@
+{
+  "info": {
+    "title": "OMA App Data Container (Object ID 10250)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2018, Huawei",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "App_Data_Container": {
+      "label": "App Data Container",
+      "description": "This LWM2M Object is used for reporting application data of a device.",
+      "oma:id": 10250,
+      "sdfProperty": {
+        "UL_data": {
+          "label": "UL data",
+          "description": "Uplink application data, e.g. gas meter reporting data.",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "DL_data": {
+          "label": "DL data",
+          "description": "Downlink application data, e.g. application response message of uplink data.",
+          "oma:id": 1,
+          "readable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/App_Data_Container/sdfProperty/UL_data",
+        "#/sdfObject/App_Data_Container/sdfProperty/DL_data"
+      ]
+    }
+  }
+}

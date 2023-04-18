@@ -1,0 +1,46 @@
+{
+  "info": {
+    "title": "OMA Lock (Object ID 10359)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Lock": {
+      "label": "Lock",
+      "description": "This LWM2M Object includes the Lock information.",
+      "oma:id": 10359,
+      "sdfProperty": {
+        "Lock_Name": {
+          "label": "Lock Name",
+          "description": "The name of the compressor.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Lock_Status": {
+          "label": "Lock Status",
+          "description": "The status of the lock, 1:Locked, 0:Unlocked.",
+          "oma:id": 50,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Lock_Control": {
+          "label": "Lock Control",
+          "description": "Lock/Unlock the lock: Parameter: 1:Lock, 0:Unlock",
+          "oma:id": 100
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/Lock/sdfProperty/Lock_Name",
+        "#/sdfObject/Lock/sdfAction/Lock_Control"
+      ]
+    }
+  }
+}

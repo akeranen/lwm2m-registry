@@ -1,0 +1,48 @@
+{
+  "info": {
+    "title": "OMA TimingAdvance (Object ID 3372)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "TimingAdvance": {
+      "label": "TimingAdvance",
+      "description": "Timing Advance Information",
+      "oma:id": 3372,
+      "sdfProperty": {
+        "sysFrameNumber": {
+          "label": "sysFrameNumber",
+          "description": "System Frame Number.",
+          "oma:id": 6037,
+          "writable": false,
+          "type": "integer"
+        },
+        "subFrameNumber": {
+          "label": "subFrameNumber",
+          "description": "Sub Frame Number.",
+          "oma:id": 6038,
+          "writable": false,
+          "type": "integer"
+        },
+        "timingAdvance": {
+          "label": "timingAdvance",
+          "description": "in TA units microseconds",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/TimingAdvance/sdfProperty/sysFrameNumber",
+        "#/sdfObject/TimingAdvance/sdfProperty/subFrameNumber",
+        "#/sdfObject/TimingAdvance/sdfProperty/timingAdvance"
+      ]
+    }
+  }
+}

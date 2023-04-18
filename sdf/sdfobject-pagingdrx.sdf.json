@@ -1,0 +1,80 @@
+{
+  "info": {
+    "title": "OMA PagingDRX (Object ID 3375)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "PagingDRX": {
+      "label": "PagingDRX",
+      "description": "Paging DRX information",
+      "oma:id": 3375,
+      "sdfProperty": {
+        "dlEarfcn": {
+          "label": "dlEarfcn",
+          "description": "EARFCN - frequency",
+          "oma:id": 6032,
+          "writable": false,
+          "type": "integer"
+        },
+        "pci": {
+          "label": "pci",
+          "description": "PCI.",
+          "oma:id": 6034,
+          "writable": false,
+          "type": "integer"
+        },
+        "pagingCycle": {
+          "label": "pagingCycle",
+          "description": "Paging Cycle",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "DrxNb": {
+          "label": "DrxNb",
+          "description": "DRX NB",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "ueID": {
+          "label": "ueID",
+          "description": "IMSI mod 1024",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer"
+        },
+        "drxSysFrameNumOffset": {
+          "label": "drxSysFrameNumOffset",
+          "description": "drxSysFrameNumOffset is used to obtain the starting system frame number for DRX cycle",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer"
+        },
+        "drxSubFrameNumOffset": {
+          "label": "drxSubFrameNumOffset",
+          "description": "drxSubFrameNumOffset is used to obtain the starting sub frame number for DRX cycle",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/PagingDRX/sdfProperty/dlEarfcn",
+        "#/sdfObject/PagingDRX/sdfProperty/pci",
+        "#/sdfObject/PagingDRX/sdfProperty/pagingCycle",
+        "#/sdfObject/PagingDRX/sdfProperty/DrxNb",
+        "#/sdfObject/PagingDRX/sdfProperty/ueID",
+        "#/sdfObject/PagingDRX/sdfProperty/drxSysFrameNumOffset",
+        "#/sdfObject/PagingDRX/sdfProperty/drxSubFrameNumOffset"
+      ]
+    }
+  }
+}

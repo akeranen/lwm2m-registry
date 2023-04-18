@@ -1,0 +1,61 @@
+{
+  "info": {
+    "title": "OMA Parking Sensor (Object ID 3431)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2020 uCIFI Alliance",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Parking_Sensor": {
+      "label": "Parking Sensor",
+      "description": "The uCIFI parking sensor provides actual and cumulated occupancy duration as well as forbidden parking detection.",
+      "oma:id": 3431,
+      "sdfProperty": {
+        "Occupancy": {
+          "label": "Occupancy",
+          "description": "Set to True if the parking place is occupied. Set to False if the parking place is free.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Duration": {
+          "label": "Duration",
+          "description": "Number of seconds since the parking place is occupied. If not occupied, duration shows the duration of the last occupation.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Daily_Duration": {
+          "label": "Daily Duration",
+          "description": "Cumulated occupation time since beginning of the day.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Forbidden_parking_detected": {
+          "label": "Forbidden parking detected",
+          "description": "Set to True if the vehicle present on the parking place is not authorized. Set to False if parking place is free or if the vehicle is authorized.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Type_of_Sensor": {
+          "label": "Type of Sensor",
+          "description": "Type of sensor (e.g. PIR, camera).",
+          "oma:id": 5,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Parking_Sensor/sdfProperty/Occupancy"
+      ]
+    }
+  }
+}

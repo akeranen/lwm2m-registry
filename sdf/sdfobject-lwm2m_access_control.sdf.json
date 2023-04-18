@@ -1,0 +1,79 @@
+{
+  "info": {
+    "title": "OMA LwM2M Access Control (Object ID 2)",
+    "version": "2023-04-18",
+    "copyright": "2020 Open Mobile Alliance",
+    "license": "BSD-3-OMA",
+    "oma:info": {
+      "permanent_document": {
+        "file": "OMA-SUP-XML_2-V1_1-20201110-A.xml",
+        "path": "http://www.openmobilealliance.org/release/ObjLwM2M_ACL/"
+      },
+      "lwm2m_registry": {
+        "file": "2.xml",
+        "path": "https://github.com/OpenMobileAlliance/lwm2m-registry"
+      },
+      "normative_information": {
+        "ts": "OMA-TS-LightweightM2M_Core-V1_2",
+        "ts_url": "http://www.openmobilealliance.org/release/LightweightM2M/",
+        "bug_reporting": "https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues"
+      }
+    }
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LwM2M_Access_Control": {
+      "label": "LwM2M Access Control",
+      "description": "Access Control Object is used to check whether the LwM2M Server has access right for performing an operation.",
+      "oma:id": 2,
+      "sdfProperty": {
+        "Object_ID": {
+          "label": "Object ID",
+          "description": "Resources 0 and 1 point to the Object Instance for which the Instances of the ACL Resource of that Access Control Object Instance are applicable.",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65534
+        },
+        "Object_Instance_ID": {
+          "label": "Object Instance ID",
+          "description": "See above",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "ACL": {
+          "label": "ACL",
+          "description": "The Resource Instance ID MUST be the Short Server ID of a certain LwM2M Server for which associated access rights are contained in the Resource Instance value.\r\nThe Resource Instance ID 0 is a specific ID, determining the ACL Instance which contains the default access rights.\r\nEach bit set in the Resource Instance value, grants an access right to the LwM2M Server to the corresponding operation.\r\nThe bit order is specified as below.\r\n1st LSB: R(Read, Observe, Write-Attributes)\r\n2nd LSB: W(Write)\r\n3rd LSB: E(Execute)\r\n4th LSB: D(Delete)\r\n5th LSB: C(Create)\r\nOther bits are reserved for future use.",
+          "oma:id": 2,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 0,
+          "maximum": 31
+        },
+        "Access_Control_Owner": {
+          "label": "Access Control Owner",
+          "description": "Short Server ID of a certain LwM2M Server; only such an LwM2M Server can manage the Resources of this Object Instance. \r\nThe specific value MAX_ID=65535 means this Access Control Object Instance is created and modified during a Bootstrap phase only.",
+          "oma:id": 3,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/LwM2M_Access_Control/sdfProperty/Object_ID",
+        "#/sdfObject/LwM2M_Access_Control/sdfProperty/Object_Instance_ID",
+        "#/sdfObject/LwM2M_Access_Control/sdfProperty/Access_Control_Owner"
+      ]
+    }
+  }
+}

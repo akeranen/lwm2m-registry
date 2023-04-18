@@ -1,0 +1,103 @@
+{
+  "info": {
+    "title": "OMA LWM2M OSCORE (Object ID 21)",
+    "version": "2023-04-18",
+    "copyright": "2020 Open Mobile Alliance",
+    "license": "BSD-3-OMA",
+    "oma:info": {
+      "permanent_document": {
+        "file": "OMA-SUP-XML_21-V2_0-20211123-A.xml",
+        "path": "http://www.openmobilealliance.org/release/ObjLwM2M_OSCORE/"
+      },
+      "lwm2m_registry": {
+        "file": "21.xml",
+        "path": "https://github.com/OpenMobileAlliance/lwm2m-registry"
+      },
+      "normative_information": {
+        "ts": "OMA-TS-LightweightM2M_Core-V1_2",
+        "ts_url": "http://www.openmobilealliance.org/release/LightweightM2M/",
+        "bug_reporting": "https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues"
+      }
+    }
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LWM2M_OSCORE": {
+      "label": "LWM2M OSCORE",
+      "description": "This LwM2M Object provides the keying material and related information of a LwM2M Client appropriate to access a specified LwM2M Server using OSCORE. One Object Instance MAY address a LwM2M Bootstrap-Server. These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.\r\nInstances of this Object are linked from Instances of Object 0 using the OSCORE Security Mode Resource of Object 0. Instances of this Object MUST NOT be linked from more than one Instance of Object 0.",
+      "oma:id": 21,
+      "sdfProperty": {
+        "OSCORE_Master_Secret": {
+          "label": "OSCORE Master Secret",
+          "description": "This resource MUST be used to store the pre-shared key used in LwM2M Client and LwM2M Server/Bootstrap-Server, called the Master Secret.",
+          "oma:id": 0,
+          "readable": false,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "OSCORE_Sender_ID": {
+          "label": "OSCORE Sender ID",
+          "description": "This resource MUST store an OSCORE identifier for the LwM2M Client called the Sender ID.",
+          "oma:id": 1,
+          "readable": false,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "OSCORE_Recipient_ID": {
+          "label": "OSCORE Recipient ID",
+          "description": "This resource MUST store an OSCORE identifier for the LwM2M Client called the Recipient ID.",
+          "oma:id": 2,
+          "readable": false,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "OSCORE_AEAD_Algorithm_": {
+          "label": "OSCORE AEAD Algorithm ",
+          "description": "This resource MUST be used to store the encoding of the AEAD Algorithm as defined in Table 10 of RFC 8152. The AEAD is used by OSCORE for encryption and integrity protection of CoAP message fields.",
+          "oma:id": 3,
+          "readable": false,
+          "writable": false,
+          "type": "integer"
+        },
+        "OSCORE_HMAC_Algorithm_": {
+          "label": "OSCORE HMAC Algorithm ",
+          "description": "This resource MUST be used to store the encoding of the HMAC Algorithm used in the HKDF. The encoding of HMAC algorithms are defined in Table 7 of RFC 8152. The HKDF is used to derive the security context used by OSCORE.",
+          "oma:id": 4,
+          "readable": false,
+          "writable": false,
+          "type": "integer"
+        },
+        "OSCORE_Master_Salt": {
+          "label": "OSCORE Master Salt",
+          "description": "This resource MUST be used to store a non-secret random value called the Master Salt. The Master Salt is used to derive the security context used by OSCORE.",
+          "oma:id": 5,
+          "readable": false,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "_OSCORE_ID_Context": {
+          "label": " OSCORE ID Context",
+          "description": "This resource MUST be used to store an OSCORE identifier called ID Context. This identifier is used to identify the Common Context and derive the security context used by OSCORE.",
+          "oma:id": 6,
+          "readable": false,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/LWM2M_OSCORE/sdfProperty/OSCORE_Master_Secret",
+        "#/sdfObject/LWM2M_OSCORE/sdfProperty/OSCORE_Sender_ID",
+        "#/sdfObject/LWM2M_OSCORE/sdfProperty/OSCORE_Recipient_ID"
+      ]
+    }
+  }
+}

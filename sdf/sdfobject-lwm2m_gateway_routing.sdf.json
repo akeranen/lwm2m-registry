@@ -1,0 +1,57 @@
+{
+  "info": {
+    "title": "OMA LwM2M Gateway Routing (Object ID 26)",
+    "version": "2023-04-18",
+    "copyright": "2020 Open Mobile Alliance",
+    "license": "BSD-3-OMA",
+    "oma:info": {
+      "permanent_document": {
+        "file": "OMA-SUP-XML_26-V1_0-20201110-A.xml",
+        "path": "http://www.openmobilealliance.org/release/ObjLwM2M_Routing/"
+      },
+      "lwm2m_registry": {
+        "file": "26.xml",
+        "path": "https://github.com/OpenMobileAlliance/lwm2m-registry"
+      },
+      "normative_information": {
+        "ts": "OMA-TS-LightweightM2M_Core-V1_2",
+        "ts_url": "http://www.openmobilealliance.org/release/LightweightM2M/",
+        "bug_reporting": "https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues"
+      }
+    }
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LwM2M_Gateway_Routing": {
+      "label": "LwM2M Gateway Routing",
+      "description": "This object is used by a LwM2M Gateway to maintain the routing table.",
+      "oma:id": 26,
+      "sdfProperty": {
+        "LwM2M_Object_ID": {
+          "label": "LwM2M Object ID",
+          "description": "This resource identifies mapping the LwM2M Object ID that is mapped with the Mapping Info Resource. It defines the source of the mapping.",
+          "oma:id": 0,
+          "writable": false,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "Mapping_Info": {
+          "label": "Mapping Info",
+          "description": "This resource defines the target of the mapping. This Resource may be empty in which case the mapping is the identity function.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "object",
+          "sdfType": "core-link"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/LwM2M_Gateway_Routing/sdfProperty/LwM2M_Object_ID",
+        "#/sdfObject/LwM2M_Gateway_Routing/sdfProperty/Mapping_Info"
+      ]
+    }
+  }
+}

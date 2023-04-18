@@ -1,0 +1,47 @@
+{
+  "info": {
+    "title": "OMA Door (Object ID 10351)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Door": {
+      "label": "Door",
+      "description": "This LWM2M Object includes the door information.",
+      "oma:id": 10351,
+      "sdfProperty": {
+        "Door_Name": {
+          "label": "Door Name",
+          "description": "The name of the door.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Door_Status": {
+          "label": "Door Status",
+          "description": "The status of the door, 1:Opened, 0:Closed.",
+          "oma:id": 50,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Door_Control": {
+          "label": "Door Control",
+          "description": "Open/Close the door: Parameter: 1:Open, 0:Close",
+          "oma:id": 100
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/Door/sdfProperty/Door_Name",
+        "#/sdfObject/Door/sdfProperty/Door_Status",
+        "#/sdfObject/Door/sdfAction/Door_Control"
+      ]
+    }
+  }
+}

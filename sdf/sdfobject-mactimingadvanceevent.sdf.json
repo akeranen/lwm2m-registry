@@ -1,0 +1,40 @@
+{
+  "info": {
+    "title": "OMA macTimingAdvanceEvent (Object ID 3369)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "macTimingAdvanceEvent": {
+      "label": "macTimingAdvanceEvent",
+      "description": "Timing advance information",
+      "oma:id": 3369,
+      "sdfProperty": {
+        "timerValue": {
+          "label": "timerValue",
+          "description": "Timer Value",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "timingAdvance": {
+          "label": "timingAdvance",
+          "description": "Timing Advance",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/macTimingAdvanceEvent/sdfProperty/timerValue",
+        "#/sdfObject/macTimingAdvanceEvent/sdfProperty/timingAdvance"
+      ]
+    }
+  }
+}

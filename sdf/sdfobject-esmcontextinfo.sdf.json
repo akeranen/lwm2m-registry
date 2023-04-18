@@ -1,0 +1,56 @@
+{
+  "info": {
+    "title": "OMA esmContextInfo (Object ID 3360)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "esmContextInfo": {
+      "label": "esmContextInfo",
+      "description": "ESM context information",
+      "oma:id": 3360,
+      "sdfProperty": {
+        "contextType": {
+          "label": "contextType",
+          "description": "0=default\r\n1=dedicated",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "bearerState": {
+          "label": "bearerState",
+          "description": "Bearer State\r\n0 = null\r\n1 = activeWaiting\r\n2 = active\r\n3 = modifying",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "radioBearerId": {
+          "label": "radioBearerId",
+          "description": "Radio bearer ID corresponding to EPS Bearer ID of the context",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "qci": {
+          "label": "qci",
+          "description": "QoS Class Identifier (TS 23.203)",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/esmContextInfo/sdfProperty/contextType",
+        "#/sdfObject/esmContextInfo/sdfProperty/bearerState",
+        "#/sdfObject/esmContextInfo/sdfProperty/radioBearerId",
+        "#/sdfObject/esmContextInfo/sdfProperty/qci"
+      ]
+    }
+  }
+}

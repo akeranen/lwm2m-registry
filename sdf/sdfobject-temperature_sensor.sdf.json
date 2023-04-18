@@ -1,0 +1,32 @@
+{
+  "info": {
+    "title": "OMA Temperature Sensor (Object ID 10363)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Temperature_Sensor": {
+      "label": "Temperature Sensor",
+      "description": "This LWM2M Object includes Temperature Sensor information.",
+      "oma:id": 10363,
+      "sdfProperty": {
+        "Status": {
+          "label": "Status",
+          "description": "0:Normal, 1:Unknown, <0:Failed with error code(negative number).",
+          "oma:id": 50,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Temperature_Sensor/sdfProperty/Status"
+      ]
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "info": {
+    "title": "OMA Delivery Schedule (Object ID 10264)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 South East Water Corporation.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Delivery_Schedule": {
+      "label": "Delivery Schedule",
+      "description": "The Delivery Schedule object provides a means for controlling the periodic delivery of interval and event data to the LwM2M server.",
+      "oma:id": 10264,
+      "sdfProperty": {
+        "Schedule_Start_Time": {
+          "label": "Schedule Start Time",
+          "description": "Schedule Start Time is a readable and writable resource representing the number of seconds past midnight for which this schedule commences",
+          "oma:id": 0,
+          "type": "integer"
+        },
+        "Schedule_UTC_Offset": {
+          "label": "Schedule UTC Offset",
+          "description": "The Schedule UTC Offset resource is a readable and writable resource representing the time zone offset for the Schedule Start Time Resource for this Delivery Schedule instance. If this resource is empty, the application should use the UTC offset provided in the Device [/3/0/14] object instance resource or UTC if not provided.  UTC+X [ISO 8601].",
+          "oma:id": 1,
+          "type": "string"
+        },
+        "Delivery_Frequency": {
+          "label": "Delivery Frequency",
+          "description": "The Delivery Frequency resource is a readable and writable resource representing the number of seconds between deliveries. It is recommended that the Delivery Frequency be set to a devisor of 24 hours (86400 seconds) to provide a consistent interval period. Examples of Delivery Frequency include:-\r\n30 = Every 30 seconds\r\n600 = Every 10 minutes\r\n1800 = Every 30 minutes\r\n3600 = Hourly\r\n7200 = Every 2 hours\r\n14400 = Every 4 hours\r\n43200 = Every 12 hours\r\n86400 = Every Day\r\n172600 = Every Second Day",
+          "oma:id": 2,
+          "type": "integer"
+        },
+        "Randomised_Delivery_Window": {
+          "label": "Randomised Delivery Window",
+          "description": "The Randomised Delivery Window resource is a readable and writable resource representing a randomisation widow in seconds for the triggering of the notification delivery to the LwM2M server. If not provided, the randomised delivery window should default to 0 and the Notification should be sent immediately. The Randomised Delivery Window resource should be set to a value smaller than the delivery frequency.",
+          "oma:id": 3,
+          "type": "integer"
+        },
+        "Number_of_Retries": {
+          "label": "Number of Retries",
+          "description": "The Number of Retries resource is a readable and writable resource representing the number of retry attempts that should be attempted when the delivery notification is not successful. If not provided, this value defaults to 0 and no retries are attempted. This retry behaviour is at an application level and should be set with consideration of standard CoAP retry behaviour.",
+          "oma:id": 4,
+          "type": "integer"
+        },
+        "Retry_Period": {
+          "label": "Retry Period",
+          "description": "The Retry Period resource is a readable and writable resource representing the number of seconds between each application level retry.",
+          "oma:id": 5,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Delivery_Schedule/sdfProperty/Schedule_Start_Time",
+        "#/sdfObject/Delivery_Schedule/sdfProperty/Schedule_UTC_Offset",
+        "#/sdfObject/Delivery_Schedule/sdfProperty/Delivery_Frequency"
+      ]
+    }
+  }
+}

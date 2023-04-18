@@ -1,0 +1,54 @@
+{
+  "info": {
+    "title": "OMA Collision Sensor (Object ID 10361)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Collision_Sensor": {
+      "label": "Collision Sensor",
+      "description": "This LWM2M Object includes Collision Sensor information.",
+      "oma:id": 10361,
+      "sdfProperty": {
+        "Name": {
+          "label": "Name",
+          "description": "The display name of the Collision Sensor.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Status": {
+          "label": "Status",
+          "description": "0:Normal, 1:Unknown, <0:Failed with error code(negative number).",
+          "oma:id": 50,
+          "writable": false,
+          "type": "integer"
+        },
+        "Collision_Detection": {
+          "label": "Collision Detection",
+          "description": "If Collision Detection is enabled or not, \r\n\t\t\t\tthe setting of which is a Boolean value (1,0) where 1 is Enabled and 0 is Disabled.",
+          "oma:id": 51,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Collision_Detection_Control": {
+          "label": "Collision Detection Control",
+          "description": "Enable/Disable Collision Detection: Parameter: 1:Enable, 0:Disable",
+          "oma:id": 100
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/Collision_Sensor/sdfProperty/Name",
+        "#/sdfObject/Collision_Sensor/sdfProperty/Status",
+        "#/sdfObject/Collision_Sensor/sdfAction/Collision_Detection_Control"
+      ]
+    }
+  }
+}

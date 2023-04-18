@@ -1,0 +1,108 @@
+{
+  "info": {
+    "title": "OMA Shareparkinglot (Object ID 10309)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019 XiangYiIOT Technologies Co., Ltd.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Shareparkinglot": {
+      "label": "Shareparkinglot",
+      "description": "This LwM2M Object provides the keying material of our technology product-ShareParkingLock.",
+      "oma:id": 10309,
+      "sdfProperty": {
+        "LockID": {
+          "label": "LockID",
+          "description": "Unique ID of the lock.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "LockType": {
+          "label": "LockType",
+          "description": "Type of the lock.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "LightSwitchState": {
+          "label": "LightSwitchState",
+          "description": "Infra-red sensor switch state.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "RSSI": {
+          "label": "RSSI",
+          "description": "Radio Received Signal Strength Indicator.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "dBm",
+          "minimum": -30,
+          "maximum": -120
+        },
+        "BatteryCapacity": {
+          "label": "BatteryCapacity",
+          "description": "Current battery capacity in percentage Energy Level (EL).",
+          "oma:id": 5,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "unit": "%EL",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "DataUpTime": {
+          "label": "DataUpTime",
+          "description": "The data upload time.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "number",
+            "sdfType": "unix-time"
+          }
+        },
+        "Latitude": {
+          "label": "Latitude",
+          "description": "The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984).",
+          "oma:id": 5514,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Longitude": {
+          "label": "Longitude",
+          "description": "The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984).",
+          "oma:id": 5515,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Shareparkinglot/sdfProperty/LockID",
+        "#/sdfObject/Shareparkinglot/sdfProperty/RSSI",
+        "#/sdfObject/Shareparkinglot/sdfProperty/DataUpTime"
+      ]
+    }
+  }
+}

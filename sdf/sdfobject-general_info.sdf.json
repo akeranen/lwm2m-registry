@@ -1,0 +1,64 @@
+{
+  "info": {
+    "title": "OMA General Info (Object ID 10355)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "General_Info": {
+      "label": "General Info",
+      "description": "This LWM2M Object contains the referrence to all general info objects of the robot.",
+      "oma:id": 10355,
+      "sdfProperty": {
+        "Robot_General_Info": {
+          "label": "Robot General Info",
+          "description": "Contains the reference to the Robot General Info.",
+          "oma:id": 100,
+          "writable": false,
+          "type": "object",
+          "sdfType": "object-link"
+        },
+        "RCU_General_Info": {
+          "label": "RCU General Info",
+          "description": "Contains the reference to the RCU General info of the Robot.",
+          "oma:id": 101,
+          "writable": false,
+          "type": "object",
+          "sdfType": "object-link"
+        },
+        "CCU_General_Info": {
+          "label": "CCU General Info",
+          "description": "Contains the reference to general info of CCUs of the Robot.",
+          "oma:id": 102,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "sdfType": "object-link"
+          }
+        },
+        "ECU_General_Info": {
+          "label": "ECU General Info",
+          "description": "Contains the reference to general info of ECUs of the Robot.",
+          "oma:id": 103,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "sdfType": "object-link"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/General_Info/sdfProperty/Robot_General_Info",
+        "#/sdfObject/General_Info/sdfProperty/RCU_General_Info"
+      ]
+    }
+  }
+}

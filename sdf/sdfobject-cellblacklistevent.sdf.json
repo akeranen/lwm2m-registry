@@ -1,0 +1,40 @@
+{
+  "info": {
+    "title": "OMA cellBlacklistEvent (Object ID 3359)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "cellBlacklistEvent": {
+      "label": "cellBlacklistEvent",
+      "description": "Cell blacklist information",
+      "oma:id": 3359,
+      "sdfProperty": {
+        "dlEarfcn": {
+          "label": "dlEarfcn",
+          "description": "EARFCN - frequency",
+          "oma:id": 6032,
+          "writable": false,
+          "type": "integer"
+        },
+        "CellID": {
+          "label": "CellID",
+          "description": "Cell ID.",
+          "oma:id": 6033,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/cellBlacklistEvent/sdfProperty/dlEarfcn",
+        "#/sdfObject/cellBlacklistEvent/sdfProperty/CellID"
+      ]
+    }
+  }
+}

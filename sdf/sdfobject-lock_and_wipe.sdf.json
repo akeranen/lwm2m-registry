@@ -1,0 +1,97 @@
+{
+  "info": {
+    "title": "OMA Lock and Wipe (Object ID 8)",
+    "version": "2023-04-18",
+    "copyright": "2020 Open Mobile Alliance",
+    "license": "BSD-3-OMA",
+    "oma:info": {
+      "permanent_document": {
+        "file": "OMA-SUP-XML_8-V1_0_3-20210119-A.xml",
+        "path": "http://www.openmobilealliance.org/release/LWM2M_LOCKWIPE/"
+      },
+      "lwm2m_registry": {
+        "file": "8.xml",
+        "path": "https://github.com/OpenMobileAlliance/lwm2m-registry"
+      },
+      "normative_information": {
+        "ts": "OMA-TS-LightweightM2M_Core-V1_2",
+        "ts_url": "http://www.openmobilealliance.org/release/LightweightM2M/",
+        "bug_reporting": "https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues"
+      }
+    }
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Lock_and_Wipe": {
+      "label": "Lock and Wipe",
+      "description": "This LWM2M objects provides the resources needed to perform the lock and wipe operations.",
+      "oma:id": 8,
+      "sdfProperty": {
+        "State": {
+          "label": "State",
+          "description": "State of the device:\r\n0: unlocked state Normal operation.\r\n1: partially locked state\r\nTo render the device inoperable the device has been partially locked. The \"lock target\" resource allows specifying the target(s) for this operation.\r\n2: fully locked state\r\nTo render the device fully inoperable the device has been fully locked.",
+          "oma:id": 0,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "Lock_target": {
+          "label": "Lock target",
+          "description": "To specify one or several targets for the lock operation. This allows partially locking the device by selecting specific components or interfaces to be locked.",
+          "oma:id": 1,
+          "readable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Wipe_item": {
+          "label": "Wipe item",
+          "description": "Indicates which data can be wiped from the device. This resource could be e.g. representing a directory.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Wipe_target": {
+          "label": "Wipe target",
+          "description": "To specify one or several targets for the wipe operation. This allows selecting specific data, or, memory areas for the wipe operation.",
+          "oma:id": 4,
+          "readable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Lock_or_Wipe_Operation_Result": {
+          "label": "Lock or Wipe Operation Result",
+          "description": "Contains the result of a lock and wipe operation\r\n0: Default\r\n1: Partially Lock operation successful\r\n2: Fully Lock operation successful\r\n3: Unlock operation successful\r\n4: Wipe operation successful\r\n5: Partially Lock operation failed\r\n6: Fully Lock operation failed\r\n7: Unlock operation failed \r\n8: Wipe operation failed\r\nThis Resource MAY be reported by sending Observe operation.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        }
+      },
+      "sdfAction": {
+        "Wipe": {
+          "label": "Wipe",
+          "description": "To permanently erase data from the device.",
+          "oma:id": 3
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/Lock_and_Wipe/sdfProperty/State",
+        "#/sdfObject/Lock_and_Wipe/sdfProperty/Lock_target",
+        "#/sdfObject/Lock_and_Wipe/sdfAction/Wipe",
+        "#/sdfObject/Lock_and_Wipe/sdfProperty/Wipe_target",
+        "#/sdfObject/Lock_and_Wipe/sdfProperty/Lock_or_Wipe_Operation_Result"
+      ]
+    }
+  }
+}

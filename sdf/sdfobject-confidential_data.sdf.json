@@ -1,0 +1,41 @@
+{
+  "info": {
+    "title": "OMA Confidential Data (Object ID 10253)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 Lab R&D Atos Pessac.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Confidential_Data": {
+      "label": "Confidential Data",
+      "description": "This LWM2M Object is used for reporting data, but in a confidential way",
+      "oma:id": 10253,
+      "sdfProperty": {
+        "Public_Key": {
+          "label": "Public Key",
+          "description": "Object public key provided from the server side",
+          "oma:id": 0,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Application_Data": {
+          "label": "Application Data",
+          "description": "Application Data encrypted by the Public Key",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Confidential_Data/sdfProperty/Public_Key",
+        "#/sdfObject/Confidential_Data/sdfProperty/Application_Data"
+      ]
+    }
+  }
+}

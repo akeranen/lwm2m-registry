@@ -1,0 +1,40 @@
+{
+  "info": {
+    "title": "OMA VolteCallEvent (Object ID 3381)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "VolteCallEvent": {
+      "label": "VolteCallEvent",
+      "description": "VoLTE call status",
+      "oma:id": 3381,
+      "sdfProperty": {
+        "callStatus": {
+          "label": "callStatus",
+          "description": "0 = Inactive call\r\n1 = Active call\r\n2 = Attempting\r\n3 = Hold",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "callType": {
+          "label": "callType",
+          "description": "0 = Emergency\r\n1 = Voice call",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/VolteCallEvent/sdfProperty/callStatus",
+        "#/sdfObject/VolteCallEvent/sdfProperty/callType"
+      ]
+    }
+  }
+}

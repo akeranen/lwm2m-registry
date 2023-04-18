@@ -1,0 +1,61 @@
+{
+  "info": {
+    "title": "OMA Digital Output (Object ID 3201)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 Open Mobile Alliance.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Digital_Output": {
+      "label": "Digital Output",
+      "description": "Generic digital output for non-specific actuators",
+      "oma:id": 3201,
+      "sdfProperty": {
+        "Digital_Output_State": {
+          "label": "Digital Output State",
+          "description": "The current state of a digital output.",
+          "oma:id": 5550,
+          "type": "boolean"
+        },
+        "Digital_Output_Polarity": {
+          "label": "Digital Output Polarity",
+          "description": "The polarity of the digital output as a Boolean (False = Normal, True = Reversed).",
+          "oma:id": 5551,
+          "type": "boolean"
+        },
+        "Application_Type": {
+          "label": "Application Type",
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "oma:id": 5750,
+          "type": "string"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Digital_Output/sdfProperty/Digital_Output_State"
+      ]
+    }
+  }
+}

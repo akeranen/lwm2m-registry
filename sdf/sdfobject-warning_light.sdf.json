@@ -1,0 +1,53 @@
+{
+  "info": {
+    "title": "OMA Warning Light (Object ID 10353)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Warning_Light": {
+      "label": "Warning Light",
+      "description": "This LWM2M Object includes Warning Light information.",
+      "oma:id": 10353,
+      "sdfProperty": {
+        "Light_Status": {
+          "label": "Light Status",
+          "description": "The status of the light, 1:On, 0:Off.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Light_Warning": {
+          "label": "Light Warning",
+          "description": "If Light Warning is enabled or not, 1:Enabled, 0:Disabled.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Light_Control": {
+          "label": "Light Control",
+          "description": "Switch on/off the light: Parameter: 1:On, 0:Off",
+          "oma:id": 100
+        },
+        "Light_Warning_Control": {
+          "label": "Light Warning Control",
+          "description": "Enable/Disable Light Warning: Parameter: 1:Enable, 0:Disable",
+          "oma:id": 101
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/Warning_Light/sdfProperty/Light_Status",
+        "#/sdfObject/Warning_Light/sdfProperty/Light_Warning",
+        "#/sdfObject/Warning_Light/sdfAction/Light_Control",
+        "#/sdfObject/Warning_Light/sdfAction/Light_Warning_Control"
+      ]
+    }
+  }
+}

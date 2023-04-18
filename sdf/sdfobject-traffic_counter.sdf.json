@@ -1,0 +1,142 @@
+{
+  "info": {
+    "title": "OMA Traffic Counter (Object ID 3432)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2020 uCIFI Alliance",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Traffic_Counter": {
+      "label": "Traffic Counter",
+      "description": "The uCIFI traffic counter provides vehicle counting and traffic analysis data. A traffic counting device may implement multiple instances of this traffic counter object, each of them being in charge of counting different categories of vehicles (e.g. bikes, cars, trucks).",
+      "oma:id": 3432,
+      "sdfProperty": {
+        "Cumulated_number": {
+          "label": "Cumulated number",
+          "description": "Cumulated number of vehicles counted since last reset.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "Cumulated_number_today": {
+          "label": "Cumulated number today",
+          "description": "Cumulated number of vehicles counted today.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "Measuring_period_1": {
+          "label": "Measuring period 1",
+          "description": "Time period 1 during which the counter shall provide number of vehicles (e.g. 1 hour).",
+          "oma:id": 4,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Measuring_period_2": {
+          "label": "Measuring period 2",
+          "description": "Time period 2 during which the counter shall provide number of vehicles (e.g. 15 minutes).",
+          "oma:id": 5,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Measuring_period_3": {
+          "label": "Measuring period 3",
+          "description": "Time period 3 during which the counter shall provide number of vehicles (e.g. 5 minutes).",
+          "oma:id": 6,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Cumulated_number_during_last_period_1": {
+          "label": "Cumulated number during last period 1",
+          "description": "Cumulated number of vehicles counted during the last period 1 (e.g. 1 hour).",
+          "oma:id": 7,
+          "writable": false,
+          "type": "integer"
+        },
+        "Cumulated_number_during_last_period_2": {
+          "label": "Cumulated number during last period 2",
+          "description": "Cumulated number of vehicles counted during the last period 2 (e.g. 15 minutes).",
+          "oma:id": 8,
+          "writable": false,
+          "type": "integer"
+        },
+        "Cumulated_number_during_last_period_3": {
+          "label": "Cumulated number during last period 3",
+          "description": "Cumulated number of vehicles counted during the last period 3 (e.g. 5 minutes).",
+          "oma:id": 9,
+          "writable": false,
+          "type": "integer"
+        },
+        "Average_speed_during_last_period_1": {
+          "label": "Average speed during last period 1",
+          "description": "Average speed measured on the vehicles during the last period 1 (e.g. 1 hour).",
+          "oma:id": 10,
+          "writable": false,
+          "type": "integer"
+        },
+        "Average_speed_during_last_period_2": {
+          "label": "Average speed during last period 2",
+          "description": "Average speed measured on the vehicles during the last period 2 (e.g. 15 minutes).",
+          "oma:id": 11,
+          "writable": false,
+          "type": "integer"
+        },
+        "Average_speed_during_last_period_3": {
+          "label": "Average speed during last period 3",
+          "description": "Average speed measured on the vehicles during the last period 3 (e.g. 5 minutes).",
+          "oma:id": 12,
+          "writable": false,
+          "type": "integer"
+        },
+        "Average_distance_during_last_period_1": {
+          "label": "Average distance during last period 1",
+          "description": "Average distance between two vehicles measured during the last period 1 (e.g. 1 hour).",
+          "oma:id": 13,
+          "writable": false,
+          "type": "integer"
+        },
+        "Average_distance_during_last_period_2": {
+          "label": "Average distance during last period 2",
+          "description": "Average distance between two vehicles measured during the last period 2 (e.g. 15 minutes).",
+          "oma:id": 14,
+          "writable": false,
+          "type": "integer"
+        },
+        "Average_distance_during_last_period_3": {
+          "label": "Average distance during last period 3",
+          "description": "Average distance between two vehicles measured during the last period 3 (e.g. 5 minutes).",
+          "oma:id": 15,
+          "writable": false,
+          "type": "integer"
+        },
+        "Speed_limit_threshold": {
+          "label": "Speed limit threshold",
+          "description": "Speed limit threshold used to calculate the percentage of vehicles above speed limit.",
+          "oma:id": 16,
+          "type": "integer"
+        },
+        "Percentage_above_speed_limit": {
+          "label": "Percentage above speed limit",
+          "description": "Percentage of vehicles driving above speed limit.",
+          "oma:id": 17,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {
+        "Reset_cumulated_number": {
+          "label": "Reset cumulated number",
+          "description": "Reset the cumulated number of vehicles.",
+          "oma:id": 2
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/Traffic_Counter/sdfProperty/Cumulated_number_today"
+      ]
+    }
+  }
+}

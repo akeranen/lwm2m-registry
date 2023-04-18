@@ -1,0 +1,66 @@
+{
+  "info": {
+    "title": "OMA AT Command (Object ID 10251)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2017, Cisco",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "AT_Command": {
+      "label": "AT Command",
+      "description": "Used to execute an AT command on a cellular modem",
+      "oma:id": 10251,
+      "sdfProperty": {
+        "Command": {
+          "label": "Command",
+          "description": "The AT command to run. Example: AT+CREG? to query registration status",
+          "oma:id": 0,
+          "type": "string"
+        },
+        "Response": {
+          "label": "Response",
+          "description": "Response to the AT command. Example: +CREG:0,5 If multiple lines are returned as the modem response, each line will be returned in a separate resource.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Status": {
+          "label": "Status",
+          "description": "Status of the command execution as returned by the modem. Typical values:OK ERROR",
+          "oma:id": 2,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Timeout": {
+          "label": "Timeout",
+          "description": "Amount of time in seconds allowed for the modem to respond to the command.",
+          "oma:id": 3,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {
+        "Run": {
+          "label": "Run",
+          "description": "Executing this resource will cause the command to be sent to the modem. And the result to be populated using the Response (1) and Status (2) resources",
+          "oma:id": 4
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/AT_Command/sdfProperty/Command",
+        "#/sdfObject/AT_Command/sdfProperty/Response",
+        "#/sdfObject/AT_Command/sdfProperty/Status",
+        "#/sdfObject/AT_Command/sdfAction/Run"
+      ]
+    }
+  }
+}

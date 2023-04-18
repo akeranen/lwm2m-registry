@@ -1,0 +1,84 @@
+{
+  "info": {
+    "title": "OMA Noise sensor (Object ID 3433)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2020 uCIFI Alliance",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Noise_sensor": {
+      "label": "Noise sensor",
+      "description": "The uCIFI noise sensor reports a noise measurement in decibel. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the noise sensor and some specific alarms resulting from noise analysis by the device.",
+      "oma:id": 3433,
+      "sdfProperty": {
+        "Gunshot_detected": {
+          "label": "Gunshot detected",
+          "description": "Set to True when a gunshot is detected.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Abnormal_noise_detected": {
+          "label": "Abnormal noise detected",
+          "description": "Set to True when an abnormal noise is detected.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Sensor_Value": {
+          "label": "Sensor Value",
+          "description": "Last or current measured value from the Sensor.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "number"
+        },
+        "Minimum_measured_value": {
+          "label": "Minimum measured value",
+          "description": "Minimum value measured by the sensor since power ON or reset.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "number",
+          "unit": "dB"
+        },
+        "Maximum_measured_value": {
+          "label": "Maximum measured value",
+          "description": "Maximum value measured by the sensor since power ON or reset.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "number",
+          "unit": "dB"
+        },
+        "Minimum_range_value": {
+          "label": "Minimum range value",
+          "description": "Minimum value that can be measured by the sensor.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "number",
+          "unit": "dB"
+        },
+        "Maximum_range_value": {
+          "label": "Maximum range value",
+          "description": "Maximum value that can be measured by the sensor.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "number",
+          "unit": "dB"
+        }
+      },
+      "sdfAction": {
+        "Reset_min_and_max_values": {
+          "label": "Reset min and max values",
+          "description": "Reset the min and max measured values to current value.",
+          "oma:id": 8
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/Noise_sensor/sdfProperty/Sensor_Value"
+      ]
+    }
+  }
+}

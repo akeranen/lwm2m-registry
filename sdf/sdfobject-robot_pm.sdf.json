@@ -1,0 +1,552 @@
+{
+  "info": {
+    "title": "OMA Robot PM (Object ID 10326)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Robot_PM": {
+      "label": "Robot PM",
+      "description": "This LWM2M Object includes PM(counter and gauge) supported by all robots.",
+      "oma:id": 10326,
+      "sdfProperty": {
+        "Battery_Level": {
+          "label": "Battery Level",
+          "description": "Referrence to a PM item, similar with Corelnk in LwM2M 1.1, \r\n\t\t\t</object ID/object instance ID/resource ID>, for example: </10315/0/2>",
+          "oma:id": 51,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Battery_Temperature": {
+          "label": "Battery Temperature",
+          "description": "Battery Temperature.",
+          "oma:id": 300,
+          "writable": false,
+          "type": "integer",
+          "unit": "Cel"
+        },
+        "Temperature": {
+          "label": "Temperature",
+          "description": "Environment Temperature.",
+          "oma:id": 301,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel"
+        },
+        "Humidity": {
+          "label": "Humidity",
+          "description": "Environment Humidity.",
+          "oma:id": 302,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "PM2.5": {
+          "label": "PM2.5",
+          "description": "PM2.5 of the environment.",
+          "oma:id": 303,
+          "writable": false,
+          "type": "integer",
+          "unit": "ug/m3"
+        },
+        "Smog": {
+          "label": "Smog",
+          "description": "Smoke concentration of the environment.",
+          "oma:id": 304,
+          "writable": false,
+          "type": "number",
+          "unit": "ug/m3"
+        },
+        "CO": {
+          "label": "CO",
+          "description": "CO concentration of the environment.",
+          "oma:id": 305,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm"
+        },
+        "CO2": {
+          "label": "CO2",
+          "description": "CO2 concentration of the environment.",
+          "oma:id": 306,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm"
+        },
+        "PM10": {
+          "label": "PM10",
+          "description": "PM10 of the environment.",
+          "oma:id": 307,
+          "writable": false,
+          "type": "integer",
+          "unit": "ug/m3"
+        },
+        "Speed": {
+          "label": "Speed",
+          "description": "The speed of the robot.",
+          "oma:id": 601,
+          "writable": false,
+          "type": "number",
+          "unit": "m/h"
+        },
+        "Water_Used": {
+          "label": "Water Used",
+          "description": "The percentage of water used for CloudCleanX.",
+          "oma:id": 602,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Dust_Box_Used": {
+          "label": "Dust Box Used",
+          "description": "The percentage of Dust Box Space used for CloudCleanX.",
+          "oma:id": 603,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Obstacle_Distance": {
+          "label": "Obstacle Distance",
+          "description": "The distance between the robot and the obstacle.",
+          "oma:id": 604,
+          "writable": false,
+          "type": "integer",
+          "unit": "cm"
+        },
+        "Robot_Temperate": {
+          "label": "Robot Temperate",
+          "description": "Robot surface temperature, for example: the RCU temperature.",
+          "oma:id": 607,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel"
+        },
+        "Confidence_Index": {
+          "label": "Confidence Index",
+          "description": "The Confidence Index of the robot.",
+          "oma:id": 608,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Data_Traffic_Used": {
+          "label": "Data Traffic Used",
+          "description": "Data Traffic Used by the robot.",
+          "oma:id": 1101,
+          "writable": false,
+          "type": "number",
+          "unit": "Mbit/s"
+        },
+        "Images_Handled": {
+          "label": "Images Handled",
+          "description": "How many images have been handled by the robot.",
+          "oma:id": 1102,
+          "writable": false,
+          "type": "integer"
+        },
+        "HARI_S-Voice_Requests": {
+          "label": "HARI S-Voice Requests",
+          "description": "HARI S-Voice Requests number by the robot.",
+          "oma:id": 1103,
+          "writable": false,
+          "type": "integer"
+        },
+        "HARI_S-Vision_Requests": {
+          "label": "HARI S-Vision Requests",
+          "description": "HARI S-Vision Requests number by the robot.",
+          "oma:id": 1104,
+          "writable": false,
+          "type": "integer"
+        },
+        "HARI_S-Motion_Requests": {
+          "label": "HARI S-Motion Requests",
+          "description": "HARI S-Motion Requests number by the robot.",
+          "oma:id": 1105,
+          "writable": false,
+          "type": "integer"
+        },
+        "HARI_S-Map_Requests": {
+          "label": "HARI S-Map Requests",
+          "description": "HARI S-Map Requests number by the robot.",
+          "oma:id": 1106,
+          "writable": false,
+          "type": "integer"
+        },
+        "Successful_HARI_S-Voice_Requests": {
+          "label": "Successful HARI S-Voice Requests",
+          "description": "Successful HARI S-Voice Requests number by the robot.",
+          "oma:id": 1107,
+          "writable": false,
+          "type": "integer"
+        },
+        "Successful_HARI_S-Vision_Requests": {
+          "label": "Successful HARI S-Vision Requests",
+          "description": "Successful HARI S-Vision Requests number by the robot.",
+          "oma:id": 1108,
+          "writable": false,
+          "type": "integer"
+        },
+        "Successful_HARI_S-Motion_Requests": {
+          "label": "Successful HARI S-Motion Requests",
+          "description": "Successful HARI S-Motion Requests number by the robot.",
+          "oma:id": 1109,
+          "writable": false,
+          "type": "integer"
+        },
+        "Successful_HARI_S-Map_Requests": {
+          "label": "Successful HARI S-Map Requests",
+          "description": "Successful HARI S-Map Requests number by the robot.",
+          "oma:id": 1110,
+          "writable": false,
+          "type": "integer"
+        },
+        "Questions_Answered": {
+          "label": "Questions Answered",
+          "description": "How many questions have been answered by the robot.",
+          "oma:id": 1111,
+          "writable": false,
+          "type": "integer"
+        },
+        "Unknown_Questions": {
+          "label": "Unknown Questions",
+          "description": "How many questions can't be answered by the robot.",
+          "oma:id": 1112,
+          "writable": false,
+          "type": "integer"
+        },
+        "Mileage": {
+          "label": "Mileage",
+          "description": "How long has the robot gone, for CloudCleanX and CloudPatrol.",
+          "oma:id": 1113,
+          "writable": false,
+          "type": "integer",
+          "unit": "m"
+        },
+        "Cleaned_Times": {
+          "label": "Cleaned Times",
+          "description": "Cleaned Times by the robot, for CloudCleanX.",
+          "oma:id": 1114,
+          "writable": false,
+          "type": "integer"
+        },
+        "Cleaned_Area": {
+          "label": "Cleaned Area",
+          "description": "Space cleaned by the robot, for CloudCleanX.",
+          "oma:id": 1115,
+          "writable": false,
+          "type": "number",
+          "unit": "m2"
+        },
+        "Cleaned_Time": {
+          "label": "Cleaned Time",
+          "description": "How long has the robot cleaned, for CloudCleanX.",
+          "oma:id": 1116,
+          "writable": false,
+          "type": "integer",
+          "unit": "s"
+        },
+        "ASR_Recognized": {
+          "label": "ASR Recognized",
+          "description": "How many bytes of ASRs have been recognized by the robot.",
+          "oma:id": 1117,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Incorrect_ASR_Recognitions": {
+          "label": "Incorrect ASR Recognitions",
+          "description": "How many bytes of ASRs have been recognized incorrectly by the robot.",
+          "oma:id": 1118,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Tried_TTS_Texts": {
+          "label": "Tried TTS Texts",
+          "description": "Tried TTS Texts number in bytes.",
+          "oma:id": 1119,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Successful_TTS_Texts": {
+          "label": "Successful TTS Texts",
+          "description": "Successful TTS Texts number in bytes.",
+          "oma:id": 1120,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "ASR_Recognized_(CH)": {
+          "label": "ASR Recognized (CH)",
+          "description": "How many bytes of (CH) ASRs have been recognized by the robot.",
+          "oma:id": 1121,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Tried_TTS_Texts_(CH)": {
+          "label": "Tried TTS Texts (CH)",
+          "description": "Tried (CH) TTS Texts number in bytes.",
+          "oma:id": 1122,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Successful_TTS_Texts_(CH)": {
+          "label": "Successful TTS Texts (CH)",
+          "description": "Successful (CH) TTS Texts number in bytes.",
+          "oma:id": 1123,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "ASR_Recognized_(EN)": {
+          "label": "ASR Recognized (EN)",
+          "description": "How many bytes of (EN) ASRs have been recognized by the robot.",
+          "oma:id": 1124,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Tried_TTS_Texts_(EN)": {
+          "label": "Tried TTS Texts (EN)",
+          "description": "Tried (EN) TTS Texts number in bytes.",
+          "oma:id": 1125,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Successful_TTS_Texts_(EN)": {
+          "label": "Successful TTS Texts (EN)",
+          "description": "Successful (EN) TTS Texts number in bytes.",
+          "oma:id": 1126,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "ASR_Recognized_(ES)": {
+          "label": "ASR Recognized (ES)",
+          "description": "How many bytes of (ES) ASRs have been recognized by the robot.",
+          "oma:id": 1127,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Tried_TTS_Texts_(ES)": {
+          "label": "Tried TTS Texts (ES)",
+          "description": "Tried (ES) TTS Texts number in bytes.",
+          "oma:id": 1128,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Successful_TTS_Texts_(ES)": {
+          "label": "Successful TTS Texts (ES)",
+          "description": "Successful(ES) TTS Texts number in bytes.",
+          "oma:id": 1129,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "ASR_Recognized_(JA)": {
+          "label": "ASR Recognized (JA)",
+          "description": "How many bytes of (JA) ASRs have been recognized by the robot.",
+          "oma:id": 1130,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Tried_TTS_Texts_(JA)": {
+          "label": "Tried TTS Texts (JA)",
+          "description": "Tried (JA) TTS Texts number in bytes.",
+          "oma:id": 1131,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Successful_TTS_Texts_(JA)": {
+          "label": "Successful TTS Texts (JA)",
+          "description": "Successful (JA) TTS Texts number in bytes.",
+          "oma:id": 1132,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "ASR_Recognized_(SCCH)": {
+          "label": "ASR Recognized (SCCH)",
+          "description": "How many bytes of (SCCH) ASRs have been recognized by the robot.",
+          "oma:id": 1133,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Tried_TTS_Texts_(SCCH)": {
+          "label": "Tried TTS Texts (SCCH)",
+          "description": "Tried (SCCH) TTS Texts number in bytes.",
+          "oma:id": 1134,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Successful_TTS_Texts_(SCCH)": {
+          "label": "Successful TTS Texts (SCCH)",
+          "description": "Successful (SCCH) TTS Texts number in bytes.",
+          "oma:id": 1135,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "ASR_Recognized_(GDCH)": {
+          "label": "ASR Recognized (GDCH)",
+          "description": "How many bytes of (GDCH) ASRs have been recognized by the robot.",
+          "oma:id": 1136,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Tried_TTS_Texts_(GDCH)": {
+          "label": "Tried TTS Texts (GDCH)",
+          "description": "Tried (GDCH) TTS Texts number in bytes.",
+          "oma:id": 1137,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Successful_TTS_Texts_(GDCH)": {
+          "label": "Successful TTS Texts (GDCH)",
+          "description": "Successful (GDCH) TTS Texts number in bytes.",
+          "oma:id": 1138,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "ASR_Recognized_(TCH)": {
+          "label": "ASR Recognized (TCH)",
+          "description": "How many bytes of (TCH) ASRs have been recognized by the robot.",
+          "oma:id": 1139,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Tried_TTS_Texts_(TCH)": {
+          "label": "Tried TTS Texts (TCH)",
+          "description": "Tried  (TCH)TTS Texts number in bytes.",
+          "oma:id": 1140,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Successful_TTS_Texts_(TCH)": {
+          "label": "Successful TTS Texts (TCH)",
+          "description": "Successful (TCH) TTS Texts number in bytes.",
+          "oma:id": 1141,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Objects_Recognition_Tries": {
+          "label": "Objects Recognition Tries",
+          "description": "Objects Recognition Tries by the robot.",
+          "oma:id": 1501,
+          "writable": false,
+          "type": "integer"
+        },
+        "Successful_Object_Recognition": {
+          "label": "Successful Object Recognition",
+          "description": "Successful Objects Recognition Tries by the robot.",
+          "oma:id": 1502,
+          "writable": false,
+          "type": "integer"
+        },
+        "Face_Recognition_Tries": {
+          "label": "Face Recognition Tries",
+          "description": "Face Recognition Tries by the robot.",
+          "oma:id": 1503,
+          "writable": false,
+          "type": "integer"
+        },
+        "Successful_Face_Recognitions": {
+          "label": "Successful Face Recognitions",
+          "description": "Successful Face Recognition Tries by the robot.",
+          "oma:id": 1504,
+          "writable": false,
+          "type": "integer"
+        },
+        "Vehicle_Plate_Recognition_Tries": {
+          "label": "Vehicle Plate Recognition Tries",
+          "description": "Vehicle Plate Recognition Tries by the robot.",
+          "oma:id": 1505,
+          "writable": false,
+          "type": "integer"
+        },
+        "Successful_Vehicle_Plate_Recognitions": {
+          "label": "Successful Vehicle Plate Recognitions",
+          "description": "Successful Vehicle Plate Recognitions by the robot.",
+          "oma:id": 1506,
+          "writable": false,
+          "type": "integer"
+        },
+        "Tasks_Assigned": {
+          "label": "Tasks Assigned",
+          "description": "Tasks number assigned to the robot.",
+          "oma:id": 1507,
+          "writable": false,
+          "type": "integer"
+        },
+        "Successful_Tasks_Executed": {
+          "label": "Successful Tasks Executed",
+          "description": "Tasks successfully executed by the robot.",
+          "oma:id": 1508,
+          "writable": false,
+          "type": "integer"
+        },
+        "Images_Uploaded": {
+          "label": "Images Uploaded",
+          "description": "Images Uploaded by the robot.",
+          "oma:id": 1509,
+          "writable": false,
+          "type": "integer"
+        },
+        "Videos_Uploaded": {
+          "label": "Videos Uploaded",
+          "description": "Videos Uploaded by the robot.",
+          "oma:id": 1510,
+          "writable": false,
+          "type": "integer"
+        },
+        "Images_Matted": {
+          "label": "Images Matted",
+          "description": "Images Matted by the robot.",
+          "oma:id": 1511,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Robot_PM/sdfProperty/Battery_Level",
+        "#/sdfObject/Robot_PM/sdfProperty/Battery_Temperature",
+        "#/sdfObject/Robot_PM/sdfProperty/Data_Traffic_Used",
+        "#/sdfObject/Robot_PM/sdfProperty/Tasks_Assigned",
+        "#/sdfObject/Robot_PM/sdfProperty/Successful_Tasks_Executed"
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "info": {
+    "title": "OMA radioLinkMonitoring (Object ID 3374)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "radioLinkMonitoring": {
+      "label": "radioLinkMonitoring",
+      "description": "Radio Link monitoring information maintained by RRC",
+      "oma:id": 3374,
+      "sdfProperty": {
+        "sysFrameNumber": {
+          "label": "sysFrameNumber",
+          "description": "System Frame Number.",
+          "oma:id": 6037,
+          "writable": false,
+          "type": "integer"
+        },
+        "subFrameNumber": {
+          "label": "subFrameNumber",
+          "description": "Sub Frame Number.",
+          "oma:id": 6038,
+          "writable": false,
+          "type": "integer"
+        },
+        "outOfSyncCount": {
+          "label": "outOfSyncCount",
+          "description": "out of sync count",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "inSyncCount": {
+          "label": "inSyncCount",
+          "description": "in Sync Count",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "t310Timer": {
+          "label": "t310Timer",
+          "description": "0=stopped, 1=running",
+          "oma:id": 4,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/radioLinkMonitoring/sdfProperty/sysFrameNumber",
+        "#/sdfObject/radioLinkMonitoring/sdfProperty/subFrameNumber",
+        "#/sdfObject/radioLinkMonitoring/sdfProperty/outOfSyncCount",
+        "#/sdfObject/radioLinkMonitoring/sdfProperty/inSyncCount",
+        "#/sdfObject/radioLinkMonitoring/sdfProperty/t310Timer"
+      ]
+    }
+  }
+}

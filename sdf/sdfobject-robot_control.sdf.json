@@ -1,0 +1,221 @@
+{
+  "info": {
+    "title": "OMA Robot Control (Object ID 10329)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Robot_Control": {
+      "label": "Robot Control",
+      "description": "This LWM2M Object includes all operations on robots.",
+      "oma:id": 10329,
+      "sdfProperty": {
+        "Collision_Detection": {
+          "label": "Collision Detection",
+          "description": "If Collision Detection is enabled or not, \r\n\t\t\t\tthe setting of which is a Boolean value (1,0) where 1 is Enabled and 0 is Disabled.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Drop_Detection": {
+          "label": "Drop Detection",
+          "description": "If Drop Detection is enabled or not,\r\n\t\t\t\tthe setting of which is a Boolean value (1,0) where 1 is Enabled and 0 is Disabled.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Automatic_Navigation": {
+          "label": "Automatic Navigation",
+          "description": "If Automatic Navigation is enabled or not,\r\n\t\t\t\tthe setting of which is a Boolean value (1,0) where 1 is Enabled and 0 is Disabled.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Robot_Shutdown": {
+          "label": "Robot Shutdown",
+          "description": "Shut down the robot.",
+          "oma:id": 100
+        },
+        "Robot_Reboot": {
+          "label": "Robot Reboot",
+          "description": "Reboot the robot.",
+          "oma:id": 101
+        },
+        "Robot_Reset": {
+          "label": "Robot Reset",
+          "description": "Reset the robot to factory settings.",
+          "oma:id": 102
+        },
+        "Robot_Wakeup_": {
+          "label": "Robot Wakeup ",
+          "description": "Let the robot to wake up.",
+          "oma:id": 103
+        },
+        "Robot_Sleep": {
+          "label": "Robot Sleep",
+          "description": "Let the robot to sleep.",
+          "oma:id": 104
+        },
+        "Robot_Self-checking": {
+          "label": "Robot Self-checking",
+          "description": "Let the robot to do self-checking.",
+          "oma:id": 105
+        },
+        "Emergency_Braking": {
+          "label": "Emergency Braking",
+          "description": "Bark the robot emergently.",
+          "oma:id": 106
+        },
+        "Emergency_Braking_Release": {
+          "label": "Emergency Braking Release",
+          "description": "Release Emergency Braking for the robot.",
+          "oma:id": 107
+        },
+        "Action_Execution": {
+          "label": "Action Execution",
+          "description": "Let the robot to execute a task, parameter: Action name|possible parameters if any.",
+          "oma:id": 110
+        },
+        "Action_List_Upload": {
+          "label": "Action List Upload",
+          "description": "Upload action list, parameter:select action list to be uploaed.",
+          "oma:id": 111
+        },
+        "Action_List_Download": {
+          "label": "Action List Download",
+          "description": "Download action list, parameter: \r\n\t\t\t\tdownload path if present, else store in default directory with default name.",
+          "oma:id": 112
+        },
+        "Group_Dancing_Program_Control": {
+          "label": "Group Dancing Program Control",
+          "description": "Change playbill for group dancing, parameter:playbill.",
+          "oma:id": 115
+        },
+        "Navigation_Map_Upload": {
+          "label": "Navigation Map Upload",
+          "description": "Upload navigation map, parameter:select navigation map to be uploaded.",
+          "oma:id": 114
+        },
+        "Navigation_Map_Download": {
+          "label": "Navigation Map Download",
+          "description": "Download navigation map, parameter: \r\n\t\t\t\tdownload path if present, else store in default directory with default name.",
+          "oma:id": 116
+        },
+        "Route_list_Execution": {
+          "label": "Route list Execution",
+          "description": "Execute route list , parameter:if any.",
+          "oma:id": 117
+        },
+        "Route_list_Upload": {
+          "label": "Route list Upload",
+          "description": "Upload route list, parameter:select route list to be uploaded.",
+          "oma:id": 118
+        },
+        "Route_list_Download": {
+          "label": "Route list Download",
+          "description": "Download route list, parameter: \r\n\t\t\t\tdownload path if present, else store in default directory with default name.",
+          "oma:id": 119
+        },
+        "Automatic_Navigation_Control": {
+          "label": "Automatic Navigation Control",
+          "description": "Enable/Disable Automatic Navigation: Parameter: 1:Enable, 0:Disable",
+          "oma:id": 120
+        },
+        "Manual_Navigation": {
+          "label": "Manual Navigation",
+          "description": "Manual Navigation: Parameter: route info.",
+          "oma:id": 121
+        },
+        "Moving_to_Charging_Station": {
+          "label": "Moving to Charging Station",
+          "description": "Moving to Charging Station.",
+          "oma:id": 122
+        },
+        "Moving_to_Specified_location": {
+          "label": "Moving to Specified location",
+          "description": "Manual Navigation: Parameter: route info.",
+          "oma:id": 123
+        },
+        "Low_Frequency_Patrol_Broadcasting": {
+          "label": "Low Frequency Patrol Broadcasting",
+          "description": "Patrol broadcast in low frequency.",
+          "oma:id": 124
+        },
+        "Task_Start": {
+          "label": "Task Start",
+          "description": "Start a task, parameter:task name.",
+          "oma:id": 125
+        },
+        "Task_Stop": {
+          "label": "Task Stop",
+          "description": "Stop a task, parameter:task name.",
+          "oma:id": 126
+        },
+        "Task_Suspend": {
+          "label": "Task Suspend",
+          "description": "Suspend a task, parameter:task name.",
+          "oma:id": 127
+        },
+        "Task_Resume": {
+          "label": "Task Resume",
+          "description": "Resume a task, parameter:task name.",
+          "oma:id": 128
+        },
+        "Video_Upload": {
+          "label": "Video Upload",
+          "description": "Upload a video, parameter:select video to be uploaded.",
+          "oma:id": 129
+        },
+        "Picture_Upload": {
+          "label": "Picture Upload",
+          "description": "Upload picture, parameter:select picture to be uploaded.",
+          "oma:id": 130
+        },
+        "Default_Language_Switching": {
+          "label": "Default Language Switching",
+          "description": "Upload picture, parameter:Language name.",
+          "oma:id": 131
+        },
+        "Intonation_Change": {
+          "label": "Intonation Change",
+          "description": "Change intonation of the robot, parameter:Intonation name.",
+          "oma:id": 133
+        },
+        "Speaking_with_Action": {
+          "label": "Speaking with Action",
+          "description": "Robot speaks with specific action, parameter:key words|action name.",
+          "oma:id": 134
+        },
+        "Collision_Detection_Control": {
+          "label": "Collision Detection Control",
+          "description": "Enable/Disable Collision Detection: Parameter: 1:Enable, 0:Disable",
+          "oma:id": 135
+        },
+        "Drop_Detection_Control": {
+          "label": "Drop Detection Control",
+          "description": "Enable/Disable Drop Detection: Parameter: 1:Enable, 0:Disable",
+          "oma:id": 136
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/Robot_Control/sdfAction/Robot_Shutdown",
+        "#/sdfObject/Robot_Control/sdfAction/Robot_Reboot",
+        "#/sdfObject/Robot_Control/sdfAction/Robot_Reset",
+        "#/sdfObject/Robot_Control/sdfAction/Robot_Wakeup_",
+        "#/sdfObject/Robot_Control/sdfAction/Robot_Sleep",
+        "#/sdfObject/Robot_Control/sdfAction/Robot_Self-checking",
+        "#/sdfObject/Robot_Control/sdfAction/Emergency_Braking",
+        "#/sdfObject/Robot_Control/sdfAction/Emergency_Braking_Release",
+        "#/sdfObject/Robot_Control/sdfAction/Collision_Detection_Control",
+        "#/sdfObject/Robot_Control/sdfAction/Drop_Detection_Control"
+      ]
+    }
+  }
+}

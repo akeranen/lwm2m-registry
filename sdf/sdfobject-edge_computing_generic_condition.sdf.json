@@ -1,0 +1,48 @@
+{
+  "info": {
+    "title": "OMA Edge computing generic condition (Object ID 3439)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2020 uCIFI Alliance",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Edge_computing_generic_condition": {
+      "label": "Edge computing generic condition",
+      "description": "The uCIFI edge computing generic condition object defines a vendor-specific condition (e.g. when a resource or an object is equal to a particular value) at which a particular script should be executed by the device.",
+      "oma:id": 3439,
+      "sdfProperty": {
+        "Vendor_condition": {
+          "label": "Vendor condition",
+          "description": "Condition described in a vendor specific way.",
+          "oma:id": 1,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Script_identifier": {
+          "label": "Script identifier",
+          "description": "Object URN/Resource ID of the script to apply to the time/days defined in the vendor condition resource.",
+          "oma:id": 2,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Non_supported_time_condition": {
+          "label": "Non supported time condition",
+          "description": "Set to True if the device can’t support the condition.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Edge_computing_generic_condition/sdfProperty/Script_identifier"
+      ]
+    }
+  }
+}

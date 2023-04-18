@@ -1,0 +1,56 @@
+{
+  "info": {
+    "title": "OMA cellReselectionEvent (Object ID 3354)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "cellReselectionEvent": {
+      "label": "cellReselectionEvent",
+      "description": "cell reselection event information",
+      "oma:id": 3354,
+      "sdfProperty": {
+        "timeReselectionStart": {
+          "label": "timeReselectionStart",
+          "description": "Modem time when reselection is initiated",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "dlEarfcn": {
+          "label": "dlEarfcn",
+          "description": "EARFCN - frequency",
+          "oma:id": 6032,
+          "writable": false,
+          "type": "integer"
+        },
+        "CellID": {
+          "label": "CellID",
+          "description": "Cell ID.",
+          "oma:id": 6033,
+          "writable": false,
+          "type": "integer"
+        },
+        "failureType": {
+          "label": "failureType",
+          "description": "0 = Pass\r\n1= S-Failure\r\n2 =  Sib-Read-Failure\r\n3 = Weak-Downlink-Indicator\r\n4 = Cell-Barred\r\n5 = Non-Valid-Plmn\r\n6 = Forbidden-Tracking-Area\r\n7 = Aborted\r\n8 = Forbidden-CSG-Id\r\n9 = IRAT-Reselection-Failure\r\n10 = Frequency-Barred",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/cellReselectionEvent/sdfProperty/timeReselectionStart",
+        "#/sdfObject/cellReselectionEvent/sdfProperty/dlEarfcn",
+        "#/sdfObject/cellReselectionEvent/sdfProperty/CellID",
+        "#/sdfObject/cellReselectionEvent/sdfProperty/failureType"
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "info": {
+    "title": "OMA txPowerHeadroomEvent (Object ID 3373)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "txPowerHeadroomEvent": {
+      "label": "txPowerHeadroomEvent",
+      "description": "TX power headroom information",
+      "oma:id": 3373,
+      "sdfProperty": {
+        "sysFrameNumber": {
+          "label": "sysFrameNumber",
+          "description": "System Frame Number.",
+          "oma:id": 6037,
+          "writable": false,
+          "type": "integer"
+        },
+        "subFrameNumber": {
+          "label": "subFrameNumber",
+          "description": "Sub Frame Number.",
+          "oma:id": 6038,
+          "writable": false,
+          "type": "integer"
+        },
+        "headroom-value": {
+          "label": "headroom-value",
+          "description": "headroom value in dB (-23..40)",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/txPowerHeadroomEvent/sdfProperty/sysFrameNumber",
+        "#/sdfObject/txPowerHeadroomEvent/sdfProperty/subFrameNumber",
+        "#/sdfObject/txPowerHeadroomEvent/sdfProperty/headroom-value"
+      ]
+    }
+  }
+}

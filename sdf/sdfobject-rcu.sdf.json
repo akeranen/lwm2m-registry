@@ -1,0 +1,186 @@
+{
+  "info": {
+    "title": "OMA RCU (Object ID 10316)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "RCU": {
+      "label": "RCU",
+      "description": "This LWM2M Object includes RCU(Robotic Control Unit) information and the link to RCU APPs.",
+      "oma:id": 10316,
+      "sdfProperty": {
+        "RCU_ID": {
+          "label": "RCU ID",
+          "description": "The RCU identity.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 127
+        },
+        "RCU_Serial_Number": {
+          "label": "RCU Serial Number",
+          "description": "Serial Number of the RCU.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 63
+        },
+        "RCU_Software_Version": {
+          "label": "RCU Software Version",
+          "description": "Software Version of the RCU.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 63
+        },
+        "RCU_OS_Version": {
+          "label": "RCU OS Version",
+          "description": "OS type and version of the RCU.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 127
+        },
+        "RCU_CPU_Info": {
+          "label": "RCU CPU Info",
+          "description": "Cpu information of the RCU.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "string"
+        },
+        "RCU_RAM_Info": {
+          "label": "RCU RAM Info",
+          "description": "RAM information of the RCU.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "string"
+        },
+        "RCU_ROM_Size": {
+          "label": "RCU ROM Size",
+          "description": "ROM Size of the RCU (expressed in gigabyte).",
+          "oma:id": 7,
+          "writable": false,
+          "type": "integer",
+          "unit": "GB"
+        },
+        "RCU_ROM_Available_Size": {
+          "label": "RCU ROM Available Size",
+          "description": "Available ROM Size of the RCU (expressed in gigabyte).",
+          "oma:id": 8,
+          "writable": false,
+          "type": "integer",
+          "unit": "GB"
+        },
+        "SD_Storage": {
+          "label": "SD Storage",
+          "description": "Total storage of the RCU SD card, for example: 128G.",
+          "oma:id": 9,
+          "writable": false,
+          "type": "integer",
+          "unit": "GB"
+        },
+        "SD_Available_Storage": {
+          "label": "SD Available Storage",
+          "description": "Available storage of the RCU SD card, for example: 63G.",
+          "oma:id": 10,
+          "writable": false,
+          "type": "integer",
+          "unit": "GB"
+        },
+        "RCU_GPS_Location": {
+          "label": "RCU GPS Location",
+          "description": "RCU GPS location, contains the referrence to Location(6).",
+          "oma:id": 11,
+          "writable": false,
+          "type": "object",
+          "sdfType": "object-link"
+        },
+        "Wi-Fi_MAC": {
+          "label": "Wi-Fi MAC",
+          "description": "Wi-Fi MAC of the RCU.",
+          "oma:id": 12,
+          "writable": false,
+          "type": "string"
+        },
+        "Bluetooth_MAC": {
+          "label": "Bluetooth MAC",
+          "description": "Bluetooth MAC of the RCU, for example: .",
+          "oma:id": 13,
+          "writable": false,
+          "type": "string"
+        },
+        "Camera_Info": {
+          "label": "Camera Info",
+          "description": "Camera info of the RCU.",
+          "oma:id": 14,
+          "writable": false,
+          "type": "string"
+        },
+        "Battery_Level": {
+          "label": "Battery Level",
+          "description": "The current Battery Level as a percentage (with a range from 0 to 100).",
+          "oma:id": 51,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "On_time": {
+          "label": "On time",
+          "description": "The time in seconds that the device has been on. Writing a value of 0 resets the counter.",
+          "oma:id": 5852,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Downloaded_APP_Packages": {
+          "label": "Downloaded APP Packages",
+          "description": "Each item contains APP Name/Version info/Package Name.",
+          "oma:id": 60,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "RCU_APPs": {
+          "label": "RCU APPs",
+          "description": "Contains the reference to the APPs belongs to RCU.",
+          "oma:id": 100,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "sdfType": "object-link"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/RCU/sdfProperty/RCU_ID",
+        "#/sdfObject/RCU/sdfProperty/RCU_Serial_Number",
+        "#/sdfObject/RCU/sdfProperty/RCU_Software_Version",
+        "#/sdfObject/RCU/sdfProperty/RCU_OS_Version",
+        "#/sdfObject/RCU/sdfProperty/RCU_CPU_Info",
+        "#/sdfObject/RCU/sdfProperty/RCU_RAM_Info",
+        "#/sdfObject/RCU/sdfProperty/RCU_ROM_Size",
+        "#/sdfObject/RCU/sdfProperty/RCU_ROM_Available_Size",
+        "#/sdfObject/RCU/sdfProperty/SD_Storage",
+        "#/sdfObject/RCU/sdfProperty/SD_Available_Storage",
+        "#/sdfObject/RCU/sdfProperty/Battery_Level",
+        "#/sdfObject/RCU/sdfProperty/On_time",
+        "#/sdfObject/RCU/sdfProperty/Downloaded_APP_Packages"
+      ]
+    }
+  }
+}

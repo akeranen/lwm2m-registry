@@ -1,0 +1,303 @@
+{
+  "info": {
+    "title": "OMA Fire Alarm (Object ID 503)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2022 Open Mobile Alliance.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Fire_Alarm": {
+      "label": "Fire Alarm",
+      "description": "This is an alarm that should be raised if the sensor(s) detect fire, based on the values reported from Temperature, Humidity, Smoke (CO2).",
+      "oma:id": 503,
+      "sdfProperty": {
+        "Temperature_Sensor_Location_Tag": {
+          "label": "Temperature Sensor Location Tag",
+          "description": "Verbose identification of the location of the Temperature sensor location",
+          "oma:id": 0,
+          "type": "string"
+        },
+        "Temperature_Unit": {
+          "label": "Temperature Unit",
+          "description": "Temperature Units: 0 = Celsius, 1 = Fahrenheit, 2 = Kelvin. All temperature values are represented in this unit.",
+          "oma:id": 1,
+          "type": "integer"
+        },
+        "Ambient_Temperature": {
+          "label": "Ambient Temperature",
+          "description": "Temperature for the area.",
+          "oma:id": 2,
+          "type": "number"
+        },
+        "Temperature_Value": {
+          "label": "Temperature Value",
+          "description": "Last or Current Measured Temperature Value from the Sensor. The value 65534 indicates that the Sensor data is not available.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "number"
+        },
+        "Minimum_Measured_Temperature_Value": {
+          "label": "Minimum Measured Temperature Value",
+          "description": "The minimum Temperature value measured by the sensor since power ON or reset.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "number"
+        },
+        "Maximum_Measured_Temperature_Value": {
+          "label": "Maximum Measured Temperature Value",
+          "description": "The maximum Temperature value measured by the sensor since power ON or reset.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "number"
+        },
+        "Min_Temperature_Range_Value": {
+          "label": "Min Temperature Range Value",
+          "description": "The minimum temperature value that can be measured by the sensor.",
+          "oma:id": 6,
+          "type": "number"
+        },
+        "Max_Temperature_Range_Value": {
+          "label": "Max Temperature Range Value",
+          "description": "The maximum temperature value that can be measured by the sensor.",
+          "oma:id": 7,
+          "type": "number"
+        },
+        "Lower_Temperature_Accuracy": {
+          "label": "Lower Temperature Accuracy",
+          "description": "Indicates the lower end of the accuracy range for the temperature sensor.",
+          "oma:id": 8,
+          "type": "number"
+        },
+        "Upper_Temperature_Accuracy": {
+          "label": "Upper Temperature Accuracy",
+          "description": "Indicates the upper end of the accuracy range for the temperature sensor.",
+          "oma:id": 9,
+          "type": "number"
+        },
+        "Temperature_Threshold": {
+          "label": "Temperature Threshold",
+          "description": "Indicates the maximum threshold for the temperature.",
+          "oma:id": 10,
+          "type": "number"
+        },
+        "Temperature_Sensor_Error": {
+          "label": "Temperature Sensor Error",
+          "description": "Temperature Sensor Error: 0 = false (Working correctly), 1 = true (Faulty).",
+          "oma:id": 11,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Temperature_Alarm_Loudness": {
+          "label": "Temperature Alarm Loudness",
+          "description": "Indicates the loudness of temperature alarm.",
+          "oma:id": 13,
+          "type": "number",
+          "unit": "dB"
+        },
+        "Humidity_Sensor_Location_Tag": {
+          "label": "Humidity Sensor Location Tag",
+          "description": "Verbose identification of the location of the Humidity sensor.",
+          "oma:id": 14,
+          "type": "string"
+        },
+        "Ambient_Relative_Humidity": {
+          "label": "Ambient Relative Humidity",
+          "description": "Relative humidity for the area.",
+          "oma:id": 15,
+          "type": "number",
+          "unit": "%RH",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Humidity_Value": {
+          "label": "Humidity Value",
+          "description": "Last or Current Measured Humidity Value from the Sensor. The value 0 indicates that the Sensor data is not available.",
+          "oma:id": 16,
+          "writable": false,
+          "type": "number",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Minimum_Measured_Humidity_Value": {
+          "label": "Minimum Measured Humidity Value",
+          "description": "The minimum Humidity value measured by the sensor since power ON or reset.",
+          "oma:id": 17,
+          "writable": false,
+          "type": "number",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Maximum_Measured_Humidity_Value": {
+          "label": "Maximum Measured Humidity Value",
+          "description": "The maximum Humidity value measured by the sensor since power ON or reset.",
+          "oma:id": 18,
+          "writable": false,
+          "type": "number",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Humidity_Accuracy": {
+          "label": "Humidity Accuracy",
+          "description": "Indicate the accuracy for the Humidity Sensor.",
+          "oma:id": 19,
+          "type": "number",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Humidity_Threshold": {
+          "label": "Humidity Threshold",
+          "description": "Indicate the threshold for the Humidity.",
+          "oma:id": 20,
+          "type": "number",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Humidity_Sensor_Error": {
+          "label": "Humidity Sensor Error",
+          "description": "Humidity Sensor Error: 0 = false (Working correctly), 1 = true (Faulty)",
+          "oma:id": 21,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Humidity_Alarm_Loudness": {
+          "label": "Humidity Alarm Loudness",
+          "description": "Indicates the loudness of the Humidity alarm.",
+          "oma:id": 23,
+          "type": "number",
+          "unit": "dB"
+        },
+        "Smoke_Sensor_Location_Tag": {
+          "label": "Smoke Sensor Location Tag",
+          "description": "Verbose identification of the location of the Smoke sensor.",
+          "oma:id": 24,
+          "type": "string"
+        },
+        "CO2_Alarm_State": {
+          "label": "CO2 Alarm State",
+          "description": "0 = False (CO2 alarm threshold not exceeded), 1 = True (CO2 alarm threshold exceeded).",
+          "oma:id": 25,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Ambient_CO2_Value": {
+          "label": "Ambient CO2 Value",
+          "description": "CO2 value for the area.",
+          "oma:id": 26,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm"
+        },
+        "CO2_Value": {
+          "label": "CO2 Value",
+          "description": "Last or Current Measured CO2 Value from the sensor. The value 0 indicates that the Sensor data is not available.",
+          "oma:id": 27,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm"
+        },
+        "Minimum_Measured_CO2_Value": {
+          "label": "Minimum Measured CO2 Value",
+          "description": "The minimum CO2 value measured by the sensor since power ON or reset.",
+          "oma:id": 28,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm"
+        },
+        "Maximum_Measured_CO2_Value": {
+          "label": "Maximum Measured CO2 Value",
+          "description": "The maximum CO2 value measured by the sensor since power ON or reset.",
+          "oma:id": 29,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm"
+        },
+        "CO2_Threshold": {
+          "label": "CO2 Threshold",
+          "description": "Indicate the alarm threshold for the CO2.",
+          "oma:id": 30,
+          "type": "number",
+          "unit": "ppm"
+        },
+        "Smoke_Sensor_Error": {
+          "label": "Smoke Sensor Error",
+          "description": "Smoke Sensor Error: 0 = false (Working correctly), 1 = true (Faulty)",
+          "oma:id": 31,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Smoke_Alarm_Loudness": {
+          "label": "Smoke Alarm Loudness",
+          "description": "Indicates the loudness of smoke alarm",
+          "oma:id": 33,
+          "writable": false,
+          "type": "number",
+          "unit": "dB"
+        },
+        "Battery_Percentage": {
+          "label": "Battery Percentage",
+          "description": "Current remaining battery level.",
+          "oma:id": 6044,
+          "writable": false,
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Latitude": {
+          "label": "Latitude",
+          "description": "The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984).",
+          "oma:id": 5514,
+          "writable": false,
+          "type": "string"
+        },
+        "Longitude": {
+          "label": "Longitude",
+          "description": "The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984).",
+          "oma:id": 5515,
+          "writable": false,
+          "type": "string"
+        },
+        "Altitude": {
+          "label": "Altitude",
+          "description": "Altitude above sea level in meters.",
+          "oma:id": 6039,
+          "writable": false,
+          "type": "number",
+          "unit": "m"
+        }
+      },
+      "sdfAction": {
+        "Reset_Temperature": {
+          "label": "Reset Temperature",
+          "description": "Reset the \"Temperature\" related parameters to default.",
+          "oma:id": 12
+        },
+        "Reset_Humidity": {
+          "label": "Reset Humidity",
+          "description": "Reset the \"Humidity\" related parameters to default.",
+          "oma:id": 22
+        },
+        "Reset_Smoke_Detection": {
+          "label": "Reset Smoke Detection",
+          "description": "Reset the \"Smoke\" related parameters to default.",
+          "oma:id": 32
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/Fire_Alarm/sdfProperty/Temperature_Unit",
+        "#/sdfObject/Fire_Alarm/sdfProperty/Temperature_Value",
+        "#/sdfObject/Fire_Alarm/sdfProperty/Humidity_Value",
+        "#/sdfObject/Fire_Alarm/sdfProperty/CO2_Alarm_State",
+        "#/sdfObject/Fire_Alarm/sdfProperty/CO2_Value"
+      ]
+    }
+  }
+}

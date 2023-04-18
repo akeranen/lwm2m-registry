@@ -1,0 +1,66 @@
+{
+  "info": {
+    "title": "OMA LwM2M COSE (Object ID 23)",
+    "version": "2023-04-18",
+    "copyright": "2020 Open Mobile Alliance",
+    "license": "BSD-3-OMA",
+    "oma:info": {
+      "permanent_document": {
+        "file": "OMA-SUP-XML_23-V1_0-20201110-A.xml",
+        "path": "http://www.openmobilealliance.org/release/ObjLwM2M_COSE/"
+      },
+      "lwm2m_registry": {
+        "file": "23.xml",
+        "path": "https://github.com/OpenMobileAlliance/lwm2m-registry"
+      },
+      "normative_information": {
+        "ts": "OMA-TS-LightweightM2M_Core-V1_2",
+        "ts_url": "http://www.openmobilealliance.org/release/LightweightM2M/",
+        "bug_reporting": "https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues"
+      }
+    }
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LwM2M_COSE": {
+      "label": "LwM2M COSE",
+      "description": "This Object provides the keying material and related information for use with COSE.",
+      "oma:id": 23,
+      "sdfProperty": {
+        "KID": {
+          "label": "KID",
+          "description": "This resource is used to indicate the key identifier.",
+          "oma:id": 0,
+          "readable": false,
+          "writable": false,
+          "type": "string"
+        },
+        "AEAD_Algorithm": {
+          "label": "AEAD Algorithm",
+          "description": "This resource is used to store the encoding of the AEAD Algorithm as defined in Table 10 of RFC 8152.",
+          "oma:id": 1,
+          "readable": false,
+          "writable": false,
+          "type": "integer"
+        },
+        "Key": {
+          "label": "Key",
+          "description": "This resource is used to store the key for use with the indicated AEAD algorithm.",
+          "oma:id": 2,
+          "readable": false,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/LwM2M_COSE/sdfProperty/KID",
+        "#/sdfObject/LwM2M_COSE/sdfProperty/AEAD_Algorithm",
+        "#/sdfObject/LwM2M_COSE/sdfProperty/Key"
+      ]
+    }
+  }
+}

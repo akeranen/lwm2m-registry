@@ -1,0 +1,72 @@
+{
+  "info": {
+    "title": "OMA CmdhPolicy (Object ID 2048)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 oneM2M Partners.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CmdhPolicy": {
+      "label": "CmdhPolicy",
+      "description": "This Object provides links to a set of rules associated with a specific CSE that governs the behavior of that CSE regarding rejecting, buffering and sending request or response messages via the Mcc reference point.",
+      "oma:id": 2048,
+      "sdfProperty": {
+        "Name": {
+          "label": "Name",
+          "description": "Contains the name of a CmdhPolicy Object Instance",
+          "oma:id": 0,
+          "type": "string"
+        },
+        "DefaultRule": {
+          "label": "DefaultRule",
+          "description": "1 reference to CmdhDefaults Object  Instance",
+          "oma:id": 1,
+          "type": "object",
+          "sdfType": "object-link"
+        },
+        "LimiRules": {
+          "label": "LimiRules",
+          "description": "1 or more references to CmdhLimits Object Instances",
+          "oma:id": 2,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "sdfType": "object-link"
+          }
+        },
+        "NetworkAccessECRules": {
+          "label": "NetworkAccessECRules",
+          "description": "1 or more references to CmdhNetworkAccessRules Object Instances",
+          "oma:id": 3,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "sdfType": "object-link"
+          }
+        },
+        "BufferRules": {
+          "label": "BufferRules",
+          "description": "1 or more references to CmdhBuffer Object Instances",
+          "oma:id": 4,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "sdfType": "object-link"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/CmdhPolicy/sdfProperty/Name",
+        "#/sdfObject/CmdhPolicy/sdfProperty/DefaultRule",
+        "#/sdfObject/CmdhPolicy/sdfProperty/LimiRules",
+        "#/sdfObject/CmdhPolicy/sdfProperty/NetworkAccessECRules",
+        "#/sdfObject/CmdhPolicy/sdfProperty/BufferRules"
+      ]
+    }
+  }
+}

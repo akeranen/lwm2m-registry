@@ -1,0 +1,32 @@
+{
+  "info": {
+    "title": "OMA macTimerStatusEvent (Object ID 3368)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "macTimerStatusEvent": {
+      "label": "macTimerStatusEvent",
+      "description": "MAC timer expiry information",
+      "oma:id": 3368,
+      "sdfProperty": {
+        "macTimerName": {
+          "label": "macTimerName",
+          "description": "0 = TA\r\n1 = RA\r\n2 = Contention\r\n3 = RACH_Back_Off",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/macTimerStatusEvent/sdfProperty/macTimerName"
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "info": {
+    "title": "OMA System Log (Object ID 10259)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 Casa Systems.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "System_Log": {
+      "label": "System Log",
+      "description": "This object provides read access to log buffers as well as limited configuration of logging services.",
+      "oma:id": 10259,
+      "sdfProperty": {
+        "Name": {
+          "label": "Name",
+          "description": "Short name describing the log source represented by this particular instance.\r\nFor syslog-compatible log sources this value should be \"syslog\". If multiple syslog-compatible log sources exist on a device then each should be given a distinct name that is then prefixed with \"syslog-\".",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string"
+        },
+        "Read_All": {
+          "label": "Read All",
+          "description": "Read the entire current contents of the log buffer.\r\nResult is delivered as a display-formatted UTF-8 string, with each message entry on a new line.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Read": {
+          "label": "Read",
+          "description": "Similar to Read All, but only reads log entries that have arrived since the last time this log buffer was read.\r\nIf the LwM2M client is connected to multiple servers then the last read position should be tracked separately for each server.\r\nIf this is the first attempt to read the log for a given connection then this resource behaves the same as Read All.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "Enabled": {
+          "label": "Enabled",
+          "description": "Enable or disable log capture for this source.\r\nIf this resource is not provided by an implementation, then the existence of a System Log instance is taken as implicit confirmation that the log source it represents is currently enabled.",
+          "oma:id": 3,
+          "type": "boolean"
+        },
+        "Capture_Level": {
+          "label": "Capture Level",
+          "description": "For log sources that support message priorities, this resource configures the minimum priority to capture.\r\nFor syslog-compatible log sources the following enumeration must be used: 1 = Emergency, 2 = Alert, 3 = Critical, 4 = Error, 5 = Warning, 6 = Notice, 7 = Info, 8 = Debug.\r\nFor other log sources this is left up to the implementer, with the requirement that consecutive values are used, starting at 1 and sorted so that message verbosity increases as the number ascends.",
+          "oma:id": 4,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/System_Log/sdfProperty/Name",
+        "#/sdfObject/System_Log/sdfProperty/Read_All"
+      ]
+    }
+  }
+}

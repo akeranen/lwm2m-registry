@@ -1,0 +1,46 @@
+{
+  "info": {
+    "title": "OMA CmdhDefaults (Object ID 2050)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 oneM2M Partners.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CmdhDefaults": {
+      "label": "CmdhDefaults",
+      "description": "Defines which CMDH related parameters will be used by default.",
+      "oma:id": 2050,
+      "sdfProperty": {
+        "DefaultEcRules": {
+          "label": "DefaultEcRules",
+          "description": "1 or more references to  CmdhDefEcValue Object Instances containing default values for the ec (event category) parameter of an incoming request or response when this parameter is not indicated in the message itself",
+          "oma:id": 0,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "sdfType": "object-link"
+          }
+        },
+        "DefaultEcParamRules": {
+          "label": "DefaultEcParamRules",
+          "description": "1 or more references to CmdhEcDefParamValues Object Instances",
+          "oma:id": 1,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "sdfType": "object-link"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/CmdhDefaults/sdfProperty/DefaultEcRules",
+        "#/sdfObject/CmdhDefaults/sdfProperty/DefaultEcParamRules"
+      ]
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "info": {
+    "title": "OMA CO Detector (Object ID 502)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2022 Open Mobile Alliance.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CO_Detector": {
+      "label": "CO Detector",
+      "description": "This is an alarm that should be raised if the sensor detects a higher than threshold CO level.",
+      "oma:id": 502,
+      "sdfProperty": {
+        "CO_Sensor_Location_Tag": {
+          "label": "CO Sensor Location Tag",
+          "description": "Verbose identification of the location of the CO sensor.",
+          "oma:id": 0,
+          "type": "string"
+        },
+        "CO_Detected": {
+          "label": "CO Detected",
+          "description": "0 = false (CO NOT detected), 1 = true (CO Detected)",
+          "oma:id": 1,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Ambient_CO_Value": {
+          "label": "Ambient CO Value",
+          "description": "CO value (in ppm) received for the area.",
+          "oma:id": 2,
+          "type": "number",
+          "unit": "ppm",
+          "minimum": 0,
+          "maximum": 12800
+        },
+        "CO_Value": {
+          "label": "CO Value",
+          "description": "Last or Current Measured CO Value (in ppm) from the Sensor.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm",
+          "minimum": 0,
+          "maximum": 12800
+        },
+        "Min_CO_Range_Value": {
+          "label": "Min CO Range Value",
+          "description": "The minimum value that can be measured by the sensor (in ppm).",
+          "oma:id": 4,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm",
+          "minimum": 0,
+          "maximum": 12800
+        },
+        "Max_CO_Range_Value": {
+          "label": "Max CO Range Value",
+          "description": "The maximum value that can be measured by the sensor.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm",
+          "minimum": 0,
+          "maximum": 12800
+        },
+        "CO_Detection_Accuracy": {
+          "label": "CO Detection Accuracy",
+          "description": "Indicate range of the accuracy for the temperature Sensor.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm",
+          "minimum": 0,
+          "maximum": 12800
+        },
+        "Minimum_Measured_CO_Value": {
+          "label": "Minimum Measured CO Value",
+          "description": "The minimum CO value (in ppm) measured by the sensor since power ON or reset.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm",
+          "minimum": 0,
+          "maximum": 12800
+        },
+        "Maximum_Measured_CO_Value": {
+          "label": "Maximum Measured CO Value",
+          "description": "The maximum CO value measured (in ppm) by the sensor since power ON or reset",
+          "oma:id": 8,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm",
+          "minimum": 0,
+          "maximum": 12800
+        },
+        "Upper_CO_Threshold": {
+          "label": "Upper CO Threshold",
+          "description": "Indicate the Upper threshold for the CO Value (in ppm).",
+          "oma:id": 9,
+          "type": "number",
+          "unit": "ppm",
+          "minimum": 0,
+          "maximum": 12800
+        },
+        "Alarm_loudness": {
+          "label": "Alarm loudness",
+          "description": "Indicate the loudness of the alarm.",
+          "oma:id": 6048,
+          "writable": false,
+          "type": "number",
+          "unit": "dB"
+        },
+        "Latitude": {
+          "label": "Latitude",
+          "description": "The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984).",
+          "oma:id": 5514,
+          "writable": false,
+          "type": "string"
+        },
+        "Longitude": {
+          "label": "Longitude",
+          "description": "The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984).",
+          "oma:id": 5515,
+          "writable": false,
+          "type": "string"
+        },
+        "Altitude": {
+          "label": "Altitude",
+          "description": "Altitude above sea level in meters.",
+          "oma:id": 6039,
+          "writable": false,
+          "type": "number",
+          "unit": "m"
+        },
+        "Battery_Percentage": {
+          "label": "Battery Percentage",
+          "description": "Current remaining battery level.",
+          "oma:id": 6044,
+          "writable": false,
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {
+        "Reset": {
+          "label": "Reset",
+          "description": "Reset the \"CO\" object related parameters to default",
+          "oma:id": 10
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/CO_Detector/sdfProperty/CO_Detected",
+        "#/sdfObject/CO_Detector/sdfProperty/CO_Value"
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "info": {
+    "title": "OMA rrcTimerExpiryEvent (Object ID 3358)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "rrcTimerExpiryEvent": {
+      "label": "rrcTimerExpiryEvent",
+      "description": "RRC timer expiry event information",
+      "oma:id": 3358,
+      "sdfProperty": {
+        "RrcTimerExpiryEvent": {
+          "label": "RrcTimerExpiryEvent",
+          "description": "1 = t300\r\n2 = t301\r\n3 = t302\r\n4 = t303\r\n5 = t304\r\n6 = t305\r\n7 = t311\r\n8 = t320\r\n9 = t321\r\n10 = other",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/rrcTimerExpiryEvent/sdfProperty/RrcTimerExpiryEvent"
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "info": {
+    "title": "OMA Fan (Object ID 10366)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Fan": {
+      "label": "Fan",
+      "description": "This LWM2M Object includes Fan information.",
+      "oma:id": 10366,
+      "sdfProperty": {
+        "Fan_Name": {
+          "label": "Fan Name",
+          "description": "The display name of the Fan.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Fan/sdfProperty/Fan_Name"
+      ]
+    }
+  }
+}

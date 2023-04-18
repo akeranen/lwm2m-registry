@@ -1,0 +1,46 @@
+{
+  "info": {
+    "title": "OMA Compact Composite (Object ID 511)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2022 Open Mobile Alliance",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Compact_Composite": {
+      "label": "Compact Composite",
+      "description": "This Object enables collecting a set of Resource values from other Objects into a single resource representation with an array of values.",
+      "oma:id": 511,
+      "sdfProperty": {
+        "Target_Links": {
+          "label": "Target Links",
+          "description": "One or more CoRE Links to Readable Single Resources and/or Resource Instances of Readable Single Resources, from which the values will be stored in the Compact Data array. Each link results in a new item in the Compact Data array: first link points to the resource instance with the value for the first array item, second link to the instance with the second array item, etc.",
+          "oma:id": 0,
+          "type": "object",
+          "sdfType": "core-link"
+        },
+        "Compact_Data": {
+          "label": "Compact Data",
+          "description": "CBOR array of resource values in the same order as the links in the Target Links resource or empty value if there is error (e.g., link pointing to a resource that doesn't exist or is not allowed to be read because of access control rules).",
+          "oma:id": 1,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Description": {
+          "label": "Description",
+          "description": "Human-readable description of the Compact Data resulting from the Target Links.",
+          "oma:id": 2,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Compact_Composite/sdfProperty/Target_Links",
+        "#/sdfObject/Compact_Composite/sdfProperty/Compact_Data"
+      ]
+    }
+  }
+}

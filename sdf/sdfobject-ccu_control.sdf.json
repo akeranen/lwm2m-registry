@@ -1,0 +1,42 @@
+{
+  "info": {
+    "title": "OMA CCU Control (Object ID 10323)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CCU_Control": {
+      "label": "CCU Control",
+      "description": "This LWM2M Object includes all operations on CCUs.",
+      "oma:id": 10323,
+      "sdfProperty": {},
+      "sdfAction": {
+        "CCU_Restart": {
+          "label": "CCU Restart",
+          "description": "Restart the CCU.",
+          "oma:id": 100
+        },
+        "CCU_Reset": {
+          "label": "CCU Reset",
+          "description": "Reset the CCU to factory settings.",
+          "oma:id": 101
+        },
+        "CCU_Self-checking": {
+          "label": "CCU Self-checking",
+          "description": "Let the CCU to do Self-checking.",
+          "oma:id": 102
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/CCU_Control/sdfAction/CCU_Restart",
+        "#/sdfObject/CCU_Control/sdfAction/CCU_Reset",
+        "#/sdfObject/CCU_Control/sdfAction/CCU_Self-checking"
+      ]
+    }
+  }
+}

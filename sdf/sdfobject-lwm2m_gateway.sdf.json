@@ -1,0 +1,64 @@
+{
+  "info": {
+    "title": "OMA LwM2M Gateway (Object ID 25)",
+    "version": "2023-04-18",
+    "copyright": "2020 Open Mobile Alliance",
+    "license": "BSD-3-OMA",
+    "oma:info": {
+      "permanent_document": {
+        "file": "OMA-SUP-XML_25-V2_0-20210518-A.xml",
+        "path": "http://www.openmobilealliance.org/release/LwM2M_Gateway/"
+      },
+      "lwm2m_registry": {
+        "file": "25.xml",
+        "path": "https://github.com/OpenMobileAlliance/lwm2m-registry"
+      },
+      "normative_information": {
+        "ts": "OMA-TS-LightweightM2M_Core-V1_2",
+        "ts_url": "http://www.openmobilealliance.org/release/LightweightM2M/",
+        "bug_reporting": "https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues"
+      }
+    }
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LwM2M_Gateway": {
+      "label": "LwM2M Gateway",
+      "description": "This object is used by a LwM2M Gateway to maintain the IoT Devices connected to the LwM2M Gateway.",
+      "oma:id": 25,
+      "sdfProperty": {
+        "Device_ID": {
+          "label": "Device ID",
+          "description": "This resource identifies the IoT Device connected to the LwM2M Gateway.",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string"
+        },
+        "Prefix": {
+          "label": "Prefix",
+          "description": "This resource defines what prefix MUST be used for access to LwM2M Objects of this IoT Device.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "IoT_Device_Objects": {
+          "label": "IoT Device Objects",
+          "description": "This resource contains the Objects and Object Instances exposed by the LwM2M Gateway on behalf of the IoT Device. It uses the same CoreLnk format as Registration Interface.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "object",
+          "sdfType": "core-link"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/LwM2M_Gateway/sdfProperty/Device_ID",
+        "#/sdfObject/LwM2M_Gateway/sdfProperty/Prefix",
+        "#/sdfObject/LwM2M_Gateway/sdfProperty/IoT_Device_Objects"
+      ]
+    }
+  }
+}

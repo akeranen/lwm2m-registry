@@ -1,0 +1,64 @@
+{
+  "info": {
+    "title": "OMA powerupLog (Object ID 3351)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "powerupLog": {
+      "label": "powerupLog",
+      "description": "One time event sent by the device at power up.",
+      "oma:id": 3351,
+      "sdfProperty": {
+        "deviceName": {
+          "label": "deviceName",
+          "description": "Human-readable name of the device",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string"
+        },
+        "toolVersion": {
+          "label": "toolVersion",
+          "description": "The tool version that the device supports - used to determine the logging object/resource version to be used for parsing",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "IMEI": {
+          "label": "IMEI",
+          "description": "IMEI of device",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "IMSI": {
+          "label": "IMSI",
+          "description": "IMSI of device",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string"
+        },
+        "MSISDN": {
+          "label": "MSISDN",
+          "description": "MSISDN of device",
+          "oma:id": 4,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/powerupLog/sdfProperty/deviceName",
+        "#/sdfObject/powerupLog/sdfProperty/toolVersion",
+        "#/sdfObject/powerupLog/sdfProperty/IMEI",
+        "#/sdfObject/powerupLog/sdfProperty/IMSI",
+        "#/sdfObject/powerupLog/sdfProperty/MSISDN"
+      ]
+    }
+  }
+}

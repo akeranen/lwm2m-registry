@@ -1,0 +1,56 @@
+{
+  "info": {
+    "title": "OMA scellID (Object ID 3353)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "scellID": {
+      "label": "scellID",
+      "description": "serving cell information that the RRC decides to camp on",
+      "oma:id": 3353,
+      "sdfProperty": {
+        "plmnID": {
+          "label": "plmnID",
+          "description": "PLMN - mcc/mnc",
+          "oma:id": 6030,
+          "writable": false,
+          "type": "integer"
+        },
+        "BandIndicator": {
+          "label": "BandIndicator",
+          "description": "Band Indicator",
+          "oma:id": 6031,
+          "writable": false,
+          "type": "integer"
+        },
+        "TrackingAreaCode": {
+          "label": "TrackingAreaCode",
+          "description": "Tracking Area Code",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "CellID": {
+          "label": "CellID",
+          "description": "Cell ID.",
+          "oma:id": 6033,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/scellID/sdfProperty/plmnID",
+        "#/sdfObject/scellID/sdfProperty/BandIndicator",
+        "#/sdfObject/scellID/sdfProperty/TrackingAreaCode",
+        "#/sdfObject/scellID/sdfProperty/CellID"
+      ]
+    }
+  }
+}

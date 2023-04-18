@@ -1,0 +1,40 @@
+{
+  "info": {
+    "title": "OMA Compressor (Object ID 10327)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Compressor": {
+      "label": "Compressor",
+      "description": "This LWM2M Object includes the Compressor information.",
+      "oma:id": 10327,
+      "sdfProperty": {
+        "Compressor_Name": {
+          "label": "Compressor Name",
+          "description": "The name of the compressor.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Compressor_Status": {
+          "label": "Compressor Status",
+          "description": "The status of the compressor, 1:Working, 0:Stopped.",
+          "oma:id": 50,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Compressor/sdfProperty/Compressor_Name",
+        "#/sdfObject/Compressor/sdfProperty/Compressor_Status"
+      ]
+    }
+  }
+}

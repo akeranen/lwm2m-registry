@@ -1,0 +1,32 @@
+{
+  "info": {
+    "title": "OMA txPowerBackOffEvent (Object ID 3376)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "txPowerBackOffEvent": {
+      "label": "txPowerBackOffEvent",
+      "description": "TX Power backoff information",
+      "oma:id": 3376,
+      "sdfProperty": {
+        "TxPowerBackoff": {
+          "label": "TxPowerBackoff",
+          "description": "TX Power Backoff",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/txPowerBackOffEvent/sdfProperty/TxPowerBackoff"
+      ]
+    }
+  }
+}

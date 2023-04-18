@@ -1,0 +1,72 @@
+{
+  "info": {
+    "title": "OMA NeighborCellMeasurements (Object ID 3371)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "NeighborCellMeasurements": {
+      "label": "NeighborCellMeasurements",
+      "description": "Neighbor Cell Measurements",
+      "oma:id": 3371,
+      "sdfProperty": {
+        "sysFrameNumber": {
+          "label": "sysFrameNumber",
+          "description": "System Frame Number.",
+          "oma:id": 6037,
+          "writable": false,
+          "type": "integer"
+        },
+        "subFrameNumber": {
+          "label": "subFrameNumber",
+          "description": "Sub Frame Number.",
+          "oma:id": 6038,
+          "writable": false,
+          "type": "integer"
+        },
+        "pci": {
+          "label": "pci",
+          "description": "PCI.",
+          "oma:id": 6034,
+          "writable": false,
+          "type": "integer"
+        },
+        "rsrp": {
+          "label": "rsrp",
+          "description": "RSRP Value in dBm (-180..-30)",
+          "oma:id": 6035,
+          "writable": false,
+          "type": "integer"
+        },
+        "rsrq": {
+          "label": "rsrq",
+          "description": "RSRQ Value in dB (-30..10)",
+          "oma:id": 6036,
+          "writable": false,
+          "type": "integer"
+        },
+        "dlEarfcn": {
+          "label": "dlEarfcn",
+          "description": "EARFCN - frequency",
+          "oma:id": 6032,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/NeighborCellMeasurements/sdfProperty/sysFrameNumber",
+        "#/sdfObject/NeighborCellMeasurements/sdfProperty/subFrameNumber",
+        "#/sdfObject/NeighborCellMeasurements/sdfProperty/pci",
+        "#/sdfObject/NeighborCellMeasurements/sdfProperty/rsrp",
+        "#/sdfObject/NeighborCellMeasurements/sdfProperty/rsrq",
+        "#/sdfObject/NeighborCellMeasurements/sdfProperty/dlEarfcn"
+      ]
+    }
+  }
+}

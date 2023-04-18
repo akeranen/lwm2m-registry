@@ -1,0 +1,32 @@
+{
+  "info": {
+    "title": "OMA ActiveCmdhPolicy (Object ID 2049)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 oneM2M Partners.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "ActiveCmdhPolicy": {
+      "label": "ActiveCmdhPolicy",
+      "description": "This Object provides a link to the currently active set of CMDH policies",
+      "oma:id": 2049,
+      "sdfProperty": {
+        "ActiveLink": {
+          "label": "ActiveLink",
+          "description": "Contains the reference to the CMDH policies (CmdhPolicy Object Instance) currently active for the associated CSE.",
+          "oma:id": 0,
+          "type": "object",
+          "sdfType": "object-link"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/ActiveCmdhPolicy/sdfProperty/ActiveLink"
+      ]
+    }
+  }
+}

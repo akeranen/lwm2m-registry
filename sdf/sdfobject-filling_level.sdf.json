@@ -1,0 +1,122 @@
+{
+  "info": {
+    "title": "OMA Filling level (Object ID 3435)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2020 uCIFI Alliance",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Filling_level": {
+      "label": "Filling level",
+      "description": "The uCIFI filling level sensor measures how full and/or how empty a container (e.g. waste, fuel) is and reports it either in percentage or in centimeters. The filling level sensor may be complemented with a temperature sensor to compose a waste filling sensor that can also identify waste container fire.",
+      "oma:id": 3435,
+      "sdfProperty": {
+        "Container_height": {
+          "label": "Container height",
+          "description": "Height of the container.",
+          "oma:id": 1,
+          "type": "integer",
+          "unit": "cm"
+        },
+        "Actual_filling_percentage": {
+          "label": "Actual filling percentage",
+          "description": "Percentage of container filled with content.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "number",
+          "unit": "/100"
+        },
+        "Actual_filling_level": {
+          "label": "Actual filling level",
+          "description": "Height of content in the container.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer",
+          "unit": "cm"
+        },
+        "High_threshold": {
+          "label": "High threshold",
+          "description": "Threshold above which the container is considered full.",
+          "oma:id": 4,
+          "type": "number",
+          "unit": "/100"
+        },
+        "Container_full": {
+          "label": "Container full",
+          "description": "Set to True if the actual filling percentage is above the high threshold.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Low_threshold": {
+          "label": "Low threshold",
+          "description": "Threshold below which the container is considered empty.",
+          "oma:id": 6,
+          "type": "number",
+          "unit": "/100"
+        },
+        "Container_empty": {
+          "label": "Container empty",
+          "description": "Set to True if the actual filling percentage is below the low threshold.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Average_filling_speed": {
+          "label": "Average filling speed",
+          "description": "Average percentage filled per day.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "number",
+          "unit": "/100"
+        },
+        "Forecast_full_date": {
+          "label": "Forecast full date",
+          "description": "Next date at which the container should reach the high threshold.",
+          "oma:id": 10,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Forecast_empty_date": {
+          "label": "Forecast empty date",
+          "description": "Next date at which the container should reach the low threshold.",
+          "oma:id": 11,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Container_out_of_location": {
+          "label": "Container out of location",
+          "description": "Set to True if the container is not at the location where it should be.",
+          "oma:id": 12,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Container_out_of_position": {
+          "label": "Container out of position",
+          "description": "Set to True if the container is not in correct upright position.",
+          "oma:id": 13,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Average_filling_speed_reset": {
+          "label": "Average filling speed reset",
+          "description": "Reset average filling speed.",
+          "oma:id": 9
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/Filling_level/sdfProperty/Actual_filling_percentage",
+        "#/sdfObject/Filling_level/sdfProperty/Container_full",
+        "#/sdfObject/Filling_level/sdfProperty/Container_empty"
+      ]
+    }
+  }
+}

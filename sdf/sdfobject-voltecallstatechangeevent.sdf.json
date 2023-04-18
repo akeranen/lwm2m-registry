@@ -1,0 +1,40 @@
+{
+  "info": {
+    "title": "OMA volteCallStateChangeEvent (Object ID 3385)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "volteCallStateChangeEvent": {
+      "label": "volteCallStateChangeEvent",
+      "description": "VoLTE call status change",
+      "oma:id": 3385,
+      "sdfProperty": {
+        "callStatus": {
+          "label": "callStatus",
+          "description": "0 = Inactive call\r\n1 = Active call\r\n2 = Attempting\r\n3 = Hold",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "VolteCallStateChangeCause": {
+          "label": "VolteCallStateChangeCause",
+          "description": "0 = Not available\r\n1 = Normal Call Clearing\r\n2 = Call Drop",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/volteCallStateChangeEvent/sdfProperty/callStatus",
+        "#/sdfObject/volteCallStateChangeEvent/sdfProperty/VolteCallStateChangeCause"
+      ]
+    }
+  }
+}

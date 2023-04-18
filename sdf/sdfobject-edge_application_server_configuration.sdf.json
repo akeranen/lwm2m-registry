@@ -1,0 +1,62 @@
+{
+  "info": {
+    "title": "OMA Edge Application Server Configuration (Object ID 10378)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2022 Ericsson.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Edge_Application_Server_Configuration": {
+      "label": "Edge Application Server Configuration",
+      "description": "This is used for UE to obtain information about suitable Edge Application Server in Edge Data Network, and to support service continuity for the UE to minimize service interruption.",
+      "oma:id": 10378,
+      "sdfProperty": {
+        "Application_Client_ID": {
+          "label": "Application Client ID",
+          "description": "Identity of the Application Client used to distinguish multiple ACs if applicable, refer to [3GPP TS 23.558].",
+          "oma:id": 0,
+          "type": "string"
+        },
+        "EAS_ID": {
+          "label": "EAS ID",
+          "description": "The identifier of the Edge Application Server, refer to [3GPP TS 23.558].",
+          "oma:id": 1,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "EAS_Endpoint": {
+          "label": "EAS Endpoint",
+          "description": "The endpoint information (e.g. URI, FQDN, IP address) used to communicate with the Edge Application Server, refer to [3GPP TS 23.558].",
+          "oma:id": 2,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Type": {
+          "label": "Type",
+          "description": "Type of EAS that may be useful in service continuity scenario. UE may switch from source EAS (S-EAS) to target EAS (T-EAS) during mobility.\r\n1: S-EAS\r\n2: T-EAS\r\nrefer to [3GPP TS 23.558]",
+          "oma:id": 3,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 1,
+          "maximum": 2
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Edge_Application_Server_Configuration/sdfProperty/Application_Client_ID",
+        "#/sdfObject/Edge_Application_Server_Configuration/sdfProperty/EAS_ID",
+        "#/sdfObject/Edge_Application_Server_Configuration/sdfProperty/EAS_Endpoint"
+      ]
+    }
+  }
+}

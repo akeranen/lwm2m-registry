@@ -1,0 +1,58 @@
+{
+  "info": {
+    "title": "OMA Time synchronization (Object ID 3415)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2020 uCIFI Alliance",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Time_synchronization": {
+      "label": "Time synchronization",
+      "description": "The uCIFI time synchronization object enables a device to sync-up its internal clock with a remote NTP server.",
+      "oma:id": 3415,
+      "sdfProperty": {
+        "NTP_server_address": {
+          "label": "NTP server address",
+          "description": "Hostname or IP address of the Network Time Protocol server.",
+          "oma:id": 1,
+          "type": "string"
+        },
+        "Backup_NTP_server_address": {
+          "label": "Backup NTP server address",
+          "description": "Hostname or IP address of a backup NTP server to be used in case the main NTP server does not respond.",
+          "oma:id": 2,
+          "type": "string"
+        },
+        "NTP_period": {
+          "label": "NTP period",
+          "description": "Number of hours before which the device tries to reach the NTP server for time synchronization.",
+          "oma:id": 3,
+          "type": "string"
+        },
+        "Last_time_sync": {
+          "label": "Last time sync",
+          "description": "Last time at which a successful time synchronization occurred.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "unit": "h"
+        },
+        "Time_sync_error": {
+          "label": "Time sync error",
+          "description": "Set to True in case the latest time synchronization operation failed. Set to False in case the last operation succeeded.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Time_synchronization/sdfProperty/NTP_server_address"
+      ]
+    }
+  }
+}

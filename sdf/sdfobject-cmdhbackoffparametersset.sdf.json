@@ -1,0 +1,66 @@
+{
+  "info": {
+    "title": "OMA CmdhBackOffParametersSet (Object ID 2057)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 oneM2M Partners.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CmdhBackOffParametersSet": {
+      "label": "CmdhBackOffParametersSet",
+      "description": "This Object defines set of parameters which can be referenced by a specific Instance of the CmdhNwAccessRule Object (ID: 2055)",
+      "oma:id": 2057,
+      "sdfProperty": {
+        "NetworkAction": {
+          "label": "NetworkAction",
+          "description": "Contains specific action actually  attempted on the network (e.g. cellular-registration)",
+          "oma:id": 0,
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "InitialBackoffTime": {
+          "label": "InitialBackoffTime",
+          "description": "Regarding the BackOffParameters of a certain CmdhNwAccessRule  Object Instance, this Resource contains the value for the Initial wait time.",
+          "oma:id": 1,
+          "type": "integer",
+          "unit": "ms"
+        },
+        "AdditionalBackoffTime": {
+          "label": "AdditionalBackoffTime",
+          "description": "Regarding the BackOffParameters of a certain CmdhNwAccessRule  Object Instance, this Resource contains the value for an additional wait tme.",
+          "oma:id": 2,
+          "type": "integer",
+          "unit": "ms"
+        },
+        "MaximumBackoffTime": {
+          "label": "MaximumBackoffTime",
+          "description": "Regarding the BackOffParameters of a certain CmdhNwAccessRule  Object Instance, this Resource contains the value for the maximum wait time",
+          "oma:id": 3,
+          "type": "integer",
+          "unit": "ms"
+        },
+        "OptionalRandomBackoffTime": {
+          "label": "OptionalRandomBackoffTime",
+          "description": "Regarding the BackOffParameters of a certain CmdhNwAccessRule  Object Instance, this Resource contains the value for an optional random wait time.",
+          "oma:id": 4,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "ms"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/CmdhBackOffParametersSet/sdfProperty/InitialBackoffTime",
+        "#/sdfObject/CmdhBackOffParametersSet/sdfProperty/AdditionalBackoffTime",
+        "#/sdfObject/CmdhBackOffParametersSet/sdfProperty/MaximumBackoffTime"
+      ]
+    }
+  }
+}

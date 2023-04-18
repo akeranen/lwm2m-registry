@@ -1,0 +1,40 @@
+{
+  "info": {
+    "title": "OMA VoLTErtpPacketLoss (Object ID 3386)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "VoLTErtpPacketLoss": {
+      "label": "VoLTErtpPacketLoss",
+      "description": "Log is generated at the receiving end of RTP flow when newReceivedSequenceNumber - lastReceivedSequenceNumber > 1",
+      "oma:id": 3386,
+      "sdfProperty": {
+        "ssrc": {
+          "label": "ssrc",
+          "description": "id of RTP stream",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "packetsLost": {
+          "label": "packetsLost",
+          "description": "Number of RTP packets lost",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/VoLTErtpPacketLoss/sdfProperty/ssrc",
+        "#/sdfObject/VoLTErtpPacketLoss/sdfProperty/packetsLost"
+      ]
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "info": {
+    "title": "OMA Heat / Cooling meter (Object ID 10257)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2017 Comsel System Ltd",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Heat___Cooling_meter": {
+      "label": "Heat / Cooling meter",
+      "description": "This Object provides the information to represent a generic (district) heat or cooling meter",
+      "oma:id": 10257,
+      "sdfProperty": {
+        "Manufacturer": {
+          "label": "Manufacturer",
+          "description": "Human readable manufacturer name",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string"
+        },
+        "Model_Number": {
+          "label": "Model Number",
+          "description": "A model identifier (manufacturer specified string)",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Serial_Number": {
+          "label": "Serial Number",
+          "description": "Serial number of the meter",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "Description": {
+          "label": "Description",
+          "description": "Description of the meter",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string"
+        },
+        "Error_code": {
+          "label": "Error code",
+          "description": "Error code reported by the meter",
+          "oma:id": 11,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Instantaneous_active_power": {
+          "label": "Instantaneous active power",
+          "description": "The current active power.",
+          "oma:id": 5800,
+          "writable": false,
+          "type": "number",
+          "unit": "W"
+        },
+        "Max_Measured_active_power": {
+          "label": "Max Measured active power",
+          "description": "The maximum active power measured by the sensor since it is ON.",
+          "oma:id": 5802,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "unit": "W"
+        },
+        "Cumulative_active_power": {
+          "label": "Cumulative active power",
+          "description": "The cumulative active power since the last cumulative energy reset or device start.",
+          "oma:id": 5805,
+          "writable": false,
+          "type": "number",
+          "unit": "Wh"
+        },
+        "Flow_temperature": {
+          "label": "Flow temperature",
+          "description": "Flow temperature",
+          "oma:id": 12,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel"
+        },
+        "Max_Measured_flow_temperature": {
+          "label": "Max Measured flow temperature",
+          "description": "The maximum flow temperature measured by the meter",
+          "oma:id": 13,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel"
+        },
+        "Return_temperature": {
+          "label": "Return temperature",
+          "description": "Return temperature",
+          "oma:id": 14,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel"
+        },
+        "Max_Measured_return_temperature": {
+          "label": "Max Measured return temperature",
+          "description": "The maximum return temperature measured by the meter",
+          "oma:id": 15,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel"
+        },
+        "Temperature_difference": {
+          "label": "Temperature difference",
+          "description": "Temperature difference",
+          "oma:id": 16,
+          "writable": false,
+          "type": "number",
+          "unit": "K"
+        },
+        "Flow_rate": {
+          "label": "Flow rate",
+          "description": "The flow rate",
+          "oma:id": 17,
+          "writable": false,
+          "type": "number",
+          "unit": "m3/s"
+        },
+        "Max_Measured_flow": {
+          "label": "Max Measured flow",
+          "description": "The maximum flow measured by the meter",
+          "oma:id": 18,
+          "writable": false,
+          "type": "number",
+          "unit": "m3/s"
+        },
+        "Flow_volume": {
+          "label": "Flow volume",
+          "description": "The cumulative flow volume measured on the flow pipe",
+          "oma:id": 20,
+          "writable": false,
+          "type": "number",
+          "unit": "m3"
+        },
+        "Return_volume": {
+          "label": "Return volume",
+          "description": "The cumulative flow volume measured on the return pipe",
+          "oma:id": 21,
+          "writable": false,
+          "type": "number",
+          "unit": "m3"
+        },
+        "Current_Time": {
+          "label": "Current Time",
+          "description": "Unix Time. A signed integer representing the number of seconds since Jan 1st, 1970 in the UTC time zone.",
+          "oma:id": 5506,
+          "type": "number",
+          "sdfType": "unix-time"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Heat___Cooling_meter/sdfProperty/Max_Measured_active_power"
+      ]
+    }
+  }
+}

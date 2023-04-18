@@ -1,0 +1,99 @@
+{
+  "info": {
+    "title": "OMA MQTT Server (Object ID 24)",
+    "version": "2023-04-18",
+    "copyright": "2020 Open Mobile Alliance",
+    "license": "BSD-3-OMA",
+    "oma:info": {
+      "permanent_document": {
+        "file": "OMA-SUP-XML_24-V1_0-20201110-A.xml",
+        "path": "http://www.openmobilealliance.org/release/ObjLwM2M_MQTT_Server/"
+      },
+      "lwm2m_registry": {
+        "file": "24.xml",
+        "path": "https://github.com/OpenMobileAlliance/lwm2m-registry"
+      },
+      "normative_information": {
+        "ts": "OMA-TS-LightweightM2M_Core-V1_2",
+        "ts_url": "http://www.openmobilealliance.org/release/LightweightM2M/",
+        "bug_reporting": "https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues"
+      }
+    }
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "MQTT_Server": {
+      "label": "MQTT Server",
+      "description": "This object defines configuration parameters for an MQTT client to interact with a MQTT server.",
+      "oma:id": 24,
+      "sdfProperty": {
+        "Will_Retain": {
+          "label": "Will Retain",
+          "description": "The Will Retain value to declare in the MQTT CONNECT message.",
+          "oma:id": 0,
+          "type": "boolean"
+        },
+        "Will_Topic": {
+          "label": "Will Topic",
+          "description": "The Will Topic to include in the MQTT CONNECT message.",
+          "oma:id": 1,
+          "type": "string"
+        },
+        "Will_Message": {
+          "label": "Will Message",
+          "description": "The Will Message to include in the MQTT CONNECT message.",
+          "oma:id": 2,
+          "type": "string"
+        },
+        "Clean_Session": {
+          "label": "Clean Session",
+          "description": "The Clean Session value to declare in the MQTT CONNECT message.",
+          "oma:id": 3,
+          "type": "boolean"
+        },
+        "Will_QoS": {
+          "label": "Will QoS",
+          "description": "The Will QoS value to declare in the MQTT CONNECT message.",
+          "oma:id": 4,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 3
+        },
+        "Keep_Alive": {
+          "label": "Keep Alive",
+          "description": "The Keep Alive value to declare in the MQTT CONNECT message.",
+          "oma:id": 5,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Client_Identifier": {
+          "label": "Client Identifier",
+          "description": "The Client Identifier identifies the MQTT client to the MQTT server. MQTT server must support ClientIds which are between 1 and 23 UTF-8 encoded bytes in length, and that contain only the characters \"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\". MQTT server may allow ClientId's that contain more than 23 encoded bytes and may support ClientId's that contain characters not included in the list.",
+          "oma:id": 6,
+          "type": "string"
+        },
+        "User_Name": {
+          "label": "User Name",
+          "description": "The User Name to declare in the MQTT CONNECT message. It must be a UTF-8 encoded string. It can be used by the MQTT server for authentication and authorization.",
+          "oma:id": 7,
+          "type": "string"
+        },
+        "Password": {
+          "label": "Password",
+          "description": "The Password value to declare in the MQTT CONNECT message.",
+          "oma:id": 8,
+          "type": "string",
+          "sdfType": "byte-string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/MQTT_Server/sdfProperty/Client_Identifier"
+      ]
+    }
+  }
+}

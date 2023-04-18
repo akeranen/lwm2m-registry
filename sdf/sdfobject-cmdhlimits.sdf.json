@@ -1,0 +1,123 @@
+{
+  "info": {
+    "title": "OMA CmdhLimits (Object ID 2053)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 oneM2M Partners.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CmdhLimits": {
+      "label": "CmdhLimits",
+      "description": "This Object represents limits for CMDH related parameter values.",
+      "oma:id": 2053,
+      "sdfProperty": {
+        "Order": {
+          "label": "Order",
+          "description": "Contains index indicating in which order the concerned CmdhLimits Object Instance will be treated by the CSE to determine a value for the limit parameters.",
+          "oma:id": 0,
+          "type": "integer"
+        },
+        "RequestOrigin": {
+          "label": "RequestOrigin",
+          "description": "List of zero or more Local AE-IDs, App-IDs, or the strings \"localAE\" or \"thisCSE\"",
+          "oma:id": 1,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "RequestContext": {
+          "label": "RequestContext",
+          "description": "Represents the Dynamic Context condition under which CMDH parameter limits defined inside the concerned CmdhLimits Object Instance is applicable.",
+          "oma:id": 2,
+          "type": "string"
+        },
+        "RequestContextNotificatio": {
+          "label": "RequestContextNotificatio",
+          "description": "Contains true/false flag indicating whether or not notification procedures apply.",
+          "oma:id": 3,
+          "type": "boolean"
+        },
+        "RequestCharacteristics": {
+          "label": "RequestCharacteristics",
+          "description": "Represents conditions pertaining to the request itself, (e.g. the requested Response Type  ) than needs to be matched",
+          "oma:id": 4,
+          "type": "string"
+        },
+        "LimitsEventCategory": {
+          "label": "LimitsEventCategory",
+          "description": "Allowed values for the Event Category parameter in a request of any of the Originators indicated in the requestOrigin attribute.",
+          "oma:id": 5,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "LimitsRequestExpTime_": {
+          "label": "LimitsRequestExpTime ",
+          "description": "Defines a range of values for the Request Expiration Time parameter for a request of any Originator indicated in the requestOrigin Resource\r\nInst 0 : minTime\r\nInst 1:  maxTime",
+          "oma:id": 6,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "ms"
+        },
+        "LimitsResultExpTime": {
+          "label": "LimitsResultExpTime",
+          "description": "Defines a range of values for the Result Expiration Time parameter for a request of any Originator indicated in the requestOrigin Resource\r\nInst 0 : minTime\r\nInst 1:  maxTime",
+          "oma:id": 7,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "ms"
+        },
+        "LimitsOptExpTime": {
+          "label": "LimitsOptExpTime",
+          "description": "Defines a range of values for the Operation Expiration Time parameter for a request of any Originator indicated in the requestOrigin Resource\r\nInst 0 : minTime\r\nInst 1:  maxTime",
+          "oma:id": 8,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "ms"
+        },
+        "LimitsRespPersistence": {
+          "label": "LimitsRespPersistence",
+          "description": "Defines a range of values for the Result Persistence parameter for a request of any Originator indicated in the requestOrigin Resource\r\nInst 0 : minTime\r\nInst 1:  maxTime",
+          "oma:id": 9,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "ms"
+        },
+        "LimitsDelAggregation": {
+          "label": "LimitsDelAggregation",
+          "description": "Contains the permitted settings of the DeliveryAggregation parameter of request primitives. \r\n'0' means 'False' '1' means 'True' '0 1' means 'False' or 'True'",
+          "oma:id": 10,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/CmdhLimits/sdfProperty/Order",
+        "#/sdfObject/CmdhLimits/sdfProperty/RequestOrigin",
+        "#/sdfObject/CmdhLimits/sdfProperty/LimitsEventCategory",
+        "#/sdfObject/CmdhLimits/sdfProperty/LimitsRequestExpTime_",
+        "#/sdfObject/CmdhLimits/sdfProperty/LimitsResultExpTime",
+        "#/sdfObject/CmdhLimits/sdfProperty/LimitsOptExpTime",
+        "#/sdfObject/CmdhLimits/sdfProperty/LimitsRespPersistence",
+        "#/sdfObject/CmdhLimits/sdfProperty/LimitsDelAggregation"
+      ]
+    }
+  }
+}

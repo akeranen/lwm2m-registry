@@ -1,0 +1,42 @@
+{
+  "info": {
+    "title": "OMA Robot Selfcheck Info (Object ID 10332)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Robot_Selfcheck_Info": {
+      "label": "Robot Selfcheck Info",
+      "description": "This LWM2M Object includes robot selfcheck result.",
+      "oma:id": 10332,
+      "sdfProperty": {
+        "Entity": {
+          "label": "Entity",
+          "description": "Contains the object ID and object instance ID/Name, for example: </10320/2>.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string",
+          "minLength": 4,
+          "maxLength": 63
+        },
+        "Status": {
+          "label": "Status",
+          "description": "0:Normal, 1:Unknown, 0:Failed with error code(negative number).",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Robot_Selfcheck_Info/sdfProperty/Entity",
+        "#/sdfObject/Robot_Selfcheck_Info/sdfProperty/Status"
+      ]
+    }
+  }
+}

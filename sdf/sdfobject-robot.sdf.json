@@ -1,0 +1,96 @@
+{
+  "info": {
+    "title": "OMA Robot (Object ID 10315)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Robot": {
+      "label": "Robot",
+      "description": "This LWM2M Object includes robot information and links to the location object.",
+      "oma:id": 10315,
+      "sdfProperty": {
+        "Robot_ID": {
+          "label": "Robot ID",
+          "description": "The Robot identity.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "Robot_Type": {
+          "label": "Robot Type",
+          "description": "Robot Type, for example: Ginger, CloudCleanX, CloudPepper.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 63
+        },
+        "Robot_Serial_Number": {
+          "label": "Robot Serial Number",
+          "description": "Robot Type, for example: Ginger, CloudCleanX, CloudPepper.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 63
+        },
+        "Battery_Level": {
+          "label": "Battery Level",
+          "description": "Current Battery Level of the robot.",
+          "oma:id": 51,
+          "writable": false,
+          "type": "integer",
+          "unit": "%",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Charging": {
+          "label": "Charging",
+          "description": "If the robot is charging or not,the setting of which is a Boolean value (1,0) where 1 is Yes and 0 is No.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "boolean"
+        },
+        "On_time": {
+          "label": "On time",
+          "description": "The time in seconds that the device has been on. Writing a value of 0 resets the counter.",
+          "oma:id": 5852,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Positioning": {
+          "label": "Positioning",
+          "description": "If the robot is needed to be positioned, the setting of which is a Boolean value (1,0) where 1 is Yes and 0 is No.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Location": {
+          "label": "Location",
+          "description": "The location of the robot, contains the reference to the Location object(6).",
+          "oma:id": 6,
+          "writable": false,
+          "type": "object",
+          "sdfType": "object-link"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Robot/sdfProperty/Robot_ID",
+        "#/sdfObject/Robot/sdfProperty/Robot_Type",
+        "#/sdfObject/Robot/sdfProperty/Robot_Serial_Number",
+        "#/sdfObject/Robot/sdfProperty/Battery_Level",
+        "#/sdfObject/Robot/sdfProperty/Charging",
+        "#/sdfObject/Robot/sdfProperty/On_time"
+      ]
+    }
+  }
+}

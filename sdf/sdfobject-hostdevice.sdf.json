@@ -1,0 +1,77 @@
+{
+  "info": {
+    "title": "OMA HostDevice (Object ID 10299)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 Verizon Wireless.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "HostDevice": {
+      "label": "HostDevice",
+      "description": "This LWM2M Object provides a range of host device related information which can be queried by the LWM2M Server. The host device is any integrated device with an embedded cellular radio module.",
+      "oma:id": 10299,
+      "sdfProperty": {
+        "Manufacturer": {
+          "label": "Manufacturer",
+          "description": "Host device manufacturers name (OEM).",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string"
+        },
+        "Model": {
+          "label": "Model",
+          "description": "Identifier of the model name or number determined by device manufacturer.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "UniqueID": {
+          "label": "UniqueID",
+          "description": "Unique ID assigned by an manufacturer or other body. Used to uniquely identify a host device. Examples include serial # or UUID.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "FirmwareVersion": {
+          "label": "FirmwareVersion",
+          "description": "Current Firmware version of the host device. (manufacturer specified string).",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string"
+        },
+        "SoftwareVersion": {
+          "label": "SoftwareVersion",
+          "description": "Current software version of the host device. (manufacturer specified string).",
+          "oma:id": 4,
+          "writable": false,
+          "type": "string"
+        },
+        "HardwareVersion": {
+          "label": "HardwareVersion",
+          "description": "Current hardware version of the host device. (manufacturer specified string).",
+          "oma:id": 5,
+          "writable": false,
+          "type": "string"
+        },
+        "DateStamp": {
+          "label": "DateStamp",
+          "description": "UTC value of the time and date of the last Firmware or Software update. Format:MM:DD:YYYY HH:MM:SS",
+          "oma:id": 6,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/HostDevice/sdfProperty/Manufacturer",
+        "#/sdfObject/HostDevice/sdfProperty/Model",
+        "#/sdfObject/HostDevice/sdfProperty/UniqueID",
+        "#/sdfObject/HostDevice/sdfProperty/FirmwareVersion"
+      ]
+    }
+  }
+}

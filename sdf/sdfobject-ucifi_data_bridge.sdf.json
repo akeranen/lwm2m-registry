@@ -1,0 +1,68 @@
+{
+  "info": {
+    "title": "OMA uCIFI data bridge (Object ID 3414)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2020 uCIFI Alliance",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "uCIFI_data_bridge": {
+      "label": "uCIFI data bridge",
+      "description": "The uCIFI data bridge object may be used to transport data from a 3rd party device, operating a proprietary network or protocol, over a LwM2M compliant network.",
+      "oma:id": 3414,
+      "sdfProperty": {
+        "Payload": {
+          "label": "Payload",
+          "description": "Content of the message that is to be transported.",
+          "oma:id": 1,
+          "type": "string"
+        },
+        "Hash": {
+          "label": "Hash",
+          "description": "Hash to check the consistency of the data payload. Hash mechanism and calculation is vendor-specific.",
+          "oma:id": 2,
+          "type": "string"
+        },
+        "Cumulated_daily_data_volume_up": {
+          "label": "Cumulated daily data volume up",
+          "description": "Cumulated volume of data received by the device since beginning of the day. This information could be used for data invoicing.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Cumulated_daily_data_volume_down": {
+          "label": "Cumulated daily data volume down",
+          "description": "Cumulated volume of data sent by the device since beginning of the day. This information could be used for data invoicing.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Cumulated_daily_data_volume_total": {
+          "label": "Cumulated daily data volume total",
+          "description": "Cumulated volume of data sent and received by/from the device since beginning of the day. This information could be used for data invoicing.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Communication_error": {
+          "label": "Communication error",
+          "description": "Set to True if the device detects a difference in a received payload and the hash.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/uCIFI_data_bridge/sdfProperty/Payload"
+      ]
+    }
+  }
+}

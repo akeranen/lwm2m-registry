@@ -1,0 +1,167 @@
+{
+  "info": {
+    "title": "OMA Connectivity Monitoring (Object ID 4)",
+    "version": "2023-04-18",
+    "copyright": "2020 Open Mobile Alliance",
+    "license": "BSD-3-OMA",
+    "oma:info": {
+      "permanent_document": {
+        "file": "OMA-SUP-XML_4-V1_3-20201110-A.xml",
+        "path": "http://www.openmobilealliance.org/release/ObjLwM2M_Conn_Mon/"
+      },
+      "lwm2m_registry": {
+        "file": "4.xml",
+        "path": "https://github.com/OpenMobileAlliance/lwm2m-registry"
+      },
+      "normative_information": {
+        "ts": "OMA-TS-LightweightM2M_Core-V1_2",
+        "ts_url": "http://www.openmobilealliance.org/release/LightweightM2M/",
+        "bug_reporting": "https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues"
+      }
+    }
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Connectivity_Monitoring": {
+      "label": "Connectivity Monitoring",
+      "description": "This LwM2M Object enables monitoring of parameters related to network connectivity.\r\nIn this general connectivity Object, the Resources are limited to the most general cases common to most network bearers. It is recommended to read the description, which refers to relevant standard development organizations (e.g. 3GPP, IEEE).\r\nThe goal of the Connectivity Monitoring Object is to carry information reflecting the more up to date values of the current connection for monitoring purposes. Resources such as Link Quality, Radio Signal Strength, Cell ID are retrieved during connected mode at least for cellular networks.",
+      "oma:id": 4,
+      "sdfProperty": {
+        "Network_Bearer": {
+          "label": "Network Bearer",
+          "description": "Indicates the network bearer used for the current LwM2M communication session from the network bearer list below. \r\nThe number range is split into three categories:\r\n0 - 20 are Cellular Bearers \r\n21 - 40 are Wireless Bearers \r\n41 - 50 are Wireline Bearers\r\nMore specifically: \r\n0: GSM cellular network\r\n1: TD-SCDMA cellular network\r\n2: WCDMA cellular network\r\n3: CDMA2000 cellular network\r\n4: WiMAX cellular network\r\n5: LTE-TDD cellular network\r\n6: LTE-FDD cellular network\r\n7: NB-IoT\r\n8: 5G-NR TDD\r\n9: 5G-NR FDD\r\n10 - 20: Reserved for other types of cellular network\r\n21: WLAN network\r\n22: Bluetooth network\r\n23: IEEE 802.15.4 network\r\n24 - 40: Reserved for other types of local wireless network\r\n41: Ethernet\r\n42: DSL\r\n43: PLC\r\n44 - 50: reserved for other types of wireline networks.",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 50
+        },
+        "Available_Network_Bearer": {
+          "label": "Available Network Bearer",
+          "description": "Indicates a list of current available network bearer. Each Resource Instance has a value from the network bearer list.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 0,
+          "maximum": 50
+        },
+        "Radio_Signal_Strength": {
+          "label": "Radio Signal Strength",
+          "description": "Indicates the average value of the received signal strength indication used in the\r\ncurrent network bearer (as indicated by Resource 0 of this Object). The value is expressed in dBm. For the following network bearers the signal strength parameters indicated below are represented by this resource:\r\nGSM:    RSSI\r\nUMTS:   RSCP\r\nLTE:    RSRP\r\nNB-IoT: NRSRP\r\nFor more details on Network Measurement Report, refer to the appropriate Cellular or Wireless Network standards, (e.g. for LTE Cellular Network\r\nrefer to 3GPP TS 36.133 specification).",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "Link_Quality": {
+          "label": "Link Quality",
+          "description": "This contains received link quality  e.g. LQI for IEEE 802.15.4 (range 0...255), RxQual Downlink for GSM (range 0...7, refer to [3GPP 44.018] for more details on Network Measurement Report encoding), RSRQ for LTE, (refer to [3GPP 36.214]), NRSRQ for NB-IoT (refer to [3GPP 36.214]).",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "IP_Addresses": {
+          "label": "IP Addresses",
+          "description": "The IP addresses assigned to the connectivity interface. (e.g. IPv4, IPv6, etc.)",
+          "oma:id": 4,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Router_IP_Addresses": {
+          "label": "Router IP Addresses",
+          "description": "The IP address of the next-hop IP router, on each of the interfaces specified in resource 4 (IP Addresses).\r\nNote: This IP Address doesn't indicate the Server IP address.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Link_Utilization": {
+          "label": "Link Utilization",
+          "description": "The percentage indicating the average utilization of the link to the next-hop IP router.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "APN": {
+          "label": "APN",
+          "description": "Access Point Name in case Network Bearer Resource is a Cellular Network.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Cell_ID": {
+          "label": "Cell ID",
+          "description": "Serving Cell ID in case Network Bearer Resource is a Cellular Network.\r\nAs specified in TS [3GPP 23.003] and in [3GPP. 24.008]. Range (0...65535) in GSM/EDGE\r\nUTRAN Cell ID has a length of 28 bits.\r\nCell Identity in WCDMA/TD-SCDMA. Range: (0...268435455).\r\nLTE Cell ID has a length of 28 bits.\r\nParameter definitions in [3GPP 25.331].",
+          "oma:id": 8,
+          "writable": false,
+          "type": "integer"
+        },
+        "SMNC": {
+          "label": "SMNC",
+          "description": "Serving Mobile Network Code. This is applicable when the Network Bearer Resource value is referring to a cellular network.\r\nAs specified in TS [3GPP 23.003].",
+          "oma:id": 9,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 999
+        },
+        "SMCC": {
+          "label": "SMCC",
+          "description": "Serving Mobile Country Code. This is applicable when the Network Bearer Resource value is referring to a cellular network.\r\nAs specified in TS [3GPP 23.003].",
+          "oma:id": 10,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 999
+        },
+        "SignalSNR": {
+          "label": "SignalSNR",
+          "description": "SINR: Signal to Interference plus Noise Ratio SINR is the ratio of the strength of the received signal to the strength of the received interference signal (noise and interference).",
+          "oma:id": 11,
+          "writable": false,
+          "type": "integer",
+          "unit": "dB"
+        },
+        "LAC": {
+          "label": "LAC",
+          "description": "Location Area Code in case Network Bearer Resource is a Cellular Network. As specified in TS [3GPP 23.003] and in [3GPP. 24.008]",
+          "oma:id": 12,
+          "writable": false,
+          "type": "integer"
+        },
+        "Coverage_Enhancement_Level": {
+          "label": "Coverage Enhancement Level",
+          "description": "Indicates the Coverage Enhancement Level of the UE in the serving cell. The Coverage Enhancement levels are defined and specified in 3GPP TS 36.331 and 36.213.\r\n\t\t0: No Coverage Enhancement in the serving cell\r\n\t\t1: Coverage Enhancement level 0\r\n\t\t2: Coverage Enhancement level 1\r\n\t\t3: Coverage Enhancement level 2\r\n\t\t4: Coverage Enhancement level 3",
+          "oma:id": 13,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Connectivity_Monitoring/sdfProperty/Network_Bearer",
+        "#/sdfObject/Connectivity_Monitoring/sdfProperty/Available_Network_Bearer",
+        "#/sdfObject/Connectivity_Monitoring/sdfProperty/Radio_Signal_Strength",
+        "#/sdfObject/Connectivity_Monitoring/sdfProperty/IP_Addresses"
+      ]
+    }
+  }
+}

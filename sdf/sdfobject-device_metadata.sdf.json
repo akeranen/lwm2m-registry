@@ -1,0 +1,74 @@
+{
+  "info": {
+    "title": "OMA Device Metadata (Object ID 10255)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 ARM.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Device_Metadata": {
+      "label": "Device Metadata",
+      "description": "This object provides a range of information related to device metadata",
+      "oma:id": 10255,
+      "sdfProperty": {
+        "Protocol_supported": {
+          "label": "Protocol supported",
+          "description": "Manifest protocol supported",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "Bootloader_hash": {
+          "label": "Bootloader hash",
+          "description": "Hash of the bootloader. This is used for tracking the version of the bootloader used.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "OEM_bootloader_hash": {
+          "label": "OEM bootloader hash",
+          "description": "If the end-user has modified the bootloader the hash of the modified bootloader is recorded here",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Vendor": {
+          "label": "Vendor",
+          "description": "Vendor Class UUID",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string"
+        },
+        "Class": {
+          "label": "Class",
+          "description": "Class UUID",
+          "oma:id": 4,
+          "writable": false,
+          "type": "string"
+        },
+        "Device": {
+          "label": "Device",
+          "description": "Device UUID",
+          "oma:id": 5,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Device_Metadata/sdfProperty/Protocol_supported",
+        "#/sdfObject/Device_Metadata/sdfProperty/Bootloader_hash",
+        "#/sdfObject/Device_Metadata/sdfProperty/OEM_bootloader_hash",
+        "#/sdfObject/Device_Metadata/sdfProperty/Vendor",
+        "#/sdfObject/Device_Metadata/sdfProperty/Class",
+        "#/sdfObject/Device_Metadata/sdfProperty/Device"
+      ]
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "info": {
+    "title": "OMA Message3Report (Object ID 3377)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Message3Report": {
+      "label": "Message3Report",
+      "description": "RACH message 3 report information",
+      "oma:id": 3377,
+      "sdfProperty": {
+        "tpc": {
+          "label": "tpc",
+          "description": "TPC",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "resourceIndicatorValue": {
+          "label": "resourceIndicatorValue",
+          "description": "Resource Indicator Value",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "cqi": {
+          "label": "cqi",
+          "description": "CQI",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "uplinkDelay": {
+          "label": "uplinkDelay",
+          "description": "0=no delay, 1=delay",
+          "oma:id": 3,
+          "writable": false,
+          "type": "boolean"
+        },
+        "hoppingEnabled": {
+          "label": "hoppingEnabled",
+          "description": "0=Disabled, 1=Enabled",
+          "oma:id": 4,
+          "writable": false,
+          "type": "boolean"
+        },
+        "numRb": {
+          "label": "numRb",
+          "description": "num RB",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer"
+        },
+        "transportBlockSizeIndex": {
+          "label": "transportBlockSizeIndex",
+          "description": "Transport Block Size Index",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer"
+        },
+        "ModulationType": {
+          "label": "ModulationType",
+          "description": "Modulation Type",
+          "oma:id": 7,
+          "writable": false,
+          "type": "integer"
+        },
+        "redundancyVersionIndex": {
+          "label": "redundancyVersionIndex",
+          "description": "Redundancy Version Index",
+          "oma:id": 8,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Message3Report/sdfProperty/tpc",
+        "#/sdfObject/Message3Report/sdfProperty/resourceIndicatorValue",
+        "#/sdfObject/Message3Report/sdfProperty/cqi",
+        "#/sdfObject/Message3Report/sdfProperty/uplinkDelay",
+        "#/sdfObject/Message3Report/sdfProperty/hoppingEnabled",
+        "#/sdfObject/Message3Report/sdfProperty/numRb",
+        "#/sdfObject/Message3Report/sdfProperty/transportBlockSizeIndex",
+        "#/sdfObject/Message3Report/sdfProperty/ModulationType",
+        "#/sdfObject/Message3Report/sdfProperty/redundancyVersionIndex"
+      ]
+    }
+  }
+}

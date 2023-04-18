@@ -1,0 +1,50 @@
+{
+  "info": {
+    "title": "OMA SCA PM (Object ID 10328)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "SCA_PM": {
+      "label": "SCA PM",
+      "description": "This LWM2M Object includes all PM items belongs to a specific SCA.",
+      "oma:id": 10328,
+      "sdfProperty": {
+        "SCA_Name": {
+          "label": "SCA Name",
+          "description": "The name of the SCA.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "SCA_Current": {
+          "label": "SCA Current",
+          "description": "The current of the SCA.",
+          "oma:id": 605,
+          "writable": false,
+          "type": "number",
+          "unit": "A"
+        },
+        "SCA_Temperate": {
+          "label": "SCA Temperate",
+          "description": "SCA Temperature.",
+          "oma:id": 606,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/SCA_PM/sdfProperty/SCA_Name",
+        "#/sdfObject/SCA_PM/sdfProperty/SCA_Current",
+        "#/sdfObject/SCA_PM/sdfProperty/SCA_Temperate"
+      ]
+    }
+  }
+}

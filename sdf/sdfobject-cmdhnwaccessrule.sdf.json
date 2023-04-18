@@ -1,0 +1,75 @@
+{
+  "info": {
+    "title": "OMA CmdhNwAccessRule (Object ID 2055)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 oneM2M Partners.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CmdhNwAccessRule": {
+      "label": "CmdhNwAccessRule",
+      "description": "This Object defines limits in usage of specific underlying networks for forwarding information to other CSEs during processing of CMDH-related requests in a CSE.",
+      "oma:id": 2055,
+      "sdfProperty": {
+        "TargetNetwork": {
+          "label": "TargetNetwork",
+          "description": "Contains identifiers of Underlying networks",
+          "oma:id": 0,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "SpreadingWaitTime": {
+          "label": "SpreadingWaitTime",
+          "description": "Contains a value in ms such that before accessing the underlying network (typically to forward an incoming request), the CSE will wait for an additional amount of time randomly chosen between 0 and this value",
+          "oma:id": 1,
+          "type": "integer",
+          "unit": "ms"
+        },
+        "MinReqVolume": {
+          "label": "MinReqVolume",
+          "description": "Minimum amount of data that needs to be aggregated before any of the Underlying Networks matching with the targetNetwork Resource of the current Instance of the  CmdhNwAccessRule Object can be used for forwarding information to other CSEs.",
+          "oma:id": 2,
+          "type": "integer",
+          "unit": "B"
+        },
+        "BackOffParameters": {
+          "label": "BackOffParameters",
+          "description": "Reference to an Instance of BackOffParameterSet Object defining parameters that define how usage of any of the Underlying Networks matching with the targetNetwork Resource  of that Object Instance, shall be handled when attempts to use such networks have failed.",
+          "oma:id": 3,
+          "type": "object",
+          "sdfType": "object-link"
+        },
+        "OtherConditions": {
+          "label": "OtherConditions",
+          "description": "List of additional conditions that need to be fulfilled before any of the Underlying Networks matching with the TargetNetwork Resource of this CmdhNwAccessRule Object Instance can be used for forwarding information to other CSEs.",
+          "oma:id": 4,
+          "type": "string"
+        },
+        "AllowedSchedule": {
+          "label": "AllowedSchedule",
+          "description": "Contains time schedules in form of extended crontab syntax defined in oneM2M Protocol TS-0004",
+          "oma:id": 5,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/CmdhNwAccessRule/sdfProperty/TargetNetwork",
+        "#/sdfObject/CmdhNwAccessRule/sdfProperty/SpreadingWaitTime",
+        "#/sdfObject/CmdhNwAccessRule/sdfProperty/MinReqVolume",
+        "#/sdfObject/CmdhNwAccessRule/sdfProperty/BackOffParameters",
+        "#/sdfObject/CmdhNwAccessRule/sdfProperty/OtherConditions",
+        "#/sdfObject/CmdhNwAccessRule/sdfProperty/AllowedSchedule"
+      ]
+    }
+  }
+}

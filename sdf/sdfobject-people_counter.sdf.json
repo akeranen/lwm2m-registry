@@ -1,0 +1,77 @@
+{
+  "info": {
+    "title": "OMA People counter (Object ID 3434)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2020 uCIFI Alliance",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "People_counter": {
+      "label": "People counter",
+      "description": "The uCIFI people counter provides people counting information using Bluetooth beacon or any other method.",
+      "oma:id": 3434,
+      "sdfProperty": {
+        "Actual_number_of_persons": {
+          "label": "Actual number of persons",
+          "description": "Number of persons currently identified by the device.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "Daily_number_of_persons": {
+          "label": "Daily number of persons",
+          "description": "Cumulated number of persons detected by the device since beginning of the day.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "Cumulated_number_of_persons": {
+          "label": "Cumulated number of persons",
+          "description": "Cumulated number of persons detected by the device since last reset.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "Daily_number_of_passages": {
+          "label": "Daily number of passages",
+          "description": "Number of passages (same people could be counted multiple times if identified several times) today.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer"
+        },
+        "Cumulated_number_of_passages": {
+          "label": "Cumulated number of passages",
+          "description": "Cumulated number of passages since last reset.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer"
+        },
+        "Type_of_sensor": {
+          "label": "Type of sensor",
+          "description": "Type of sensor (e.g. Bluetooth beacon, WIFI detector).",
+          "oma:id": 8,
+          "type": "string"
+        }
+      },
+      "sdfAction": {
+        "Reset_of_cumulated_number": {
+          "label": "Reset of cumulated number",
+          "description": "Reset the cumulated number of persons.",
+          "oma:id": 4
+        },
+        "Reset_of_cumulated_number_of_passages": {
+          "label": "Reset of cumulated number of passages",
+          "description": "Reset the cumulated number of passages.",
+          "oma:id": 7
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/People_counter/sdfProperty/Actual_number_of_persons"
+      ]
+    }
+  }
+}

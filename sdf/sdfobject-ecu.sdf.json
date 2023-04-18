@@ -1,0 +1,48 @@
+{
+  "info": {
+    "title": "OMA ECU (Object ID 10324)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "ECU": {
+      "label": "ECU",
+      "description": "This LWM2M Object includes ECU(End Control Unit) information.",
+      "oma:id": 10324,
+      "sdfProperty": {
+        "ECU_ID": {
+          "label": "ECU ID",
+          "description": "The ECU identity.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "ECU_FM_Version": {
+          "label": "ECU FM Version",
+          "description": "The firmware version of the ECU.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "On_time": {
+          "label": "On time",
+          "description": "The time in seconds that the device has been on. Writing a value of 0 resets the counter.",
+          "oma:id": 5852,
+          "type": "integer",
+          "unit": "s"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/ECU/sdfProperty/ECU_ID",
+        "#/sdfObject/ECU/sdfProperty/ECU_FM_Version",
+        "#/sdfObject/ECU/sdfProperty/On_time"
+      ]
+    }
+  }
+}

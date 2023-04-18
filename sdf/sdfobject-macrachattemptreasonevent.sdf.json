@@ -1,0 +1,64 @@
+{
+  "info": {
+    "title": "OMA macRachAttemptReasonEvent (Object ID 3367)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "macRachAttemptReasonEvent": {
+      "label": "macRachAttemptReasonEvent",
+      "description": "RACH Information - reason for initiating RACH",
+      "oma:id": 3367,
+      "sdfProperty": {
+        "MacRachAttemptReasonType": {
+          "label": "MacRachAttemptReasonType",
+          "description": "1 = Connection-Request\r\n2 = Radio-Link-Failure\r\n3 = UL-Data-Arrival\r\n4 = DL-Data-Arrival\r\n5 = Handover",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "ueID": {
+          "label": "ueID",
+          "description": "UE ID",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "contentionBased": {
+          "label": "contentionBased",
+          "description": "1 = Contention based\r\n0 = otherwise",
+          "oma:id": 2,
+          "writable": false,
+          "type": "boolean"
+        },
+        "preamble": {
+          "label": "preamble",
+          "description": "preamble= The random access preambles are generated from Zadoff-Chu sequences with zero correlation zone (3GPP TS 36.211)",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "preambleGroupChosen": {
+          "label": "preambleGroupChosen",
+          "description": "0: Group A, 1: Group B",
+          "oma:id": 4,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/macRachAttemptReasonEvent/sdfProperty/MacRachAttemptReasonType",
+        "#/sdfObject/macRachAttemptReasonEvent/sdfProperty/ueID",
+        "#/sdfObject/macRachAttemptReasonEvent/sdfProperty/contentionBased",
+        "#/sdfObject/macRachAttemptReasonEvent/sdfProperty/preamble",
+        "#/sdfObject/macRachAttemptReasonEvent/sdfProperty/preambleGroupChosen"
+      ]
+    }
+  }
+}

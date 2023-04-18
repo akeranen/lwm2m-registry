@@ -1,0 +1,318 @@
+{
+  "info": {
+    "title": "OMA LWM2M APN Connection Profile (Object ID 11)",
+    "version": "2023-04-18",
+    "copyright": "2020 Open Mobile Alliance",
+    "license": "BSD-3-OMA",
+    "oma:info": {
+      "permanent_document": {
+        "file": "OMA-SUP-XML_11-V1_1-20201110-A.xml",
+        "path": "http://www.openmobilealliance.org/release/ObjLwM2M_APN_Conn/"
+      },
+      "lwm2m_registry": {
+        "file": "11.xml",
+        "path": "https://github.com/OpenMobileAlliance/lwm2m-registry"
+      },
+      "normative_information": {
+        "ts": "OMA-TS-LightweightM2M_Core-V1_2",
+        "ts_url": "http://www.openmobilealliance.org/release/LightweightM2M/",
+        "bug_reporting": "https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues"
+      }
+    }
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LWM2M_APN_Connection_Profile": {
+      "label": "LWM2M APN Connection Profile",
+      "description": "This object specifies resources to enable a device to connect to an APN.",
+      "oma:id": 11,
+      "sdfProperty": {
+        "Profile_name": {
+          "label": "Profile name",
+          "description": "Human-readable identifier. Multiple connection profiles can share the same APN value but e.g. have different credentials.",
+          "oma:id": 0,
+          "type": "string"
+        },
+        "APN": {
+          "label": "APN",
+          "description": "Presented to network during connection to PDN e.g. ‘internet.15.234’.\r\n\t\t\t\tThis resource is not included in case ‘Auto select APN by device’ resource has the value TRUE.\r\n\t\t\t\tIf the APN resource is present but contains an empty string, then the device shall not provide an APN in the connection request (invoking default APN procedures in the network).",
+          "oma:id": 1,
+          "type": "string"
+        },
+        "Auto_select_APN_by_device": {
+          "label": "Auto select APN by device",
+          "description": "If this resource is present for a connection profile, it enables the device to choose an APN according to a device specific algorithm. It provides a fall-back mechanism e.g. for some MVNO SIMs the configured APN may not work.  Resource not included or set to False in case the ‘APN’ resource is specified.",
+          "oma:id": 2,
+          "type": "boolean"
+        },
+        "Enable_status": {
+          "label": "Enable status",
+          "description": "Allows the profile to be remotely enabled or disabled. True: APN profile is enabled. False: APN profile is disabled. If the status is set to disabled (False) while a data connection for that profile is active, that data connection will be released.",
+          "oma:id": 3,
+          "type": "boolean"
+        },
+        "Authentication_Type": {
+          "label": "Authentication Type",
+          "description": "Enumerated type:\r\n\t\t\t\t0: PAP\r\n\t\t\t\t1: CHAP\r\n\t\t\t\t2: PAP or CHAP\r\n\t\t\t\t3: None",
+          "oma:id": 4,
+          "type": "integer"
+        },
+        "User_Name": {
+          "label": "User Name",
+          "description": "Used with e.g. PAP.",
+          "oma:id": 5,
+          "type": "string"
+        },
+        "Secret": {
+          "label": "Secret",
+          "description": "Used with e.g. PAP.",
+          "oma:id": 6,
+          "type": "string"
+        },
+        "Reconnect_Schedule": {
+          "label": "Reconnect Schedule",
+          "description": "Comma separated list of retry delay values in seconds to be used in case of unsuccessful connection establishment attempts. e.g. \"10,60,600,3600,86400\"",
+          "oma:id": 7,
+          "type": "string"
+        },
+        "Validity_(MCC__MNC)": {
+          "label": "Validity (MCC, MNC)",
+          "description": "Coma separated mobile country code, then mobile network code - for which this APN is valid.",
+          "oma:id": 8,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Connection_establishment_time_(1)": {
+          "label": "Connection establishment time (1)",
+          "description": "UTC time of connection request. See note (1)",
+          "oma:id": 9,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "number",
+            "sdfType": "unix-time"
+          }
+        },
+        "Connection_establishment_result_(1)": {
+          "label": "Connection establishment result (1)",
+          "description": "0 = accepted\r\n\t\t\t\t1 = rejected",
+          "oma:id": 10,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Connection_establishment_reject_cause_(1)": {
+          "label": "Connection establishment reject cause (1)",
+          "description": "Reject cause, see [3GPP-TS_24.008, 3GPP-TS_24.301]",
+          "oma:id": 11,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 0,
+          "maximum": 111
+        },
+        "Connection_end_time_(1)": {
+          "label": "Connection end time (1)",
+          "description": "UTC time of connection end.",
+          "oma:id": 12,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "number",
+            "sdfType": "unix-time"
+          }
+        },
+        "TotalBytesSent": {
+          "label": "TotalBytesSent",
+          "description": "Rolling counter for total number of bytes sent via this interface since last device reset.",
+          "oma:id": 13,
+          "writable": false,
+          "type": "integer"
+        },
+        "TotalBytesReceived": {
+          "label": "TotalBytesReceived",
+          "description": "Rolling counter for total number of bytes received via this interface since last device reset.",
+          "oma:id": 14,
+          "writable": false,
+          "type": "integer"
+        },
+        "IP_address_(2)": {
+          "label": "IP address (2)",
+          "description": "May be IPv4 or IPv6 address.",
+          "oma:id": 15,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Prefix_length(2)": {
+          "label": "Prefix length(2)",
+          "description": "Associated with IPv6 address.",
+          "oma:id": 16,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Subnet_mask_(2)": {
+          "label": "Subnet mask (2)",
+          "description": "Subnet mask.",
+          "oma:id": 17,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Gateway_(2)": {
+          "label": "Gateway (2)",
+          "description": "Gateway.",
+          "oma:id": 18,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Primary_DNS_address_(2)": {
+          "label": "Primary DNS address (2)",
+          "description": "Primary DNS address.",
+          "oma:id": 19,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Secondary_DNS_address_(2)": {
+          "label": "Secondary DNS address (2)",
+          "description": "Secondary DNS address.",
+          "oma:id": 20,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "QCI_(3)": {
+          "label": "QCI (3)",
+          "description": "Quality of service Class Identifier QCI), applicable to LTE and NB-IoT only\r\n\t\t\t\tThis resource enables the LWM2M server to signal the LWM2M client which QCI it shall request from the network.\r\n\t\t\t\tSee [3GPP-TS_23.203, and 3GPP-TS_24.301] for a description of QCI values. See note (3).",
+          "oma:id": 21,
+          "writable": false,
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9
+        },
+        "Vendor_specific_extensions": {
+          "label": "Vendor specific extensions",
+          "description": "Links to a vendor specific object.",
+          "oma:id": 22,
+          "writable": false,
+          "type": "object",
+          "sdfType": "object-link"
+        },
+        "TotalPacketsSent": {
+          "label": "TotalPacketsSent",
+          "description": "Rolling counter for total number of packets sent via this interface since last device reset.",
+          "oma:id": 23,
+          "writable": false,
+          "type": "integer"
+        },
+        "PDN_Type": {
+          "label": "PDN Type",
+          "description": "0=Non-IP\r\n\t\t\t\t1=IPv4\r\n\t\t\t\t2=IPv6\r\n\t\t\t\t3=IPv4v6",
+          "oma:id": 24,
+          "type": "integer"
+        },
+        "APN_Rate_Control": {
+          "label": "APN Rate Control",
+          "description": "Determines the number of allowed uplink PDU transmissions per time interval per APN.\r\n\t\t\t\tRate Control information is part of the Protocol Configuration Options (PCO) according to  [3GPP-TS_24.301], [3GPP-TS_24.008 and [3GPP-TS_27.060]",
+          "oma:id": 25,
+          "writable": false,
+          "type": "integer"
+        },
+        "Serving_PLMN_Rate_control": {
+          "label": "Serving PLMN Rate control",
+          "description": "For data sent over NAS, this indicates the maximum number of messages the UE can send per time unit (Resource 27) per PDN connection. See [3GPP-TS_23.401] clause 4.7.7.2 and [3GPP-TS_24.008] clause 10.5.6.3.2.",
+          "oma:id": 26,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "Uplink_Time_Unit": {
+          "label": "Uplink Time Unit",
+          "description": "In association with APN Rate Control (Resource 28), this indicates the units of the period over which the maximum number of PDU transmissions are measured. [3GPP-TS_24.008] clause 10.5.6.3.2 specifies that 0=unrestricted, 1=minute, 2=hour, 3=day and 4=week.",
+          "oma:id": 27,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 4
+        },
+        "APN_Rate_Control_for_Exception_Data": {
+          "label": "APN Rate Control for Exception Data",
+          "description": "Determines the number of allowed uplink PDU transmissions for exception data per time interval for this APN. This\r\n\t\t\t\tRate Control information is part of the Protocol Configuration Options (PCO) according to  [3GPP-TS_24.301], [3GPP-TS_24.008 and [3GPP-TS_27.060]",
+          "oma:id": 28,
+          "writable": false,
+          "type": "integer"
+        },
+        "APN_Exception_Data_Uplink_Time_Unit": {
+          "label": "APN Exception Data Uplink Time Unit",
+          "description": "In association with APN Rate Control for Exception Data (Resource 28), this indicates the units of the period over which the maximum number of messages is measured. [3GPP-TS_24.008] clause 10.5.6.3.2 specifies that 0=unrestricted, 1=minute, 2=hour, 3=day and 4=week.",
+          "oma:id": 29,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 4
+        },
+        "Supported_RAT_Types": {
+          "label": "Supported RAT Types",
+          "description": "This resource specifies the supported RAT Types that the LWM2M Client can use for connecting to the specified APN.\r\n\t\t\t\tEach instance is one of these values:\r\n\t\t\t\t1: 3GPP PS\r\n\t\t\t\t2: 3GPP PS GSM (GPRS)\r\n\t\t\t\t3: 3GPP PS UMTS\r\n\t\t\t\t4: 3GPP PS LTE\r\n\t\t\t\t5: 1xEV-DO\r\n\t\t\t\t6: 3GPP CS\r\n\t\t\t\t12: 3GPP PS LTE with CIoT EPS optimisations, User Plane\r\n\t\t\t\t13: 3GPP PS LTE with CIoT EPS optimisations, Control Plane\r\n\t\t\t\t14: 3GPP PS NB-IoT Control Plane optimisations\r\n\t\t\t\t15: 3GPP PS NB-IoT User Plane optimisations\r\n\t\t\t\t16-100: Reserved for future use",
+          "oma:id": 30,
+          "minimum": 0,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "RDS_Application_ID": {
+          "label": "RDS Application ID",
+          "description": "This resource provides the Application ID to correlate to the appropriate instance Ids of Resources 32 and 33.",
+          "oma:id": 31,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "RDS_Destination_Port": {
+          "label": "RDS Destination Port",
+          "description": "This resource provides the correlated RDS Destination Port Number (as defined in 3GPP TS 24.250) to use for contacting the LwM2M Server identifed in Resource 29 when communicating through the SCEF across the Non-IP binding (Resource 24 must equal 0).",
+          "oma:id": 32,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 0,
+          "maximum": 15
+        },
+        "RDS_Source_Port": {
+          "label": "RDS Source Port",
+          "description": "This resource provides the correlated RDS Source Port Number (as defined in 3GPP TS 24.250) to use for contacting the LwM2M Server identifed in Resource 29 when communicating through the SCEF across the Non-IP binding (Resource 24 must equal 0).",
+          "oma:id": 33,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 0,
+          "maximum": 15
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/LWM2M_APN_Connection_Profile/sdfProperty/Profile_name",
+        "#/sdfObject/LWM2M_APN_Connection_Profile/sdfProperty/Authentication_Type"
+      ]
+    }
+  }
+}

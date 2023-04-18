@@ -1,0 +1,109 @@
+{
+  "info": {
+    "title": "OMA MQTT Broker (Object ID 18830)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 IoTerop. All rights reserved.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "MQTT_Broker": {
+      "label": "MQTT Broker",
+      "description": "This LwM2M Object provides the information to connect to an MQTT Broker i.e. URI, configuration, and keying material.",
+      "oma:id": 18830,
+      "sdfProperty": {
+        "URI": {
+          "label": "URI",
+          "description": "URI of the MQTT broker.",
+          "oma:id": 0,
+          "type": "string"
+        },
+        "Client_Identifier": {
+          "label": "Client Identifier",
+          "description": "MQTT Client Identifier to use when connecting to this MQTT broker.",
+          "oma:id": 1,
+          "type": "string"
+        },
+        "Clean_Session": {
+          "label": "Clean Session",
+          "description": "The Clean Session value to declare in the MQTT CONNECT message.",
+          "oma:id": 2,
+          "type": "boolean"
+        },
+        "Keep_Alive": {
+          "label": "Keep Alive",
+          "description": "The Keep Alive value to declare in the MQTT CONNECT message.",
+          "oma:id": 3,
+          "minimum": 0,
+          "type": "integer",
+          "unit": "s",
+          "maximum": 65535
+        },
+        "User_Name": {
+          "label": "User Name",
+          "description": "The User Name to declare in the MQTT CONNECT message.",
+          "oma:id": 4,
+          "type": "string"
+        },
+        "Password": {
+          "label": "Password",
+          "description": "The Password value to declare in the MQTT CONNECT message.",
+          "oma:id": 5,
+          "type": "string",
+          "sdfType": "byte-string",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "Security_Mode": {
+          "label": "Security Mode",
+          "description": "Determines which security mode is used\r\n                    0: PreShared Key mode\r\n                    1: Raw Public Key mode\r\n                    2: Certificate mode\r\n                    3: NoSec mode\r\n                    4: Certificate mode with EST",
+          "oma:id": 6,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "Public_Key_or_Identity": {
+          "label": "Public Key or Identity",
+          "description": "Stores the Device’s certificate, public key (RPK mode) or PSK Identity (PSK mode).",
+          "oma:id": 7,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "MQTT_Broker_Public_Key": {
+          "label": "MQTT Broker Public Key",
+          "description": "Stores the MQTT Broker’s certificate, public key (RPK mode) or trust anchor. The Certificate Usage Resource determines the content of this resource.",
+          "oma:id": 8,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Secret_Key": {
+          "label": "Secret Key",
+          "description": "Stores the secret key (PSK mode) or private key (RPK or certificate mode).",
+          "oma:id": 9,
+          "readable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Certificate_Usage": {
+          "label": "Certificate Usage",
+          "description": "The Certificate Usage Resource specifies the semantic of the certificate or raw public key stored in the \"MQTT Broker Public Key\" Resource, which is used to match the certificate presented in the TLS/DTLS handshake. The currently defined values are:\r\n                    0: CA constraint\r\n                    1: service certificate constraint\r\n                    2: trust anchor assertion\r\n                    3: domain-issued certificate\r\n\r\n                    When this Resource is absent, value (3) for domain issued certificate mode is assumed.",
+          "oma:id": 10,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/MQTT_Broker/sdfProperty/URI",
+        "#/sdfObject/MQTT_Broker/sdfProperty/Client_Identifier",
+        "#/sdfObject/MQTT_Broker/sdfProperty/Clean_Session",
+        "#/sdfObject/MQTT_Broker/sdfProperty/Keep_Alive",
+        "#/sdfObject/MQTT_Broker/sdfProperty/Security_Mode"
+      ]
+    }
+  }
+}

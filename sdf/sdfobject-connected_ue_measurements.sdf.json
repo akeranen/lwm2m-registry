@@ -1,0 +1,56 @@
+{
+  "info": {
+    "title": "OMA Connected UE Measurements (Object ID 10248)",
+    "version": "2023-04-18",
+    "copyright": "Copyright 2019 Vodafone Group.",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Connected_UE_Measurements": {
+      "label": "Connected UE Measurements",
+      "description": "This LWM2M Object provides a range of measurements of connected UEs and provides an Object link to the Connected UE report.",
+      "oma:id": 10248,
+      "sdfProperty": {
+        "Number_of_Connected_Users": {
+          "label": "Number of Connected Users",
+          "description": "The number of different UEs currently connected to the eNB (i.e. in RRC_CONNECTED state).",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "Cumulative_Number_of_Unique_Users": {
+          "label": "Cumulative Number of Unique Users",
+          "description": "The number of different UEs that have connected to the eNB over the immediately preceding period specified by the \"Cumulative Measurement Window\" field.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "Connected_UE_Report": {
+          "label": "Connected UE Report",
+          "description": "Provides an Object link to the Connected UE Report which provides a range of information related to the connected UEs.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "sdfType": "object-link"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Connected_UE_Measurements/sdfProperty/Number_of_Connected_Users",
+        "#/sdfObject/Connected_UE_Measurements/sdfProperty/Cumulative_Number_of_Unique_Users",
+        "#/sdfObject/Connected_UE_Measurements/sdfProperty/Connected_UE_Report"
+      ]
+    }
+  }
+}

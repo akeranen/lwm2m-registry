@@ -1,0 +1,40 @@
+{
+  "info": {
+    "title": "OMA Ultrasonic Sensor (Object ID 10360)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Ultrasonic_Sensor": {
+      "label": "Ultrasonic Sensor",
+      "description": "This LWM2M Object includes Ultrasonic Sensor information.",
+      "oma:id": 10360,
+      "sdfProperty": {
+        "Name": {
+          "label": "Name",
+          "description": "The display name of the Ultrasonic Sensor.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Status": {
+          "label": "Status",
+          "description": "0:Normal, 1:Unknown, <0:Failed with error code(negative number).",
+          "oma:id": 50,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Ultrasonic_Sensor/sdfProperty/Name",
+        "#/sdfObject/Ultrasonic_Sensor/sdfProperty/Status"
+      ]
+    }
+  }
+}

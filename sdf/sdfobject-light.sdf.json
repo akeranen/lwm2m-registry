@@ -1,0 +1,47 @@
+{
+  "info": {
+    "title": "OMA Light (Object ID 10350)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Light": {
+      "label": "Light",
+      "description": "This LWM2M Object includes light information.",
+      "oma:id": 10350,
+      "sdfProperty": {
+        "Light_Name": {
+          "label": "Light Name",
+          "description": "The display name of the light.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Light_Status": {
+          "label": "Light Status",
+          "description": "The status of the light, 1:On, 0:Off.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Light_Control": {
+          "label": "Light Control",
+          "description": "Switch on/off the light: Parameter: 1:On, 0:Off",
+          "oma:id": 100
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/Light/sdfProperty/Light_Name",
+        "#/sdfObject/Light/sdfProperty/Light_Status",
+        "#/sdfObject/Light/sdfAction/Light_Control"
+      ]
+    }
+  }
+}

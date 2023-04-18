@@ -1,0 +1,40 @@
+{
+  "info": {
+    "title": "OMA Fan PM (Object ID 10358)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Fan_PM": {
+      "label": "Fan PM",
+      "description": "This LWM2M Object includes all PM items belongs to Fans.",
+      "oma:id": 10358,
+      "sdfProperty": {
+        "Fan_Name": {
+          "label": "Fan Name",
+          "description": "The name of the Fan.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Fan_Speed": {
+          "label": "Fan Speed",
+          "description": "The speed of the Fan.",
+          "oma:id": 609,
+          "writable": false,
+          "type": "integer",
+          "unit": "1/min"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfObject/Fan_PM/sdfProperty/Fan_Name"
+      ]
+    }
+  }
+}

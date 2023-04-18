@@ -1,0 +1,75 @@
+{
+  "info": {
+    "title": "OMA RCU Control (Object ID 10319)",
+    "version": "2023-04-18",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-OMA"
+  },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "RCU_Control": {
+      "label": "RCU Control",
+      "description": "This LWM2M Object includes all operations on RCUs.",
+      "oma:id": 10319,
+      "sdfProperty": {
+        "RCU_Diagnostics_Mode": {
+          "label": "RCU Diagnostics Mode",
+          "description": "If the Diagnostics Mode is switched on or not, \r\n\t\t\t\tthe setting of which is a Boolean value (1,0) where 1 is On and 0 is Off.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "boolean"
+        },
+        "RCU_Log_Recording": {
+          "label": "RCU Log Recording",
+          "description": "If the Log Recording is switched on or not,\r\n\t\t\t\tthe setting of which is a Boolean value (1,0) where 1 is On and 0 is Off.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "RCU_Shutdown": {
+          "label": "RCU Shutdown",
+          "description": "Shut down the RCU.",
+          "oma:id": 100
+        },
+        "RCU_Restart": {
+          "label": "RCU Restart",
+          "description": "Restart the RCU.",
+          "oma:id": 101
+        },
+        "RCU_Deactivate": {
+          "label": "RCU Deactivate",
+          "description": "Deactivate the RCU.",
+          "oma:id": 102
+        },
+        "RCU_Reset": {
+          "label": "RCU Reset",
+          "description": "Reset the RCU to factory settings.",
+          "oma:id": 103
+        },
+        "RCU_Diagnostics_Mode_Control": {
+          "label": "RCU Diagnostics Mode Control",
+          "description": "Switch on/off Diagnostics Mode: Parameter: 1:On, 0:Off",
+          "oma:id": 104
+        },
+        "RCU_Log_Recording_Control": {
+          "label": "RCU Log Recording Control",
+          "description": "Switch on/off the Log Recording, Parameter: 1:On, 0:Off",
+          "oma:id": 105
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/RCU_Control/sdfAction/RCU_Shutdown",
+        "#/sdfObject/RCU_Control/sdfAction/RCU_Restart",
+        "#/sdfObject/RCU_Control/sdfAction/RCU_Deactivate",
+        "#/sdfObject/RCU_Control/sdfAction/RCU_Reset",
+        "#/sdfObject/RCU_Control/sdfAction/RCU_Diagnostics_Mode_Control",
+        "#/sdfObject/RCU_Control/sdfAction/RCU_Log_Recording_Control"
+      ]
+    }
+  }
+}
