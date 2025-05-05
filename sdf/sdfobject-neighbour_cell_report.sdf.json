@@ -1,0 +1,73 @@
+{
+  "info": {
+    "title": "OMA LwM2M Neighbour Cell Report (Object ID 10247)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Vodafone Group.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Neighbour_Cell_Report": {
+      "label": "Neighbour Cell Report",
+      "description": "This LWM2M Object provides the neighbour cell report. The CrowdBox Measurements Object and the Connected UE Report Object have both Objlnk Resources pointing to this Object.",
+      "oma:id": "10247",
+      "sdfProperty": {
+        "Neighbour_PCI": {
+          "label": "Neighbour PCI",
+          "description": "Physical Cell ID of neighbouring LTE cell, as defined in TS 36.211",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 503
+        },
+        "Neighbour_Cell_ID": {
+          "label": "Neighbour Cell ID",
+          "description": "Neighbour cell ID as specified by the cellIdentity field broadcast in SIB1 of the neighbour cell (see TS 36.331).",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "Neighbour_Cell_Rank": {
+          "label": "Neighbour Cell Rank",
+          "description": "Current neighbour cell rank. Neighbour cells should be ordered (ranked) by the CrowdBox according to neighbour cell RSRP, with a higher RSRP corresponding to a lower index. Hence the neighbouring cell with the highest RSRP should be neighbour cell 0, the second neighbour cell 1, and so on.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "Neighbour_Cell_RSRP": {
+          "label": "Neighbour Cell RSRP",
+          "description": "Neighbour cell RSRP, as defined in TS 36.133, Section 9.1.4. Range: RSRP_00; RSRP_01 .. RSRP_97",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 97
+        },
+        "Neighbour_Cell_RSRQ": {
+          "label": "Neighbour Cell RSRQ",
+          "description": "Neighbour cell RSRQ, as defined in TS 36.133, Section 9.1.7. Range: RSRQ_-30; RSRQ_-29 .. RSRQ_46",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "minimum": -30,
+          "maximum": 46
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Neighbour_PCI",
+        "Neighbour_Cell_Rank",
+        "Neighbour_Cell_RSRP",
+        "Neighbour_Cell_RSRQ"
+      ]
+    }
+  }
+}

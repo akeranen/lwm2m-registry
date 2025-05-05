@@ -1,0 +1,55 @@
+{
+  "info": {
+    "title": "OMA LwM2M Sensor Alarm (Object ID 10496)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Sensor_Alarm": {
+      "label": "Sensor Alarm",
+      "description": "The autosen Sensor Alarm object can be used to set alarm conditions for sampled sensor data. If condition is true, an action could be triggered e.g. upload immediately",
+      "oma:id": "10496",
+      "sdfProperty": {
+        "Sensor_Value_Path": {
+          "label": "Sensor Value Path",
+          "description": "Resources are specified using Core Link syntax\r\nExample:\r\nInstance #0: </3303/0/5700>\r\nInstance #1: </3303/1/5700>",
+          "oma:id": 0,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Alarm_Condition": {
+          "label": "Alarm Condition",
+          "description": "0: disabled\r\n1: Upper Bound is exceeded \r\n2: Lower Bound is exceeded\r\n3: In between bounds\r\n4: Outside of bounds",
+          "oma:id": 1,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "Lower_Bound": {
+          "label": "Lower Bound",
+          "description": "Lower bound of the sensor value(s)",
+          "oma:id": 2,
+          "type": "number"
+        },
+        "Upper_Bound": {
+          "label": "Upper Bound",
+          "description": "Upper bound of the sensor value(s)",
+          "oma:id": 3,
+          "type": "number"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Sensor_Value_Path",
+        "Alarm_Condition"
+      ]
+    }
+  }
+}

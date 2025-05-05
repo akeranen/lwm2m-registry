@@ -1,0 +1,69 @@
+{
+  "info": {
+    "title": "OMA LwM2M Thread Commissioning (joiner add) (Object ID 10484)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2023 Hydro-Québec.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Thread_Commissioning_(joiner_add)": {
+      "label": "Thread Commissioning (joiner add)",
+      "description": "This LwM2M Object enables commissioning (commissioner joiner add) of Thread devices on the Network. The target device must be have the \"commissioner\" and \"joiner router\" roles. Ex: \"Border Router\"",
+      "oma:id": "10484",
+      "sdfProperty": {
+        "Joiner_eui64___discerner": {
+          "label": "Joiner eui64 / discerner",
+          "description": "Indicates the Extended Unique Identifier (EUI64) or discerner value that can be accepted by the thread commissioner. Use '*' to match any Joiner.",
+          "oma:id": 0,
+          "type": "string"
+        },
+        "Joiner_PSK": {
+          "label": "Joiner PSK",
+          "description": "Indicates the Pre Shared Key (PSK/PSKd) Identity shared between thread device and thread commisioner.",
+          "oma:id": 1,
+          "type": "string"
+        },
+        "State": {
+          "label": "State",
+          "description": "Provides the commisioner state as Enumerated type:\r\n\t\t\t\t0: Disabled\r\n\t\t\t\t1: Active",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Pending_joiners_IDs": {
+          "label": "Pending joiners IDs",
+          "description": "Reports the commissioner currently accepted (eui64 / discerner) IDs.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "sdfAction": {
+        "Start": {
+          "label": "Start",
+          "description": "Start the commisioning sequence with a default timeout. Using ot-br-posix, this is equivalent to issuing the \"commissioner joiner add [Thread joiner eui64] [Pre Shared Key Identity]\" command. Optionnal commissioning timeout in seconds can be specified using argument 0. Ex 0='60'",
+          "oma:id": 2
+        },
+        "Cancel": {
+          "label": "Cancel",
+          "description": "Stops the commissionning process immediatly.",
+          "oma:id": 3
+        }
+      },
+      "sdfRequired": [
+        "Joiner_eui64___discerner",
+        "Joiner_PSK",
+        "Start"
+      ]
+    }
+  }
+}

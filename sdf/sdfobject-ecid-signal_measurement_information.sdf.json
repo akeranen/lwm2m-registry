@@ -1,0 +1,75 @@
+{
+  "info": {
+    "title": "OMA LwM2M ECID-Signal Measurement Information (Object ID 10256)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2017, Huawei",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "ECID-Signal_Measurement_Information": {
+      "label": "ECID-Signal Measurement Information",
+      "description": "This LWM2M Object provides ECID signal measurements of a device.",
+      "oma:id": "10256",
+      "sdfProperty": {
+        "physCellId": {
+          "label": "physCellId",
+          "description": "This field specifies the physical cell identity of the measured cell.",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer",
+          "unit": "\r\n        "
+        },
+        "ECGI": {
+          "label": "ECGI",
+          "description": "This field specifies cell global ID of the measured cell. The target device shall provide this field if it was able to determine the ECGI of the measured cell at the time of measurement.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer",
+          "unit": "\r\n        "
+        },
+        "arfcnEUTRA": {
+          "label": "arfcnEUTRA",
+          "description": "This field specifies the ARFCN of the measured E-UTRA carrier frequency.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer",
+          "unit": "\r\n        "
+        },
+        "rsrp-Result_": {
+          "label": "rsrp-Result ",
+          "description": "This field specifies the reference signal received power (RSRP) measurement.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer",
+          "unit": "\r\n        "
+        },
+        "rsrq-Result": {
+          "label": "rsrq-Result",
+          "description": "This field specifies the reference signal received quality (RSRQ) measurement.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "unit": "\r\n        "
+        },
+        "ue-RxTxTimeDiff": {
+          "label": "ue-RxTxTimeDiff",
+          "description": "This field specifies the UE Rx-Tx time difference measurement.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer",
+          "unit": "\r\n        "
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "physCellId",
+        "arfcnEUTRA",
+        "rsrp-Result_"
+      ]
+    }
+  }
+}

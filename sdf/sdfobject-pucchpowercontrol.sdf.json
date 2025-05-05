@@ -1,0 +1,56 @@
+{
+  "info": {
+    "title": "OMA LwM2M pucchPowerControl (Object ID 3379)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "pucchPowerControl": {
+      "label": "pucchPowerControl",
+      "description": "PUCCH TX power control information",
+      "oma:id": "3379",
+      "sdfProperty": {
+        "sysFrameNumber": {
+          "label": "sysFrameNumber",
+          "description": "System Frame Number.",
+          "oma:id": 6037,
+          "writable": false,
+          "type": "integer"
+        },
+        "subFrameNumber": {
+          "label": "subFrameNumber",
+          "description": "Sub Frame Number.",
+          "oma:id": 6038,
+          "writable": false,
+          "type": "integer"
+        },
+        "pucchTxPowerValue": {
+          "label": "pucchTxPowerValue",
+          "description": "PUCCH Tx power measurement in dB (-112..23)",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "dlPathLoss": {
+          "label": "dlPathLoss",
+          "description": "Downlink path loss calculated in UE (0..255)",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "sysFrameNumber",
+        "subFrameNumber",
+        "pucchTxPowerValue",
+        "dlPathLoss"
+      ]
+    }
+  }
+}

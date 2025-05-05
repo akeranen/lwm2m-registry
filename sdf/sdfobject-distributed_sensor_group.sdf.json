@@ -1,0 +1,191 @@
+{
+  "info": {
+    "title": "OMA LwM2M Distributed Sensor Group (Object ID 3459)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Distributed_Sensor_Group": {
+      "label": "Distributed Sensor Group",
+      "description": "The uCIFI Distributed Sensor Group allows to configure a device to publish or subscribe to device-to-device communication.",
+      "oma:id": "3459",
+      "sdfProperty": {
+        "Group_State": {
+          "label": "Group State",
+          "description": "The current output state of the sensor Group, derived either from the latest sensor state published to the group, or computed based on all sensor inputs when data Fusion Operation is used [default=NaN]",
+          "oma:id": 0,
+          "writable": false,
+          "type": "number"
+        },
+        "Most_recent_group_activity": {
+          "label": "Most recent group activity",
+          "description": "SUBSCRIBER ONLY UNIX Timestamp for when the last activity in the group was recorded, either by the node sending a message to the group our retrieved from the \"Publishing Timestamp\" of the last message received from the group. [default=0]",
+          "oma:id": 1,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Most_recent_Sensor_Notification": {
+          "label": "Most recent Sensor Notification",
+          "description": "SUBSCRIBER ONLY URI for the last sensor state value published within the group , in the format of </Object/Instance/Resource> (using Core Link syntax), retrieved from the \"Remote Sensor State URI\" field of the last received or sent group message. [default=empty]",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "Most_recent_Sensor_Publisher_ID": {
+          "label": "Most recent Sensor Publisher ID",
+          "description": "SUBSCRIBER ONLY The publisher sensor ID associated to the last registered sensor notification [default=0]",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "Group__Address": {
+          "label": "Group  Address",
+          "description": "PUBLISHER SUBSCRIBER The address where all devices that wish to be part of the group, need to communicate with, either by publishing sensor data to the address or by subscribing to sensor data from the address. In case IP multicast is used for exchange of data within a distributed sensor group, than this resource would be used to store the IPv4 or IPv6 multicast group address [default=empty]",
+          "oma:id": 4,
+          "type": "string"
+        },
+        "Group_ID": {
+          "label": "Group ID",
+          "description": "PUBLISHER SUBSCRIBER A unique Identifier for the Group that should be present in every transmission of sensor data linked to the group. If specified, this identifier will be used as the Group ID in the \"Distributed Group Message\" payload, otherwise the Group address will be used. [default=empty]",
+          "oma:id": 5,
+          "type": "string"
+        },
+        "Shared_Sensor_information": {
+          "label": "Shared Sensor information",
+          "description": "PUBLISHER ONLY Sensor information to be included in the payload of the \"Distributed Sensor Message\" notifications sent within the group: 0: Sensor state information - Only the current state of a sensor is to be sent 1: All sensor information - A device publishing sensor updates into the group should include within the notification payload all sensor object resources. These will depend on the sensor but may include for example \"sensor type\", \"reading timestamp\", \"hold time\", etc.. When not defined the only sensor information to be sent to the group MUST be its up-to-date state information, no other sensor related information is to be sent. [default=0]",
+          "oma:id": 6,
+          "type": "integer"
+        },
+        "Quality_of_service": {
+          "label": "Quality of service",
+          "description": "PUBLISHER ONLY If the underlying transport technology supports QoS, this resource can be used to set the buffering and forwarding priority of this sensor data within the network. [default=empty]",
+          "oma:id": 7,
+          "type": "string"
+        },
+        "Hop_Limit": {
+          "label": "Hop Limit",
+          "description": "PUBLISHER ONLY Used by publishers nodes to set the hop limit to apply on the broadcast messages used to forward sensor information, in this way limiting the reach of the sensor data message forwarding within a group. [default=5]",
+          "oma:id": 8,
+          "type": "integer"
+        },
+        "Broadcast_Criteria": {
+          "label": "Broadcast Criteria",
+          "description": "PUBLISHER ONLY 1 - On sensor state change, 2 - periodic, 3 - both [default=1]",
+          "oma:id": 9,
+          "type": "integer"
+        },
+        "Min_Broadcast_Period": {
+          "label": "Min Broadcast Period",
+          "description": "PUBLISHER ONLY Used by publishers nodes, this resource limits the rate at which a sensor is allowed to broadcast messages to the sensor group. This is used to avoid message storming scenarios within the distributed sensor group. Ignored if 0 [default=0]",
+          "oma:id": 10,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Max_Broadcast_Period": {
+          "label": "Max Broadcast Period",
+          "description": "PUBLISHER ONLY Used by publishers nodes, this resource should be used when sensor Broadcast criteria is set to either 2 or 3, defining the maximum amount of time that can elapse before a sensor publishes is current state within the group. Ignored if 0 [default=0]",
+          "oma:id": 11,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Publisher_Step_interval": {
+          "label": "Publisher Step interval",
+          "description": "PUBLISHER ONLY Used by publishers nodes, the resource works as a filter, allowing only significant variations on the reading provided by local sensor (minimum step interval) to be forwarded to the sensor group [default=1].",
+          "oma:id": 12,
+          "type": "number"
+        },
+        "Min_Threshold": {
+          "label": "Min Threshold",
+          "description": "PUBLISHER ONLY Data is sent only if greater than or equal min threshold. Ignored if omitted or NaN [default=NaN]",
+          "oma:id": 13,
+          "type": "number"
+        },
+        "Max_Threshold": {
+          "label": "Max Threshold",
+          "description": "PUBLISHER ONLY Data is sent only if less than or equal max threshold. Ignored if omitted or NaN [default=NaN]",
+          "oma:id": 14,
+          "type": "number"
+        },
+        "Auto_Clear_Validity_Time": {
+          "label": "Auto Clear Validity Time",
+          "description": "PUBLISHER ONLY Time for which the published sensor state shall be considered valid If Auto-clear capability is supported by the publisher, this value will be included in the messages being sent Ignored if 0 [default=0]",
+          "oma:id": 15,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Auto_Clear_Default_Value": {
+          "label": "Auto Clear Default Value",
+          "description": "PUBLISHER ONLY Default value to be restored when the validity time is expired. The publisher may not include the validity time when the sensor state is already equal (or equivalent) to the default state. If not specified 0/false has to be assumed [default=0]",
+          "oma:id": 16,
+          "type": "number"
+        },
+        "Data_Fusion_Operation": {
+          "label": "Data Fusion Operation",
+          "description": "SUBSCRIBER ONLY The data fusion operation to be performed between resources pointed by local sensor state URIs and remote sensor state URIs (or their implicitly allocated equivalent value). To be noted that the operation is normally applicable to numerical values only (for Boolean values, 0 = false, 1 = true) 0: No fusion is to be performed 1: OR 2: AND 3: ADD 4: MAX 5: MIN 6: LAST - The last value reported by any sensor in the group becomes the group state value 7: Reserved (Custom 1) 8: Reserved (Custom 2)",
+          "oma:id": 17,
+          "type": "integer"
+        },
+        "Remote_Sensors_Dynamic_Mapping": {
+          "label": "Remote Sensors Dynamic Mapping",
+          "description": "SUBSCRIBER ONLY This resource controls how to locally map remote sensors and its configuration depends on the capabilities advertised within the Sensor Group Device Capabilities False: Static mapping is enforced. Only publishers listed in Remote Sensor State URI are accepted and take part into the fusion operation. True: Dynamic mapping is enforced. Any publisher belonging to the group is accepted and take part into the fusion operation [default=false]",
+          "oma:id": 18,
+          "type": "boolean"
+        },
+        "Remote_Sensors_Implicit_Mapping": {
+          "label": "Remote Sensors Implicit Mapping",
+          "description": "SUBSCRIBER ONLY This resource controls how to locally map remote sensors and its configuration depends on the capabilities advertised within the Sensor Group Device Capabilities False: Explicit mapping is enforced. Remote sensor state is captured and maintained in the current device by updating local objects instances corresponding to remote publishers, allowing server endpoint visibility over individual remote sensor states. If dynamic mapping is not supported, object instances shall be created in advance True: Implicit mapping is enforced. Remote sensor state is captured and maintained on an implementation specific internal database. No external visibility is provided on the current state of remote sensor entries. [default=false]",
+          "oma:id": 19,
+          "type": "boolean"
+        },
+        "Local_Sensor_State_URI": {
+          "label": "Local Sensor State URI",
+          "description": "PUBLISHER ONLY URI in the format of </Object/Instance/Resource(/ResourceInstance)> (using Core Link syntax) pointing to the LwM2M resource instance holding the sensor state that the device should publish into the group. This uses the real address of a local physical sensor, e.g. </3302/0/5500> [default=empty]",
+          "oma:id": 20,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Local_Sensor_Publisher_ID": {
+          "label": "Local Sensor Publisher ID",
+          "description": "PUBLISHER ONLY The sensor ID that should be used to translate the instance specified within the corresponding \"Local Sensor State URI\" when publishing new data. In most scenarios Sensor publisher ID should be unique within the Group (unless if some type of overlap/overwrite of the information provided by the different sensors is intended) [default=empty]",
+          "oma:id": 21,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Remote_Sensor_State_URI": {
+          "label": "Remote Sensor State URI",
+          "description": "SUBSCRIBER ONLY URI in the format of </Object/Instance/Resource(/ResourceInstance)> (using Core Link syntax) identifying the publishers to be accepted when using static mapping. This also reflects where the sensor state information retrieved from the Sensor Group should be locally stored into. [default=empty]",
+          "oma:id": 22,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Group_Log": {
+          "label": "Group Log",
+          "description": "PUBLISHER SUBSCRIBER This resource can be used to provide vendor specific information related to the operativity of the group, such as the remote publishers dynamically mapped [default=empty]",
+          "oma:id": 23,
+          "writable": false,
+          "type": "string"
+        },
+        "Group_Description": {
+          "label": "Group Description",
+          "description": "Custom user defined description.",
+          "oma:id": 24,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": []
+    }
+  }
+}

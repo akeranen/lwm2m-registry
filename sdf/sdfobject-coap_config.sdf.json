@@ -1,0 +1,95 @@
+{
+  "info": {
+    "title": "OMA LwM2M CoAP Config (Object ID 500)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2020 Open Mobile Alliance.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CoAP_Config": {
+      "label": "CoAP Config",
+      "description": "This object is used to configure the CoAP transmission parameters (RFC7252) and other parameters that affect CoAP transmission.",
+      "oma:id": "500",
+      "sdfProperty": {
+        "Network_Bearer": {
+          "label": "Network Bearer",
+          "description": "Identify the network bearer for which these parameters are applicable. The value is from the network bearer list defined in the Connectivity Monitoring Object (ID: 4). Please, verify the list of currently reserved values.",
+          "oma:id": 0,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "ACK_TIMEOUT": {
+          "label": "ACK_TIMEOUT",
+          "description": "The initial value of retransmission timeout in CoAP. Default is set to that of RFC7252, that is 2 seconds.",
+          "oma:id": 1,
+          "type": "integer",
+          "unit": "s"
+        },
+        "ACK_RANDOM_FACTOR": {
+          "label": "ACK_RANDOM_FACTOR",
+          "description": "The initial value of retransmission timeout in CoAP. Default is set to that of RFC7252, that is a value of 1.5.",
+          "oma:id": 2,
+          "type": "number"
+        },
+        "MAX_RETRANSMIT": {
+          "label": "MAX_RETRANSMIT",
+          "description": "The maximum number of retransmissions. Default is set to that of RFC7252, that is 4 retransmissions.",
+          "oma:id": 3,
+          "type": "integer"
+        },
+        "NSTART": {
+          "label": "NSTART",
+          "description": "Number of simultaneous outstanding interactions that the LwM2M client can accept from a given LwM2M Server. An outstanding interaction is either a CON for which an ACK has not yet been received but is still expected (message layer) or a request for which neither a response nor an Acknowledgment message has yet been received but is still expected. Default is set to that of RFC7252, that is 1 interaction.",
+          "oma:id": 4,
+          "type": "integer"
+        },
+        "DEFAULT_LEISURE": {
+          "label": "DEFAULT_LEISURE",
+          "description": "If a server does decide to respond to a multicast request, it should not respond immediately. Instead, it should pick based on RFC7252, Section 8.2. If the LwM2M Client does not have data to compute the Leisure time it should use that of Default Leisure as specified in RFC7252.",
+          "oma:id": 5,
+          "type": "integer",
+          "unit": "s"
+        },
+        "PROBING_RATE": {
+          "label": "PROBING_RATE",
+          "description": "This resource represents the maximum probing rate accepted by this LwM2M Client in bytes per second.",
+          "oma:id": 6,
+          "type": "integer",
+          "unit": "B/s"
+        },
+        "DTLS_Retransmission_Timer": {
+          "label": "DTLS Retransmission Timer",
+          "description": "The LwM2M Server may modify the initial DTLS retransmission timer value of 1 second into a different value. This will have effects on latency as well as on congestion, thus the timer value should be handled carefully.",
+          "oma:id": 7,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Max_Response_Waiting_Time": {
+          "label": "Max Response Waiting Time",
+          "description": "The maximum time in seconds the device will wait for a separate response to a request.",
+          "oma:id": 8,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {
+        "Apply": {
+          "label": "Apply",
+          "description": "Applies the parameters specifed in the resources to the CoAP connections on this interface.",
+          "oma:id": 9
+        }
+      },
+      "sdfRequired": [
+        "Network_Bearer",
+        "ACK_TIMEOUT",
+        "ACK_RANDOM_FACTOR",
+        "MAX_RETRANSMIT",
+        "NSTART"
+      ]
+    }
+  }
+}

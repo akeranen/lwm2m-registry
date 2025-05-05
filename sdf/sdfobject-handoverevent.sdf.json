@@ -1,0 +1,80 @@
+{
+  "info": {
+    "title": "OMA LwM2M handoverEvent (Object ID 3355)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "handoverEvent": {
+      "label": "handoverEvent",
+      "description": "handover event information",
+      "oma:id": "3355",
+      "sdfProperty": {
+        "timeHandoverStart": {
+          "label": "timeHandoverStart",
+          "description": "Modem time when handover is initiated",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "dlEarfcn": {
+          "label": "dlEarfcn",
+          "description": "EARFCN - frequency",
+          "oma:id": 6032,
+          "writable": false,
+          "type": "integer"
+        },
+        "CellID": {
+          "label": "CellID",
+          "description": "Cell ID.",
+          "oma:id": 6033,
+          "writable": false,
+          "type": "integer"
+        },
+        "handoverResult": {
+          "label": "handoverResult",
+          "description": "0 = Pass\r\n1 = InvalidCfg (Validation failure)\r\n2 = PhysicalFailure (Physical layer failure on the target cell)\r\n3 = Rach (T304 expiry due to RACH failure on target cell)\r\n4 = RachMeasConfigIncluded (T304 expiry due to RACH failure on target cell when MeasConfig IE was included)\r\n5 = Other (other failure reason than ones above)",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "TargetEarfcn": {
+          "label": "TargetEarfcn",
+          "description": "Target EARFCN",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer"
+        },
+        "TargetPhysicalCellID": {
+          "label": "TargetPhysicalCellID",
+          "description": "Target Physical Cell ID",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer"
+        },
+        "targetCellRsrp": {
+          "label": "targetCellRsrp",
+          "description": "Target Cell RSRP in dBm",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "timeHandoverStart",
+        "dlEarfcn",
+        "CellID",
+        "handoverResult",
+        "TargetEarfcn",
+        "TargetPhysicalCellID",
+        "targetCellRsrp"
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "info": {
+    "title": "OMA LwM2M LwM2M Gateway (Object ID 25)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LwM2M_Gateway": {
+      "label": "LwM2M Gateway",
+      "description": "This object is used by a LwM2M Gateway to maintain the IoT Devices connected to the LwM2M Gateway.",
+      "oma:id": "25",
+      "sdfProperty": {
+        "Device_ID": {
+          "label": "Device ID",
+          "description": "This resource identifies the IoT Device connected to the LwM2M Gateway.",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string"
+        },
+        "Prefix": {
+          "label": "Prefix",
+          "description": "This resource defines what prefix MUST be used for access to LwM2M Objects of this IoT Device.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "IoT_Device_Objects": {
+          "label": "IoT Device Objects",
+          "description": "This resource contains the Objects and Object Instances exposed by the LwM2M Gateway on behalf of the IoT Device. It uses the same CoreLnk format as Registration Interface.",
+          "oma:id": 3,
+          "writable": false,
+          "sdfRef": "oma:corelnk"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Device_ID",
+        "Prefix",
+        "IoT_Device_Objects"
+      ]
+    }
+  }
+}

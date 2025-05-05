@@ -1,0 +1,57 @@
+{
+  "info": {
+    "title": "OMA LwM2M Sensor Group Device Capabilities (Object ID 3461)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Sensor_Group_Device_Capabilities": {
+      "label": "Sensor Group Device Capabilities",
+      "description": "This object is used to notify the user about the capabilities supported by the device in respect to Distributed Sensot Group functionality.",
+      "oma:id": "3461",
+      "sdfProperty": {
+        "Remote_Sensor_Management_capabilities": {
+          "label": "Remote Sensor Management capabilities",
+          "description": "Specifies the capabilities supported by the device to manage and store remote sensors information retrieved from the sensor group as a Bit Mask:\r\nBit 0: Dynamic mapping support - Remote sensors can be discovered as new messages are received. If explicit mapping is required, new corresponding object instances will be automatically created\r\nBit 1: Implicit mapping support - Sensor state is maintained on an implementation specific internal database instead of being reflected into local objects\r\nBit 2: Auto clear support - Automatic clear to the default value is supported after validity time is expired",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "Max_number_of_explicit_sensors": {
+          "label": "Max number of explicit sensors",
+          "description": "The maximum number of sensors and sensor states the device can instantiate.\r\nThis value is calculated by the count of all different sensor objects associated with a sensor groups.\r\nThis value shall be set to 0 if explicit mapping is not supported\r\nOn uCiFi compliant devices support for static explicit mapping is mandatory.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "Max_number_of_implicit_sensors": {
+          "label": "Max number of implicit sensors",
+          "description": "The maximum number of sensors and sensor states the device can keep in memory.\r\nThis value is calculated by the count of all different sensor objects associated with a sensor groups.\r\nThis value shall be set to 0 if implicit mapping is not supported.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "Data_Fusion_Capabilities": {
+          "label": "Data Fusion Capabilities",
+          "description": "Specifies the data fusion algorithms supported by the device represented as a bitmask:\r\nBit 0: OR\r\nBit 1: AND\r\nBit 2: ADD\r\nBit 3: MAX\r\nBit 4: MIN\r\nBit 5: LAST - The last value reported by any sensor in the group becomes the group state value\r\nBit 6: Reserved (Custom 1)\r\nBit 7: Reserved (Custom 2)\r\nIf the device supports no fusion capabilities, this resource should be set to 0.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {
+        "Reset_DSG_objects": {
+          "label": "Reset DSG objects",
+          "description": "When executed, trigger a complete wipe of the distributed sensor groups already commissioned",
+          "oma:id": 5
+        }
+      },
+      "sdfRequired": []
+    }
+  }
+}

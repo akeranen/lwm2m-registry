@@ -1,0 +1,109 @@
+{
+  "info": {
+    "title": "OMA LwM2M Manifest (Object ID 10252)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2018 ARM.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Manifest": {
+      "label": "Manifest",
+      "description": "This object provides a range of information related to updating packages on a device",
+      "oma:id": "10252",
+      "sdfProperty": {
+        "Manifest": {
+          "label": "Manifest",
+          "description": "Content of a new manifest",
+          "oma:id": 1,
+          "readable": false,
+          "type": "string",
+          "sdfType": "byte-string",
+          "unit": "\r\n        "
+        },
+        "State": {
+          "label": "State",
+          "description": "Current state of manifest processing\r\n0.\tUninitialised\r\n1.\tIdle\r\n2.\tProcessing manifest\r\n3.\tAwaiting download approval\r\n4.\tDownloading \r\n5.\tDownloaded\r\n6.\tAwaiting application approval\r\n7.\tUpdating\r\n8.\tRebooting",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer",
+          "unit": "\r\n        ",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "Manifest_Result": {
+          "label": "Manifest Result",
+          "description": "Final result of the device processing a manifest.\r\n0.\tUninitialised\r\n1.\tSuccess\r\n2.\tManifest timeout. The Manifest URI has timed-out.\r\n3.\tManifest not found. The Manifest URI not found.\r\n4.\tManifest failed integrity check. The manifest integrity check failed. \r\n5.\tManifest rejected. The Manifest attributes do not apply to this device.\r\n6.\tManifest certificate not found\r\n7.\tManifest signature failed. The Manifest signature is not recognised by this device.\r\n8.\tDependent manifest not found\r\n9.\tNot enough storage for the new asset\r\n10.\tOut of memory during download process\r\n11.\tConnection lost during download process\r\n12.\tAsset failed integrity check\r\n13.\tUnsupported asset type\r\n14.\tInvalid asset URI\r\n15.\tTimed out downloading asset\r\n16.\tUnsupported delta format\r\n17.\tUnsupported encryption format\r\n18.\tAsset update successfully completed\r\n19.\tAsset updated successfully after recovery",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer",
+          "unit": "\r\n        ",
+          "minimum": 0,
+          "maximum": 19
+        },
+        "Payload_Result": {
+          "label": "Payload Result",
+          "description": "Contains payload-specific errors or output.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string",
+          "unit": "\r\n        "
+        },
+        "Asset_Hash": {
+          "label": "Asset Hash",
+          "description": "Hash of the installed asset.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string",
+          "unit": "\r\n        "
+        },
+        "Manifest_version": {
+          "label": "Manifest version",
+          "description": "Version of the current manifest.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer",
+          "unit": "\r\n        "
+        },
+        "Asset_Installation_Progress": {
+          "label": "Asset Installation Progress",
+          "description": "Progress update of the asset installation process (in bytes).",
+          "oma:id": 7,
+          "writable": false,
+          "type": "integer",
+          "unit": "\r\n        "
+        },
+        "Campaign_Id": {
+          "label": "Campaign Id",
+          "description": "Id of campaign affecting this device. There currently isn’t any logic on the server or the client to handle this.",
+          "oma:id": 8,
+          "type": "string",
+          "unit": "\r\n        "
+        }
+      },
+      "sdfAction": {
+        "Manual_Trigger": {
+          "label": "Manual Trigger",
+          "description": "Manually apply the asset update. This will only have effect if the manifest requires this. The state resource must also be in the downloaded state for the execute command to be actioned.",
+          "oma:id": 9
+        }
+      },
+      "sdfRequired": [
+        "Manifest",
+        "State",
+        "Manifest_Result",
+        "Payload_Result",
+        "Asset_Hash",
+        "Manifest_version",
+        "Asset_Installation_Progress",
+        "Campaign_Id",
+        "Manual_Trigger"
+      ]
+    }
+  }
+}

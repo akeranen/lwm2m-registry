@@ -1,0 +1,105 @@
+{
+  "info": {
+    "title": "OMA LwM2M Tilt sensor (Object ID 3429)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Tilt_sensor": {
+      "label": "Tilt sensor",
+      "description": "The uCIFI tilt sensor provides the angle between the object's internal vertical and the perpendicular to the earth.",
+      "oma:id": "3429",
+      "sdfProperty": {
+        "Angle": {
+          "label": "Angle",
+          "description": "Angle between the internal vertical line and the perpendicular to earth.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "number",
+          "unit": "rad"
+        },
+        "Minimum_measured_Angle": {
+          "label": "Minimum measured Angle",
+          "description": "Minimum angle measured by the tilt sensor since last reset or since power ON if no reset.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "number",
+          "unit": "rad"
+        },
+        "Maximum_measured_angle": {
+          "label": "Maximum measured angle",
+          "description": "Maximum angle measured by the tilt sensor since last reset or since power ON if no reset.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "number",
+          "unit": "rad"
+        },
+        "Out_of_position_threshold": {
+          "label": "Out of position threshold",
+          "description": "The angle above which the device triggers an out of position event.",
+          "oma:id": 5,
+          "type": "number",
+          "unit": "rad"
+        },
+        "Out_of_position": {
+          "label": "Out of position",
+          "description": "Set to True if the angle is above the out of position threshold.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {
+        "Reset_min_max_angles": {
+          "label": "Reset min max angles",
+          "description": "Set the minimum and maximum measured angles to the current angle value.",
+          "oma:id": 4
+        }
+      },
+      "sdfRequired": [
+        "Angle"
+      ]
+    }
+  }
+}

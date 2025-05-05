@@ -1,0 +1,121 @@
+{
+  "info": {
+    "title": "OMA LwM2M oA Logical Presence Sensor (Object ID 3394)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Zumtobel Group.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "oA_Logical_Presence_Sensor": {
+      "label": "oA Logical Presence Sensor",
+      "description": "The 'oA Logical Presence Sensor' represents the logical part of a presence sensor. The corresponding physical device is a sensor that detects presence in its detection area. \\nThe Object supports two states 'presence' and 'absence'.",
+      "oma:id": "3394",
+      "sdfProperty": {
+        "ObjectVersion": {
+          "label": "ObjectVersion",
+          "description": "LWM2M Object versioning label.",
+          "oma:id": 4001,
+          "writable": false,
+          "type": "string"
+        },
+        "Documentary_Description": {
+          "label": "Documentary Description",
+          "description": "Resource to hold a documentary text description of the object.",
+          "oma:id": 901,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 256
+        },
+        "Digital_Input_State": {
+          "label": "Digital Input State",
+          "description": "The current state of a digital input.",
+          "oma:id": 5500,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Executing_Object": {
+          "label": "Executing Object",
+          "description": "Link to the Object Instance in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)",
+          "oma:id": 909,
+          "sdfRef": "oma:corelnk"
+        },
+        "Busy_to_Clear_delay": {
+          "label": "Busy to Clear delay",
+          "description": "Delay from the detection state to the clear state in ms.",
+          "oma:id": 5903,
+          "type": "integer",
+          "unit": "ms"
+        },
+        "Clear_to_Busy_delay": {
+          "label": "Clear to Busy delay",
+          "description": "Delay from the clear state to the busy state in ms.",
+          "oma:id": 5904,
+          "type": "integer",
+          "unit": "ms"
+        },
+        "Application_Group_ID": {
+          "label": "Application Group ID",
+          "description": "The application group ID that the logical object is part of. This ID will define the application group the status reports are sent to. It is internally used as a pointer to the Group Object instance that hosts all the Group configurations.",
+          "oma:id": 903,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Status_Resend_Time": {
+          "label": "Status Resend Time",
+          "description": "The time specified as status resend time is used to resend the actual status to the application group the object is a member of, even if nothing changed.\\nThe status resend time is restarted after every event. The actual interval is a random time with the maximum duration given by this resource. Randomization helps to avoid massive ongoing message collisions after system power up.\\nFor example: Status resend time is set to 10 seconds;\\n* 00:00 status is sent\\n* 00:05 status changes and is sent immediatly\\n* 00:15 (or before, depending on the randomization) status is sent even though it did not change",
+          "oma:id": 904,
+          "minimum": 1,
+          "type": "integer",
+          "unit": "s",
+          "maximum": 600
+        },
+        "Status_Report_Structure_ID": {
+          "label": "Status Report Structure ID",
+          "description": "The ID of the status resource structure that is used to code the cyclic status report. See object 4012 'oA Status Report Structure' for more information",
+          "oma:id": 919,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 255
+        },
+        "Debug_Mode_Enabled": {
+          "label": "Debug Mode Enabled",
+          "description": "Enables the object test mode. The physical representation of the object will be disabled. Stimuli can be injected to test the object remotely using inject test event.",
+          "oma:id": 905,
+          "type": "boolean"
+        },
+        "Inject_Test_Event": {
+          "label": "Inject Test Event",
+          "description": "Defines the test events to be injected into the system when debug mode is enabled. Event definition is vendor specific.",
+          "oma:id": 906,
+          "readable": false,
+          "type": "boolean"
+        },
+        "Object_Enabled": {
+          "label": "Object Enabled",
+          "description": "This resource allows to disable an object instance. \\nIf an object instance is disabled it does process incoming events but does not create outgoing events.",
+          "oma:id": 924,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Object_Enabled": {
+          "label": "Object Enabled",
+          "description": "When executed, a test event s specified in 906 will be injected \\nIf an object instance is disabled it does process incoming events but does not create outgoing events.",
+          "oma:id": 934
+        }
+      },
+      "sdfRequired": [
+        "#/sdfObject/oA_Logical_Presence_Sensor/sdfProperty/Digital_Input_State",
+        "#/sdfObject/oA_Logical_Presence_Sensor/sdfProperty/Executing_Object",
+        "#/sdfObject/oA_Logical_Presence_Sensor/sdfProperty/Application_Group_ID",
+        "#/sdfObject/oA_Logical_Presence_Sensor/sdfProperty/Status_Resend_Time",
+        "#/sdfObject/oA_Logical_Presence_Sensor/sdfProperty/Status_Report_Structure_ID"
+      ]
+    }
+  }
+}

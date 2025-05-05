@@ -1,0 +1,72 @@
+{
+  "info": {
+    "title": "OMA LwM2M Input Filter (Object ID 3455)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Input_Filter": {
+      "label": "Input Filter",
+      "description": "The uCIFI Input Filter can be used to fine tune the sensor evaluation, in order to provide hold functionality or custom filtering. To be used in conjunction with a Program Scheduler.",
+      "oma:id": "3455",
+      "sdfProperty": {
+        "Input_State": {
+          "label": "Input State",
+          "description": "Current state captured on the input source",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string"
+        },
+        "Input_Source": {
+          "label": "Input Source",
+          "description": "Resources are specified using Core Link syntax\r\nExample:\r\nInstance #0: </3302/0/5500>\r\nInstance #1: </3302/1/5500>",
+          "oma:id": 1,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Data_Type": {
+          "label": "Data Type",
+          "description": "0 - opaque 1 - counter integer 2 - gauge integer 3 - gauge float 4 - Time 5 - String",
+          "oma:id": 2,
+          "type": "integer"
+        },
+        "Evaluation_Interval": {
+          "label": "Evaluation Interval",
+          "description": "Sets the frequency at which the LwM2M resource identified as Source should be evaluated.\r\nExample, if set to 5000, the Program should evaluate the value reported by the LwM2M resource pointed by Source every 5 seconds.",
+          "oma:id": 3,
+          "type": "number",
+          "unit": "s"
+        },
+        "Step_Filter": {
+          "label": "Step Filter",
+          "description": "Sets a step interval, making the Program evaluate the LwM2M resource pointed by Source, only when its value changes by more than Step Filter.\r\nExample, if set to 1000, the Program should evaluate the value reported by the LwM2M resource pointed by Source only if it changes by more than 1000 units from the last evaluation.",
+          "oma:id": 4,
+          "type": "number"
+        },
+        "Busy_to_Clear_delay": {
+          "label": "Busy to Clear delay",
+          "description": "Delay from the detection state to the clear state in ms.",
+          "oma:id": 5903,
+          "type": "integer",
+          "unit": "ms"
+        },
+        "Clear_to_Busy_delay": {
+          "label": "Clear to Busy delay",
+          "description": "Delay from the clear state to the busy state in ms.",
+          "oma:id": 5904,
+          "type": "integer",
+          "unit": "ms"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": []
+    }
+  }
+}

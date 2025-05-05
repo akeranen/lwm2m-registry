@@ -1,0 +1,95 @@
+{
+  "info": {
+    "title": "OMA LwM2M Irrigation valve (Object ID 3425)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Irrigation_valve": {
+      "label": "Irrigation valve",
+      "description": "The uCIFI irrigation valve provides a way to control and monitor an irrigation valve.",
+      "oma:id": "3425",
+      "sdfProperty": {
+        "Default_status": {
+          "label": "Default status",
+          "description": "Default status (level of opening of the valve from 0 to 100%) that is applied when the device is powered ON.",
+          "oma:id": 1,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Status": {
+          "label": "Status",
+          "description": "Actual level of opening of the valve (from 0 to 100%).",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Command": {
+          "label": "Command",
+          "description": "Command (e.g. manual override, scheduler) sent to the irrigation valve.",
+          "oma:id": 3,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Command_in_action": {
+          "label": "Command in action",
+          "description": "For devices connected on slow LPWAN networks, the command in action (this resource) may differ from a command that was sent (resource ID: 3). The command in action is the actual value of the command in action on the irrigation valve.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Scheduler_ID": {
+          "label": "Scheduler ID",
+          "description": "Identifiers of the schedulers that are assigned to the Command of this irrigation valve.",
+          "oma:id": 5,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Invalid_scheduler": {
+          "label": "Invalid scheduler",
+          "description": "Set to True when one of the schedulers can’t be executed or is not supported by this irrigation valve. Otherwise set to False.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": []
+    }
+  }
+}

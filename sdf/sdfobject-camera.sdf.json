@@ -1,0 +1,121 @@
+{
+  "info": {
+    "title": "OMA LwM2M Camera (Object ID 10340)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Camera": {
+      "label": "Camera",
+      "description": "This LWM2M Object includes camera information.",
+      "oma:id": "10340",
+      "sdfProperty": {
+        "Camera_Name": {
+          "label": "Camera Name",
+          "description": "Human readable camera name",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Camera_Status": {
+          "label": "Camera Status",
+          "description": "The status of the camera, 1:Enabled, 0:Disabled.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Connection_Status": {
+          "label": "Connection Status",
+          "description": "The Connection Status of the camera, 1:On, 0:Off.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Working_Status": {
+          "label": "Working Status",
+          "description": "The Working Status of the camera, 0:Recording, 1:Playing, 2:Paused.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 15
+        },
+        "Local_Recording": {
+          "label": "Local Recording",
+          "description": "If Local Recording is enabled or not, 1:Enabled, 0:Disabled.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Image_Matting": {
+          "label": "Image Matting",
+          "description": "If Image Matting is enabled or not, 1:Enabled, 0:Disabled.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Camera_Snapshot": {
+          "label": "Camera Snapshot",
+          "description": "If Camera Snapshot is enabled or not(in Dangerous Situation), \r\n\t\t\t\t1:Enabled, 0:Disabled.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Camera_Recording": {
+          "label": "Camera Recording",
+          "description": "If Camera Recording is enabled or not(in Dangerous Situation), \r\n\t\t\t\t1:Enabled, 0:Disabled.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Camera_Control": {
+          "label": "Camera Control",
+          "description": "Enable/Disable the camera: Parameter: 1:Enable, 0:Disable",
+          "oma:id": 100
+        },
+        "Local_Recording_Control": {
+          "label": "Local Recording Control",
+          "description": "Enable/Disable Local Recording: Parameter: 1:Enable, 0:Disable",
+          "oma:id": 101
+        },
+        "Image_Matting_Control": {
+          "label": "Image Matting Control",
+          "description": "Enable/Disable Image Matting: Parameter: 1:Enable, 0:Disable",
+          "oma:id": 102
+        },
+        "Camera_Snapshot_Control": {
+          "label": "Camera Snapshot Control",
+          "description": "Enable/Disable Camera Snapshot in Dangerous Situation: Parameter: 1:Enable, 0:Disable",
+          "oma:id": 103
+        },
+        "Camera_Recording_Control": {
+          "label": "Camera Recording Control",
+          "description": "Enable/Disable Camera Recording in Dangerous Situation: Parameter: 1:Enable, 0:Disable",
+          "oma:id": 104
+        }
+      },
+      "sdfRequired": [
+        "Camera_Name",
+        "Camera_Status",
+        "Connection_Status",
+        "Working_Status",
+        "Local_Recording",
+        "Image_Matting",
+        "Camera_Snapshot",
+        "Camera_Recording",
+        "Camera_Control",
+        "Local_Recording_Control",
+        "Image_Matting_Control",
+        "Camera_Snapshot_Control",
+        "Camera_Recording_Control"
+      ]
+    }
+  }
+}

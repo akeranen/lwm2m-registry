@@ -1,0 +1,235 @@
+{
+  "info": {
+    "title": "OMA LwM2M oA Logical Colour Light-Point Actuator (Object ID 3390)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Zumtobel Group.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "oA_Logical_Colour_Light-Point_Actuator": {
+      "label": "oA Logical Colour Light-Point Actuator",
+      "description": "The 'oA Logical Colour Light Point Actuator' represents the logical part of an actuator model for a colour light point. The corresponding physical device is a light channel and associated gear (e.g. LED driver).\\nThe Object (module) supports several interactions that include absolute and relative colour setting. Several device configuration parameters are mapped, which relate to behaviour or describe device limitations.",
+      "oma:id": "3390",
+      "sdfProperty": {
+        "ObjectVersion": {
+          "label": "ObjectVersion",
+          "description": "LWM2M Object versioning label.",
+          "oma:id": 4001,
+          "writable": false,
+          "type": "string"
+        },
+        "Documentary_Description": {
+          "label": "Documentary Description",
+          "description": "Resource to hold a documentary text description of the object.",
+          "oma:id": 901,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 256
+        },
+        "Target_Colour_X": {
+          "label": "Target Colour X",
+          "description": "This Resource represents the target colour X value requested to the Light Point. Scale is: 0.001",
+          "oma:id": 125,
+          "writable": false,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Target_Colour_Y": {
+          "label": "Target Colour Y",
+          "description": "This Resource represents the target colour Y value requested to the Light Point. Scaling is 0.001 per Unit, Value conforms to CIE color definition",
+          "oma:id": 126,
+          "writable": false,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Executing_Object": {
+          "label": "Executing Object",
+          "description": "Link to the Object Instance in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)",
+          "oma:id": 909,
+          "sdfRef": "oma:corelnk"
+        },
+        "Priority": {
+          "label": "Priority",
+          "description": "The priority of this Logical Object. If a Logical Object with a higher priority controlles the same physical object, this instance will hold its settings until its priority is sufficient again. \\nIf the priorities are the same the last one is served.",
+          "oma:id": 921,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 5
+        },
+        "Colour_Changing_Time": {
+          "label": "Colour Changing Time",
+          "description": "Defines the time needed to change the light point output from minimum hue/saturation to maximum hue/saturation. The resulting change rate is used for the relative changes of the colour request. Scaling is 100ms per Unit",
+          "oma:id": 127,
+          "minimum": 0,
+          "type": "integer",
+          "unit": "ms",
+          "maximum": 65535
+        },
+        "Colour_Transition_Time": {
+          "label": "Colour Transition Time",
+          "description": "Defines the default transition time to be used for 'Set_Colour' and 'Step' requests, if that request has no value specified. A value of 0 means the transaction is immediate. Scaling is 100ms per unit",
+          "oma:id": 128,
+          "minimum": 0,
+          "type": "integer",
+          "unit": "ms",
+          "maximum": 65535
+        },
+        "Hue_Step_Size": {
+          "label": "Hue Step Size",
+          "description": "Defines the default step size to be used for 'Hue Step' requests, if that request has no value specified. The Hue is in relative units (0..1), scaling is 0.001 per unit, so the integers given are at factor 1000.",
+          "oma:id": 129,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Saturation_Step_Size": {
+          "label": "Saturation Step Size",
+          "description": "Defines the default step size to be used for 'Saturation Step' requests, if that request has no value specified. The Saturation is in relative units (0..1), scaling is 0.001 per unit, so the integers given are at factor 1000.",
+          "oma:id": 130,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Application_Group_ID": {
+          "label": "Application Group ID",
+          "description": "The application group ID that the logical object is part of. This ID will define the application group the status reports are sent to. It is internally used as a pointer to the Group Object instance that hosts all the Group configurations.",
+          "oma:id": 903,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Status_Resend_Time": {
+          "label": "Status Resend Time",
+          "description": "The time specified as status resend time is used to resend the actual status to the application group the object is a member of, even if nothing changed.\\nThe status resend time is restarted after every event. The actual interval is a random time with the maximum duration given by this resource. Randomization helps to avoid massive ongoing message collisions after system power up.\\nFor example: Status resend time is set to 10 seconds;\\n* 00:00 status is sent\\n* 00:05 status changes and is sent immediatly\\n* 00:15 (or before, depending on the randomization) status is sent even though it did not change",
+          "oma:id": 904,
+          "minimum": 1,
+          "type": "integer",
+          "unit": "s",
+          "maximum": 600
+        },
+        "Status_Report_Structure_ID": {
+          "label": "Status Report Structure ID",
+          "description": "The ID of the status resource structure that is used to code the cyclic status report. See object 4012 'oA Status Report Structure' for more information",
+          "oma:id": 919,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 255
+        },
+        "Scene_Cache": {
+          "label": "Scene Cache",
+          "description": "A cache for the scene values. These values should be called when a scene is recalled. It is buildt from a Scene_ID (UInt 16, a target resource (Corelnk) defineition, and a payload that operates on this resource), a transition time in ms (UInt16), and an action (Put/Post) defintion",
+          "oma:id": 922,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "sdfType": "byte-string"
+          }
+        },
+        "Set_Colour": {
+          "label": "Set Colour",
+          "description": "This Resource allows to set the colour of a light point using the following arguments:\\n- *arg0: Colour x* - final colour x value\\n- *arg1: Colour y* - final colour y value\\n- *arg2: Time* - transition time with 100ms resolution\\n\\t\\t\\t\\n**Note:** When the optional argument time is not given, or if its value is empty the default configuration value is used.\\nA request on this Resource will immediately update 'Remaining Transition Time' and 'Current Colour' until the Set Colour operation is cloncluded.",
+          "oma:id": 131,
+          "readable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Relative_Change_Saturation": {
+          "label": "Relative Change Saturation",
+          "description": "This Resource allows to change the saturation relatively:\\n- *Direction* [mandatory] direction of change\\n**Note:** During this process, the 'Current Colour' and 'Remaining Transition Time' are continuously updated.If this Resource is executed while another colour variation process is running, the ongoing process is stopped and the new process begins using the actual colour as starting point.\\n\\t\\t\\t\\nSome examples:\\n- `POST coap://<target_IP_address>/<dir>/<Obj_ID>/<obj_instance>/118 0`  \\ndecreases saturation.\\n- `POST coap://<target_IP_address>/<dir>/<Obj_ID>/<obj_instance>/118 1`  \\nincreases saturation.",
+          "oma:id": 134,
+          "readable": false,
+          "type": "boolean"
+        },
+        "Relative_Change_Hue": {
+          "label": "Relative Change Hue",
+          "description": "This Resource allows to change the hue relatively:\\n- *Direction* [mandatory] direction of change\\n**Note:** During this process, the 'Current Colour' and 'Remaining Transition Time' are continuously updated. If this Resource is executed while another colour variation process is running, the ongoing process is stopped and the new process begins using the colour values at that specific moment as starting point.\\n\\t\\t\\t\\nSome examples:\\n- `POST coap://<target_IP_address>/<dir>/<Obj_ID>/<obj_instance>/118 0`  \\nincreases hue.\\n- `POST coap://<target_IP_address>/<dir>/<Obj_ID>/<obj_instance>/118 1`  \\ndecreases hue.",
+          "oma:id": 132,
+          "readable": false,
+          "type": "boolean"
+        },
+        "Step_Saturation": {
+          "label": "Step Saturation",
+          "description": "This resource allows to increase and decrease the saturation of the colour light point by a given step size. \\nThe following paramters are used:\\n- *arg0: Direction* - step direction (true=increase saturation, false=decrease saturation)\\n- *arg1: Step Size* - the size of the step\\n- *arg2: Transition Time* - transition time with 100ms resolution\\n\\t\\t\\t\\t\\n**Note:** During this process, the 'Remaining Transition Time' and 'Current Colour' are continuously updated.\\nIf this Resource is executed while another colour variation process is running, the ongoing is stopped and this new process is started, using the current colour value as a starting point.",
+          "oma:id": 135,
+          "readable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Step_Hue": {
+          "label": "Step Hue",
+          "description": "This resource allows to increase and decrease the hue of the colour light point by a given step size. \\nThe following paramters are used:\\n- *arg0: Direction* - step direction (true=increase hue, false=decrease hue)\\n- *arg1: Step Size* - the size of the step\\n- *arg2: Transition Time* - transition time with 100ms resolution\\n\\t\\t\\t\\t\\n**Note:** During this process, the 'Remaining Transition Time' and 'Current Colour' are continuously updated.\\nIf this Resource is executed while another colour variation process is running, the ongoing is stopped and this new process is started, using the current colour value as a starting point.",
+          "oma:id": 133,
+          "readable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Recall_Scene": {
+          "label": "Recall Scene",
+          "description": "When written, the scene with the given ID is recalled immediately.",
+          "oma:id": 902,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Debug_Mode_Enabled": {
+          "label": "Debug Mode Enabled",
+          "description": "Enables the object test mode. The physical representation of the object will be disabled. Stimuli can be injected to test the object remotely using inject test event.",
+          "oma:id": 905,
+          "type": "boolean"
+        },
+        "Inject_Test_Event": {
+          "label": "Inject Test Event",
+          "description": "Defines a test event for injection into the system when debug mode is enabled. Event definition is vendor specific.",
+          "oma:id": 906,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Object_Enabled": {
+          "label": "Object Enabled",
+          "description": "This resource allows to disable an object instance. \\nIf an object instance is disabled it does process incoming events but does not create outgoing events.",
+          "oma:id": 924,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Stop_Transition": {
+          "label": "Stop Transition",
+          "description": "When written, it immediately stops all ongoing transition processes (absolute or relative). 'Current Colour' maintains the value it has at that moment and 'Remaining Transition Time' is set to '0'. Payload is not required, however, a success/failure message is recommended.",
+          "oma:id": 136
+        },
+        "Execute_Inject": {
+          "label": "Execute Inject",
+          "description": "Executes the injection of a test event as specified in 906",
+          "oma:id": 934
+        }
+      },
+      "sdfRequired": [
+        "Target_Colour_X",
+        "Target_Colour_Y",
+        "Executing_Object",
+        "Priority",
+        "Colour_Changing_Time",
+        "Colour_Transition_Time",
+        "Hue_Step_Size",
+        "Saturation_Step_Size",
+        "Application_Group_ID",
+        "Status_Resend_Time",
+        "Status_Report_Structure_ID",
+        "Set_Colour",
+        "Relative_Change_Saturation",
+        "Relative_Change_Hue",
+        "Step_Saturation",
+        "Step_Hue",
+        "Recall_Scene",
+        "Stop_Transition"
+      ]
+    }
+  }
+}

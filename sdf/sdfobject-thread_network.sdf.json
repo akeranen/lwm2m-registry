@@ -1,0 +1,109 @@
+{
+  "info": {
+    "title": "OMA LwM2M Thread Network (Object ID 10483)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2023 Hydro-Québec.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Thread_Network": {
+      "label": "Thread Network",
+      "description": "This LWM2M object is used to describe and modify Thread network configurations",
+      "oma:id": "10483",
+      "sdfProperty": {
+        "Network_Name": {
+          "label": "Network Name",
+          "description": "Thread network name.",
+          "oma:id": 0,
+          "type": "string"
+        },
+        "PAN_ID": {
+          "label": "PAN ID",
+          "description": "Thread network Personal Area Network Identification (PAN ID).",
+          "oma:id": 1,
+          "type": "string"
+        },
+        "Extended_PAN_ID_": {
+          "label": "Extended PAN ID ",
+          "description": "Thread network Extended Personal Area Network Identification (Ext PAN ID).",
+          "oma:id": 2,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Passphrase": {
+          "label": "Passphrase",
+          "description": "Thread network passphrase.",
+          "oma:id": 3,
+          "type": "string"
+        },
+        "Master_Key": {
+          "label": "Master Key",
+          "description": "Thread network master key value.",
+          "oma:id": 4,
+          "type": "string"
+        },
+        "Channel": {
+          "label": "Channel",
+          "description": "The communication channel number. IEEE 802.15.4 Channel value.",
+          "oma:id": 5,
+          "type": "integer"
+        },
+        "IPv6_Mesh_Local_Prefix": {
+          "label": "IPv6 Mesh Local Prefix",
+          "description": "The IPv6 mesh local prefix.",
+          "oma:id": 6,
+          "type": "string"
+        },
+        "Max_Children": {
+          "label": "Max Children",
+          "description": "The configured maximum number of children.",
+          "oma:id": 7,
+          "type": "integer"
+        },
+        "RLOC16_Address": {
+          "label": "RLOC16 Address",
+          "description": "The Routing Locator (RLOC16) identifies a Thread interface, based on its location in the network topology.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "string"
+        },
+        "EUI64": {
+          "label": "EUI64",
+          "description": "Indicates the Extended Unique Identifier (EUI64) of the device.",
+          "oma:id": 9,
+          "writable": false,
+          "type": "string"
+        },
+        "Extended_MAC_Address": {
+          "label": "Extended MAC Address",
+          "description": "The extended media access control (MAC) address of the device.",
+          "oma:id": 10,
+          "writable": false,
+          "type": "string"
+        },
+        "IPv6_Addresses": {
+          "label": "IPv6 Addresses",
+          "description": "A list of assigned IP addresses.",
+          "oma:id": 11,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Network_Name",
+        "PAN_ID",
+        "Extended_PAN_ID_"
+      ]
+    }
+  }
+}

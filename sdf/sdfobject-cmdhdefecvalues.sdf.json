@@ -1,0 +1,66 @@
+{
+  "info": {
+    "title": "OMA LwM2M CmdhDefEcValues (Object ID 2051)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 oneM2M Partners.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CmdhDefEcValues": {
+      "label": "CmdhDefEcValues",
+      "description": "This Object represents default set of values for the Event Category parameter of an incoming request or response message.",
+      "oma:id": "2051",
+      "sdfProperty": {
+        "Order": {
+          "label": "Order",
+          "description": "Contains an index defining the order of processing this CmdhDefEcValue Object Instance will be handled",
+          "oma:id": 0,
+          "type": "integer"
+        },
+        "DefEcValue": {
+          "label": "DefEcValue",
+          "description": "Represents the default Event category value to be applied when the conditions given in this Object Instance are matched",
+          "oma:id": 1,
+          "type": "string"
+        },
+        "RequestOrigin": {
+          "label": "RequestOrigin",
+          "description": "List of zero or more Local AE-IDs, App-IDs, or the strings \"localAE\" or \"thisCSE\"",
+          "oma:id": 2,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "RequestContext": {
+          "label": "RequestContext",
+          "description": "Contains the requestContext information of this Object Instance which needs to be matched",
+          "oma:id": 3,
+          "type": "string"
+        },
+        "RequestContextNotification": {
+          "label": "RequestContextNotification",
+          "description": "Contains true/false flag indicating whether or not notification procedures apply.",
+          "oma:id": 4,
+          "type": "boolean"
+        },
+        "RequestCharacteristics": {
+          "label": "RequestCharacteristics",
+          "description": "Represents conditions pertaining to the request itself, (e.g. the requested Response Type  ) than needs to be matched",
+          "oma:id": 5,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Order",
+        "DefEcValue",
+        "RequestOrigin"
+      ]
+    }
+  }
+}

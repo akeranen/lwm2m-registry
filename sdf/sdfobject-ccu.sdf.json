@@ -1,0 +1,103 @@
+{
+  "info": {
+    "title": "OMA LwM2M CCU (Object ID 10320)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CCU": {
+      "label": "CCU",
+      "description": "This LWM2M Object includes CCU(Central Control Unit) information and the link to CCU APPs.",
+      "oma:id": "10320",
+      "sdfProperty": {
+        "CCU_ID": {
+          "label": "CCU ID",
+          "description": "The CCU identity.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "CCU_FM_Version": {
+          "label": "CCU FM Version",
+          "description": "The firmware version of the CCU.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "CCU_SW_Version": {
+          "label": "CCU SW Version",
+          "description": "The software version of the CCU.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string"
+        },
+        "CCU_Memory_Size": {
+          "label": "CCU Memory Size",
+          "description": "Total Memory Size of the CCU (expressed in gigabyte).",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "unit": "GB"
+        },
+        "CCU_Storage": {
+          "label": "CCU Storage",
+          "description": "Total storage of the CCU.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer",
+          "unit": "GB"
+        },
+        "CCU_Available_Storage": {
+          "label": "CCU Available Storage",
+          "description": "Available storage of the CCU.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer",
+          "unit": "GB"
+        },
+        "On_time": {
+          "label": "On time",
+          "description": "The time in seconds that the device has been on. Writing a value of 0 resets the counter.",
+          "oma:id": 5852,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Downloaded_APP_Packages": {
+          "label": "Downloaded APP Packages",
+          "description": "Each item contains APP Name, Version info, Package Name.",
+          "oma:id": 100,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "CCU_APPs": {
+          "label": "CCU APPs",
+          "description": "Contains the reference to the APPs belongs to this CCU.",
+          "oma:id": 101,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "CCU_ID",
+        "CCU_FM_Version",
+        "CCU_SW_Version",
+        "CCU_Memory_Size",
+        "CCU_Storage",
+        "CCU_Available_Storage",
+        "On_time"
+      ]
+    }
+  }
+}

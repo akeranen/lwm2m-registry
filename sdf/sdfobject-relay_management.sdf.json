@@ -1,0 +1,189 @@
+{
+  "info": {
+    "title": "OMA LwM2M Relay Management (Object ID 10245)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Vodafone Group.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Relay_Management": {
+      "label": "Relay Management",
+      "description": "This LWM2M Object provides a range of eNB related measurements and parameters of which several are changeable. Furthermore, it includes Resources to enable/disable the eNB.",
+      "oma:id": "10245",
+      "sdfProperty": {
+        "eNB_Availability": {
+          "label": "eNB Availability",
+          "description": "This field indicates to the CCC whether or not the eNB of the CrowdBox is available for activation: AVAILABLE = TRUE; UNAVAILABLE = FALSE This is set by the CrowdBox itself using an algorithm specific to the use case and based on parameters known to the CrowdBox which may not necessarily be signalled to the network. In the absence of a more specific algorithm, this parameter should be set to AVAILABLE, unless a fault is detected which would prevent activation of the eNB, in which case it should be set to UNAVAILABLE.",
+          "oma:id": 0,
+          "writable": false,
+          "type": "boolean"
+        },
+        "GPS_Status": {
+          "label": "GPS Status",
+          "description": "States whether the CrowdBox GPS receiver is synchronised to GPS time or not: UNSYCHRONISED = FALSE; SYNCHRONISED = TRUE If more than one GPS receiver is used by the CrowdBox, then SYNCHRONISED should be reported only if all receivers are synchronised.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Orientation": {
+          "label": "Orientation",
+          "description": "Orientation of CrowdBox with respect to magnetic north. The reference orientation of the CrowdBox shall be the pointing direction of the eNB antenna(s) or, in the case of an omni-directional CrowdBox antenna, as defined in the accompanying product documentation.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer",
+          "unit": "deg",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "eNB_EARFCN": {
+          "label": "eNB EARFCN",
+          "description": "EARFCN currently used by the eNB. Highest valid value in 3GPP is currently 46589. If the requested EARFCN is not supported by the eNB, the response should be \"Bad Request\". The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command.",
+          "oma:id": 3,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "eNB_Bandwidth": {
+          "label": "eNB Bandwidth",
+          "description": "Bandwidth of the currently used eNB carrier. If the requested bandwidth is not supported by the eNB, the response should be \"Bad Request\". The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command.",
+          "oma:id": 4,
+          "type": "integer"
+        },
+        "Backhaul_Primary_EARFCN": {
+          "label": "Backhaul Primary EARFCN",
+          "description": "EARFCN of primary cell used for the backhaul. If the requested EARFCN is not supported by the CrowdBox UE, the response should be \"Bad Request\". The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command.",
+          "oma:id": 5,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "Backhaul_Secondary_EARFCN": {
+          "label": "Backhaul Secondary EARFCN",
+          "description": "EARFCN of any secondary cells used for the backhaul, in the event that carrier aggregation is being used. If the requested EARFCN is not supported by the CrowdBox UE, the response should be \"Bad Request\". The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command.",
+          "oma:id": 6,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "Cumulative_Measurement_Window": {
+          "label": "Cumulative Measurement Window",
+          "description": "The current measurement interval over which cumulative statistics are collected for the following resources: Cumulative Number of Unique Users, Cumulative Downlink Throughput per Connected User, Cumulative Uplink Throughput per Connected User. Note that this measurement period is a sliding window rather than a granularity period. Measurements should never be reset, but rather old measurements should be removed from the cumulative total as they fall outside of the window. A value of 0 shall be interpreted as meaning only the current value should be reported. A value of 65535 shall be interpreted as an infinite window size (i.e. old measurements are never discarded).",
+          "oma:id": 7,
+          "type": "integer",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "eNB_ECI": {
+          "label": "eNB ECI",
+          "description": "A 28 bit E-UTRAN Cell Identifier (ECI) (range 0..2^28-1)",
+          "oma:id": 8,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 268435455
+        },
+        "eNB_Status": {
+          "label": "eNB Status",
+          "description": "This resource indicates the current status of the eNB and can be used by the CCC to change the state from enabled to disabled. TRUE = eNB enabled FALSE = eNB disabled",
+          "oma:id": 9,
+          "type": "boolean"
+        },
+        "eNB_Maximum_Power": {
+          "label": "eNB Maximum Power",
+          "description": "Maximum power for the eNB measured as the sum of input powers to all antenna connectors. The maximum power per antenna port is equal to the maximum eNB power divided by the number of antenna ports. If the requested power is above or below the maximum or minimum power levels of the eNB, then the power level should be set to the maximum or minimum respectively. The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command.",
+          "oma:id": 11,
+          "type": "integer",
+          "unit": "dBm",
+          "minimum": 0,
+          "maximum": 63
+        },
+        "Backhaul_Primary_q-OffsetFreq": {
+          "label": "Backhaul Primary q-OffsetFreq",
+          "description": "q-OffsetFreq parameter for the backhaul primary EARFCN in SIB5 of the CrowdBox eNB BCCH. See TS 36.331 for details. Range: dB-24; dB-22 .. dB24 The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command.",
+          "oma:id": 12,
+          "type": "integer",
+          "unit": "dB",
+          "minimum": -24,
+          "maximum": 24
+        },
+        "Backhaul_Secondary_q-OffsetFreq": {
+          "label": "Backhaul Secondary q-OffsetFreq",
+          "description": "q-OffsetFreq parameter for the backhaul secondary EARFCN in SIB5 of the CrowdBox eNB BCCH. See TS 36.331 for details Range: dB-24; dB-22 .. dB24 The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command.",
+          "oma:id": 13,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "dB",
+          "minimum": -24,
+          "maximum": 24
+        },
+        "Neighbour_CrowdBox_EARFCN": {
+          "label": "Neighbour CrowdBox EARFCN",
+          "description": "EARFCN of a neighbour CrowdBox. Each instance of this resource relates to the same instance of resource ID 15.",
+          "oma:id": 14,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 0,
+          "maximum": 66635
+        },
+        "Neighbour_CrowdBox_q-OffsetFreq": {
+          "label": "Neighbour CrowdBox q-OffsetFreq",
+          "description": "q-OffsetFreq parameter of the Neighbour CrowdBox EARFCN in SIB5 of the Neighbour CrowdBox eNB BCCH. See TS 36.331 for details Range: dB-24; dB-22 .. dB24 Each instance of this resource relates to the same instance of resource ID 14. The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command.",
+          "oma:id": 15,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "dB",
+          "minimum": -24,
+          "maximum": 24
+        },
+        "Serving_Macro_eNB_cellIndividualOffset": {
+          "label": "Serving Macro eNB cellIndividualOffset",
+          "description": "Specifies the value of the cellIndividualOffset parameter applicable to the CrowdBox macro serving cell that is to be signalled to connected UEs in their measurement configuration information . See TS 36.331 for details. The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command.",
+          "oma:id": 16,
+          "type": "integer",
+          "unit": "dB",
+          "minimum": -24,
+          "maximum": 24
+        }
+      },
+      "sdfAction": {
+        "Enable_eNB": {
+          "label": "Enable eNB",
+          "description": "Enables the eNB. In addition the CrowdBox shall also update its configuration to reflect the current state of other relevant parameters. This might require a reboot.",
+          "oma:id": 10
+        }
+      },
+      "sdfRequired": [
+        "eNB_Availability",
+        "GPS_Status",
+        "eNB_EARFCN",
+        "eNB_Bandwidth",
+        "Backhaul_Primary_EARFCN",
+        "Backhaul_Secondary_EARFCN",
+        "Cumulative_Measurement_Window",
+        "eNB_ECI",
+        "eNB_Status",
+        "eNB_Maximum_Power",
+        "Backhaul_Primary_q-OffsetFreq",
+        "Backhaul_Secondary_q-OffsetFreq",
+        "Neighbour_CrowdBox_EARFCN",
+        "Neighbour_CrowdBox_q-OffsetFreq",
+        "Serving_Macro_eNB_cellIndividualOffset",
+        "Enable_eNB"
+      ]
+    }
+  }
+}

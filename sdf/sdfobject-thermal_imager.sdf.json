@@ -1,0 +1,57 @@
+{
+  "info": {
+    "title": "OMA LwM2M Thermal Imager (Object ID 10352)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Thermal_Imager": {
+      "label": "Thermal Imager",
+      "description": "This LWM2M Object includes the Thermal Imager information.",
+      "oma:id": "10352",
+      "sdfProperty": {
+        "Highest_Temperature": {
+          "label": "Highest Temperature",
+          "description": "The Highest Temperature of the thermal imager.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "Lowest_Temperature": {
+          "label": "Lowest Temperature",
+          "description": "The Lowest Temperature of the thermal imager.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "Average_Temperature": {
+          "label": "Average Temperature",
+          "description": "The Average Temperature of the thermal imager.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel",
+          "minimum": -100,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Highest_Temperature",
+        "Lowest_Temperature",
+        "Average_Temperature"
+      ]
+    }
+  }
+}

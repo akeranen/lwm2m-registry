@@ -1,0 +1,136 @@
+{
+  "info": {
+    "title": "OMA LwM2M uCIFI data bridge (Object ID 3414)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "uCIFI_data_bridge": {
+      "label": "uCIFI data bridge",
+      "description": "The uCIFI data bridge object may be used to transport data from a 3rd party device, operating a proprietary network or protocol, over a LwM2M compliant network.",
+      "oma:id": "3414",
+      "sdfProperty": {
+        "Payload": {
+          "label": "Payload",
+          "description": "Content of the message that is to be transported.",
+          "oma:id": 1,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Hash": {
+          "label": "Hash",
+          "description": "Hash to check the consistency of the data payload. Hash mechanism and calculation is vendor-specific.",
+          "oma:id": 2,
+          "type": "string"
+        },
+        "Cumulated_daily_data_volume_up": {
+          "label": "Cumulated daily data volume up",
+          "description": "Cumulated volume of data received by the device since beginning of the day. This information could be used for data invoicing.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Cumulated_daily_data_volume_down": {
+          "label": "Cumulated daily data volume down",
+          "description": "Cumulated volume of data sent by the device since beginning of the day. This information could be used for data invoicing.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Cumulated_daily_data_volume_total": {
+          "label": "Cumulated daily data volume total",
+          "description": "Cumulated volume of data sent and received by/from the device since beginning of the day. This information could be used for data invoicing.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Communication_error": {
+          "label": "Communication error",
+          "description": "Set to True if the device detects a difference in a received payload and the hash.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Data_Priority": {
+          "label": "Data Priority",
+          "description": "Indicates the Application data priority: 0:Immediate, 1:BestEffort, 2:Latest, 3-100: Reserved for future use. 101-254: Proprietary mode.",
+          "oma:id": 7,
+          "type": "integer"
+        },
+        "Data_Creation_Time": {
+          "label": "Data Creation Time",
+          "description": "Indicates the data instance creation timestamp.",
+          "oma:id": 8,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Data_Description": {
+          "label": "Data Description",
+          "description": "Indicates the data description (e.g. \"Meter data\").",
+          "oma:id": 9,
+          "type": "string"
+        },
+        "Data_Format": {
+          "label": "Data Format",
+          "description": "Indicates the format of the Application Data. E.g. JSON compressed format from company XYZ.",
+          "oma:id": 10,
+          "type": "string"
+        },
+        "App_ID": {
+          "label": "App ID",
+          "description": "Indicates the destination application identifier.",
+          "oma:id": 11,
+          "type": "integer"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Payload"
+      ]
+    }
+  }
+}

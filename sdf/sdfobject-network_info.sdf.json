@@ -1,0 +1,89 @@
+{
+  "info": {
+    "title": "OMA LwM2M Network Info (Object ID 10330)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Network_Info": {
+      "label": "Network Info",
+      "description": "This LWM2M Object includes network status related information.",
+      "oma:id": "10330",
+      "sdfProperty": {
+        "IMEI": {
+          "label": "IMEI",
+          "description": "The IMEI of the RCU in the Robot.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "IMSI": {
+          "label": "IMSI",
+          "description": "The IMSI of the RCU in the Robot.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "Radio_Connectivity": {
+          "label": "Radio Connectivity",
+          "description": "The radio connectivity status, contains the reference to the Connectivity Monitoring(4).",
+          "oma:id": 3,
+          "writable": false,
+          "sdfRef": "oma:objlnk"
+        },
+        "GPS_Signal_Status": {
+          "label": "GPS Signal Status",
+          "description": "The GPS signal status: 1: Very Good, 2: Good, 3:Normal, 4: Bad.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "VBN_Connection_Status": {
+          "label": "VBN Connection Status",
+          "description": "VBN Connection Status: 1:Connected, 0:Disconnected.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "HARI_Connection_Status": {
+          "label": "HARI Connection Status",
+          "description": "HARI Connection Status: 1:Connected, 0:Disconnected.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "CCU_Connection_Status": {
+          "label": "CCU Connection Status",
+          "description": "CCU Connection Status: 1:Connected, 0:Disconnected.\r\n\t\t\tThe resource instance ID is the same with the Object Instance ID of corresponding CCU.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "IMEI",
+        "IMSI",
+        "Radio_Connectivity",
+        "VBN_Connection_Status",
+        "HARI_Connection_Status"
+      ]
+    }
+  }
+}

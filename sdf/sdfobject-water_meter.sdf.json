@@ -1,0 +1,150 @@
+{
+  "info": {
+    "title": "OMA LwM2M Water meter (Object ID 3424)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Water_meter": {
+      "label": "Water meter",
+      "description": "The uCIFI water meter measures water volume that was distributed through a water meter, in pulse count as well as in m3. It also detects anomalies in the water meter.",
+      "oma:id": "3424",
+      "sdfProperty": {
+        "Cumulated_water_volume": {
+          "label": "Cumulated water volume",
+          "description": "Number of cubic meters of water distributed through the meter since last reset.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "number",
+          "unit": "m3"
+        },
+        "Type_of_meter": {
+          "label": "Type of meter",
+          "description": "Type of water meter.",
+          "oma:id": 3,
+          "type": "string"
+        },
+        "Cumulated_pulse_value": {
+          "label": "Cumulated pulse value",
+          "description": "Cumulated number of pulses detected on the meter.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer"
+        },
+        "Pulse_ratio": {
+          "label": "Pulse ratio",
+          "description": "Ratio to calculate water volume from pulse value.",
+          "oma:id": 6,
+          "type": "integer"
+        },
+        "Minimum_flow_rate": {
+          "label": "Minimum flow rate",
+          "description": "Minimum flow rate since last metering value.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "number",
+          "unit": "m3/s"
+        },
+        "Maximum_flow_rate": {
+          "label": "Maximum flow rate",
+          "description": "Maximum flow rate since last metering value.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "number",
+          "unit": "m3/s"
+        },
+        "Leak_suspected": {
+          "label": "Leak suspected",
+          "description": "Set to True if water leak is suspected.",
+          "oma:id": 9,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Leak_detected": {
+          "label": "Leak detected",
+          "description": "Set to True if leak is detected.",
+          "oma:id": 10,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Back_flow_detected": {
+          "label": "Back flow detected",
+          "description": "Set to True if water back flow is detected.",
+          "oma:id": 11,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Blocked_meter": {
+          "label": "Blocked meter",
+          "description": "Set to True if water meter is blocked.",
+          "oma:id": 12,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Fraud_detected": {
+          "label": "Fraud detected",
+          "description": "Set to True if fraud is detected.",
+          "oma:id": 13,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {
+        "Cumulated_water_meter_value_reset": {
+          "label": "Cumulated water meter value reset",
+          "description": "Reset the cumulated meter value.",
+          "oma:id": 2
+        },
+        "Cumulated_pulse_value_reset": {
+          "label": "Cumulated pulse value reset",
+          "description": "Reset the cumulated pulse value.",
+          "oma:id": 5
+        }
+      },
+      "sdfRequired": [
+        "Cumulated_water_volume"
+      ]
+    }
+  }
+}

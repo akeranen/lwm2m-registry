@@ -1,0 +1,126 @@
+{
+  "info": {
+    "title": "OMA LwM2M Luminaire asset (Object ID 3417)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2020 uCIFI Alliance",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Luminaire_asset": {
+      "label": "Luminaire asset",
+      "description": "The uCIFI luminaire asset is an object that enables outdoor lighting control software to configure outdoor lamp controllers. It also enables outdoor lamp controllers to send Zhaga D4i or DALI attributes read from the control gears, to centrally managed outdoor lighting control software or asset management systems.",
+      "oma:id": "3417",
+      "sdfProperty": {
+        "Asset_GTIN": {
+          "label": "Asset GTIN",
+          "description": "Global trade-in international number used in the Luminaire Asset controlled by the device.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Year_of_manufacture": {
+          "label": "Year of manufacture",
+          "description": "Year of manufacture of the luminaire.",
+          "oma:id": 2,
+          "type": "integer"
+        },
+        "Week_of_manufacture": {
+          "label": "Week of manufacture",
+          "description": "Week of manufacture of the luminaire.",
+          "oma:id": 3,
+          "type": "integer"
+        },
+        "Nominal_light_output": {
+          "label": "Nominal light output",
+          "description": "Nominal light output of the luminaire.",
+          "oma:id": 4,
+          "type": "integer",
+          "unit": "lm"
+        },
+        "Light_distribution_type": {
+          "label": "Light distribution type",
+          "description": "Enumeration of possible light distribution type, using the Zhaga D4i enumeration. Please refer to ZD4i standard for more details.",
+          "oma:id": 5,
+          "type": "integer"
+        },
+        "Luminaire_color": {
+          "label": "Luminaire color",
+          "description": "Painting color of the luminaire.",
+          "oma:id": 6,
+          "type": "string"
+        },
+        "Nominal_input_power": {
+          "label": "Nominal input power",
+          "description": "Nominal input power of the luminaire.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "number",
+          "unit": "W"
+        },
+        "Power_at_minimum_dim_level": {
+          "label": "Power at minimum dim level",
+          "description": "Power at minimum dim level for the luminaire.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "number",
+          "unit": "W"
+        },
+        "Nominal_max_AC_mains_voltage": {
+          "label": "Nominal max AC mains voltage",
+          "description": "Nominal max AC mains voltage for the luminaire to operate.",
+          "oma:id": 9,
+          "writable": false,
+          "type": "integer",
+          "unit": "V"
+        },
+        "Nominal_min_AC_mains_voltage": {
+          "label": "Nominal min AC mains voltage",
+          "description": "Nominal min AC mains voltage for the luminaire to operate.",
+          "oma:id": 10,
+          "writable": false,
+          "type": "integer",
+          "unit": "V"
+        },
+        "CRI": {
+          "label": "CRI",
+          "description": "Color rendering index (0 to 100) of the luminaire.",
+          "oma:id": 11,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "CCT_value": {
+          "label": "CCT value",
+          "description": "Color temperature of the luminaire.",
+          "oma:id": 12,
+          "writable": false,
+          "type": "integer",
+          "unit": "K"
+        },
+        "Luminaire_identification": {
+          "label": "Luminaire identification",
+          "description": "Luminaire identification as per DiiA/D4i specification part 251 (MB1 extension): 60 ascii character string.",
+          "oma:id": 13,
+          "writable": false,
+          "type": "string"
+        },
+        "Luminaire_identification_number": {
+          "label": "Luminaire identification number",
+          "description": "Luminaire identification number as per DiiA/D4i specification part 251 (MB1 extension): 20 digit number.",
+          "oma:id": 14,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Asset_GTIN"
+      ]
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "info": {
+    "title": "OMA LwM2M Pressure monitoring sensor (Object ID 3427)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Pressure_monitoring_sensor": {
+      "label": "Pressure monitoring sensor",
+      "description": "The uCIFI water pressure monitoring sensor measures water pressure and help identify water leaks in water distribution pipelines.",
+      "oma:id": "3427",
+      "sdfProperty": {
+        "Pressure": {
+          "label": "Pressure",
+          "description": "Last or current pressure value measured by the sensor.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "number",
+          "unit": "Pa"
+        },
+        "Sampling_period": {
+          "label": "Sampling period",
+          "description": "Number of seconds between two measurement.",
+          "oma:id": 2,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Leak_detected": {
+          "label": "Leak detected",
+          "description": "Set to True if a water leak is detected by the sensor.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Hammer_effect_detected": {
+          "label": "Hammer effect detected",
+          "description": "Set to True if hammer effect is detected in the water pipeline.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Minimum_measured_pressure_value": {
+          "label": "Minimum measured pressure value",
+          "description": "Minimum value measured by the sensor since power ON or reset.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "number",
+          "unit": "Pa"
+        },
+        "Maximum_measured_pressure_value": {
+          "label": "Maximum measured pressure value",
+          "description": "Maximum value measured by the sensor since power ON or reset.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "number",
+          "unit": "Pa"
+        },
+        "Minimum_range_pressure_value": {
+          "label": "Minimum range pressure value",
+          "description": "Minimum value that can be measured by the sensor.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "number",
+          "unit": "Pa"
+        },
+        "Maximum_range_pressure_value": {
+          "label": "Maximum range pressure value",
+          "description": "Maximum value that can be measured by the sensor.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "number",
+          "unit": "Pa"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {
+        "Reset_min_and_max_measured_pressure_values": {
+          "label": "Reset min and max measured pressure values",
+          "description": "Set the minimum and maximum measured values to current value.",
+          "oma:id": 9
+        }
+      },
+      "sdfRequired": [
+        "Pressure"
+      ]
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "info": {
+    "title": "OMA LwM2M CmdhEcDefParamValues (Object ID 2052)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 oneM2M Partners.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CmdhEcDefParamValues": {
+      "label": "CmdhEcDefParamValues",
+      "description": "This Object represents a specific set of default values for the CMDH related parameters Request Expiration Timestamp, Result Expiration Timestamp, Operational Execution Time, Result Persistence and Delivery Aggregation that are applicable for a given Event Category if these parameters are not specified in the message.",
+      "oma:id": "2052",
+      "sdfProperty": {
+        "ApplicableEventCategory_": {
+          "label": "ApplicableEventCategory ",
+          "description": "Contains  list of Event Category values",
+          "oma:id": 0,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "DefaultRequestExpTime": {
+          "label": "DefaultRequestExpTime",
+          "description": "Contains the default value for the Request Expiration Timestamp parameter when such a parameter is not set in the request",
+          "oma:id": 1,
+          "type": "integer",
+          "unit": "ms"
+        },
+        "DefaultResultExpTime_": {
+          "label": "DefaultResultExpTime ",
+          "description": "Contains the default value of the Result  Expiration Timestamp parameter when such a parameter is not set in the request",
+          "oma:id": 2,
+          "type": "integer",
+          "unit": "ms"
+        },
+        "DefaultOpExecTime": {
+          "label": "DefaultOpExecTime",
+          "description": "Contains the default value of the Operation Execution Time parameter when such a parameter is not set in the request",
+          "oma:id": 3,
+          "type": "integer",
+          "unit": "ms"
+        },
+        "DefaultRespPersistence_": {
+          "label": "DefaultRespPersistence ",
+          "description": "Contains the default value of the Result  Persistence parameter when such a parameter is not set in the request",
+          "oma:id": 4,
+          "type": "integer",
+          "unit": "ms"
+        },
+        "DefaultDelAggregation_": {
+          "label": "DefaultDelAggregation ",
+          "description": "Contains the default value of the Delivery Aggregation  parameter when such a parameter is not set in the request",
+          "oma:id": 5,
+          "type": "integer",
+          "unit": "ms"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "ApplicableEventCategory_",
+        "DefaultRequestExpTime",
+        "DefaultResultExpTime_",
+        "DefaultOpExecTime",
+        "DefaultRespPersistence_",
+        "DefaultDelAggregation_"
+      ]
+    }
+  }
+}

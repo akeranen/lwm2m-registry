@@ -1,0 +1,209 @@
+{
+  "info": {
+    "title": "OMA LwM2M LwM2M v1.1 Test Object (Object ID 3442)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LwM2M_v1.1_Test_Object": {
+      "label": "LwM2M v1.1 Test Object",
+      "description": "This object aims to make easier to do interoperability tests about LWM2M v1.1. It contains resources for each available datatype.",
+      "oma:id": "3442",
+      "sdfProperty": {
+        "Arguments_List": {
+          "label": "Arguments List",
+          "description": "List of Arguments from last execute on \"Exec With Arguments\"(3) resource. This resource is not affected by \"Randomize values\"(1) executable resource.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Resources_to_Send": {
+          "label": "Resources to Send",
+          "description": "List of path to LWM2M node (Object / Object Instance / Resource / Resource Instance) used by \"Send Data \"(5) resource. This resource is not affected by \"Randomize values\"(1) executable resource.",
+          "oma:id": 6,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "String_Value": {
+          "label": "String Value",
+          "description": "Initial value must be \"initial value\".",
+          "oma:id": 110,
+          "type": "string"
+        },
+        "Integer_Value": {
+          "label": "Integer Value",
+          "description": "Initial value must be \"1024\".",
+          "oma:id": 120,
+          "type": "integer"
+        },
+        "Unsigned_Integer_Value": {
+          "label": "Unsigned Integer Value",
+          "description": "Initial value must be 2^63 (9223372036854775808).",
+          "oma:id": 125,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "Float_Value": {
+          "label": "Float Value",
+          "description": "Initial value must be \"3.14159\".",
+          "oma:id": 130,
+          "type": "number"
+        },
+        "Boolean_Value": {
+          "label": "Boolean Value",
+          "description": "Initial value must be \"true\".",
+          "oma:id": 140,
+          "type": "boolean"
+        },
+        "Opaque_Value": {
+          "label": "Opaque Value",
+          "description": "Initial value must be the bytes sequence \"0123456789ABCDEF\" (Hexadecimal notation).",
+          "oma:id": 150,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Time_Value": {
+          "label": "Time Value",
+          "description": "Initial value must be the time to an 1st, 2000 in the UTC time zone. (Timestamp value : 946684800)",
+          "oma:id": 160,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "ObjLink_Value": {
+          "label": "ObjLink Value",
+          "description": "Initial value must be a link to instance 0 of Device Object 3 (3:0).",
+          "oma:id": 170,
+          "sdfRef": "oma:objlnk"
+        },
+        "CoreLnk_Value": {
+          "label": "CoreLnk Value",
+          "description": "Initial value must be a the \"</3442>\".",
+          "oma:id": 180,
+          "sdfRef": "oma:corelnk"
+        },
+        "Multiple_String_Value": {
+          "label": "Multiple String Value",
+          "description": "Initial value must be 1 instance with ID 0 and value \"initial value\".",
+          "oma:id": 1110,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Multiple_Integer_Value": {
+          "label": "Multiple Integer Value",
+          "description": "Initial value must be 1 instance with ID 0 and value \"1024\".",
+          "oma:id": 1120,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Multiple_Unsigned_Integer_Value": {
+          "label": "Multiple Unsigned Integer Value",
+          "description": "Initial value must be 1 instance with ID 0 and value 2^63 (9223372036854775808).",
+          "oma:id": 1125,
+          "minimum": 0,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Multiple_Float_Value": {
+          "label": "Multiple Float Value",
+          "description": "Initial value must be 1 instance with ID 0 and value \"3.14159\".",
+          "oma:id": 1130,
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Multiple_Boolean_Value": {
+          "label": "Multiple Boolean Value",
+          "description": "Initial value must be 1 instance with ID 0 and value \"true\".",
+          "oma:id": 1140,
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "Multiple_Opaque_Value": {
+          "label": "Multiple Opaque Value",
+          "description": "Initial value must be 1 instance with ID 0 and value \"0123456789ABCDEF\"(Hexadecimal notation of the bytes sequence).",
+          "oma:id": 1150,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "sdfType": "byte-string"
+          }
+        },
+        "Multiple_Time_Value": {
+          "label": "Multiple Time Value",
+          "description": "Initial value must be 1 instance with ID 0 and value 1st, 2000 in the UTC time zone (Timestamp value : 946684800).",
+          "oma:id": 1160,
+          "type": "array",
+          "items": {
+            "type": "number",
+            "sdfType": "unix-time"
+          }
+        },
+        "Multiple_ObjLink_Value": {
+          "label": "Multiple ObjLink Value",
+          "description": "Initial value must be 1 instance with ID 0 and value \"3:0\".",
+          "oma:id": 1170,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        },
+        "Multiple_CoreLnk_Value": {
+          "label": "Multiple CoreLnk Value",
+          "description": "Initial value must be 1 instance with ID 0 and value \"</3442>\".",
+          "oma:id": 1180,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:corelnk"
+          }
+        }
+      },
+      "sdfAction": {
+        "Reset_values": {
+          "label": "Reset values",
+          "description": "Reset all resources of this object with their initial value.",
+          "oma:id": 0
+        },
+        "Randomize_values": {
+          "label": "Randomize values",
+          "description": "Set random value to all resources. For multi-instance resources, the number of resource instances is also randomized.\r\nRandomization should avoid to generate too big payload. We advice to limit value to something like : \r\n - 20 characters for String,\r\n - 20 bytes for Opaque,\r\n - 10 instances for multi-instance resources.",
+          "oma:id": 1
+        },
+        "Clear_values": {
+          "label": "Clear values",
+          "description": "Clear all values : \r\n - all multiple resource as empty resource\r\n - all number to 0\r\n - String to empty string\r\n - boolean to false,\r\n - opaque to empty byte array,\r\n - time to an 1st, 1970 in the UTC time zone\r\n - objlink to null link",
+          "oma:id": 2
+        },
+        "Exec_With_Arguments": {
+          "label": "Exec With Arguments",
+          "description": "This resources can be used to test \"Execute Operation\" with Arguments.\r\nSent Arguments can be read via \"Arguments List\"(4) resource.\r\nE.g. If you send an Exec /3441/0/3 with \"3='stringValue',4\" as arguments value,\r\n     then /3441/0/4/3 will be 'stringValue' and /3441/0/4/4 will be an empty string.",
+          "oma:id": 3
+        },
+        "Send_Data": {
+          "label": "Send Data",
+          "description": "This resources can be used to test \"Send Operation\".\r\nWhen LWM2M client received the Execute Request, it must send data for each resources listed in \"Resources to Send\"(6) resource.\r\nBy default LWM2M client chooses the Content format and Timeout to use for this Send Request, but Arguments can optionally be used to change it.\r\nArgument 0 must contain the Content Format code. e.g. 0='110' for SENML_JSON.\r\nArgument 1 must contain the request timeout in ms. e.g. 1='2000' for 2s timeout.",
+          "oma:id": 5
+        }
+      },
+      "sdfRequired": []
+    }
+  }
+}

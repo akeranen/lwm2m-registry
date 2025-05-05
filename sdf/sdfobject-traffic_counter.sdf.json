@@ -1,0 +1,236 @@
+{
+  "info": {
+    "title": "OMA LwM2M Traffic Counter (Object ID 3432)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Traffic_Counter": {
+      "label": "Traffic Counter",
+      "description": "The uCIFI traffic counter provides vehicle counting and traffic analysis data. A traffic counting device may implement multiple instances of this traffic counter object, each of them being in charge of counting different categories of vehicles (e.g. bikes, cars, trucks).",
+      "oma:id": "3432",
+      "sdfProperty": {
+        "Vehicle_type": {
+          "label": "Vehicle type",
+          "description": "Identifies the Vehicle type(s) detected in conformance with DATEX II v3 specifications.\r\nThe resource instance ID used here should match, the remaining resource IDs under this object for measurement taken by the device for the specified vehicle type. \r\nInstance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any type)\r\n\r\n0=Vehicle normally used for agricultural purposes, e.g. tractor, combined harvester etc.\r\n1=Vehicle of any type.\r\n2=Articulated bus\r\n3=Articulated trolley bus\r\n4=Articulated vehicle.\r\n5=Bicycle.\r\n6=Bus.\r\n7=Vehicles designed and constructed for the carriage of passengers and comprising no more than eight seats in addition to the driver's seat, and having a maximum mass (\"technically permissible maximum laden mass\") not exceeding 3.5 tons (M1).\r\n8=Caravan.\r\n9=Car or light vehicle.\r\n10=Car towing a caravan.\r\n11=Car towing a trailer.\r\n12=Vehicle normally used for construction or maintenance purposes, e.g. digger, excavator, bulldozer, lorry mounted crane etc.\r\n13=Four wheel drive vehicle.\r\n14=Vehicles with a total weight above 3,500 kg (vehicle and load).\r\n15=Heavy goods vehicle with trailer\r\n16=A transporter for heavy duty (usually with abnormal dimensions).\r\n17=Vehicle whose weight means it should be classed as a heavy vehicle\r\n18=High sided vehicle.\r\n19=Vehicles for the carriage of goods and having a maximum mass not exceeding 3.5 tonnes (class N1).\r\n20=Large car\r\n21=Vehicles for the carriage of goods and having a maximum mass exceeding 3.5 tonnes (belonging to class N2 when not exceeding 12 tonnes, otherwise class N3).\r\n22=Light goods vehicle with trailer\r\n23=A heavy lorry that is longer than normal.\r\n24=Lorry of any type.\r\n25=Metro\r\n26=Vehicles designed and constructed for the carriage of passengers, comprising more than eight seats in addition to the driver's seat, and having a maximum mass not exceeding 5 tonnes (class M2).\r\n27=Moped (a two wheeled motor vehicle characterized by a small engine typically less than 50cc and by normally having pedals).\r\n28=Motorcycle.\r\n29=Three wheeled vehicle comprising a motorcycle with an attached side car.\r\n30=Motorhome\r\n31=Motorscooter (a two wheeled motor vehicle characterized by a step-through frame and small diameter wheels).\r\n32=Passenger car\r\n33=Small car\r\n34=Vehicle with large tank for carrying bulk liquids.\r\n35=Three wheeled vehicle of unspecified type.\r\n36=Trailer.\r\n37=Tram.\r\n38=Trolley bus\r\n39=Two wheeled vehicle of unspecified type.\r\n40=Van.\r\n41=Vehicle (of unspecified type) towing a caravan.\r\n42=Vehicle with catalytic converter.\r\n43Vehicle without catalytic converter.\r\n44=Vehicle (of unspecified type) towing a trailer.\r\n45n=Vehicle with even numbered registration plate.\r\n46=Vehicle with odd numbered registration plate.\r\n99=Unknown.\r\n100=Other than as defined in this enumeration.",
+          "oma:id": 0,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Cumulated_number": {
+          "label": "Cumulated number",
+          "description": "Cumulated number of vehicles counted since last reset.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Cumulated_number_today": {
+          "label": "Cumulated number today",
+          "description": "Cumulated number of vehicles counted today.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Measuring_period_1": {
+          "label": "Measuring period 1",
+          "description": "Time period 1 during which the counter shall provide number of vehicles (e.g. 1 hour).",
+          "oma:id": 4,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "s"
+        },
+        "Measuring_period_2": {
+          "label": "Measuring period 2",
+          "description": "Time period 2 during which the counter shall provide number of vehicles (e.g. 15 minutes).",
+          "oma:id": 5,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "s"
+        },
+        "Measuring_period_3": {
+          "label": "Measuring period 3",
+          "description": "Time period 3 during which the counter shall provide number of vehicles (e.g. 5 minutes).",
+          "oma:id": 6,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "s"
+        },
+        "Cumulated_number_during_last_period_1": {
+          "label": "Cumulated number during last period 1",
+          "description": "Cumulated number of vehicles counted during the last period 1 (e.g. 1 hour).",
+          "oma:id": 7,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Cumulated_number_during_last_period_2": {
+          "label": "Cumulated number during last period 2",
+          "description": "Cumulated number of vehicles counted during the last period 2 (e.g. 15 minutes).",
+          "oma:id": 8,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Cumulated_number_during_last_period_3": {
+          "label": "Cumulated number during last period 3",
+          "description": "Cumulated number of vehicles counted during the last period 3 (e.g. 5 minutes).",
+          "oma:id": 9,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Average_speed_during_last_period_1": {
+          "label": "Average speed during last period 1",
+          "description": "Average speed measured on the vehicles during the last period 1 (e.g. 1 hour).",
+          "oma:id": 10,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Average_speed_during_last_period_2": {
+          "label": "Average speed during last period 2",
+          "description": "Average speed measured on the vehicles during the last period 2 (e.g. 15 minutes).",
+          "oma:id": 11,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Average_speed_during_last_period_3": {
+          "label": "Average speed during last period 3",
+          "description": "Average speed measured on the vehicles during the last period 3 (e.g. 5 minutes).",
+          "oma:id": 12,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Average_distance_during_last_period_1": {
+          "label": "Average distance during last period 1",
+          "description": "Average distance between two vehicles measured during the last period 1 (e.g. 1 hour).",
+          "oma:id": 13,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Average_distance_during_last_period_2": {
+          "label": "Average distance during last period 2",
+          "description": "Average distance between two vehicles measured during the last period 2 (e.g. 15 minutes).",
+          "oma:id": 14,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Average_distance_during_last_period_3": {
+          "label": "Average distance during last period 3",
+          "description": "Average distance between two vehicles measured during the last period 3 (e.g. 5 minutes).",
+          "oma:id": 15,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Speed_limit_threshold": {
+          "label": "Speed limit threshold",
+          "description": "Speed limit threshold used to calculate the percentage of vehicles above speed limit.",
+          "oma:id": 16,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Percentage_above_speed_limit": {
+          "label": "Percentage above speed limit",
+          "description": "Percentage of vehicles driving above speed limit.",
+          "oma:id": 17,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {
+        "Reset_cumulated_number": {
+          "label": "Reset cumulated number",
+          "description": "Reset the cumulated number of vehicles.",
+          "oma:id": 2
+        }
+      },
+      "sdfRequired": [
+        "Cumulated_number_today"
+      ]
+    }
+  }
+}

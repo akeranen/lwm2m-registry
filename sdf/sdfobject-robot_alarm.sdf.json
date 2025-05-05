@@ -1,0 +1,98 @@
+{
+  "info": {
+    "title": "OMA LwM2M Robot Alarm (Object ID 10334)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Robot_Alarm": {
+      "label": "Robot Alarm",
+      "description": "Here lists all items of an alarm reported by the robot.",
+      "oma:id": "10334",
+      "sdfProperty": {
+        "Entity": {
+          "label": "Entity",
+          "description": "Contains the object ID and object instance ID/name, for example: </10320/2>.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string",
+          "minLength": 4,
+          "maxLength": 63
+        },
+        "Probable_Cause": {
+          "label": "Probable Cause",
+          "description": "Probable cause of this alarm.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "Specific_Problem": {
+          "label": "Specific Problem",
+          "description": "Specific Problem of of this alarm.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string"
+        },
+        "Alarm_Type": {
+          "label": "Alarm Type",
+          "description": "The Alarm Type of this alarm,\r\n\t\t\t\t2:Communications, 3:Quality of Service (QoS), 4:Processing Error, \r\n\t\t\t\t5:Equipment, 6:Environmental.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 6
+        },
+        "Severity": {
+          "label": "Severity",
+          "description": "The severity of this alarm. Critical(1), Major(2), Minor(3), Warning(4), Cleared(5).",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "Report_Time": {
+          "label": "Report Time",
+          "description": "When was this alarm reported.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Sequence_No": {
+          "label": "Sequence No",
+          "description": "Sequence No of this alarm, used to detect alarm loss. A 63 bit value with range 0..2^63-1.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9223372036854776000
+        },
+        "Additional_Info": {
+          "label": "Additional Info",
+          "description": "The information related to this alarm.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Entity",
+        "Probable_Cause",
+        "Specific_Problem",
+        "Alarm_Type",
+        "Severity",
+        "Report_Time",
+        "Sequence_No"
+      ]
+    }
+  }
+}

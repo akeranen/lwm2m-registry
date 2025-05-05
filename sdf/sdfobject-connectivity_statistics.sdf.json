@@ -1,0 +1,88 @@
+{
+  "info": {
+    "title": "OMA LwM2M Connectivity Statistics (Object ID 7)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Connectivity_Statistics": {
+      "label": "Connectivity Statistics",
+      "description": "This LwM2M Objects enables client to collect statistical information and enables the LwM2M Server to retrieve these information, set the collection duration and reset the statistical parameters.",
+      "oma:id": "7",
+      "sdfProperty": {
+        "SMS_Tx_Counter": {
+          "label": "SMS Tx Counter",
+          "description": "Indicate the total number of SMS successfully transmitted during the collection period.",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "SMS_Rx_Counter": {
+          "label": "SMS Rx Counter",
+          "description": "Indicate the total number of SMS successfully received during the collection period.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "Tx_Data": {
+          "label": "Tx Data",
+          "description": "Indicate the total amount of data (IP / non-IP) transmitted during the collection period expressed in kilobytes.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "Rx_Data": {
+          "label": "Rx Data",
+          "description": "Indicate the total amount of data (IP / non-IP) received during the collection period expressed in kilobytes.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "Max_Message_Size": {
+          "label": "Max Message Size",
+          "description": "The maximum IP message size that is used during the collection period.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Average_Message_Size": {
+          "label": "Average Message Size",
+          "description": "The average IP message size that is used during the collection period.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Collection_Period": {
+          "label": "Collection Period",
+          "description": "The default collection period in seconds. The value 0 indicates that the collection period is not set.",
+          "oma:id": 8,
+          "type": "integer",
+          "unit": "s"
+        }
+      },
+      "sdfAction": {
+        "Start": {
+          "label": "Start",
+          "description": "Reset resources 0-5 to 0 and start to collect information, If resource 8 (Collection Period) value is 0, the client will keep collecting information until resource 7 (Stop) is executed, otherwise the client will stop collecting information after specified period ended.\r\n        Note:When reporting the Tx Data or Rx Data, the LwM2M Client reports the total KB transmitted/received over IP bearer(s), including all protocol header bytes up to and including the IP header. This does not include lower level retransmissions/optimizations (e.g. RAN, header compression) or SMS messages.",
+          "oma:id": 6
+        },
+        "Stop": {
+          "label": "Stop",
+          "description": "Stop collecting information, but do not reset resources 0-5.",
+          "oma:id": 7
+        }
+      },
+      "sdfRequired": [
+        "Start",
+        "Stop"
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "info": {
+    "title": "OMA LwM2M PbchDecodingResults (Object ID 3378)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "PbchDecodingResults": {
+      "label": "PbchDecodingResults",
+      "description": "Serving cell PBCH decoding information",
+      "oma:id": "3378",
+      "sdfProperty": {
+        "servingCellID": {
+          "label": "servingCellID",
+          "description": "Serving Cell ID",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "crcResult": {
+          "label": "crcResult",
+          "description": "fail=0\r\npass=1",
+          "oma:id": 1,
+          "writable": false,
+          "type": "boolean"
+        },
+        "sysFrameNumber": {
+          "label": "sysFrameNumber",
+          "description": "System Frame Number.",
+          "oma:id": 6037,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "servingCellID",
+        "crcResult",
+        "sysFrameNumber"
+      ]
+    }
+  }
+}

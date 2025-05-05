@@ -1,0 +1,52 @@
+{
+  "info": {
+    "title": "OMA LwM2M Vendor Specific Measurement Quality Reason (Object ID 510)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Vendor_Specific_Measurement_Quality_Reason": {
+      "label": "Vendor Specific Measurement Quality Reason",
+      "description": "This object contains description for vendor specific measurement quality reason codes provided in a Measurement Metadata (509) object. Instances of this object define the mapping of vendor specific reason codes to reason description in the scope of an individual device.",
+      "oma:id": "510",
+      "sdfProperty": {
+        "Vendor_Specific_Quality_Reason_Code": {
+          "label": "Vendor Specific Quality Reason Code",
+          "description": "Measurement quality degradation reason reported by a smart sensor. Reason codes 0-127 are generic reason codes and they are defined in Measurement Metadata object description.\r\n128-511: VENDOR_SPECIFIC_BLOCK Vendor specific block. This block contains vendor specific quality reason codes.\r\n512-1023: RESERVED_VENDOR_BLOCK Reserved vendor specific block. This block is reserved for future use.",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer",
+          "minimum": 128,
+          "maximum": 1023
+        },
+        "Quality_Reason_Name": {
+          "label": "Quality Reason Name",
+          "description": "The name of the quality reason. It is used as a key to find a localized reason description. The name should be concise and unique in the localization scope.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "Quality_Reason_Description": {
+          "label": "Quality Reason Description",
+          "description": "Description of the quality reason. This text can be used if a localized version is not found.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Vendor_Specific_Quality_Reason_Code",
+        "Quality_Reason_Name",
+        "Quality_Reason_Description"
+      ]
+    }
+  }
+}

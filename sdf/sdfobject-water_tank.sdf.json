@@ -1,0 +1,127 @@
+{
+  "info": {
+    "title": "OMA LwM2M Water Tank (Object ID 10502)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2024 South East Water Corporation.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Water_Tank": {
+      "label": "Water Tank",
+      "description": "This object provides site specific configuration for devices operating in a water tank.",
+      "oma:id": "10502",
+      "sdfProperty": {
+        "Valve_Type": {
+          "label": "Valve Type",
+          "description": "The type of discharge valve used:\r\n1. Valve Type 1 - Battery powered pump with feedback\r\n2. Valve Type 2 - Mains powered pump with feedback\r\n3. Valve Type 3 - Mains powered pump without feedback",
+          "oma:id": 0,
+          "type": "integer"
+        },
+        "Sensor_Offset": {
+          "label": "Sensor Offset",
+          "description": "Distance from the sensor face to the bottom of the tank measured in metres",
+          "oma:id": 1,
+          "type": "number",
+          "unit": "m"
+        },
+        "Tank_Cross_Section": {
+          "label": "Tank Cross Section",
+          "description": "Cross-Sectional area of the tank in m^2",
+          "oma:id": 2,
+          "type": "number",
+          "unit": "m2"
+        },
+        "Tank_GPS_Location_Longitude": {
+          "label": "Tank GPS Location Longitude",
+          "description": "GPS Location - Longitude of the device in the format [+/-]12.345678",
+          "oma:id": 3,
+          "type": "number"
+        },
+        "Tank_GPS_Location_Latitude": {
+          "label": "Tank GPS Location Latitude",
+          "description": "GPS Location - Latitude of the device in the format [+/-]12.345678",
+          "oma:id": 4,
+          "type": "number"
+        },
+        "Minimum_Tank_Discharge_Level": {
+          "label": "Minimum Tank Discharge Level",
+          "description": "Minimum water level that the tank can be discharged to in metres",
+          "oma:id": 5,
+          "type": "number",
+          "unit": "m"
+        },
+        "Valve_State_Validation_Time": {
+          "label": "Valve State Validation Time",
+          "description": "The amount of time to wait in seconds before validating the hardware state of the valve if feedback is configured",
+          "oma:id": 6,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Tank_Reserve_Pump_Cut-In_Level": {
+          "label": "Tank Reserve Pump Cut-In Level",
+          "description": "The water level threshold above which the optional domestic usage pump is enabled if configured as Valve Type 1.",
+          "oma:id": 7,
+          "type": "number",
+          "unit": "m"
+        },
+        "Tank_Reserve_Pump_Cut-Out_Level": {
+          "label": "Tank Reserve Pump Cut-Out Level",
+          "description": "The water level threshold below which the optional domestic usage pump is disabled if configured as Valve Type 1.",
+          "oma:id": 8,
+          "type": "number",
+          "unit": "m"
+        },
+        "Maximum_Discharge_Time": {
+          "label": "Maximum Discharge Time",
+          "description": "Maximum expected discharge duration in seconds. Used to limit the duration of any discharge event.",
+          "oma:id": 9,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Static_Objects": {
+          "label": "Static Objects",
+          "description": "The distances to static objects identified in the tank",
+          "oma:id": 10,
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "unit": "m"
+        },
+        "Static_Objects_Count": {
+          "label": "Static Objects Count",
+          "description": "The number of static objects indentified in the tank",
+          "oma:id": 11,
+          "type": "integer"
+        },
+        "Catchment_Area": {
+          "label": "Catchment Area",
+          "description": "The area of the roof or other surfaces that collects rainwater to be stored in the rainwater tank",
+          "oma:id": 12,
+          "type": "number",
+          "unit": "m2"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Valve_Type",
+        "Sensor_Offset",
+        "Tank_Cross_Section",
+        "Tank_GPS_Location_Longitude",
+        "Tank_GPS_Location_Latitude",
+        "Minimum_Tank_Discharge_Level",
+        "Valve_State_Validation_Time",
+        "Tank_Reserve_Pump_Cut-In_Level",
+        "Tank_Reserve_Pump_Cut-Out_Level",
+        "Maximum_Discharge_Time",
+        "Static_Objects",
+        "Static_Objects_Count",
+        "Catchment_Area"
+      ]
+    }
+  }
+}

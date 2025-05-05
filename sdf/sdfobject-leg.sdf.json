@@ -1,0 +1,53 @@
+{
+  "info": {
+    "title": "OMA LwM2M Leg (Object ID 10345)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Leg": {
+      "label": "Leg",
+      "description": "This LWM2M Object includes leg information.",
+      "oma:id": "10345",
+      "sdfProperty": {
+        "Leg_Name": {
+          "label": "Leg Name",
+          "description": "The display name of the leg, Left/Right Leg.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Host_Device_Unique_ID": {
+          "label": "Host Device Unique ID",
+          "description": "The host device unique ID as assigned by an OEM, MNO, \r\n\t\t\t\tor other as the Device ID in the onboarding or manufacturing process.",
+          "oma:id": 5907,
+          "writable": false,
+          "type": "string"
+        },
+        "Host_Device_Manufacturer": {
+          "label": "Host Device Manufacturer",
+          "description": "Human readable host device manufacturer name.",
+          "oma:id": 5905,
+          "writable": false,
+          "type": "string"
+        },
+        "Host_Device_Model_Number": {
+          "label": "Host Device Model Number",
+          "description": "A host device model identifier (manufacturer specified string).",
+          "oma:id": 5906,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Leg_Name"
+      ]
+    }
+  }
+}

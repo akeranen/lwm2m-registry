@@ -1,0 +1,205 @@
+{
+  "info": {
+    "title": "OMA LwM2M Device (Object ID 3)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Device": {
+      "label": "Device",
+      "description": "This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.",
+      "oma:id": "3",
+      "sdfProperty": {
+        "Manufacturer": {
+          "label": "Manufacturer",
+          "description": "Human readable manufacturer name",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string"
+        },
+        "Model_Number": {
+          "label": "Model Number",
+          "description": "A model identifier (manufacturer specified string)",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Serial_Number": {
+          "label": "Serial Number",
+          "description": "Serial Number",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "Firmware_Version": {
+          "label": "Firmware Version",
+          "description": "Current firmware version of the Device.The Firmware Management function could rely on this resource.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string"
+        },
+        "Available_Power_Sources": {
+          "label": "Available Power Sources",
+          "description": "0: DC power\r\n1: Internal Battery\r\n2: External Battery\r\n3: Fuel Cell\r\n4: Power over Ethernet\r\n5: USB\r\n6: AC (Mains) power\r\n7: Solar\r\nThe same Resource Instance ID MUST be used to associate a given Power Source (Resource ID:6) with its Present Voltage (Resource ID:7) and its Present Current (Resource ID:8)",
+          "oma:id": 6,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 0,
+          "maximum": 7
+        },
+        "Power_Source_Voltage": {
+          "label": "Power Source Voltage",
+          "description": "Present voltage for each Available Power Sources Resource Instance. The unit used for this resource is in mV.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Power_Source_Current": {
+          "label": "Power Source Current",
+          "description": "Present current for each Available Power Source. The unit used for this resource is in mA.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Battery_Level": {
+          "label": "Battery Level",
+          "description": "Contains the current battery level as a percentage (with a range from 0 to 100). This value is only valid for the Device internal Battery if present (one Available Power Sources Resource Instance is 1).",
+          "oma:id": 9,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Memory_Free": {
+          "label": "Memory Free",
+          "description": "Estimated current available amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes). Note: 1 kilobyte corresponds to 1000 bytes.",
+          "oma:id": 10,
+          "writable": false,
+          "type": "integer"
+        },
+        "Error_Code": {
+          "label": "Error Code",
+          "description": "0=No error\r\n1=Low battery power\r\n2=External power supply off\r\n3=GPS module failure\r\n4=Low received signal strength\r\n5=Out of memory\r\n6=SMS failure\r\n7=IP connectivity failure\r\n8=Peripheral malfunction\r\n9..15=Reserved for future use\r\n16..32=Device specific error codes\r\n\r\nWhen the single Device Object Instance is initiated, there is only one error code Resource Instance whose value is equal to 0 that means no error. When the first error happens, the LwM2M Client changes error code Resource Instance to any non-zero value to indicate the error type. When any other error happens, a new error code Resource Instance is created. When an error associated with a Resource Instance is no longer present, that Resource Instance is deleted. When the single existing error is no longer present, the LwM2M Client returns to the original no error state where Instance 0 has value 0.\r\nThis error code Resource MAY be observed by the LwM2M Server. How to deal with LwM2M Client’s error report depends on the policy of the LwM2M Server. Error codes in between 16 and 32 are specific to the Device and may have different meanings among implementations.",
+          "oma:id": 11,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 0,
+          "maximum": 32
+        },
+        "Current_Time": {
+          "label": "Current Time",
+          "description": "Current UNIX time of the LwM2M Client.\r\nThe LwM2M Client should be responsible to increase this time value as every second elapses.\r\nThe LwM2M Server is able to write this Resource to make the LwM2M Client synchronized with the LwM2M Server.",
+          "oma:id": 13,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "UTC_Offset": {
+          "label": "UTC Offset",
+          "description": "Indicates the UTC offset currently in effect for this LwM2M Device. UTC+X [ISO 8601].",
+          "oma:id": 14,
+          "type": "string"
+        },
+        "Timezone": {
+          "label": "Timezone",
+          "description": "Indicates in which time zone the LwM2M Device is located, in IANA Timezone (TZ) database format.",
+          "oma:id": 15,
+          "type": "string"
+        },
+        "Supported_Binding_and_Modes": {
+          "label": "Supported Binding and Modes",
+          "description": "Indicates which bindings and modes are supported in the LwM2M Client. The possible values are those listed in the LwM2M Core Specification.",
+          "oma:id": 16,
+          "writable": false,
+          "type": "string"
+        },
+        "Device_Type": {
+          "label": "Device Type",
+          "description": "Type of the device (manufacturer specified string: e.g. smart meters / dev Class / ...)",
+          "oma:id": 17,
+          "writable": false,
+          "type": "string"
+        },
+        "Hardware_Version": {
+          "label": "Hardware Version",
+          "description": "Current hardware version of the device",
+          "oma:id": 18,
+          "writable": false,
+          "type": "string"
+        },
+        "Software_Version": {
+          "label": "Software Version",
+          "description": "Current software version of the device (manufacturer specified string). On elaborated LwM2M device, SW could be split in 2 parts: a firmware one and a higher level software on top.\r\nBoth pieces of Software are together managed by LwM2M Firmware Update Object (Object ID 5)",
+          "oma:id": 19,
+          "writable": false,
+          "type": "string"
+        },
+        "Battery_Status": {
+          "label": "Battery Status",
+          "description": "This value is only valid for the Device Internal Battery if present (one Available Power Sources Resource Instance value is 1).\r\nBattery\r\nStatus\tMeaning\tDescription\r\n0\tNormal\tThe battery is operating normally and not on power.\r\n1\tCharging\tThe battery is currently charging.\r\n2\tCharge Complete\tThe battery is fully charged and still on power.\r\n3\tDamaged\tThe battery has some problem.\r\n4\tLow Battery\tThe battery is low on charge.\r\n5\tNot Installed\tThe battery is not installed.\r\n6\tUnknown\tThe battery information is not available.",
+          "oma:id": 20,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 6
+        },
+        "Memory_Total": {
+          "label": "Memory Total",
+          "description": "Total amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes).  Note: 1 kilobyte corresponds to 1000 bytes.",
+          "oma:id": 21,
+          "writable": false,
+          "type": "integer"
+        },
+        "ExtDevInfo": {
+          "label": "ExtDevInfo",
+          "description": "Reference to external \"Device\" object instance containing information. For example, such an external device can be a Host Device, which is a device into which the Device containing the LwM2M client is embedded. This Resource may be used to retrieve information about the Host Device.",
+          "oma:id": 22,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        }
+      },
+      "sdfAction": {
+        "Reboot": {
+          "label": "Reboot",
+          "description": "Reboot the LwM2M Device to restore the Device from unexpected firmware failure.",
+          "oma:id": 4
+        },
+        "Factory_Reset": {
+          "label": "Factory Reset",
+          "description": "Perform factory reset of the LwM2M Device to make the LwM2M Device to go through initial deployment sequence where provisioning and bootstrap sequence is performed. This requires client ensuring post factory reset to have minimal information to allow it to carry out one of the bootstrap methods specified in section 5.2.3. \r\nWhen this Resource is executed, \"De-register\" operation MAY be sent to the LwM2M Server(s) before factory reset of the LwM2M Device.",
+          "oma:id": 5
+        },
+        "Reset_Error_Code": {
+          "label": "Reset Error Code",
+          "description": "Delete all error code Resource Instances and create only one zero-value error code that implies no error, then re-evaluate all error conditions and update and create Resources Instances to capture all current error conditions.",
+          "oma:id": 12
+        }
+      },
+      "sdfRequired": [
+        "Error_Code",
+        "Supported_Binding_and_Modes",
+        "Reboot"
+      ]
+    }
+  }
+}

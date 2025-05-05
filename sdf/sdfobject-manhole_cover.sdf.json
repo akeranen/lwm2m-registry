@@ -1,0 +1,54 @@
+{
+  "info": {
+    "title": "OMA LwM2M Manhole Cover (Object ID 3408)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Manhole_Cover": {
+      "label": "Manhole Cover",
+      "description": "Describe the status of a manhole cover.",
+      "oma:id": "3408",
+      "sdfProperty": {
+        "Safety_Angle_Threshold": {
+          "label": "Safety Angle Threshold",
+          "description": "The threshold of manhole cover's safety angle.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer",
+          "unit": "rad",
+          "minimum": 0,
+          "maximum": 180
+        },
+        "Manhole_Cover_Tilt": {
+          "label": "Manhole Cover Tilt",
+          "description": "The tilt angle of a manhole cover.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer",
+          "unit": "rad",
+          "minimum": 0,
+          "maximum": 180
+        },
+        "Cover_Open_Status": {
+          "label": "Cover Open Status",
+          "description": "Indicate whether an open status of the manhole cover is detected. Not detected open [true] or Detected open [false].",
+          "oma:id": 3,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Safety_Angle_Threshold",
+        "Manhole_Cover_Tilt",
+        "Cover_Open_Status"
+      ]
+    }
+  }
+}

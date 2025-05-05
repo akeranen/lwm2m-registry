@@ -1,0 +1,65 @@
+{
+  "info": {
+    "title": "OMA LwM2M eSIM IoT (Object ID 3443)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "eSIM_IoT": {
+      "label": "eSIM IoT",
+      "description": "The interface between eIM and IPA as described in GSMA SGP.32.",
+      "oma:id": "3443",
+      "sdfProperty": {
+        "State": {
+          "label": "State",
+          "description": "Status\r\n\t\t\t\t\t0  ready to receive eIM message\r\n\t\t\t\t\t1  not able to receive eIM message\r\n\t\t\t\t\tNote: In case value is >0 then writing to resource 2 shall not be possible",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "EID": {
+          "label": "EID",
+          "description": "EID of the eUICC that is target of the object",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "eIM_message": {
+          "label": "eIM message",
+          "description": "The message from eIM to IPA. The message shall be in the ASN.1 DER format defined in SGP.32 Section 6.3.1",
+          "oma:id": 2,
+          "readable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "IPA_message": {
+          "label": "IPA message",
+          "description": "The message from IPA to eIM. The message shall be in the ASN.1 DER format defined in GSMA SGP.32 section 6.3.1",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        }
+      },
+      "sdfAction": {
+        "Clear_IPA_message": {
+          "label": "Clear IPA message",
+          "description": "In case Send or Confirmable Notifications is not used to deliver IPA messsage then execution of this resource will confirm delivery of the IPA message and clear the resource 3.",
+          "oma:id": 4
+        }
+      },
+      "sdfRequired": [
+        "State",
+        "EID",
+        "eIM_message",
+        "IPA_message",
+        "Clear_IPA_message"
+      ]
+    }
+  }
+}

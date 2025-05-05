@@ -1,0 +1,158 @@
+{
+  "info": {
+    "title": "OMA LwM2M RCU PM (Object ID 10318)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "RCU_PM": {
+      "label": "RCU PM",
+      "description": "This LWM2M Object includes RCU(Robotic Control Unit) PM information(counter and guage).",
+      "oma:id": "10318",
+      "sdfProperty": {
+        "CPU_Usage": {
+          "label": "CPU Usage",
+          "description": "The CPU usage of the RCU.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Max_CPU_Usage": {
+          "label": "Max CPU Usage",
+          "description": "Max CPU Usage of the RCU.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Memory_Usage": {
+          "label": "Memory Usage",
+          "description": "Memory Usage of the RCU.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Storage_Usage": {
+          "label": "Storage Usage",
+          "description": "Storage Usage of the RCU.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Battery_Level": {
+          "label": "Battery Level",
+          "description": "The Battery Level of the RCU.",
+          "oma:id": 51,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Network_Bandwidth": {
+          "label": "Network Bandwidth",
+          "description": "Network Bandwidth of the RCU.",
+          "oma:id": 52,
+          "writable": false,
+          "type": "number",
+          "unit": "Mbit/s"
+        },
+        "Mobile_Signal": {
+          "label": "Mobile Signal",
+          "description": "Mobile Signal of the RCU.",
+          "oma:id": 53,
+          "writable": false,
+          "type": "integer"
+        },
+        "GPS_Signal": {
+          "label": "GPS Signal",
+          "description": "GPS Signal of the RCU.",
+          "oma:id": 54,
+          "writable": false,
+          "type": "integer"
+        },
+        "Wi-Fi_Signal": {
+          "label": "Wi-Fi Signal",
+          "description": "Wi-Fi Signal of the RCU.",
+          "oma:id": 55,
+          "writable": false,
+          "type": "integer"
+        },
+        "UpLink_Rate": {
+          "label": "UpLink Rate",
+          "description": "UpLink Rate of the network used by the RCU.",
+          "oma:id": 56,
+          "writable": false,
+          "type": "number",
+          "unit": "Mbit/s"
+        },
+        "DownLink_Rate": {
+          "label": "DownLink Rate",
+          "description": "DownLink Rate of the network used by the RCU.",
+          "oma:id": 57,
+          "writable": false,
+          "type": "number",
+          "unit": "Mbit/s"
+        },
+        "Packet_Loss_Rate": {
+          "label": "Packet Loss Rate",
+          "description": "Packet Loss Rate in percentage.",
+          "oma:id": 58,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Network_Latency": {
+          "label": "Network Latency",
+          "description": "Network Latency in ms.",
+          "oma:id": 59,
+          "writable": false,
+          "type": "integer",
+          "unit": "ms"
+        },
+        "Battery_Temperature": {
+          "label": "Battery Temperature",
+          "description": "Battery Temperature.",
+          "oma:id": 300,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "CPU_Usage",
+        "Max_CPU_Usage",
+        "Memory_Usage",
+        "Storage_Usage",
+        "Battery_Level",
+        "Network_Bandwidth",
+        "Mobile_Signal",
+        "Wi-Fi_Signal",
+        "UpLink_Rate",
+        "DownLink_Rate",
+        "Packet_Loss_Rate",
+        "Network_Latency",
+        "Battery_Temperature"
+      ]
+    }
+  }
+}

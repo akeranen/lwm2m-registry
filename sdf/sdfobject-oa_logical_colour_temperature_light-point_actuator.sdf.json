@@ -1,0 +1,203 @@
+{
+  "info": {
+    "title": "OMA LwM2M oA Logical Colour Temperature Light-Point Actuator (Object ID 3391)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Zumtobel Group.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "oA_Logical_Colour_Temperature_Light-Point_Actuator": {
+      "label": "oA Logical Colour Temperature Light-Point Actuator",
+      "description": "The 'oA Logical Colour_Temperature Light Point Actuator' represents the logical part of an actuator model for a tunable white light point. The corresponding physical device is a light channel and associated gear (e.g. LED driver).\\nThe Object (module) supports several interactions that include absolute and relative colour temperature setting. Several device configuration parameters are mapped, which relate to behaviour or describe device limitations. Note that the overall intensity is not controlled by this object, it remains controlled by a logical light point object to ease dimming action across tuneable, coloured and non coloured lights. Please note also, that the corresponding executing object does not need to be restricted to tuneable white operation.",
+      "oma:id": "3391",
+      "sdfProperty": {
+        "ObjectVersion": {
+          "label": "ObjectVersion",
+          "description": "LWM2M Object versioning label.",
+          "oma:id": 4001,
+          "writable": false,
+          "type": "string"
+        },
+        "Documentary_Description": {
+          "label": "Documentary Description",
+          "description": "Resource to hold a documentary text description of the object.",
+          "oma:id": 901,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 256
+        },
+        "Target_Colour_Temperature": {
+          "label": "Target Colour Temperature",
+          "description": "This Resource represents the target colour temperature requested to the Light Point. On reset this value should be set to 5000. On a Power cycle, the Target colour temperature is set according to 'On Behaviour'.",
+          "oma:id": 146,
+          "writable": false,
+          "minimum": 0,
+          "type": "integer",
+          "unit": "K",
+          "maximum": 65535
+        },
+        "Executing_Object": {
+          "label": "Executing Object",
+          "description": "Link to the Object Instance in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)",
+          "oma:id": 909,
+          "sdfRef": "oma:corelnk"
+        },
+        "Priority": {
+          "label": "Priority",
+          "description": "The priority of this Logical Object. If a Logical Object with a higher priority controlles the same physical object, this instance will hold its settings until its priority is sufficient again. \\nIf the priorities are the same the last one is served.",
+          "oma:id": 921,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 5
+        },
+        "Colour_Temperature_Changing_Time": {
+          "label": "Colour Temperature Changing Time",
+          "description": "Defines the time needed to change the light point from minimum colour temperature to maximum colour temperature. The resulting change rate is used for every colour temperature shift request. Scaling is 100ms per unit",
+          "oma:id": 139,
+          "minimum": 0,
+          "type": "integer",
+          "unit": "ms",
+          "maximum": 65535
+        },
+        "Colour_Temperature_Transition_Time": {
+          "label": "Colour Temperature Transition Time",
+          "description": "Defines the default transition time to be used for 'Set_Colour_Temperature' and 'Step' requests, if that request has no value specified. A value of 0 means the transaction is immediate. Scaling is 100ms per unit",
+          "oma:id": 140,
+          "minimum": 0,
+          "type": "integer",
+          "unit": "ms",
+          "maximum": 65535
+        },
+        "Colour_Temperature_Step_Size": {
+          "label": "Colour Temperature Step Size",
+          "description": "Defines the default step size to be used for 'Step' requests, if that request has no value specified.",
+          "oma:id": 141,
+          "minimum": 0,
+          "type": "integer",
+          "unit": "K",
+          "maximum": 65535
+        },
+        "Application_Group_ID": {
+          "label": "Application Group ID",
+          "description": "The application group ID that the logical object is part of. This ID will define the application group the status reports are sent to. It is internally used as a pointer to the Group Object instance that hosts all the Group configurations.",
+          "oma:id": 903,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Status_Resend_Time": {
+          "label": "Status Resend Time",
+          "description": "The time specified as status resend time is used to resend the actual status to the application group the object is a member of, even if nothing changed.\\nThe status resend time is restarted after every event. The actual interval is a random time with the maximum duration given by this resource. Randomization helps to avoid massive ongoing message collisions after system power up.\\nFor example: Status resend time is set to 10 seconds;\\n* 00:00 status is sent\\n* 00:05 status changes and is sent immediatly\\n* 00:15 (or before, depending on the randomization) status is sent even though it did not change",
+          "oma:id": 904,
+          "minimum": 1,
+          "type": "integer",
+          "unit": "s",
+          "maximum": 600
+        },
+        "Status_Report_Structure_ID": {
+          "label": "Status Report Structure ID",
+          "description": "The ID of the status resource structure that is used to code the cyclic status report. See object 4012 'oA Status Report Structure' for more information",
+          "oma:id": 919,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 255
+        },
+        "Scene_Cache": {
+          "label": "Scene Cache",
+          "description": "A cache for the scene values. These values should be called when a scene is recalled. It is buildt from a Scene_ID (UInt 16, a target resource (Corelnk) defineition, and a payload that operates on this resource), a transition time in ms (UInt16), and an action (Put/Post) defintion",
+          "oma:id": 922,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "sdfType": "byte-string"
+          }
+        },
+        "Set_Colour_Temperature": {
+          "label": "Set Colour Temperature",
+          "description": "This Resource allows to set the colour temperature to an absolute value. Possible arguments are:\\n- *arg0: Colour Temperature* - final colour temperature value\\n- *arg1: Transition Time* - transition time with 100ms resolution\\n\\t\\t\\t\\n**Note:** When the optional argument time is not given, or if its value is empty the default configuration value is used.\\nA request on this Resource will immediately update 'Remaining Transition Time' and 'Current Colour Temperature' until the Set Colour Temperature operation is cloncluded.",
+          "oma:id": 142,
+          "readable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Relative_Change_Colour_Temperature": {
+          "label": "Relative Change Colour Temperature",
+          "description": "This Resource allows to change the colour temperature relatively:\\n- *Direction* [mandatory] direction of colour temperature change\\n**Note:** During this process, the 'Current Colour Temperature' and 'Remaining Transition Time' are continuously updated. If this Resource is executed while another colour temperature variation process is running, the ongoing process is stopped and the relative change process begins using as starting point the colour temperature value at that specific moment.\\n\\t\\t\\t\\nSome examples:\\n- `POST coap://<target_IP_address>/<dir>/<Obj_ID>/<obj_instance>/118 0`  \\nreduces the colour temperature.\\n- `POST coap://<target_IP_address>/<dir>/<Obj_ID>/<obj_instance>/118 1`  \\nincreases the colour temperature.",
+          "oma:id": 143,
+          "readable": false,
+          "type": "boolean"
+        },
+        "Step_Colour_Temperature": {
+          "label": "Step Colour Temperature",
+          "description": "This resource allows to increase and decrease the colour temperature of the light point by a given step size. \\nThe following paramters are used:\\n- *arg0: Direction* - step direction (true=increase, false=decrease)\\n- *arg1: Step Size* - the size of the step\\n- *arg2: Transition Time* - transition time with 100ms resolution\\n\\t\\t\\t\\t\\n**Note:** During this process, the 'Remaining Transition Time' and 'Current Colour Temperature' are continuously updated.\\nIf this Resource is executed while another colour temperature variation process is running, the ongoing is stopped and this new process is started, using the current colour temperature value as a starting point.",
+          "oma:id": 145,
+          "readable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Recall_Scene": {
+          "label": "Recall Scene",
+          "description": "When written, the scene with the given ID is recalled.",
+          "oma:id": 902,
+          "readable": false,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Debug_Mode_Enabled": {
+          "label": "Debug Mode Enabled",
+          "description": "Enables the object test mode. The physical representation of the object will be disabled. Stimuli can be injected to test the object remotely using inject test event.",
+          "oma:id": 905,
+          "type": "boolean"
+        },
+        "Inject_Test_Event": {
+          "label": "Inject Test Event",
+          "description": "Defines the test events to be injected into the system when debug mode is enabled. Event definition is vendor specific.",
+          "oma:id": 906,
+          "readable": false,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Object_Enabled": {
+          "label": "Object Enabled",
+          "description": "This resource allows to disable an object instance. \\nIf an object instance is disabled it does process incoming events but does not create outgoing events.",
+          "oma:id": 924,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Stop_Transition": {
+          "label": "Stop Transition",
+          "description": "When executed, it immediately stops all ongoing transition processes. 'Current Colour Temperature' maintains the value it has at that moment and 'Remaining Transition Time' is set to '0'.",
+          "oma:id": 144
+        },
+        "Execute_Test_Injection": {
+          "label": "Execute Test Injection",
+          "description": "When executed, the test event specified in resource 906 is injected.",
+          "oma:id": 934
+        }
+      },
+      "sdfRequired": [
+        "Target_Colour_Temperature",
+        "Executing_Object",
+        "Priority",
+        "Colour_Temperature_Changing_Time",
+        "Colour_Temperature_Transition_Time",
+        "Colour_Temperature_Step_Size",
+        "Application_Group_ID",
+        "Status_Resend_Time",
+        "Status_Report_Structure_ID",
+        "Set_Colour_Temperature",
+        "Relative_Change_Colour_Temperature",
+        "Step_Colour_Temperature",
+        "Recall_Scene",
+        "Stop_Transition"
+      ]
+    }
+  }
+}

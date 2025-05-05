@@ -1,0 +1,68 @@
+{
+  "info": {
+    "title": "OMA LwM2M oA OGC-Security (Object ID 3405)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Zumtobel Group.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "oA_OGC-Security": {
+      "label": "oA OGC-Security",
+      "description": "The 'OGC Security' provides the appropriate keying material for a specific OGC Application group in the context of OGC. The keying material will be provided by a key distribution server, and must not be readable by any instance outside the local node.",
+      "oma:id": "3405",
+      "sdfProperty": {
+        "ObjectVersion": {
+          "label": "ObjectVersion",
+          "description": "LWM2M Object versioning label.",
+          "oma:id": 4001,
+          "writable": false,
+          "type": "string"
+        },
+        "Documentary_Description": {
+          "label": "Documentary Description",
+          "description": "Resource to hold a documentary text description of the object.",
+          "oma:id": 901,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 256
+        },
+        "OGC_Security_ID": {
+          "label": "OGC Security ID",
+          "description": "Uniquely identifies the OpenAIS Security group that this instance is using.",
+          "oma:id": 0,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Accepted_Senders": {
+          "label": "Accepted Senders",
+          "description": "Stores the identities (OSCORE / IPv6) and Keys of accepted senders in the group",
+          "oma:id": 3,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "sdfType": "byte-string"
+          }
+        },
+        "Secret_Group_Key": {
+          "label": "Secret Group Key",
+          "description": "Stores the shared symmetric key for low latency group communication.This Resource MUST NOT be readable by any server.",
+          "oma:id": 5,
+          "readable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "OGC_Security_ID",
+        "Accepted_Senders",
+        "Secret_Group_Key"
+      ]
+    }
+  }
+}

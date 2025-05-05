@@ -1,0 +1,203 @@
+{
+  "info": {
+    "title": "OMA LwM2M Power Measurement (Object ID 3305)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Open Mobile Alliance.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Power_Measurement": {
+      "label": "Power Measurement",
+      "description": "This IPSO object should be used over a power measurement sensor to report a remote power measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range for both active and reactive power. It also provides resources for cumulative energy, calibration, and the power factor.",
+      "oma:id": "3305",
+      "sdfProperty": {
+        "Instantaneous_active_power": {
+          "label": "Instantaneous active power",
+          "description": "The current active power.",
+          "oma:id": 5800,
+          "writable": false,
+          "type": "number",
+          "unit": "W"
+        },
+        "Min_Measured_active_power": {
+          "label": "Min Measured active power",
+          "description": "The minimum active power measured by the sensor since it is ON.",
+          "oma:id": 5801,
+          "writable": false,
+          "type": "number",
+          "unit": "W"
+        },
+        "Max_Measured_active_power": {
+          "label": "Max Measured active power",
+          "description": "The maximum active power measured by the sensor since it is ON.",
+          "oma:id": 5802,
+          "writable": false,
+          "type": "number",
+          "unit": "W"
+        },
+        "Min_Range_active_power": {
+          "label": "Min Range active power",
+          "description": "The minimum active power that can be measured by the sensor.",
+          "oma:id": 5803,
+          "writable": false,
+          "type": "number",
+          "unit": "W"
+        },
+        "Max_Range_active_power": {
+          "label": "Max Range active power",
+          "description": "The maximum active power that can be measured by the sensor.",
+          "oma:id": 5804,
+          "writable": false,
+          "type": "number",
+          "unit": "W"
+        },
+        "Cumulative_active_power": {
+          "label": "Cumulative active power",
+          "description": "The cumulative active power since the last cumulative energy reset or device start.",
+          "oma:id": 5805,
+          "writable": false,
+          "type": "number",
+          "unit": "Wh"
+        },
+        "Active_Power_Calibration": {
+          "label": "Active Power Calibration",
+          "description": "Request an active power calibration by writing the value of a calibrated load.",
+          "oma:id": 5806,
+          "readable": false,
+          "type": "number",
+          "unit": "W"
+        },
+        "Instantaneous_reactive_power": {
+          "label": "Instantaneous reactive power",
+          "description": "The current reactive power.",
+          "oma:id": 5810,
+          "writable": false,
+          "type": "number",
+          "unit": "var"
+        },
+        "Min_Measured_reactive_power": {
+          "label": "Min Measured reactive power",
+          "description": "The minimum reactive power measured by the sensor since it is ON.",
+          "oma:id": 5811,
+          "writable": false,
+          "type": "number",
+          "unit": "var"
+        },
+        "Max_Measured_reactive_power": {
+          "label": "Max Measured reactive power",
+          "description": "The maximum reactive power measured by the sensor since it is ON.",
+          "oma:id": 5812,
+          "writable": false,
+          "type": "number",
+          "unit": "var"
+        },
+        "Min_Range_reactive_power": {
+          "label": "Min Range reactive power",
+          "description": "The minimum active power that can be measured by the sensor.",
+          "oma:id": 5813,
+          "writable": false,
+          "type": "number",
+          "unit": "var"
+        },
+        "Max_Range_reactive_power": {
+          "label": "Max Range reactive power",
+          "description": "The maximum reactive power that can be measured by the sensor.",
+          "oma:id": 5814,
+          "writable": false,
+          "type": "number",
+          "unit": "var"
+        },
+        "Cumulative_reactive_power": {
+          "label": "Cumulative reactive power",
+          "description": "The cumulative reactive power since the last cumulative energy reset or device start.",
+          "oma:id": 5815,
+          "writable": false,
+          "type": "number",
+          "unit": "varh"
+        },
+        "Reactive_Power_Calibration": {
+          "label": "Reactive Power Calibration",
+          "description": "Request a reactive power calibration by writing the value of a calibrated load.",
+          "oma:id": 5816,
+          "readable": false,
+          "type": "number",
+          "unit": "var"
+        },
+        "Power_factor": {
+          "label": "Power factor",
+          "description": "If applicable, the power factor of the current consumption.",
+          "oma:id": 5820,
+          "writable": false,
+          "type": "number"
+        },
+        "Current_Calibration": {
+          "label": "Current Calibration",
+          "description": "Read or Write the current calibration coefficient.",
+          "oma:id": 5821,
+          "type": "number"
+        },
+        "Application_Type": {
+          "label": "Application Type",
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "oma:id": 5750,
+          "type": "string"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {
+        "Reset_Cumulative_energy": {
+          "label": "Reset Cumulative energy",
+          "description": "Reset both cumulative active/reactive power.",
+          "oma:id": 5822
+        },
+        "Reset_Min_and_Max_Measured_Values": {
+          "label": "Reset Min and Max Measured Values",
+          "description": "Reset the Min and Max Measured Values to Current Value.",
+          "oma:id": 5605
+        }
+      },
+      "sdfRequired": [
+        "Instantaneous_active_power"
+      ]
+    }
+  }
+}

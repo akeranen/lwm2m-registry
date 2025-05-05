@@ -1,0 +1,79 @@
+{
+  "info": {
+    "title": "OMA LwM2M Device RF Capabilities (Object ID 28)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Device_RF_Capabilities": {
+      "label": "Device RF Capabilities",
+      "description": "This is a device management object that should be used for capturing the RF capabilities of the device.",
+      "oma:id": "28",
+      "sdfProperty": {
+        "Supported_LTE_Band_Information": {
+          "label": "Supported LTE Band Information",
+          "description": "Indicates the list of supported LTE bands",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "Supported_EGPRS_Band_Information": {
+          "label": "Supported EGPRS Band Information",
+          "description": "Indicates the list of supported EGPRS bands",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "Supported_TD-SCDMA_Band_Information": {
+          "label": "Supported TD-SCDMA Band Information",
+          "description": "Indicates the list of supported TD-SCDMA bands",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "Supported_WCDMA_Band_Information": {
+          "label": "Supported WCDMA Band Information",
+          "description": "Indicates the list of supported WCDMA bands",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "Supported_CDMA-2000_Band_Information": {
+          "label": "Supported CDMA-2000 Band Information",
+          "description": "Indicates the list of supported CDMA-2000 bands",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer"
+        },
+        "Supported_WiMAX_Band_Information": {
+          "label": "Supported WiMAX Band Information",
+          "description": "Indicates the list of supported WiMAX bands",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer"
+        },
+        "Supported_NB-IoT_Band_Information": {
+          "label": "Supported NB-IoT Band Information",
+          "description": "Indicates the list of supported NB-IoT bands",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer"
+        },
+        "Supported_5G_Band_Information": {
+          "label": "Supported 5G Band Information",
+          "description": "Indicates the list of supported 5G-NR bands",
+          "oma:id": 7,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": []
+    }
+  }
+}

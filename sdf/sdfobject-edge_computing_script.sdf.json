@@ -1,0 +1,70 @@
+{
+  "info": {
+    "title": "OMA LwM2M Edge computing script (Object ID 3437)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2020 uCIFI Alliance",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Edge_computing_script": {
+      "label": "Edge computing script",
+      "description": "The uCIFI edge computing scripts object defines a particular script to be executed by a device under a time or any other condition set by a \"Edge Computing Time Condition\" or \"Edge Computing Generic Condition\" object.",
+      "oma:id": "3437",
+      "sdfProperty": {
+        "Name": {
+          "label": "Name",
+          "description": "Name of the script.",
+          "oma:id": 1,
+          "type": "string"
+        },
+        "Signature": {
+          "label": "Signature",
+          "description": "Unique hash or signature associated to the script to be verified by the end-device before execution. The format of the hash or signature is vendor-specific.",
+          "oma:id": 2,
+          "type": "string"
+        },
+        "Version": {
+          "label": "Version",
+          "description": "Version of the script, as defined by the vendor.",
+          "oma:id": 3,
+          "type": "string"
+        },
+        "Script": {
+          "label": "Script",
+          "description": "Vendor-specific script.",
+          "oma:id": 4,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Script_format": {
+          "label": "Script format",
+          "description": "Script format to enable the device to select the script interpreter in case it supports multiple (e.g. LUA). The format of this resource is free to support vendor-specific formats.",
+          "oma:id": 5,
+          "type": "string"
+        },
+        "Non_supported_script": {
+          "label": "Non supported script",
+          "description": "Set to True if the script is not supported or if the device has identified errors in the script.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Non_authorized_script": {
+          "label": "Non authorized script",
+          "description": "Set to True if the hash/signature is not correct.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Script"
+      ]
+    }
+  }
+}

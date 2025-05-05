@@ -1,0 +1,116 @@
+{
+  "info": {
+    "title": "OMA LwM2M LWM2M Bearer Selection (Object ID 13)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LWM2M_Bearer_Selection": {
+      "label": "LWM2M Bearer Selection",
+      "description": "This object specifies resources to enable a device to choose a PLMN/network on which to attach/register and what type of bearer to then connect.\r\n\t\tThis object allows via remote bearer and network configuration to overwrite automatic network and bearer selection e.g. as supported by the UICC. An equivalent example for overwriting automatic selection is a user doing manual network and bearer selection on a smart phone.",
+      "oma:id": "13",
+      "sdfProperty": {
+        "Preferred_Communications_Bearer": {
+          "label": "Preferred Communications Bearer",
+          "description": "Used in network selection and, if applicable, in subsequent mobility management procedures:\r\n\t\t\t\t0: auto connect\r\n\t\t\t\t1: 3GPP PS preferred\r\n\t\t\t\t2: 3GPP PS GSM (GPRS) preferred (including EC-GSM-IoT)\r\n\t\t\t\t3: 3GPP PS UMTS preferred\r\n\t\t\t\t4: 3GPP PS LTE preferred\r\n\t\t\t\t5: 1xEV-DO preferred (1)\r\n\t\t\t\t6: 3GPP CS preferred (1)\r\n\t\t\t\t7: WLAN preferred\r\n\t\t\t\t8: Ethernet preferred (1)\r\n\t\t\t\t9: DSL preferred (1)\r\n\t\t\t\t10: Bluetooth preferred (1)\r\n\t\t\t\t11: WIMAX preferred (1)\r\n\t\t\t\t12: 3GPP PS LTE with CIoT EPS optimisations, User Plane preferred (2)\r\n\t\t\t\t13: 3GPP PS LTE with CIoT EPS optimisations, Control Plane preferred (2)14: 3GPP PS NB-IoT Control Plane optimisations preferred (2)\r\n\t\t\t\t15: 3GPP PS NB-IoT User Plane optimisations preferred (2) \r\n\t\t\t\t16: 3GPP 5G-NR preferred\r\n\t\t\t\t17-100: Reserved for future use\r\n\t\t\t\tThe Preferred Communications Bearer resource specifies the preferred communications bearer that the LWM2M Client is requested to use for connecting to the LWM2M Server. If multiple preferred communications bearers are specified, the priority order is reflected by the resource instance order. E.g. the bearer which appears first in the list of resource instances is to have higher priority over the rest of available bearers. The LWM2M Client SHOULD use the preferred bearers with higher priority first if they are available. If none of indicated preferred bearers is available, the LWM2M Client SHOULD wait until one of them becomes available.",
+          "oma:id": 0,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Acceptable_RSSI_(GSM)": {
+          "label": "Acceptable RSSI (GSM)",
+          "description": "Provides guide to the application when performing manual network selection.",
+          "oma:id": 1,
+          "type": "integer",
+          "minimum": -110,
+          "maximum": -48
+        },
+        "Acceptable_RSCP_(UMTS)": {
+          "label": "Acceptable RSCP (UMTS)",
+          "description": "Provides guide to the application when performing manual network selection.",
+          "oma:id": 2,
+          "type": "integer",
+          "minimum": -120,
+          "maximum": -25
+        },
+        "Acceptable_RSRP_(LTE)": {
+          "label": "Acceptable RSRP (LTE)",
+          "description": "Provides guide to the application when performing manual network selection.",
+          "oma:id": 3,
+          "type": "integer",
+          "minimum": -140,
+          "maximum": -44
+        },
+        "Acceptable_RSSI_(1xEV-DO)": {
+          "label": "Acceptable RSSI (1xEV-DO)",
+          "description": "Provides guide to the application when performing manual network selection.",
+          "oma:id": 4,
+          "type": "integer"
+        },
+        "Cell_lock_list": {
+          "label": "Cell lock list",
+          "description": "Comma separated list of allowed Global Cell Identities.",
+          "oma:id": 5,
+          "type": "string"
+        },
+        "Operator_list": {
+          "label": "Operator list",
+          "description": "Comma separated list of MCC+MNC of operators, in priority order.\r\n\t\t\t\tResource \"operator list mode\" indicates how to process this list.",
+          "oma:id": 6,
+          "type": "string"
+        },
+        "Operator_list_mode": {
+          "label": "Operator list mode",
+          "description": "Indicates whether resource \"operator list\" represents the allowed operator list (white list), or, the preferred operator list.\r\n\t\t\t\t0=preferred\r\n\t\t\t\t1=allowed",
+          "oma:id": 7,
+          "type": "boolean"
+        },
+        "List_of_available_PLMNs": {
+          "label": "List of available PLMNs",
+          "description": "Allows server to see results of network scan (e.g. result of AT+COPS=? as per 3GPP-TS_27.007)",
+          "oma:id": 8,
+          "writable": false,
+          "type": "string"
+        },
+        "Vendor_specific_extensions": {
+          "label": "Vendor specific extensions",
+          "description": "Link to a vendor specific object.",
+          "oma:id": 9,
+          "writable": false,
+          "sdfRef": "oma:objlnk"
+        },
+        "Acceptable_RSRP_(NB-IoT)": {
+          "label": "Acceptable RSRP (NB-IoT)",
+          "description": "Provides guide to the application when performing manual network selection.",
+          "oma:id": 10,
+          "type": "integer",
+          "minimum": -158,
+          "maximum": -44
+        },
+        "Higher_Priority_PLMN_Search_Timer": {
+          "label": "Higher Priority PLMN Search Timer",
+          "description": "Interval between periodic searches for higher priority PLMNs of the same country when camped on a visited PLMN, i.e. roaming scenario; based on SIM configuration, EFHPPLMN [3GPP-TS_31.102, section 4.2.6]",
+          "oma:id": 11,
+          "type": "integer"
+        },
+        "Attach_without_PDN_connection": {
+          "label": "Attach without PDN connection",
+          "description": "False: attach with PDN connection\r\n\t\t\t\tTrue: attach without PDN connection",
+          "oma:id": 12,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": []
+    }
+  }
+}

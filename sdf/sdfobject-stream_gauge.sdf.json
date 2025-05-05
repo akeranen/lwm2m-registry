@@ -1,0 +1,140 @@
+{
+  "info": {
+    "title": "OMA LwM2M Stream Gauge (Object ID 3445)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Stream_Gauge": {
+      "label": "Stream Gauge",
+      "description": "The uCIFI Stream Gauge measures the elevation of the water level surface and/or volumetric discharge.",
+      "oma:id": "3445",
+      "sdfProperty": {
+        "Water_Level": {
+          "label": "Water Level",
+          "description": "Water level surface elevation.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "number",
+          "unit": "m"
+        },
+        "Volumetric_discharge": {
+          "label": "Volumetric discharge",
+          "description": "Volumetric flow rate of water that is transported through a given cross-sectional area.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "number",
+          "unit": "m3"
+        },
+        "Type_of_meter": {
+          "label": "Type of meter",
+          "description": "Type of stream gauge meter.",
+          "oma:id": 3,
+          "type": "string"
+        },
+        "Status": {
+          "label": "Status",
+          "description": "0 = OK, 1-255 = Error code.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "Threshold_A": {
+          "label": "Threshold A",
+          "description": "If the water Level exceeds this value, the alarm A is set to True. This alarm has highest severity. A value of 0 or less disables the alarm.",
+          "oma:id": 6,
+          "type": "number",
+          "unit": "m"
+        },
+        "Alarm_A": {
+          "label": "Alarm A",
+          "description": "If the water Level exceeds the value in Threshold A, Alarm A is set to True. Alarm A is false otherwise.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Alarm_A_Counter": {
+          "label": "Alarm A Counter",
+          "description": "Number of Alarm A events since reset.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "integer"
+        },
+        "Threshold_B": {
+          "label": "Threshold B",
+          "description": "If the water Level exceeds this value, the alarm B is set to True. This alarm has lowest severity. A value of 0 or less disables the alarm.",
+          "oma:id": 9,
+          "type": "number",
+          "unit": "m"
+        },
+        "Alarm_B": {
+          "label": "Alarm B",
+          "description": "If the water Level exceeds the value in Threshold B, Alarm B is set to True. Alarm B is false otherwise.",
+          "oma:id": 10,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Alarm_B_Counter": {
+          "label": "Alarm B Counter",
+          "description": "Number of Alarm B events since reset.",
+          "oma:id": 11,
+          "writable": false,
+          "type": "integer"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {
+        "Alarm_Counter_Reset": {
+          "label": "Alarm Counter Reset",
+          "description": "Reset alarm counts.",
+          "oma:id": 5
+        }
+      },
+      "sdfRequired": [
+        "Water_Level"
+      ]
+    }
+  }
+}

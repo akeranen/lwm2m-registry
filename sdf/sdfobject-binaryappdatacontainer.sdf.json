@@ -1,0 +1,66 @@
+{
+  "info": {
+    "title": "OMA LwM2M BinaryAppDataContainer (Object ID 19)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019-2024 Open Mobile Alliance.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "BinaryAppDataContainer": {
+      "label": "BinaryAppDataContainer",
+      "description": "This LwM2M Objects provides the application service data related to a LwM2M Server, eg. Water meter data. \r\nThere are several methods to create instance to indicate the message direction based on the negotiation between Application and LwM2M. The Client and Server should negotiate the instance(s) used to exchange the data. For example:\r\n - Using a single instance for both directions communication, from Client to Server and from Server to Client.\r\n - Using an instance for communication from Client to Server and another one for communication from Server to Client\r\n - Using several instances",
+      "oma:id": "19",
+      "sdfProperty": {
+        "Data": {
+          "label": "Data",
+          "description": "Indicates the application data content.",
+          "oma:id": 0,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "sdfType": "byte-string"
+          }
+        },
+        "Data_Priority": {
+          "label": "Data Priority",
+          "description": "Indicates the Application data priority:\r\n0:Immediate\r\n1:BestEffort\r\n2:Latest\r\n3-100: Reserved for future use.\r\n101-254: Proprietary mode.",
+          "oma:id": 1,
+          "type": "integer"
+        },
+        "Data_Creation_Time": {
+          "label": "Data Creation Time",
+          "description": "Indicates the Data instance creation timestamp.",
+          "oma:id": 2,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Data_Description": {
+          "label": "Data Description",
+          "description": "Indicates the data description.\r\ne.g. \"meter reading\".",
+          "oma:id": 3,
+          "type": "string"
+        },
+        "Data_Format": {
+          "label": "Data Format",
+          "description": "Indicates the format of the Application Data.\r\ne.g. YG-Meter-Water-Reading\r\nUTF8-string",
+          "oma:id": 4,
+          "type": "string"
+        },
+        "App_ID": {
+          "label": "App ID",
+          "description": "Indicates the destination Application ID.",
+          "oma:id": 5,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Data"
+      ]
+    }
+  }
+}

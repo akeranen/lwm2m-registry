@@ -1,0 +1,94 @@
+{
+  "info": {
+    "title": "OMA LwM2M AT&T Connectivity Extension (Object ID 10308)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 AT&T.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "AT&T_Connectivity_Extension": {
+      "label": "AT&T Connectivity Extension",
+      "description": "The AT&T Connectivity Extension Object will be used to gather information describing the UE and the operating state of the UE. The AT&T Connectivity Extension Object is an open and standard object used by AT&T.",
+      "oma:id": "10308",
+      "sdfProperty": {
+        "ICCID": {
+          "label": "ICCID",
+          "description": "T he ICCID resource is used to identify the UICC used by the IoT device or module for authentication by the network. Reference ITU-T recommendation E.118",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "IMSI": {
+          "label": "IMSI",
+          "description": "The IMSI resource is used to log the IMSI used by the UE to identify itself to the network. The IMSI is defined in 3GPP TS 23.003 and is a combination of MCC (Mobile Country Code), MNC (Mobile Network Code), and MSIN (Mobile Subscriber Identification Number).",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "MSISDN": {
+          "label": "MSISDN",
+          "description": "The MSISDN resource will indicate the MSISDN as assigned, if any, to the SIM card. In the case that no MSISDN is assigned to the SIM card the response should be zero.",
+          "oma:id": 3,
+          "type": "string"
+        },
+        "APN_Retries": {
+          "label": "APN Retries",
+          "description": "The APN Retry multi instance resource will maintain the number of retries the device can attempt to activate a context on a particular APN. This resource should be defaulted to 2 retries. Should a device integrator wish to manipulate this the integrator should be able to do so.",
+          "oma:id": 4,
+          "type": "integer"
+        },
+        "APN_Retry_Period": {
+          "label": "APN Retry Period",
+          "description": "The APN retry period multi instance resource is the time in seconds between attempting a context activation on the APN. This should be defaulted to 0. Note that the IoT Module will be limited by the number retries and the periodicity of the retries by the DAM requirements in Chapter 28 of the AT&T 13340. The resource is multi-instance to accommodate different periods of retries on different APNs.",
+          "oma:id": 5,
+          "type": "integer",
+          "unit": "s"
+        },
+        "APN_Retry_Back-Off_Period": {
+          "label": "APN Retry Back-Off Period",
+          "description": "The APN Retry Back-Off Period is the period between a burst of attempts to activate a context on a particular APN. This resource is intended to be a longer period than the APN retry period to account for limitations on the numbers of times an authentication request can be made with the network. This should be defaulted to 86400 seconds (1 Day). This resource is also a multiple instance resource to accommodate different retry periods amongst different APNs.",
+          "oma:id": 6,
+          "type": "integer",
+          "unit": "s"
+        },
+        "SINR": {
+          "label": "SINR",
+          "description": "This is the signal to noise ratio resource. This measurement should be measured over 10 sampled at a 400ms sample rate. Once the 10 samples are averaged the measurement should be reflected in the Signal to Noise Ratio resource. Reference: 3GPP TS 38.215, clause 5.1.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "integer"
+        },
+        "SRXLEV": {
+          "label": "SRXLEV",
+          "description": "This resource indicates the cell selection receive value. See definition in 3GPP TS 36.304.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "integer"
+        },
+        "CE_LEVEL": {
+          "label": "CE_LEVEL",
+          "description": "This resource indicates the Coverage Enhancement Level defined for LTE-M and NB-IoT. The Coverage Enhancement Level is on a range from 0-2. AT&T NB-IoT supports CE MODE A and B (CE LEVEL 0,1,2) and AT&T LTE-M supports CE MODE A (CE Level 0,1).",
+          "oma:id": 9,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "ICCID",
+        "IMSI",
+        "MSISDN",
+        "APN_Retries",
+        "APN_Retry_Period",
+        "APN_Retry_Back-Off_Period",
+        "SINR",
+        "SRXLEV",
+        "CE_LEVEL"
+      ]
+    }
+  }
+}

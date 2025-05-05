@@ -1,0 +1,81 @@
+{
+  "info": {
+    "title": "OMA LwM2M Periodic Sensor Sampler (Object ID 10494)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Periodic_Sensor_Sampler": {
+      "label": "Periodic Sensor Sampler",
+      "description": "The autosen Periodic Sensor Sampler object can be used to sample one or more sensor value(s) at periodic intervals",
+      "oma:id": "10494",
+      "sdfProperty": {
+        "Sensor_Value_Path": {
+          "label": "Sensor Value Path",
+          "description": "Resources are specified using Core Link syntax\r\nExample:\r\nInstance #0: </3303/0/5700>\r\nInstance #1: </3303/1/5700>",
+          "oma:id": 0,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Sampling_Start_Time": {
+          "label": "Sampling Start Time",
+          "description": "Specifies the number of seconds after midnight UTC from which the sampler should be started",
+          "oma:id": 1,
+          "type": "integer",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 86399
+        },
+        "Sampling_Interval": {
+          "label": "Sampling Interval",
+          "description": "Specifies the Interval at which the sampling is to be repeated from the Sampling Start Time.",
+          "oma:id": 2,
+          "type": "integer",
+          "unit": "s",
+          "minimum": 1,
+          "maximum": 86399
+        },
+        "Sampling_Count": {
+          "label": "Sampling Count",
+          "description": "Specifies the number of intervals to be performed in the sampling interval, starting from the Sampling Start Time",
+          "oma:id": 3,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 86399
+        },
+        "Step_Filter": {
+          "label": "Step Filter",
+          "description": "Only when the value pointed by LwM2M resource Sensor Value Path changes by more than Step Filter the Sampler should evaluate the value",
+          "oma:id": 4,
+          "type": "number"
+        },
+        "Sampling_Days_of_the_Week": {
+          "label": "Sampling Days of the Week",
+          "description": "Specifies the days of the week when sampling should occur. The value is a single byte (bitmask), where Bit 0 = Sunday, Bit 1 = Monday, ..., Bit 6 = Saturday",
+          "oma:id": 5,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Sampling_Recurrence": {
+          "label": "Sampling Recurrence",
+          "description": "Specifies the Recurrence in days in which the Sampler will be executed. This works in combination with \"Sampling Days of the Week\" (ID 5),  \r\n        allowing finer control over when sampling occurs.",
+          "oma:id": 6,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Sensor_Value_Path",
+        "Sampling_Start_Time",
+        "Sampling_Interval"
+      ]
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "info": {
+    "title": "OMA LwM2M Wet Bulb Globe Temperature (Object ID 3450)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Wet_Bulb_Globe_Temperature": {
+      "label": "Wet Bulb Globe Temperature",
+      "description": "The uCIFI Wet Bulb Globe Temperature is a temperature sensor that extends the standard IPSO Temperature object reference and can be used to record apparent temperature based on WBGT calculation. The measure comes from applying specific formula that take into account environmental measurements, such as temperature, humidity, wind speed, radiation.",
+      "oma:id": "3450",
+      "sdfProperty": {
+        "Estimation_type": {
+          "label": "Estimation type",
+          "description": "Bit mask to inform about the type of measurements that are taken into account in the calculation of wet bulb globe temperature : 0 = Ambient Temperature, 1 = Black Globe Temperature, 2 = Humidity, 3 = Air Pressure, 4 = Illuminance, 5 = Wind speed, 6 = Visible radiation, 7 = Infrared radiation. If the sensor considers both ambien temperature, air pressure and illuminance, the value of this resource shall be: 0001101.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "Estimated_Value": {
+          "label": "Estimated Value",
+          "description": "Additional estimated measurement.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel"
+        },
+        "WBGT_Threshold": {
+          "label": "WBGT Threshold",
+          "description": "If the calculated WBGT exceeds this value, the alarm is set. A value of 0 or less disables the alarm.",
+          "oma:id": 3,
+          "type": "number",
+          "unit": "Cel"
+        },
+        "WBGT_Alarm": {
+          "label": "WBGT Alarm",
+          "description": "If the calculated WBGT in resource Sensor Value (5700)exceeds the WBGT Threshold value, the WBGT Alarm is set to True. WBGT Alarm A is false otherwise.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "boolean"
+        },
+        "WBGT_Alarm_Counter": {
+          "label": "WBGT Alarm Counter",
+          "description": "Number of WBGT Alarm events since reset.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer"
+        },
+        "Sensor_Value": {
+          "label": "Sensor Value",
+          "description": "Last or Current Measured Value from the Sensor.",
+          "oma:id": 5700,
+          "writable": false,
+          "type": "number"
+        },
+        "Min_Measured_Value": {
+          "label": "Min Measured Value",
+          "description": "The minimum value measured by the sensor since power ON or reset.",
+          "oma:id": 5601,
+          "writable": false,
+          "type": "number"
+        },
+        "Max_Measured_Value": {
+          "label": "Max Measured Value",
+          "description": "The maximum value measured by the sensor since power ON or reset.",
+          "oma:id": 5602,
+          "writable": false,
+          "type": "number"
+        },
+        "Min_Range_Value": {
+          "label": "Min Range Value",
+          "description": "The minimum value that can be measured by the sensor.",
+          "oma:id": 5603,
+          "writable": false,
+          "type": "number"
+        },
+        "Max_Range_Value": {
+          "label": "Max Range Value",
+          "description": "The maximum value that can be measured by the sensor.",
+          "oma:id": 5604,
+          "writable": false,
+          "type": "number"
+        },
+        "Application_Type": {
+          "label": "Application Type",
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "oma:id": 5750,
+          "type": "string"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {
+        "WBGT_Alarm_Counter_Reset": {
+          "label": "WBGT Alarm Counter Reset",
+          "description": "Reset WBGT Alarm Counter.",
+          "oma:id": 6
+        },
+        "Reset_Min_and_Max_Measured_Values": {
+          "label": "Reset Min and Max Measured Values",
+          "description": "Reset the Min and Max Measured Values to Current Value.",
+          "oma:id": 5605
+        }
+      },
+      "sdfRequired": [
+        "Sensor_Value"
+      ]
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "info": {
+    "title": "OMA LwM2M Network Speed Test (Object ID 10481)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Network_Speed_Test": {
+      "label": "Network Speed Test",
+      "description": "This Object supports triggering a network speed test and records the results. Furthermore, it allows to configure the server address of the server used for the speed test.",
+      "oma:id": "10481",
+      "sdfProperty": {
+        "Last_updated": {
+          "label": "Last updated",
+          "description": "Timestamp of the last speed test.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Server_address": {
+          "label": "Server address",
+          "description": "Server address for the speed test.",
+          "oma:id": 2,
+          "type": "string"
+        },
+        "Download_Speed": {
+          "label": "Download Speed",
+          "description": "Download speed",
+          "oma:id": 3,
+          "writable": false,
+          "type": "number",
+          "unit": "Mbit/s"
+        },
+        "Upload_Speed": {
+          "label": "Upload Speed",
+          "description": "Upload speed",
+          "oma:id": 4,
+          "writable": false,
+          "type": "number",
+          "unit": "Mbit/s"
+        },
+        "Ping_Latency": {
+          "label": "Ping Latency",
+          "description": "Ping latency",
+          "oma:id": 5,
+          "writable": false,
+          "type": "number",
+          "unit": "ms"
+        }
+      },
+      "sdfAction": {
+        "Perform_Speed_Test": {
+          "label": "Perform Speed Test",
+          "description": "Start the speed test.",
+          "oma:id": 0
+        }
+      },
+      "sdfRequired": [
+        "Last_updated",
+        "Server_address",
+        "Download_Speed",
+        "Upload_Speed",
+        "Ping_Latency",
+        "Perform_Speed_Test"
+      ]
+    }
+  }
+}

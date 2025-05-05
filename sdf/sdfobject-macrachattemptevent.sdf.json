@@ -1,0 +1,96 @@
+{
+  "info": {
+    "title": "OMA LwM2M macRachAttemptEvent (Object ID 3366)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "macRachAttemptEvent": {
+      "label": "macRachAttemptEvent",
+      "description": "RACH information. Logged at RACH TX",
+      "oma:id": "3366",
+      "sdfProperty": {
+        "rachAttemptCounter": {
+          "label": "rachAttemptCounter",
+          "description": "RACH Attempt Counter",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "MacRachAttemptEventType": {
+          "label": "MacRachAttemptEventType",
+          "description": "0 = Success\r\n1 = Failure-At-Msg-2\r\n2 = Failure-At-Msg-4-CT-Timer-Expired\r\n3 = Failure-At-Msg-4-CT-Resolution-Not-Passed\r\n4 = Aborted",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "contentionBased": {
+          "label": "contentionBased",
+          "description": "1 = Contention based\r\n0 = otherwise",
+          "oma:id": 2,
+          "writable": false,
+          "type": "boolean"
+        },
+        "rachMessage": {
+          "label": "rachMessage",
+          "description": "1 = MSG 1\r\n2 = MSG 2\r\n3 = MSG 3",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "preambleIndex": {
+          "label": "preambleIndex",
+          "description": "preambleIndex=There are 64 preambles available in each cell. Range is from 0-63. (3GPP 36.211)",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer"
+        },
+        "preamblePowerOffset": {
+          "label": "preamblePowerOffset",
+          "description": "preamblePowerOffset= stepsize*preamble transmission number",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer"
+        },
+        "backoffTime": {
+          "label": "backoffTime",
+          "description": "Backoff Time",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer"
+        },
+        "msg2Result": {
+          "label": "msg2Result",
+          "description": "1 = pass\r\n0 = fail",
+          "oma:id": 7,
+          "writable": false,
+          "type": "boolean"
+        },
+        "timingAdjustmentValue": {
+          "label": "timingAdjustmentValue",
+          "description": "Timing Adjustment Value",
+          "oma:id": 8,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "rachAttemptCounter",
+        "MacRachAttemptEventType",
+        "contentionBased",
+        "rachMessage",
+        "preambleIndex",
+        "preamblePowerOffset",
+        "backoffTime",
+        "msg2Result",
+        "timingAdjustmentValue"
+      ]
+    }
+  }
+}

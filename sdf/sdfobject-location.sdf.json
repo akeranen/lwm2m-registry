@@ -1,0 +1,114 @@
+{
+  "info": {
+    "title": "OMA LwM2M Location (Object ID 6)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Location": {
+      "label": "Location",
+      "description": "This LwM2M Object provides a range of location telemetry related information which can be queried by the LwM2M Server.",
+      "oma:id": "6",
+      "sdfProperty": {
+        "Latitude": {
+          "label": "Latitude",
+          "description": "The decimal notation of latitude, e.g. -43.5723 [World Geodetic System 1984].",
+          "oma:id": 0,
+          "writable": false,
+          "type": "number",
+          "unit": "lat"
+        },
+        "Longitude": {
+          "label": "Longitude",
+          "description": "The decimal notation of longitude, e.g. 153.21760 [World Geodetic System 1984].",
+          "oma:id": 1,
+          "writable": false,
+          "type": "number",
+          "unit": "lon"
+        },
+        "Altitude": {
+          "label": "Altitude",
+          "description": "The decimal notation of altitude in meters above sea level.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "number",
+          "unit": "m"
+        },
+        "Radius": {
+          "label": "Radius",
+          "description": "The value in this resource indicates the radius of a circular area in meters. The circular area is used to describe uncertainty about a point for coordinates in a two-dimensional coordinate reference systems (CRS). The center point of a circular area is specified by using the Latitude and the Longitude Resources.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "number",
+          "unit": "m"
+        },
+        "Velocity": {
+          "label": "Velocity",
+          "description": "The velocity of the LwM2M Client, as defined in [3GPP-TS_23.032].",
+          "oma:id": 4,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the location measurement was performed.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Speed": {
+          "label": "Speed",
+          "description": "Speed is the time rate of change in position of a LwM2M Client without regard for direction: the scalar component of velocity.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "number",
+          "unit": "m/s"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Latitude",
+        "Longitude",
+        "Timestamp"
+      ]
+    }
+  }
+}     "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Numeric_Latitude",
+        "Numeric_Longitude"
+      ]
+    }
+  }
+}

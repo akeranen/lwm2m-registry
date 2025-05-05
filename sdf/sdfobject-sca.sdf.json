@@ -1,0 +1,47 @@
+{
+  "info": {
+    "title": "OMA LwM2M SCA (Object ID 10337)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "SCA": {
+      "label": "SCA",
+      "description": "This LWM2M Object includes SCA information.",
+      "oma:id": "10337",
+      "sdfProperty": {
+        "SCA_Name": {
+          "label": "SCA Name",
+          "description": "Human readable SCA name",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "SCA_Motion_Status": {
+          "label": "SCA Motion Status",
+          "description": "0:Forward, 1:Backward, 2:Stop.",
+          "oma:id": 100,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        }
+      },
+      "sdfAction": {
+        "SCA_Motion_Control": {
+          "label": "SCA Motion Control",
+          "description": "Parameter:0:Forward, 1:Backward, 2:Stop.",
+          "oma:id": 200
+        }
+      },
+      "sdfRequired": [
+        "SCA_Name"
+      ]
+    }
+  }
+}

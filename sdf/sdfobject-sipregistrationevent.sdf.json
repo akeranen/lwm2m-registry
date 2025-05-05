@@ -1,0 +1,40 @@
+{
+  "info": {
+    "title": "OMA LwM2M SipRegistrationEvent (Object ID 3382)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "SipRegistrationEvent": {
+      "label": "SipRegistrationEvent",
+      "description": "SIP Registration status",
+      "oma:id": "3382",
+      "sdfProperty": {
+        "registrationType": {
+          "label": "registrationType",
+          "description": "1 = Normal\r\n2 = Emergency",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "registrationResult": {
+          "label": "registrationResult",
+          "description": "0 = Success (when 200 OK is received)\r\n1 = Failure (when any error other than 401 is received, else when 408 timeout occurs)",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "registrationType",
+        "registrationResult"
+      ]
+    }
+  }
+}

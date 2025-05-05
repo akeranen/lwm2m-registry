@@ -1,0 +1,167 @@
+{
+  "info": {
+    "title": "OMA LwM2M Single-Phase Power Meter (Object ID 10243)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Odins.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Single-Phase_Power_Meter": {
+      "label": "Single-Phase Power Meter",
+      "description": "This Object provides the information to represent a generic Single-Phase Power Meter.",
+      "oma:id": "10243",
+      "sdfProperty": {
+        "Manufacturer": {
+          "label": "Manufacturer",
+          "description": "Human readable manufacturer name",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string"
+        },
+        "Model_Number": {
+          "label": "Model Number",
+          "description": "A model identifier (manufacturer specified string)",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Serial_Number": {
+          "label": "Serial Number",
+          "description": "Serial number of the meter",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "Description": {
+          "label": "Description",
+          "description": "Description of the meter",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string"
+        },
+        "Tension": {
+          "label": "Tension",
+          "description": "Voltage",
+          "oma:id": 4,
+          "writable": false,
+          "type": "number",
+          "unit": "V"
+        },
+        "Current": {
+          "label": "Current",
+          "description": "Current",
+          "oma:id": 5,
+          "writable": false,
+          "type": "number",
+          "unit": "A"
+        },
+        "Active_Power": {
+          "label": "Active Power",
+          "description": "Active Power",
+          "oma:id": 6,
+          "writable": false,
+          "type": "number",
+          "unit": "kW"
+        },
+        "Reactive_Power": {
+          "label": "Reactive Power",
+          "description": "Reactive Power",
+          "oma:id": 7,
+          "writable": false,
+          "type": "number",
+          "unit": "kvar"
+        },
+        "Inductive_Reactive_Power": {
+          "label": "Inductive Reactive Power",
+          "description": "Inductive Reactive Power",
+          "oma:id": 8,
+          "writable": false,
+          "type": "number",
+          "unit": "kvar"
+        },
+        "Capacitive_Reactive_Power": {
+          "label": "Capacitive Reactive Power",
+          "description": "Capacitive Reactive Power",
+          "oma:id": 9,
+          "writable": false,
+          "type": "number",
+          "unit": "kvar"
+        },
+        "Apparent_Power": {
+          "label": "Apparent Power",
+          "description": "Apparent Power",
+          "oma:id": 10,
+          "writable": false,
+          "type": "number",
+          "unit": "kVA"
+        },
+        "Power_Factor": {
+          "label": "Power Factor",
+          "description": "Power Factor",
+          "oma:id": 11,
+          "writable": false,
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "THD-V": {
+          "label": "THD-V",
+          "description": "Total Harmonic Distortion (Tension)",
+          "oma:id": 12,
+          "writable": false,
+          "type": "number",
+          "unit": "/100"
+        },
+        "THD-A": {
+          "label": "THD-A",
+          "description": "Total Harmonic Distortion (Current)",
+          "oma:id": 13,
+          "writable": false,
+          "type": "number",
+          "unit": "/100"
+        },
+        "Active_Energy": {
+          "label": "Active Energy",
+          "description": "Active Energy",
+          "oma:id": 14,
+          "writable": false,
+          "type": "number",
+          "unit": "kWh"
+        },
+        "Reactive_Energy": {
+          "label": "Reactive Energy",
+          "description": "Reactive Energy",
+          "oma:id": 15,
+          "writable": false,
+          "type": "number",
+          "unit": "kvarh"
+        },
+        "Apparent_Energy": {
+          "label": "Apparent Energy",
+          "description": "Apparent Energy",
+          "oma:id": 16,
+          "writable": false,
+          "type": "number",
+          "unit": "kVAh"
+        },
+        "Frequency": {
+          "label": "Frequency",
+          "description": "Frequency",
+          "oma:id": 17,
+          "writable": false,
+          "type": "number",
+          "unit": "Hz"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Tension",
+        "Current"
+      ]
+    }
+  }
+}

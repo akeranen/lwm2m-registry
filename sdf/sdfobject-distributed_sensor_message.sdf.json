@@ -1,0 +1,71 @@
+{
+  "info": {
+    "title": "OMA LwM2M Distributed Sensor Message (Object ID 3460)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Distributed_Sensor_Message": {
+      "label": "Distributed Sensor Message",
+      "description": "The uCIFI Distributed Sensor Message provides the format of data being exchanged within the Distributed Sensor Group communication.",
+      "oma:id": "3460",
+      "sdfProperty": {
+        "Group_ID": {
+          "label": "Group ID",
+          "description": "The identifier of the group. This resource can be used to filter the incoming message.\r\nThis resource should match the Group ID resource of the Distributed Sensor Group or, if not specified, the Group Address.",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "Publishing_timestamp": {
+          "label": "Publishing timestamp",
+          "description": "UNIX timestamp related to the time when the measurement has been collected by the publisher.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Publisher_State_URI": {
+          "label": "Publisher State URI",
+          "description": "URI of the resource that contains the status information, to be used for data fusion and to be eventually filtered upon reception",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "Publisher_ID": {
+          "label": "Publisher ID",
+          "description": "If this resource is omitted, the Publisher State URI shall be properly translated in advance in order to map the physical sensor instance on the publisher to the corresponding publisher ID specified within the Distributed Sensor Group.\r\nOtherwise, the real physical sensor instance can be used and the translation has to be performed upon reception",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "Auto_Clear_Validity_Time": {
+          "label": "Auto Clear Validity Time",
+          "description": "If Auto-clear capability is supported by the subscriber, the validity of the attached data can be limited for the specified amount of time, after which it can be discarded or reset to a default value (see Auto Clear Default Value)",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Auto_Clear_Default_Value": {
+          "label": "Auto Clear Default Value",
+          "description": "Default value to be restored when the validity time is expired. If not specified 0/false has to be assumed",
+          "oma:id": 5,
+          "writable": false,
+          "type": "number"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Group_ID",
+        "Publishing_timestamp",
+        "Publisher_State_URI"
+      ]
+    }
+  }
+}

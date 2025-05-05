@@ -1,0 +1,88 @@
+{
+  "info": {
+    "title": "OMA LwM2M LTE-MTC Band Config (Object ID 501)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2020 Open Mobile Alliance.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LTE-MTC_Band_Config": {
+      "label": "LTE-MTC Band Config",
+      "description": "This object is used to configure the cellular band used by the device as well as to change the band. It is intended to be used on LTE bands, as in NB-IoT and LTE Cat M1 frequency bands.",
+      "oma:id": "501",
+      "sdfProperty": {
+        "EARFCN": {
+          "label": "EARFCN",
+          "description": "E-UTRA Absolute Radio Frequency Channel Number (EARFCN), the carrier frequency of the device radio.",
+          "oma:id": 1,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "Current_Frequency_(Downlink)": {
+          "label": "Current Frequency (Downlink)",
+          "description": "The current frequency used in the current band in MHz (Downlink).",
+          "oma:id": 2,
+          "writable": false,
+          "type": "number",
+          "unit": "MHz"
+        },
+        "Current_Frequency_(Uplink)": {
+          "label": "Current Frequency (Uplink)",
+          "description": "The current frequency used in the current band in MHz (Uplink).",
+          "oma:id": 3,
+          "writable": false,
+          "type": "number",
+          "unit": "MHz"
+        },
+        "Prioritized_Channels": {
+          "label": "Prioritized Channels",
+          "description": "Indicates a list of currently supported EARFCNs in priority order. Each Resource Instance has a value from the band list.",
+          "oma:id": 4,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Application_Type": {
+          "label": "Application Type",
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "oma:id": 5750,
+          "type": "string"
+        },
+        "Reset_Timeout": {
+          "label": "Reset Timeout",
+          "description": "Time that the device will wait until reset once the Reset Resource is triggered.",
+          "oma:id": 5,
+          "type": "number",
+          "unit": "s"
+        },
+        "Vendor_specific_extensions": {
+          "label": "Vendor specific extensions",
+          "description": "This resource links to a vendor specific object.",
+          "oma:id": 48,
+          "writable": false,
+          "sdfRef": "oma:objlnk"
+        }
+      },
+      "sdfAction": {
+        "Reset": {
+          "label": "Reset",
+          "description": "Execuring this resource resets the radio interface of the device.",
+          "oma:id": 6
+        }
+      },
+      "sdfRequired": [
+        "EARFCN",
+        "Current_Frequency_(Downlink)",
+        "Prioritized_Channels",
+        "Reset_Timeout",
+        "Reset"
+      ]
+    }
+  }
+}

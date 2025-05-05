@@ -1,0 +1,94 @@
+{
+  "info": {
+    "title": "OMA LwM2M Fault Code (Object ID 10497)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2024 South East Water Corporation.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Fault_Code": {
+      "label": "Fault Code",
+      "description": "This object reports device specific fault codes",
+      "oma:id": "10497",
+      "sdfProperty": {
+        "Event_Type": {
+          "label": "Event Type",
+          "description": "Event Type is a readable and writable resource used to represent how this event will behave. Event Type should be one of the following values:-\r\n                0. Disabled\r\n                1. Alarm Current State\r\n                2. Alarm State Change Log\r\n                3. Event Log\r\n\r\n                When the Event Type is set to Disabled (0), this event will not be recorded by the device. No Latest Eventlog payload should be delivered for events that are Disabled.\r\n                When the Event Type is set to Alarm Current State (1), this Event is treated as an alarm state manager and the Latest Eventlog Payload will only contain the current state of this alarm.\r\n                When the Event Type is set to Alarm State Change Log (2), the Event is treated as an alarm that reports whenever the Alarm is either set or cleared. The Latest Eventlog Payload will contain all alarm transitions since the previous delivery in this mode.\r\n                When the Event Type is set to Event Log (3), this object instance is treated as a raw event log. It is used to manage and deliver events. The Latest Eventlog Payload will contain all events since the previous delivery in this mode.\r\n\r\n                See the Event Log Payload for examples of each of these modes.",
+          "oma:id": 6011,
+          "type": "integer"
+        },
+        "Alarm_Realtime": {
+          "label": "Alarm Realtime",
+          "description": "Realtime is a readable and writable resource used to indicate if an event should report immediately (1) at the point of occurrence, or delivered periodically as part of the Latest Eventlog Payload.",
+          "oma:id": 6012,
+          "type": "boolean"
+        },
+        "Alarm_Maximum_Event_Count": {
+          "label": "Alarm Maximum Event Count",
+          "description": "Maximum Event Count is a readable and writable resource used provide a ceiling on the number of events that can be raised within the time period defined in Maximum Event Period resource. If no Maximum Event Count is set, the number of events recorded is unconstrained. The intent of this resource is to control the number of events reported, particularly in the case of a faulty sensor.",
+          "oma:id": 6018,
+          "type": "integer"
+        },
+        "Alarm_Maximum_Event_Period": {
+          "label": "Alarm Maximum Event Period",
+          "description": "Maximum Event Period is a readable and writable resource used in conjunction with the Maximum Event Count resource to control the number of events that can be raised in a given period. Maximum Event Period is an integer value representing the number of seconds for which the Maximum Event Count is measured. If no Maximum Event Period is set, the number of events recorded is unconstrained. The intent of this resource is to control the number of events reported, particularly in the case of a faulty sensor.",
+          "oma:id": 6019,
+          "type": "integer",
+          "unit": "s",
+          "minimum": 1,
+          "maximum": 864000
+        },
+        "Latest_Delivered_Event_Time": {
+          "label": "Latest Delivered Event Time",
+          "description": "Latest Delivered Event Time is a readable and writable resource to represent the last recorded time that an event was delivered for this event code to the LwM2M server. The setting of this resource is implementation specific but should be updated based on, either a Read request of the Latest Eventlog Payload from the LwM2M server or via a confirmed delivery of Notify operation of the Latest Eventlog Payload resource. This resource is writable to allow the server to adjust the Last Delivered Event Time value if the server and client is out of sync.",
+          "oma:id": 6020,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Latest_Recorded_Event_Time": {
+          "label": "Latest Recorded Event Time",
+          "description": "Latest Recorded Event Time is a readonly resource used to represent the last recorded event time for this object instance on the device",
+          "oma:id": 6021,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Event_Code": {
+          "label": "Event Code",
+          "description": "Event Code is a read-only resource used as an identifier to represent this class of event. The allocation of event codes is implementation specific but ideally be unique across the implementation. Event Codes use vendor specific LogClass value 100...255",
+          "oma:id": 6024,
+          "writable": false,
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 255
+        },
+        "Latest_Payload": {
+          "label": "Latest Payload",
+          "description": "The Latest Eventlog Payload resource is a read-only serialised Opaque (Binary) representation of all the Event Data between the Last Delivered Event Time and the Latest Recorded Event Time. When this payload is delivered to the LwM2M server, via either a read request or a confirmed observation on this Object, Object Instance or Resource, the Latest Delivered Interval should be updated. When no new data exists, an empty Opaque value should be provided.\r\n\r\n                The payload data can be provided in an implementation specific serialisation, but by default for fixed length values should use the OMA-LwM2M CBOR format encoded with one of these schemes:-\r\n\r\n                Event Type = Alarm Current State (1)\r\n\r\n                In this mode, only the current alarm state should be reported\r\n\r\n                1. 8-bit integer, value 2 representing OMA-LwM2M CBOR format.\r\n                2. Event Code [16-bit integer]\r\n                3. Event Type [8-bit Integer] - Alarm Current State (1)\r\n                4. Alarm Timestamp [32-bit unsigned integer] representing the number of seconds since Jan 1st, 1970 in the UTC time zone.\r\n                5. Alarm State [8-bit Integer]",
+          "oma:id": 6025,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        }
+      },
+      "sdfAction": {
+        "Alarm_Clear": {
+          "label": "Alarm Clear",
+          "description": "Clear Alarm is an executable resource used to allow the LwM2M server to clear alarms when they need to be manually acknowledged.",
+          "oma:id": 6022
+        }
+      },
+      "sdfRequired": [
+        "Event_Type",
+        "Alarm_Realtime",
+        "Latest_Recorded_Event_Time",
+        "Event_Code",
+        "Latest_Payload"
+      ]
+    }
+  }
+}

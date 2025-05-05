@@ -1,0 +1,113 @@
+{
+  "info": {
+    "title": "OMA LwM2M Event Profile (Object ID 10379)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2023 Itron.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Event_Profile": {
+      "label": "Event Profile",
+      "description": "The Event Profile object manages capture of Events and Alarms based on related Event Codes. The Event Profile object also acts as an efficient aggregator for Events and Alarms, that can help to optimize their delivery. \r\nNote: this object does not intent to manage deliveries of Events and Alarms.",
+      "oma:id": "10379",
+      "sdfProperty": {
+        "Events_to_Capture": {
+          "label": "Events to Capture",
+          "description": "List of Event Codes for Events to capture in the Events Captured resource when the related Events are triggered.",
+          "oma:id": 0,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Events_Captured": {
+          "label": "Events Captured",
+          "description": "Triggered or raised Events are captured in this Events Captured resource. The triggered or raised Events must be listed in the Events to Capture resource to allow the capture. \r\nFor Events structure definitions, a recommendation is to use the definitions for Events and related serialization as found in the shared resource 6025: Latest Eventlog Payload (with an Event Code, Event Type, Event Timestamp and optional data).\r\nThe Events Captured list should be sorted by increasing Timestamps (oldest Events first).\r\nThe maximum size of the Events Captured list is implementation specific.\r\nWhen the Events Captured list reaches the maximum size, it should roll-over and start back from the first entry (overwrites that first entry).\r\nOn triggering or raising of an Event that needs to be captured (listed in the Events to Capture resource), that Event should be implicitly captured in (added to) the Events Captured resource.\r\nIf the Capture resource is supported, an explicit capture of a triggered or raised Event can be accomplished via an execution of that Capture resource.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "sdfType": "byte-string"
+          }
+        },
+        "Active_Events": {
+          "label": "Active Events",
+          "description": "List of Event Codes for currently active Events. An Event is considered Active if it got raised or triggered and didn’t get de-asserted based on its trigger conditions. (example: a high flow event triggered on exceeding a certain threshold is considered active as long as it exceeds that threshold, below that threshold that event would not be considered active anymore).",
+          "oma:id": 2,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Events_Configured_as_Alarm": {
+          "label": "Events Configured as Alarm",
+          "description": "Event Codes for Events that are also configured as Alarms, that the device could send on the next best opportunity when the underlying Events are triggered (in real-time or near real-time).",
+          "oma:id": 3,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Alarms_Captured": {
+          "label": "Alarms Captured",
+          "description": "Triggered or raised Alarms are captured in this Alarms Captured resource. The triggered or raised Alarms must be listed in the Alarms Events Configured as Alarm resource to allow the capture in this Alarms Captured resource.\r\nThe management of the Alarms Captured list can follow the same rules as used for the management of Event Captured resource.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "sdfType": "byte-string"
+          }
+        },
+        "Maximum_Event_Count": {
+          "label": "Maximum Event Count",
+          "description": "Maximum Event Count is a readable and writable resource used to provide a ceiling on the number of events that can be raised within the time period defined in Maximum Event Period resource. The intent of this resource is to control the number of events reported, particularly in the case of a faulty sensor.\r\nThe Maximum Event Count and Maximum Event Period resources store values related to an Event Code present in the Event to Capture resource and are interpreted together, with matching indexes, and shall have the same number of entries.\r\nThe first index values found in the Maximum Event Count and Maximum Event Period correspond to the first index value (Event Code) found in the Events to Capture resource, and so on.\r\nIf the Maximum Event Count (for a given Event Code) is set to -1, the number of events recorded is unconstrained.",
+          "oma:id": 8,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Maximum_Event_Period": {
+          "label": "Maximum Event Period",
+          "description": "Maximum Event Period is a readable and writable resource used in conjunction with the Maximum Event Count resource to control the number of events that can be raised in a given period. Maximum Event Period is an integer value representing the number of seconds for which the Maximum Event Count is measured.\r\nThe Maximum Event Count and Maximum Event Period resources store values related to an Event Code present in the Event to Capture resource and are interpreted together, with matching indexes, and shall have the same number of entries.\r\nThe first index values found in the Maximum Event Count and Maximum Event Period correspond to the first index value (Event Code) found in the Events to Capture resource, and so on.\r\nIf the Maximum Event Period (for a given Event Code) is set to -1, the number of events recorded is unconstrained.",
+          "oma:id": 9,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "s"
+        }
+      },
+      "sdfAction": {
+        "Capture_Event": {
+          "label": "Capture Event",
+          "description": "The Capture Event allows to capture an Event with associated parameters, based on the Event structure definition chosen (as defined for the Events Captured resource).\r\nThe captured Event is added to the Event Captured resource. \r\nIf that Event is also configured as an Alarm, it is also captured and added in the Alarms Captured resource.\r\nAssuming the use of an Event serialization as found in the shared resource 6025: Latest Eventlog Payload (with an Event Code, Event Type, Event Timestamp and optional data), the Capture Event method would use the following arguments:\r\nA mandatory Opaque argument (Order 0): an Event serialization structure as found in the shared resource 6025: Latest Eventlog Payload (with an Event Code, Event Type, Event Timestamp and optional data).",
+          "oma:id": 5
+        },
+        "Clear_Events": {
+          "label": "Clear Events",
+          "description": "Executing the Clear Events resource clears the Event Captured resource.",
+          "oma:id": 6
+        },
+        "Clear_Alarms": {
+          "label": "Clear Alarms",
+          "description": "Executing the Clear Alarms resource clears the Alarms Captured resource.",
+          "oma:id": 7
+        }
+      },
+      "sdfRequired": [
+        "Events_to_Capture",
+        "Events_Captured",
+        "Clear_Events",
+        "Clear_Alarms"
+      ]
+    }
+  }
+}

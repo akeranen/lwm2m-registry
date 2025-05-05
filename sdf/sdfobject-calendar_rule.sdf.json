@@ -1,0 +1,66 @@
+{
+  "info": {
+    "title": "OMA LwM2M Calendar Rule (Object ID 3453)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Calendar_Rule": {
+      "label": "Calendar Rule",
+      "description": "Allows to specify when to execute a particular function.",
+      "oma:id": "3453",
+      "sdfProperty": {
+        "Calendar_Name": {
+          "label": "Calendar Name",
+          "description": "Mnemonic name of the calendar",
+          "oma:id": 0,
+          "type": "string"
+        },
+        "Calendar_Type": {
+          "label": "Calendar Type",
+          "description": "0 - Day time Gregorian calendar used to reference periods of 24h (00-24h) during the year\r\n1 - Night time calendar, a variation of the Gregorian calendar proposed by uCiFi to reference \"night\" periods of 24h during a year.\r\nMeasured from 12:00 of one Gregorian calendar day to 12:00 of the next day.\r\nIf omitted, 0 shall be assumed",
+          "oma:id": 1,
+          "type": "integer"
+        },
+        "Start_Date": {
+          "label": "Start Date",
+          "description": "Start date formatted as yyyy-mm-dd.\r\nTo define the same start date every year: --mm-dd (e.g. --01-01 for Jan 1st every year).\r\nStart date is optional.\r\nIf no start date, no end date should be mentioned, and the scheduler should apply every day of every year.",
+          "oma:id": 2,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "End_Date": {
+          "label": "End Date",
+          "description": "End date formatted as yyyy-mm-dd.\r\nTo define the same end date every year: --mm-dd (e.g. --03-31 for March 31st every year).\r\nEnd date is optional.\r\nIf no start date is specified, no end date should be mentioned as well, and the scheduler should apply every day of every year.\r\nIf the start date is specified but the end date is not, it shall be assumed to be equal to the start date",
+          "oma:id": 3,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Date_Rule": {
+          "label": "Date Rule",
+          "description": "Date string formatted as dom month dow, inspired from the CRON format without minutes and hours, that indicates the occurrence of the rule:\r\ndom = day of month (1-31)\r\nmonth = 1-12\r\ndow = day of week (0-7, where 0,7=Sunday)\r\n* * * means every day between \"Start date\" and \"End date\"\r\n1-10 * * means from the 1st to the 10th day of the month each month between \"Start date\" and \"End date\"\r\n* * 6,7 means every Saturday and Sunday, between \"Start date\" and \"End date\"\r\nThe date rule is optional.\r\nIf not present, it means every day between \"Start date\" and \"End date\".\r\nIf present, it would be applied in AND to every instance of Start date and End date",
+          "oma:id": 4,
+          "type": "string"
+        },
+        "Calendar_Active": {
+          "label": "Calendar Active",
+          "description": "True if the calendar rule is currently active",
+          "oma:id": 5,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": []
+    }
+  }
+}

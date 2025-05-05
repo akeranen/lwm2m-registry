@@ -1,0 +1,85 @@
+{
+  "info": {
+    "title": "OMA LwM2M oA Scene (Object ID 3404)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Zumtobel Group.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "oA_Scene": {
+      "label": "oA Scene",
+      "description": "The 'oA Scene' represents a scene model. The scene holds defined values for each actuator in one group.",
+      "oma:id": "3404",
+      "sdfProperty": {
+        "ObjectVersion": {
+          "label": "ObjectVersion",
+          "description": "LWM2M Object versioning label.",
+          "oma:id": 4001,
+          "writable": false,
+          "type": "string"
+        },
+        "Documentary_Description": {
+          "label": "Documentary Description",
+          "description": "Resource to hold a documentary text description of the object.",
+          "oma:id": 901,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 256
+        },
+        "Scene_ID": {
+          "label": "Scene ID",
+          "description": "The ID that is used to recall the scene. This needs to be unique within one application group.",
+          "oma:id": 650,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Application_Group_ID": {
+          "label": "Application Group ID",
+          "description": "The application group ID the scene definition applies to.",
+          "oma:id": 651,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Changeable_by_User_API": {
+          "label": "Changeable by User API",
+          "description": "If true, the settings for this scene can be changed using the User API.",
+          "oma:id": 655,
+          "type": "boolean"
+        },
+        "Transition_Time": {
+          "label": "Transition Time",
+          "description": "Defines the transition time to be used for changing to this scene.",
+          "oma:id": 652,
+          "minimum": 0,
+          "type": "integer",
+          "unit": "ms",
+          "maximum": 60000
+        },
+        "Scene_Configuration": {
+          "label": "Scene Configuration",
+          "description": "Defines the list of output properties that are changed when a scene is recalled. Complex Data comprising a Corelnk pointing to the resource, a payload that sets the resource and a boolean that says if POST or PUT should be applied",
+          "oma:id": 653,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "sdfType": "byte-string"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Scene_ID",
+        "Application_Group_ID",
+        "Changeable_by_User_API",
+        "Transition_Time",
+        "Scene_Configuration"
+      ]
+    }
+  }
+}

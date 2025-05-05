@@ -1,0 +1,514 @@
+{
+  "info": {
+    "title": "OMA LwM2M Outdoor lamp controller (Object ID 3416)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Outdoor_lamp_controller": {
+      "label": "Outdoor lamp controller",
+      "description": "The uCIFI outdoor lamp controller object provides attributes to control, command and monitor outdoor luminaires in streets, in tunnels, on roads and for illumination of park and gardens.",
+      "oma:id": "3416",
+      "sdfProperty": {
+        "Command": {
+          "label": "Command",
+          "description": "Command (e.g. manual override) sent to the outdoor lamp controller from 0 (OFF) to 100 (ON with dimming level = 100%).\r\nA command equal to 67 means ON at 67% dimming level.",
+          "oma:id": 1,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Command_in_action": {
+          "label": "Command in action",
+          "description": "For outdoor lighting applications, the command in action (this resource) may differ from a command that was sent (resource ID: 1), due to LPWAN network constraints and/or light adjustments within the lamp’s control gear (e.g. virtual power settings).\r\nThe command in action is the actual value of the command in action in the outdoor lamp controller which could have been set by a manual overide command, a scheduled action (e.g. control program) or any other mechanism.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Dimming_level": {
+          "label": "Dimming level",
+          "description": "Dimming level (0 for OFF and 100% for ON) measured on the outdoor lamp controller.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Default_dimming_level": {
+          "label": "Default dimming level",
+          "description": "The default dimming level that the outdoor lamp controller applies when no schedule nor manual override command is active",
+          "oma:id": 4,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Lamp_failure": {
+          "label": "Lamp failure",
+          "description": "Set to True if the outdoor lamp controller detects that the lamp is not producing light while it is expected to (e.g. the lamp is broken).",
+          "oma:id": 5,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Lamp_failure_reason": {
+          "label": "Lamp failure reason",
+          "description": "Description of the reason why the lamp failed (e.g. low power on a LED engine, no consumption detected while relay closed).",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer"
+        },
+        "Control_gear_failure": {
+          "label": "Control gear failure",
+          "description": "Set to True in case the control gear has a failure.\r\nOutdoor lamp controllers may read the control gear failure from a DALI bus or by analyzing a 0-10 volts interface to the control gear.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Control_gear_failure_reason": {
+          "label": "Control gear failure reason",
+          "description": "Description of the reason why the control gear failed.\r\nYou may refer to the DiiA list of possible control gear failures.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "integer"
+        },
+        "Relay_failure": {
+          "label": "Relay failure",
+          "description": "Set to True if the outdoor lamp controller detects that its relay is not operating as it is expected to.",
+          "oma:id": 9,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Day_burner": {
+          "label": "Day burner",
+          "description": "Set to True in case the lamp is ON while it should be OFF (e.g. day burner).",
+          "oma:id": 10,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Cycling_failure": {
+          "label": "Cycling failure",
+          "description": "Set to True if the outdoor lamp controller detects that the lamp is switching ON and OFF too often.",
+          "oma:id": 11,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Control_gear_communication_failure": {
+          "label": "Control gear communication failure",
+          "description": "Set to True in case the control gear (e.g. LED driver) does not answer on the DALI bus.",
+          "oma:id": 12,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Scheduler_ID": {
+          "label": "Scheduler ID",
+          "description": "Identifier(s) of the scheduler(s) that are assigned to the Command of this outdoor lamp controller.",
+          "oma:id": 13,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Invalid_scheduler": {
+          "label": "Invalid scheduler",
+          "description": "Set to True when one of the schedulers can’t be executed or is not supported by the outdoor lamp controller. Otherwise set to False.",
+          "oma:id": 14,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Lamp_operating_hours": {
+          "label": "Lamp operating hours",
+          "description": "Cumulated number of hours during which the lamp has been ON with a strictly positive dimming level.",
+          "oma:id": 15,
+          "writable": false,
+          "type": "number",
+          "unit": "h"
+        },
+        "Lamp_ON_timestamp": {
+          "label": "Lamp ON timestamp",
+          "description": "Last date and time at which the lamp switched ON, i.e. from no light to light (e.g. power off to power on and/or dim level = 0 to dim level &gt; 0).",
+          "oma:id": 17,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Lamp_switch_counter": {
+          "label": "Lamp switch counter",
+          "description": "Number of times the lamp was switched from ON to OFF since the last lamp switch counter reset.",
+          "oma:id": 18,
+          "writable": false,
+          "type": "integer"
+        },
+        "Control_gear_start_counter": {
+          "label": "Control gear start counter",
+          "description": "Number of times the control gear was switched from ON to OFF.",
+          "oma:id": 20,
+          "writable": false,
+          "type": "integer"
+        },
+        "Control_gear_temperature": {
+          "label": "Control gear temperature",
+          "description": "Temperature measured by the control gear and transmitted to the device through DALI, Zhaga D4i or equivalent.",
+          "oma:id": 21,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel"
+        },
+        "Control_gear_thermal_derating": {
+          "label": "Control gear thermal derating",
+          "description": "Set to True if the control gear has derated the light source due to high temperature.",
+          "oma:id": 22,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Control_gear_thermal_derating_counter": {
+          "label": "Control gear thermal derating counter",
+          "description": "Number of time the control gear has derated the light source due to a high temperature, since last counter reset.",
+          "oma:id": 23,
+          "writable": false,
+          "type": "integer"
+        },
+        "Control_gear_thermal_shutdown": {
+          "label": "Control gear thermal shutdown",
+          "description": "Set to True if the control gear has shut the light source down due to high temperature.",
+          "oma:id": 25,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Control_gear_thermal_shutdown_counter": {
+          "label": "Control gear thermal shutdown counter",
+          "description": "Number of times the control gear has shutdown the light source since last counter reset.",
+          "oma:id": 26,
+          "writable": false,
+          "type": "integer"
+        },
+        "Output_port": {
+          "label": "Output port",
+          "description": "Address or reference of the output port (e.g. DALI port address or 1-10 volt output) in case of multiple control gears.",
+          "oma:id": 28,
+          "type": "integer"
+        },
+        "Standby_mode": {
+          "label": "Standby mode",
+          "description": "Set to True if the outdoor lamp controller should keep its relay closed (control gear is powered ON) when command and/or dimming level is equal to 0.\r\nSet to False if the outdoor lamp controller should open its relay (control gear is not powered ON) when command and/or dimming level is equal to 0.",
+          "oma:id": 29,
+          "type": "boolean"
+        },
+        "Constant_light_output": {
+          "label": "Constant light output",
+          "description": "Set to True to activate Constant Light Output dimming correction on the outdoor lamp controller.\r\nSet to False to deactivate Constant Light Output.",
+          "oma:id": 30,
+          "type": "boolean"
+        },
+        "Cleaning_factor_enabled": {
+          "label": "Cleaning factor enabled",
+          "description": "Light output of a luminaire may depend on the lamp cleaning factor.\r\nCleaning factor may be used as a light output compensation.\r\nSet to True to activate lamp cleaning correction on the outdoor lamp controller.\r\nSet to False to deactivate the lamp cleaning correction.",
+          "oma:id": 31,
+          "type": "boolean"
+        },
+        "Cleaning_period": {
+          "label": "Cleaning period",
+          "description": "Number of days after which cleaning factor is back to 100%.",
+          "oma:id": 32,
+          "type": "integer"
+        },
+        "Initial_lamp_cleaning_factor": {
+          "label": "Initial lamp cleaning factor",
+          "description": "Initial lamp cleaning correction factor to multiply to the command when the luminaire is cleaned, at the lamp cleaning date.",
+          "oma:id": 33,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Lamp_cleaning_date": {
+          "label": "Lamp cleaning date",
+          "description": "Date at which the luminaire was last (or will be next) cleaned and the lamp cleaning factor should be set to the initial lamp cleaning factor.",
+          "oma:id": 34,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Control_type": {
+          "label": "Control type",
+          "description": "Type of control system with which the outdoor lamp controller switches, dims and monitors the lamp.\r\nThe possible control types are:\r\n0: No dimming control\r\n1 : DALI part 201 - Device Type 0\r\n2 : DALI part 202 - Device Type 1\r\n3 : DALI part 203 - Device Type 2\r\n4 : DALI part 204 - Device Type 3\r\n5 : DALI part 205 - Device Type 4\r\n6 : DALI part 206 - Device Type 5\r\n7 : DALI part 207 - Device Type 6\r\n8 : DALI part 208 - Device Type 7\r\n9 : DALI part 209 - Device Type 8\r\n10 : 0-10V\r\n11 : PWM\r\n12 : PWM_N\r\n13 : Other",
+          "oma:id": 35,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minimum": 0,
+          "maximum": 13
+        },
+        "Nominal_Lamp_wattage": {
+          "label": "Nominal Lamp wattage",
+          "description": "Active power of the light source at 100% dimming level.",
+          "oma:id": 36,
+          "type": "integer",
+          "unit": "W"
+        },
+        "Minimum_dimming_level": {
+          "label": "Minimum dimming level",
+          "description": "Minimum dimming level under which the lamp will most probably not operate.",
+          "oma:id": 37,
+          "type": "integer",
+          "unit": "/100"
+        },
+        "Minimum_lamp_wattage": {
+          "label": "Minimum lamp wattage",
+          "description": "Expected active power of the light source at its minimum dimming level.\r\nThis value may be used to detect failure at low dimming level.",
+          "oma:id": 38,
+          "type": "integer",
+          "unit": "W"
+        },
+        "Light_color_temperature_command": {
+          "label": "Light color temperature command",
+          "description": "Latest light color temperature command sent to the lamp actuator.",
+          "oma:id": 39,
+          "type": "integer",
+          "unit": "K"
+        },
+        "Actual_light_color_temperature": {
+          "label": "Actual light color temperature",
+          "description": "The actual light color temperature of the light source.",
+          "oma:id": 40,
+          "writable": false,
+          "type": "integer",
+          "unit": "K"
+        },
+        "Virtual_power_output": {
+          "label": "Virtual power output",
+          "description": "Percentage of nominal power at which the light source should be set when the Command is set to 100%.",
+          "oma:id": 41,
+          "type": "integer",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Voltage_at_max_dim_level": {
+          "label": "Voltage at max dim level",
+          "description": "Voltage level on the control port that corresponds to maximum dimming level.\r\nThis applies only if Control Type = 0-10V.",
+          "oma:id": 42,
+          "type": "number",
+          "unit": "V"
+        },
+        "Voltage_at_min_dim_level": {
+          "label": "Voltage at min dim level",
+          "description": "Voltage level on the control port that corresponds to minimum dimming level.\r\nThis applies only if Control Type = 0-10V.",
+          "oma:id": 43,
+          "type": "number",
+          "unit": "V"
+        },
+        "Light_source_voltage": {
+          "label": "Light source voltage",
+          "description": "Voltage (usually DC voltage) to the light source or generic load, measured at the output of the control gear.",
+          "oma:id": 44,
+          "writable": false,
+          "type": "number",
+          "unit": "V"
+        },
+        "Light_source_current": {
+          "label": "Light source current",
+          "description": "Current (usually DC current) delivered by the control gear to the light source or generic load, measured at the output of the control gear.",
+          "oma:id": 45,
+          "writable": false,
+          "type": "number",
+          "unit": "A"
+        },
+        "Light_source_active_power": {
+          "label": "Light source active power",
+          "description": "Active power of the light source or generic load, measured at the output of the control gear.",
+          "oma:id": 46,
+          "writable": false,
+          "type": "number",
+          "unit": "W"
+        },
+        "Light_source_active_energy": {
+          "label": "Light source active energy",
+          "description": "Cumulated active energy consumption of the light source or generic load, measured at the output of the control gear.",
+          "oma:id": 47,
+          "writable": false,
+          "type": "number",
+          "unit": "kWh"
+        },
+        "Maximum_light_source_current": {
+          "label": "Maximum light source current",
+          "description": "Maximum current (usually DC current) the control gear is able to deliver to the light source or generic load, measured at the output of the control gear.",
+          "oma:id": 48,
+          "type": "number",
+          "unit": "A"
+        },
+        "Default_fade_time": {
+          "label": "Default fade time",
+          "description": "Fade time to be applied to dimming commands when no schedule nor manual override command is active, particularly managed by DALI control gears.\r\nDefault = 0",
+          "oma:id": 49,
+          "type": "number",
+          "unit": "s"
+        },
+        "Manual_override_start_time": {
+          "label": "Manual override start time",
+          "description": "If the current timestamp is greater than the configured start time and below the configured end time, the manual command specified in resource 1 is applied, overriding any schedule. Otherwise, if no schedule is currenlty active, the default values of dimming, color temperature and fade time would be restored.\r\nDefault = 0",
+          "oma:id": 50,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Manual_override_end_time": {
+          "label": "Manual override end time",
+          "description": "If the current timestamp is greater than the configured start time and below the configured end time, the manual command specified in resource 1 is applied, overriding any schedule. Otherwise, if no schedule is currenlty active, the default values of dimming, color temperature and fade time would be restored. Setting this resource to 0 would in fact clear any pending override command. If this resource is not explicitly written, the device shall adjust this resource according to the default duration (when the command will expire).\r\nDefault = 0",
+          "oma:id": 51,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Manual_override_fade": {
+          "label": "Manual override fade",
+          "description": "Fade time to be applied when an override is in progress. If set to NaN or a negative number, the value would be ignored.\r\nDefault = 0",
+          "oma:id": 52,
+          "type": "number",
+          "unit": "s"
+        },
+        "Manual_override_default_duration": {
+          "label": "Manual override default duration",
+          "description": "If a manual command is applied without specifying a corresponding end time, the default duration is applied and the end time, if supported, is changed accordingly.\r\nA value of 0 can be considered vendor specific.\r\nDefault = vendor specific (e.g. 7200)",
+          "oma:id": 53,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Manual_override_active": {
+          "label": "Manual override active",
+          "description": "Indicate if a manual override is currently active on the device",
+          "oma:id": 54,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Default_Light_color_temperature": {
+          "label": "Default Light color temperature",
+          "description": "The default color temperature level that the outdoor lamp controller applies no schedule nor manual override command is active. (kelvin)",
+          "oma:id": 55,
+          "type": "integer",
+          "unit": "K"
+        },
+        "Driver_operating_hours": {
+          "label": "Driver operating hours",
+          "description": "Cumulated number of hours during which the driver controlling the LED pannel has been powered.\r\nThis resource MUST be used as a direct mapping for the Control Gear Operating Time extracted from the Memory bank 205 of any D4i driver being connected to the DALI bus, and supporting DALI part 253",
+          "oma:id": 56,
+          "writable": false,
+          "type": "number",
+          "unit": "h"
+        },
+        "Manufacturer_GTIN": {
+          "label": "Manufacturer GTIN",
+          "description": "GTIN associated to the driver manufacturer as retrieved from DALI Memory Bank 0",
+          "oma:id": 58,
+          "writable": false,
+          "type": "string"
+        },
+        "Manufacturer_Serial_Number": {
+          "label": "Manufacturer Serial Number",
+          "description": "Identification number associated to the driver manufacturer as retrieved from DALI Memory Bank 0",
+          "oma:id": 59,
+          "writable": false,
+          "type": "string"
+        },
+        "Firmware_Version": {
+          "label": "Firmware Version",
+          "description": "Firmware version of the bus unit",
+          "oma:id": 60,
+          "writable": false,
+          "type": "string"
+        },
+        "DALI_Version": {
+          "label": "DALI Version",
+          "description": "Version of DALI implementation as a string (to allow future extensions)",
+          "oma:id": 61,
+          "writable": false,
+          "type": "string"
+        },
+        "Unit_temperature": {
+          "label": "Unit temperature",
+          "description": "Temperature associated to the Control Gear in Celsius Degrees as per DiiA specification",
+          "oma:id": 62,
+          "writable": false,
+          "type": "number",
+          "unit": "Cel"
+        },
+        "Device_capabilities": {
+          "label": "Device capabilities",
+          "description": "Bit mask of supported capabilities:\r\nbit 0: Power Supply\r\nbit 1: Memory Bank 1 Extension\r\nbit 2: Energy Reporting\r\nbit 3: Diagnostic\r\nbit 4: Sensor Ready\r\nbit 5: Sensor Ready Extended Diagnostic\r\nbit 6: Sensor Ready Power Type: Total Energy\r\nbit 7: Sensor Ready Power Type: Apparent Energy",
+          "oma:id": 63,
+          "writable": false,
+          "type": "integer"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {
+        "Lamp_operating_hours_reset": {
+          "label": "Lamp operating hours reset",
+          "description": "Reset of the lamp operating hours counter.",
+          "oma:id": 16
+        },
+        "Lamp_switch_counter_reset": {
+          "label": "Lamp switch counter reset",
+          "description": "Reset the lamp switch counter.",
+          "oma:id": 19
+        },
+        "Control_gear_thermal_derating_counter_reset": {
+          "label": "Control gear thermal derating counter reset",
+          "description": "Reset of the control gear shutdown counter.",
+          "oma:id": 27
+        },
+        "Driver_operating_hours_reset": {
+          "label": "Driver operating hours reset",
+          "description": "Triggers the reset of the Driver operating hours.\r\nOn drivers supporting DALI part 253, this should trigger the controller to reset the Control Gear Operating Time present in Memory bank 205.",
+          "oma:id": 57
+        }
+      },
+      "sdfRequired": [
+        "Command",
+        "Dimming_level"
+      ]
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "info": {
+    "title": "OMA LwM2M Rain Gauge (Object ID 3446)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Rain_Gauge": {
+      "label": "Rain Gauge",
+      "description": "The uCIFI rain gauge is a device that measures the quantity of rain fall.",
+      "oma:id": "3446",
+      "sdfProperty": {
+        "Cumulated_water_value_": {
+          "label": "Cumulated water value ",
+          "description": "Quantity of collected water since last reset.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "number",
+          "unit": "mm"
+        },
+        "Time_of_last_reset": {
+          "label": "Time of last reset",
+          "description": "Time of last reset (either internal or external).",
+          "oma:id": 3,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time",
+          "unit": "s"
+        },
+        "Type_of_meter": {
+          "label": "Type of meter",
+          "description": "Type of rain gauge meter.",
+          "oma:id": 4,
+          "type": "string"
+        },
+        "Status": {
+          "label": "Status",
+          "description": "0 = OK, 1-255 = Error code.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {
+        "Cumulated_water_value_reset": {
+          "label": "Cumulated water value reset",
+          "description": "Reset the cumulated meter value.",
+          "oma:id": 2
+        }
+      },
+      "sdfRequired": [
+        "Cumulated_water_value_"
+      ]
+    }
+  }
+}

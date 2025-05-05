@@ -1,0 +1,136 @@
+{
+  "info": {
+    "title": "OMA LwM2M Thread Neighbor Information (Object ID 10485)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2023 Hydro-Québec.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Thread_Neighbor_Information": {
+      "label": "Thread Neighbor Information",
+      "description": "This LwM2M Object provides diagnostic information about Thread neighbors",
+      "oma:id": "10485",
+      "sdfProperty": {
+        "Neighbor_Role": {
+          "label": "Neighbor Role",
+          "description": "Provides the type of neighbor as Enumerated type:\r\n\t\t\t\t0: Child\r\n\t\t\t\t1: Router",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "RLOC16_Address": {
+          "label": "RLOC16 Address",
+          "description": "The Routing Locator (RLOC16) identifies a Thread interface, based on its location in the network topology.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Age": {
+          "label": "Age",
+          "description": "The age is a measure of how long it has been since the last communication or interaction with that particular network neighbor.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Average_RSSI": {
+          "label": "Average RSSI",
+          "description": "The average Received Signal Strength Indication (RSSI) over a specific period.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "dBm"
+        },
+        "Last_RSSI": {
+          "label": "Last RSSI",
+          "description": "The instantaneous Received Signal Strength Indication (RSSI).",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "unit": "dBm"
+        },
+        "Rx_On_When_Idle": {
+          "label": "Rx On When Idle",
+          "description": "Neighbor mode R represents \"RX on when idle\".",
+          "oma:id": 5,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Full_Thread_Device": {
+          "label": "Full Thread Device",
+          "description": "Neighbor mode D represents \"Full Thread device\".",
+          "oma:id": 6,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Full_Network_Data": {
+          "label": "Full Network Data",
+          "description": "Neighbor mode N represents \"Full network data\".",
+          "oma:id": 7,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Extended_MAC_Address": {
+          "label": "Extended MAC Address",
+          "description": "Extended Medium Access Control (MAC).",
+          "oma:id": 8,
+          "writable": false,
+          "type": "string"
+        },
+        "Link_Quality_In": {
+          "label": "Link Quality In",
+          "description": "Neighbor Link quality In. Link Quality is an integer in [0, 3]. A higher link quality indicates a more usable link, with 0 indicating that the\r\nlink is non-existent or unusable.",
+          "oma:id": 9,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "Link_Quality_Out": {
+          "label": "Link Quality Out",
+          "description": "Neighbor Link quality Out. Link Quality is an integer in [0, 3]. A higher link quality indicates a more usable link, with 0 indicating that the\r\nlink is non-existent or unusable.",
+          "oma:id": 10,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "Frame_Error": {
+          "label": "Frame Error",
+          "description": "Frame error percentage.",
+          "oma:id": 11,
+          "writable": false,
+          "type": "number",
+          "unit": "/100"
+        },
+        "Message_Error": {
+          "label": "Message Error",
+          "description": "Message error percentage.",
+          "oma:id": 12,
+          "writable": false,
+          "type": "number",
+          "unit": "/100"
+        },
+        "Queued_Message_Count": {
+          "label": "Queued Message Count",
+          "description": "Queued Message count. A non-zero Queued Message Count indicates that there are messages waiting to be delivered, and it can be useful for assessing the network's communication efficiency and load.",
+          "oma:id": 13,
+          "writable": false,
+          "type": "integer",
+          "unit": "count"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": []
+    }
+  }
+}

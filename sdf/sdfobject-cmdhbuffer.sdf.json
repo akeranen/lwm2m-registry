@@ -1,0 +1,51 @@
+{
+  "info": {
+    "title": "OMA LwM2M CmdhBuffer (Object ID 2056)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 oneM2M Partners.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CmdhBuffer": {
+      "label": "CmdhBuffer",
+      "description": "This Object defines limits in usage of buffers for temporarily storing information that needs to be forwarded to other CSEs during processing of CMDH-related requests in a CSE.",
+      "oma:id": "2056",
+      "sdfProperty": {
+        "ApplicableEventCategory": {
+          "label": "ApplicableEventCategory",
+          "description": "Contains a list of event category values",
+          "oma:id": 0,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "MaxBufferSize": {
+          "label": "MaxBufferSize",
+          "description": "Contains the max Buffer size of the CmdhBuffer Object Instance",
+          "oma:id": 1,
+          "type": "integer",
+          "unit": "B"
+        },
+        "StoragePriority": {
+          "label": "StoragePriority",
+          "description": "Storage priority for the buffered data associated to that CmdhBuffer Object Instance. t \r\nBuffered requests associated with a lower storage priority shall be purged before buffered requests with a higher storage priority.",
+          "oma:id": 2,
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "ApplicableEventCategory",
+        "MaxBufferSize",
+        "StoragePriority"
+      ]
+    }
+  }
+}

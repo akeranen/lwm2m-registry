@@ -1,0 +1,56 @@
+{
+  "info": {
+    "title": "OMA LwM2M rachLatency_delay (Object ID 3365)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "rachLatency_delay": {
+      "label": "rachLatency_delay",
+      "description": "RACH Latency & delay information",
+      "oma:id": "3365",
+      "sdfProperty": {
+        "sysFrameNumber": {
+          "label": "sysFrameNumber",
+          "description": "System Frame Number.",
+          "oma:id": 6037,
+          "writable": false,
+          "type": "integer"
+        },
+        "subFrameNumber": {
+          "label": "subFrameNumber",
+          "description": "Sub Frame Number.",
+          "oma:id": 6038,
+          "writable": false,
+          "type": "integer"
+        },
+        "rachLatencyVal": {
+          "label": "rachLatencyVal",
+          "description": "time in ms between 1st preamble and response from NW in DL",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "delay": {
+          "label": "delay",
+          "description": "time in ms",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "sysFrameNumber",
+        "subFrameNumber",
+        "rachLatencyVal",
+        "delay"
+      ]
+    }
+  }
+}

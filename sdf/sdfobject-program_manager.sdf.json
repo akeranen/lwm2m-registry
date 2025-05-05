@@ -1,0 +1,145 @@
+{
+  "info": {
+    "title": "OMA LwM2M Program Manager (Object ID 3457)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Program_Manager": {
+      "label": "Program Manager",
+      "description": "The uCIFI Program Manager describes the scheduling capabilities of the device, referring to Program Schedulers, Program Functions, Calendar Rules and Filters.",
+      "oma:id": "3457",
+      "sdfProperty": {
+        "Max_number_of_Program_Schedulers": {
+          "label": "Max number of Program Schedulers",
+          "description": "Maximum number of program schedulers supported by the device.\r\nCan be eventually adjusted in order to reserve more or less memory.",
+          "oma:id": 0,
+          "type": "integer"
+        },
+        "Current_number_of_Program_Schedulers": {
+          "label": "Current number of Program Schedulers",
+          "description": "Number of program schedulers currently allocated.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "Max_number_of_Program_Functions": {
+          "label": "Max number of Program Functions",
+          "description": "Maximum number of program functions supported by the device.\r\nCan be eventually adjusted in order to reserve more or less memory.",
+          "oma:id": 2,
+          "type": "integer"
+        },
+        "Current_number_of_Program_Functions": {
+          "label": "Current number of Program Functions",
+          "description": "Number of program functions currently allocated.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "Max_number_of_Calendars": {
+          "label": "Max number of Calendars",
+          "description": "Maximum number of calendars supported by the device.\r\nCan be eventually adjusted in order to reserve more or less memory.",
+          "oma:id": 4,
+          "type": "integer"
+        },
+        "Current_number_of_Calendar": {
+          "label": "Current number of Calendar",
+          "description": "Number of calendars currently allocated.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer"
+        },
+        "Max_number_of_Actuators": {
+          "label": "Max number of Actuators",
+          "description": "Maximum number of target actuators supported.\r\nCan be eventually adjusted in order to reserve more or less memory.",
+          "oma:id": 6,
+          "type": "integer"
+        },
+        "Max_number_of_Input_Sources": {
+          "label": "Max number of Input Sources",
+          "description": "Maximum number of input sources supported.\r\nCan be eventually adjusted in order to reserve more or less memory.",
+          "oma:id": 7,
+          "type": "integer"
+        },
+        "Max_number_of_Dates_in_Calendar": {
+          "label": "Max number of Dates in Calendar",
+          "description": "Maximum number of start/end date in Calendar supported.\r\nCan be eventually adjusted in order to reserve more or less memory.",
+          "oma:id": 8,
+          "type": "integer"
+        },
+        "Max_Flash_Memory_Allocated": {
+          "label": "Max Flash Memory Allocated",
+          "description": "Max flash memory (in bytes) to be allocated.\r\nCan be eventually adjusted in order to reserve more or less memory",
+          "oma:id": 9,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Flash_Memory_Free": {
+          "label": "Flash Memory Free",
+          "description": "Free flash memory in bytes",
+          "oma:id": 10,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Error_Conditions": {
+          "label": "Error Conditions",
+          "description": "Bitmap\r\nBit 0: No valid program \r\nBit 1: Missing configuration objects \r\nBit 2: Missing configuration resources \r\nBit 3: Invalid inputs\r\nBit 4: Invalid outputs\r\nBit 5: Invalid function format\r\nBit 6: Out of storage memory\r\nBit 7: Out of runtime memory\r\nBit 8..31: reserved for future use",
+          "oma:id": 11,
+          "writable": false,
+          "type": "integer"
+        },
+        "Supported_Capabilities": {
+          "label": "Supported Capabilities",
+          "description": "Bitmap\r\nBit 0: Astronomical Events\r\nBit 1: Single sensor Inputs\r\nBit 2: Multi Sensor Inputs\r\nBit 3: Input Filters\r\nBit 4: Output Filters\r\nBit 5: Calendar\r\nBit 6: Compound Operations\r\nBit 7: Second granularity (for fixed time expressions)\r\nBit 8: Astronomical Midnight\r\nBit 9: Off when inactive",
+          "oma:id": 13,
+          "writable": false,
+          "type": "integer"
+        },
+        "Max_Dynamic_Memory_Allocated": {
+          "label": "Max Dynamic Memory Allocated",
+          "description": "Max RAM memory (in bytes) to be allocated.\r\nCan be eventually adjusted in order to reserve more or less memory",
+          "oma:id": 14,
+          "type": "integer",
+          "unit": "B"
+        },
+        "Dynamic_Memory_Free": {
+          "label": "Dynamic Memory Free",
+          "description": "Free RAM memory in bytes",
+          "oma:id": 15,
+          "writable": false,
+          "type": "integer",
+          "unit": "B"
+        }
+      },
+      "sdfAction": {
+        "Clear_errors": {
+          "label": "Clear errors",
+          "description": "When executed, clears temporary error conditions.\r\nTo be noted that some of the errors may require to change the content of other objects to be completely cleared.",
+          "oma:id": 12
+        },
+        "Reset_schedule_objects": {
+          "label": "Reset schedule objects",
+          "description": "When executed, trigger a complete wipe of schedules already commissioned",
+          "oma:id": 16
+        }
+      },
+      "sdfRequired": [
+        "Max_number_of_Program_Schedulers",
+        "Current_number_of_Program_Schedulers",
+        "Max_number_of_Program_Functions",
+        "Current_number_of_Program_Functions",
+        "Max_number_of_Calendars",
+        "Current_number_of_Calendar",
+        "Max_number_of_Actuators",
+        "Max_Flash_Memory_Allocated",
+        "Error_Conditions"
+      ]
+    }
+  }
+}

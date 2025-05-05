@@ -1,0 +1,67 @@
+{
+  "info": {
+    "title": "OMA LwM2M Smoke Alarm (Object ID 3407)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 ICA.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Smoke_Alarm": {
+      "label": "Smoke Alarm",
+      "description": "This is an alarm that should be raised if the meter detects CO2 concentration above a pre-configured threshold.",
+      "oma:id": "3407",
+      "sdfProperty": {
+        "Battery_Percentage": {
+          "label": "Battery Percentage",
+          "description": "Current remaining battery level.",
+          "oma:id": 6044,
+          "writable": false,
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "RSSI": {
+          "label": "RSSI",
+          "description": "Received Signal Strength Indicator.",
+          "oma:id": 6045,
+          "writable": false,
+          "type": "number",
+          "unit": "dBW"
+        },
+        "Smoke_Sensor_State": {
+          "label": "Smoke Sensor State",
+          "description": "Indicate current smoke sensor state.",
+          "oma:id": 6046,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Detected_CO2_percentage": {
+          "label": "Detected CO2 percentage",
+          "description": "Current level of detected CO2 as a percentage of concentration.",
+          "oma:id": 6047,
+          "writable": false,
+          "type": "number",
+          "unit": "/100",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Alarm_loudness": {
+          "label": "Alarm loudness",
+          "description": "Indicate the loudness of the alarm.",
+          "oma:id": 6048,
+          "writable": false,
+          "type": "number",
+          "unit": "dB"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Smoke_Sensor_State"
+      ]
+    }
+  }
+}

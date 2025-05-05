@@ -1,0 +1,89 @@
+{
+  "info": {
+    "title": "OMA LwM2M DYM IoT edge commands and data protocols (Object ID 10482)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2016-2023 DYM Labs (Debug Your Mind Labs LLP).",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "DYM_IoT_edge_commands_and_data_protocols": {
+      "label": "DYM IoT edge commands and data protocols",
+      "description": "This LWM2M object is used between IoT Platform and Edge IoT Device Manager for control command and data exchange",
+      "oma:id": "10482",
+      "sdfProperty": {
+        "Plugin_Management": {
+          "label": "Plugin Management",
+          "description": "Plugin Management information",
+          "oma:id": 4,
+          "type": "string"
+        },
+        "Read_data": {
+          "label": "Read data",
+          "description": "Execute read operation",
+          "oma:id": 5,
+          "writable": false
+        },
+        "Write_data": {
+          "label": "Write data",
+          "description": "Execute write operation",
+          "oma:id": 6,
+          "type": "string"
+        }
+      },
+      "sdfAction": {
+        "MQTT_Redis_Information": {
+          "label": "MQTT Redis Information",
+          "description": "MQTT and Redis connection and communication information",
+          "oma:id": 0
+        },
+        "Disable_Edge": {
+          "label": "Disable Edge",
+          "description": "Disable edge",
+          "oma:id": 1
+        },
+        "Enable_Edge": {
+          "label": "Enable Edge",
+          "description": "Execute Enable edge",
+          "oma:id": 2
+        },
+        "Delete_Edge": {
+          "label": "Delete Edge",
+          "description": "Execute Delete edge",
+          "oma:id": 3
+        },
+        "Write_Data_Operation": {
+          "label": "Write Data Operation",
+          "description": "Execute data operations",
+          "oma:id": 7
+        },
+        "Read_data_Operation": {
+          "label": "Read data Operation",
+          "description": "Execute data operation for custom sensor objects",
+          "oma:id": 8
+        },
+        "Observe_data": {
+          "label": "Observe data",
+          "description": "Execute Observe data operation for continues read",
+          "oma:id": 9
+        },
+        "Update_Observe_data": {
+          "label": "Update Observe data",
+          "description": "Execute update Observe data operation with latest config",
+          "oma:id": 10
+        },
+        "Remove_Observe_data": {
+          "label": "Remove Observe data",
+          "description": "Execute Remove Observe data operation to stop continues read",
+          "oma:id": 11
+        }
+      },
+      "sdfRequired": [
+        "Read_data_Operation"
+      ]
+    }
+  }
+}

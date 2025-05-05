@@ -1,0 +1,133 @@
+{
+  "info": {
+    "title": "OMA LwM2M AI Model Configuration (Object ID 513)",
+    "version": "2025-05-05",
+    "copyright": "Copyright Open Mobile Alliance 2025",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "AI_Model_Configuration": {
+      "label": "AI Model Configuration",
+      "description": "This object can be used to provision and configure AI Model capabilities. A new AI model is provisioned using the Model, Model URI, and/or Model Description resources. The Input and Input labels resources can be used to configure where the model reads the input data and the Output and Output labels resources are used to configure where the model writes the output data. When output of one model is used as input of another model, the models are chained together. Input and Output transform resources can be used to transform data before reading or writing.",
+      "oma:id": "513",
+      "sdfProperty": {
+        "Model": {
+          "label": "Model",
+          "description": "The binary representation of the executable model. When executable model is written here, that is used for execution when the \"Enabled\" resource is set to true.",
+          "oma:id": 1,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Version": {
+          "label": "Version",
+          "description": "The current version of the model being referred.",
+          "oma:id": 2,
+          "type": "string"
+        },
+        "Description_URL": {
+          "label": "Description URL",
+          "description": "A URL pointing to information describing the operation executed by the function and possibly metadata related to the input and/or output.",
+          "oma:id": 3,
+          "type": "string"
+        },
+        "Model_URI": {
+          "label": "Model URI",
+          "description": "URL where to retrieve the model to execute or URI to identify the model to execute (and retrieved with alternative methods). When this URI is written, the device attempts to retrieve the model using the URI and stores it in the Model resource.",
+          "oma:id": 4,
+          "type": "string"
+        },
+        "Model_Integrity": {
+          "label": "Model Integrity",
+          "description": "Cryptographic checksum of the model when one is retrieved from a URI to ensure correctness and integrity of the downloaded model.",
+          "oma:id": 5,
+          "type": "string"
+        },
+        "Model_Description": {
+          "label": "Model Description",
+          "description": "When a model description (e.g., ONEX file) is written to this resource, the device either 1) attempts to convert that into executable model 2) asks third party server to do the conversion or 3) executes the model in its native form. If conversion is done, the model is stored in the \"Model\" resource.",
+          "oma:id": 6,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Inputs": {
+          "label": "Inputs",
+          "description": "A set of CoRE links / URLs that are pointing to resources at the device (e.g., \"/3303/1/5700\" for the current value of the temperature sensor instance #1) or external resources (e.g., \"coaps://foo.example/ac-setpoint\" for a setpoint of a home automation system). The output resources can be links to other AI Model config objects' input resources to enable chaining of models.",
+          "oma:id": 7,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Input_transforms": {
+          "label": "Input transforms",
+          "description": "Description of the transformation operations for transforming the data from a local resource / external source to format usable with the given model. The transformations functions used are matching the inputs indexes unless everything is processed using one function that manage all the inputs. In case of using the matching index transformations, the inputs without transformations are marked with empty string.",
+          "oma:id": 8,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Input_labels": {
+          "label": "Input labels",
+          "description": "Labels to describe which input source is connected to which input of the AI model. Label in the resource instance 0 describes the Inputs CoRE link instance 0, label in instance 1 the Inputs CoRE link instance 1, etc.",
+          "oma:id": 9,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Outputs": {
+          "label": "Outputs",
+          "description": "A set of CoRE links / URLs that are pointing to resources at the device (e.g., \"/3308/1/5900\" for the setpoint actuator set point value of the instance #1) or external resources (e.g., \"coap://foo.example/ac-setpoint\" setpoint of a home automation system). The output resources can be links to other AI Model config objects' input resources to enable chaining of models.",
+          "oma:id": 10,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Output_transforms": {
+          "label": "Output transforms",
+          "description": "Transforming output from a model specific format to the resource specific format; similar to input transforms. The transformations functions used are matching the outputs indexes unless everything is processed using one function that manage all the outputs. In case of using the matching index transformations, the output without transformations are marked with NULL",
+          "oma:id": 11,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Output_labels": {
+          "label": "Output labels",
+          "description": "Labels to describe which output is connected to which output of the AI model. Label in the resource instance 0 describes the Inputs CoRE link instance 0, label in instance 1 the Inputs CoRE link instance 1, etc.",
+          "oma:id": 12,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Enabled": {
+          "label": "Enabled",
+          "description": "If true, the function is available to be used. If false, the model is currently inactive. Default value is true.",
+          "oma:id": 13,
+          "type": "boolean"
+        },
+        "Condition_expression": {
+          "label": "Condition expression",
+          "description": "Expression for triggering the execution of the model. If no expression is given, the model is executed every time any input resource value changes. When condition expression is given, the values of the input resources are evaluated using the condition expression. If the expression results in a true value, the model is executed. For a false value the model is not executed.",
+          "oma:id": 14,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Version",
+        "Inputs",
+        "Input_labels",
+        "Outputs",
+        "Output_labels"
+      ]
+    }
+  }
+}

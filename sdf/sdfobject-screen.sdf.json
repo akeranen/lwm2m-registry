@@ -1,0 +1,71 @@
+{
+  "info": {
+    "title": "OMA LwM2M Screen (Object ID 10347)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Screen": {
+      "label": "Screen",
+      "description": "This LWM2M Object includes robot screen information.",
+      "oma:id": "10347",
+      "sdfProperty": {
+        "Screen_Status": {
+          "label": "Screen Status",
+          "description": "The status of the camera, 1:On, 0:Off.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Startup_Page": {
+          "label": "Startup Page",
+          "description": "The Startup Page of the screen.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "Current_Displaying_Page_or_Current_Screen_Play_List": {
+          "label": "Current Displaying Page or Current Screen Play List",
+          "description": "Current Displaying Page or Current Screen Play List.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {
+        "Screen_Control": {
+          "label": "Screen Control",
+          "description": "If the screen is locked, Parameter: 1:Bright Screen, 0:Locked Screen",
+          "oma:id": 100
+        },
+        "Startup_Page_Set": {
+          "label": "Startup Page Set",
+          "description": "Set startup page, Parameter:startup page",
+          "oma:id": 101
+        },
+        "Screen_Page_Set": {
+          "label": "Screen Page Set",
+          "description": "Set screen page, Parameter:screen page",
+          "oma:id": 102
+        },
+        "Screen_Play_List_Set": {
+          "label": "Screen Play List Set",
+          "description": "Set screen play list , Parameter:screen play list",
+          "oma:id": 103
+        }
+      },
+      "sdfRequired": [
+        "Screen_Status",
+        "Screen_Control",
+        "Startup_Page_Set",
+        "Screen_Page_Set",
+        "Screen_Play_List_Set"
+      ]
+    }
+  }
+}

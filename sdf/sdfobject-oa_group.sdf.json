@@ -1,0 +1,78 @@
+{
+  "info": {
+    "title": "OMA LwM2M oA Group (Object ID 3389)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Zumtobel Group.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "oA_Group": {
+      "label": "oA Group",
+      "description": "The 'oA Group' represents a group. It contains an application group ID, a security group ID and a list of multicast and unicast IP addresses that are used in the group. \\nAdditionally it contains a list of all members of the group.",
+      "oma:id": "3389",
+      "sdfProperty": {
+        "ObjectVersion": {
+          "label": "ObjectVersion",
+          "description": "LWM2M Object versioning label.",
+          "oma:id": 4001,
+          "writable": false,
+          "type": "string"
+        },
+        "Documentary_Description": {
+          "label": "Documentary Description",
+          "description": "Resource to hold a documentary text description of the object.",
+          "oma:id": 901,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 256
+        },
+        "Application_Group_ID": {
+          "label": "Application Group ID",
+          "description": "Identifier of the application group",
+          "oma:id": 600,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Security_Group_ID": {
+          "label": "Security Group ID",
+          "description": "Identifier of the security group",
+          "oma:id": 601,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "IP_Addresses": {
+          "label": "IP Addresses",
+          "description": "List of multicast and unicast IPv6 addresses to be used for outgoing group messages",
+          "oma:id": 602,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "sdfType": "byte-string"
+          }
+        },
+        "Members": {
+          "label": "Members",
+          "description": "Link to the local object instances (and/or single resources) that are members of that group in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)\\nNote: instances and resources not listed here will not be addressable on this node through group messages of this group",
+          "oma:id": 603,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:corelnk"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Application_Group_ID",
+        "Security_Group_ID",
+        "IP_Addresses",
+        "Members"
+      ]
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "info": {
+    "title": "OMA LwM2M Water quality sensor (Object ID 3426)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Water_quality_sensor": {
+      "label": "Water quality sensor",
+      "description": "The uCIFI water quality sensor measures the quality of the water in the drinkable water distribution network, in water tanks or in lakes and rivers.",
+      "oma:id": "3426",
+      "sdfProperty": {
+        "pH": {
+          "label": "pH",
+          "description": "Current or last value of the pH measured by the sensor.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "number"
+        },
+        "Chlorine": {
+          "label": "Chlorine",
+          "description": "Current or last value of the chlorine measured by the sensor.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm"
+        },
+        "Redox_or_ORP": {
+          "label": "Redox or ORP",
+          "description": "Current or last value of the oxidation reduction potential measured by the sensor.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "number",
+          "unit": "V"
+        },
+        "Total_dissolved_gas_or_TDG": {
+          "label": "Total dissolved gas or TDG",
+          "description": "Current or last value of the dissolved gas measured by the sensor.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm"
+        },
+        "Dissolved_oxygen": {
+          "label": "Dissolved oxygen",
+          "description": "Current or last value of the dissolved oxygen measured by the sensor.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "number",
+          "unit": "ppm"
+        },
+        "Turbidity": {
+          "label": "Turbidity",
+          "description": "Current or last value of the turbidity measured by the sensor using the Nephelometric Turbidity Unit (NTU).",
+          "oma:id": 6,
+          "writable": false,
+          "type": "number",
+          "unit": "NTU"
+        },
+        "Conductivity": {
+          "label": "Conductivity",
+          "description": "Current or last value of the conductivity measured by the sensor.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "number",
+          "unit": "S/m"
+        },
+        "Conductance": {
+          "label": "Conductance",
+          "description": "Current or last value of the conductance measured by the sensor.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "number",
+          "unit": "S/m"
+        },
+        "Total_suspended_solids": {
+          "label": "Total suspended solids",
+          "description": "Current or last value of the TSS measured by the sensor.",
+          "oma:id": 9,
+          "writable": false,
+          "type": "number",
+          "unit": "mg/l"
+        },
+        "Total_dissolved_solids": {
+          "label": "Total dissolved solids",
+          "description": "Current or last value of the TDS measured by the sensor.",
+          "oma:id": 10,
+          "writable": false,
+          "type": "number",
+          "unit": "mg/l"
+        },
+        "Salinity": {
+          "label": "Salinity",
+          "description": "Current or last value of the salinity measured by the sensor.",
+          "oma:id": 11,
+          "writable": false,
+          "type": "number",
+          "unit": "ppt"
+        },
+        "NO3": {
+          "label": "NO3",
+          "description": "Current or last value of NO3 measured by the sensor.",
+          "oma:id": 12,
+          "writable": false,
+          "type": "number",
+          "unit": "mg/l"
+        },
+        "NH3": {
+          "label": "NH3",
+          "description": "Current or last value of NH3 measured by the sensor.",
+          "oma:id": 13,
+          "writable": false,
+          "type": "number",
+          "unit": "mg/l"
+        },
+        "NH4": {
+          "label": "NH4",
+          "description": "Current or last value of NH4 measured by the sensor.",
+          "oma:id": 14,
+          "writable": false,
+          "type": "number",
+          "unit": "mg/l"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": []
+    }
+  }
+}

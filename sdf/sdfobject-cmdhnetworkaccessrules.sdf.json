@@ -1,0 +1,43 @@
+{
+  "info": {
+    "title": "OMA LwM2M CmdhNetworkAccessRules (Object ID 2054)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 oneM2M Partners.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "CmdhNetworkAccessRules": {
+      "label": "CmdhNetworkAccessRules",
+      "description": "This Object defines the usage of underlying networks for forwarding information to other CSEs during processing of CMDH-related requests in a CSE.",
+      "oma:id": "2054",
+      "sdfProperty": {
+        "ApplicableEventCategories": {
+          "label": "ApplicableEventCategories",
+          "description": "Contains  a list of Event Category values",
+          "oma:id": 0,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "NetworkAccessRule": {
+          "label": "NetworkAccessRule",
+          "description": "Contains 0 or more references to CmdhNwAccessRule Object Instances",
+          "oma:id": 1,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "ApplicableEventCategories"
+      ]
+    }
+  }
+}

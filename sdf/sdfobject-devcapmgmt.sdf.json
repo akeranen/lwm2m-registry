@@ -1,0 +1,83 @@
+{
+  "info": {
+    "title": "OMA LwM2M DevCapMgmt (Object ID 15)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "DevCapMgmt": {
+      "label": "DevCapMgmt",
+      "description": "This LWM2M Object is dedicated to manage the device capabilities of a device e.g. sensors, communication, etc.",
+      "oma:id": "15",
+      "sdfProperty": {
+        "Property": {
+          "label": "Property",
+          "description": "List of Device Capabilities inside a given Group.\r\nThe format is a free list ASCII-represented integers separated by a semi colon. (e.g. 0;1;10)\r\nThe list of capabilities per Group is given in Appendix B: Device Capabilities Vocabulary\r\nexecutable Resource can work with.",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string"
+        },
+        "Group": {
+          "label": "Group",
+          "description": "Group name of Device Capabilities\r\n0: SENSOR: luminosity, presence,temp,humidity\r\n1: CONTROL: Light, Power, Sound\r\n2: CONNECTIVITY: Bluetooth, wifi, …\r\n3: NAVIGATION: gps, galieo\r\n4: STORAGE: external memory,\r\n5: VISION: cam, video-cam, night_cam.\r\n6: SOUND: speaker, buzzer\r\n7: ANALOG_INPUT: generic input\r\n8: ANALOG_OUTPUT: generic output\r\n9..15: reserved",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 15
+        },
+        "Description": {
+          "label": "Description",
+          "description": "Device Capability Description\r\n(manufacturer specified string)",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "Attached": {
+          "label": "Attached",
+          "description": "When the resource doesn’t exist, it means the associated Device Capability is not removable.\r\nWhen this resource is \"False\", it means the associated Device Capability is removable and is currently not attached to the device.\r\nWhen this resource is \"True\", it means the associated Device Capability - if removable - is currently attached to the Device.\r\nWhen a Device Capability is not removable, and the \"Attached\" Resource is present, the \"Attached\" value but be set to \"True\".",
+          "oma:id": 3,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Enabled": {
+          "label": "Enabled",
+          "description": "This resource indicates whether the Device Capability is enabled regardless whether the Device Capability is attached or not. If the value of this resource is \"True\" the Device Capability is in Enabled State. If the value is \"False\" the Device Capability is in Disabled State;\r\nThe ‘Attached’ and ‘Enabled’ resources are independent. A Device Capability MAY have ‘True’ as value for ‘Enabled’ Resource while having ‘False’ as value for the ‘Attached’ Resource. That means the Device Capability is still not available and can’t be used until it is attached to the Device, but will be useable once the Device Capability is attached.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "boolean"
+        },
+        "NotifyEn": {
+          "label": "NotifyEn",
+          "description": "When the Resources \"Enabled\" or \"Attached\" are under \"Observation\", this resource specifies whether the LWM2M Server MUST be notified when the value of the Resource on \"Observation\" changed. If the Resource \"NotifyEn\" is not present or the value is ‘False’, the LWM2M Server will be not notified about this change. If the \"NotifyEn\" Resource is present and the value is ‘True’, the LWM2M Server will be notified.",
+          "oma:id": 7,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "opEnable": {
+          "label": "opEnable",
+          "description": "This command is used to enable the Device Capability to transfer the Device Capability from Disabled State to Enabled state.\r\nIn Enabled State, the Device Capability is allowed to work when it is attached to the Device.",
+          "oma:id": 5
+        },
+        "opDisable": {
+          "label": "opDisable",
+          "description": "This command is used to disable the Device Capability to transfer the Device Capability from Enabled State to Disabled State.\r\nIn Disabled state the Device Capability is not allowed to work.",
+          "oma:id": 6
+        }
+      },
+      "sdfRequired": [
+        "Property",
+        "Group",
+        "Enabled",
+        "opEnable",
+        "opDisable"
+      ]
+    }
+  }
+}

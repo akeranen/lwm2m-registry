@@ -1,0 +1,66 @@
+{
+  "info": {
+    "title": "OMA LwM2M PM Threshold (Object ID 10333)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "PM_Threshold": {
+      "label": "PM Threshold",
+      "description": "Here defines all items needed in PM Threshold management.",
+      "oma:id": "10333",
+      "sdfProperty": {
+        "Entity": {
+          "label": "Entity",
+          "description": "Contains the object ID and object instance ID/name, for example: </10320/2>.",
+          "oma:id": 1,
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minLength": 4,
+          "maxLength": 63
+        },
+        "Performance_Type": {
+          "label": "Performance Type",
+          "description": "Referrence to a PM item, similar with Corelnk in LwM2M 1.1, \r\n\t\t\t\t</object ID/object instance ID/resoure ID>, for example:/10322/2/4",
+          "oma:id": 2,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "High_Threshold": {
+          "label": "High Threshold",
+          "description": "High Threshold of this PM item.",
+          "oma:id": 3,
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Low_Threshold": {
+          "label": "Low Threshold",
+          "description": "Low Threshold of this PM item.",
+          "oma:id": 4,
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Entity",
+        "Performance_Type",
+        "High_Threshold",
+        "Low_Threshold"
+      ]
+    }
+  }
+}

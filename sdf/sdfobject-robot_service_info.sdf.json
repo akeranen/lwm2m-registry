@@ -1,0 +1,160 @@
+{
+  "info": {
+    "title": "OMA LwM2M Robot Service Info (Object ID 10331)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Robot_Service_Info": {
+      "label": "Robot Service Info",
+      "description": "This LWM2M Object includes robot service related information.",
+      "oma:id": "10331",
+      "sdfProperty": {
+        "Current_status": {
+          "label": "Current status",
+          "description": "Current status, for example: working, pasued, dormant, holding, charging and so on.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 127
+        },
+        "Services_Providing": {
+          "label": "Services Providing",
+          "description": "Providing services: for example: patrolling, advertisement playing, patrolling and so on,\r\n\t\t\tone robot can do several works at the same time, for example, patrolling with advertisement playing.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 127
+        },
+        "Advertising_Contents": {
+          "label": "Advertising Contents",
+          "description": "The Advertising Contents it is playing.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string"
+        },
+        "Current_Language": {
+          "label": "Current Language",
+          "description": "Current language used by the robot.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 127
+        },
+        "Volume": {
+          "label": "Volume",
+          "description": "The Volume of the speaker.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "string",
+          "unit": "/100",
+          "minLength": 0,
+          "maxLength": 100
+        },
+        "Moving_Status": {
+          "label": "Moving Status",
+          "description": "0:Moving, 1:Stopped, 2:Suspended.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "Moving_Speed": {
+          "label": "Moving Speed",
+          "description": "The moving speed of the robot.",
+          "oma:id": 7,
+          "writable": false,
+          "type": "number",
+          "unit": "m/h"
+        },
+        "Location": {
+          "label": "Location",
+          "description": "Contains the reference to the location object(6).",
+          "oma:id": 8,
+          "writable": false,
+          "sdfRef": "oma:objlnk"
+        },
+        "Map_List": {
+          "label": "Map List",
+          "description": "Assigned Map List and the Map currently within.",
+          "oma:id": 9,
+          "writable": false,
+          "type": "string"
+        },
+        "Planned_Route_list": {
+          "label": "Planned Route list",
+          "description": "Planned Route list, routes are separated by comma.",
+          "oma:id": 10,
+          "writable": false,
+          "type": "string"
+        },
+        "Current_Route": {
+          "label": "Current Route",
+          "description": "Current Route.",
+          "oma:id": 11,
+          "writable": false,
+          "type": "string"
+        },
+        "Route_to-do_List": {
+          "label": "Route to-do List",
+          "description": "Routes to be done, routes are separated by comma.",
+          "oma:id": 12,
+          "writable": false,
+          "type": "string"
+        },
+        "Synchronous_Whistle": {
+          "label": "Synchronous Whistle",
+          "description": "The status of the Synchronous Whistle, 1:On, 0:Off.",
+          "oma:id": 13,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Current_Actions": {
+          "label": "Current Actions",
+          "description": "Current Body Actions/Actions.",
+          "oma:id": 14,
+          "writable": false,
+          "type": "string"
+        },
+        "ASR_Type": {
+          "label": "ASR Type",
+          "description": "ASR Type, 0:Cloud, 1:Local, 2:Offline.",
+          "oma:id": 15,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "TTS_Vendor": {
+          "label": "TTS Vendor",
+          "description": "The TTS Vendor.",
+          "oma:id": 50,
+          "writable": false,
+          "type": "string"
+        },
+        "TTS_Speaker": {
+          "label": "TTS Speaker",
+          "description": "Which speaker of the vender is selected.",
+          "oma:id": 51,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Current_status",
+        "Advertising_Contents",
+        "Synchronous_Whistle"
+      ]
+    }
+  }
+}

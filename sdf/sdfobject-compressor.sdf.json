@@ -1,0 +1,40 @@
+{
+  "info": {
+    "title": "OMA LwM2M Compressor (Object ID 10327)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Compressor": {
+      "label": "Compressor",
+      "description": "This LWM2M Object includes the Compressor information.",
+      "oma:id": "10327",
+      "sdfProperty": {
+        "Compressor_Name": {
+          "label": "Compressor Name",
+          "description": "The name of the compressor.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Compressor_Status": {
+          "label": "Compressor Status",
+          "description": "The status of the compressor, 1:Working, 0:Stopped.",
+          "oma:id": 50,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Compressor_Name",
+        "Compressor_Status"
+      ]
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "info": {
+    "title": "OMA LwM2M oA Basic Control (Object ID 3387)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Zumtobel Group.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "oA_Basic_Control": {
+      "label": "oA Basic Control",
+      "description": "The 'oA Basic Control' represents a common basic interface for a Control Function. This allows to have vendor specific (executing) control functions using diverse object numbers to be interfaced for the basic functionality in a common way. The object provides the basic functionality required for an OpenAIS control object.",
+      "oma:id": "3387",
+      "sdfProperty": {
+        "ObjectVersion": {
+          "label": "ObjectVersion",
+          "description": "LWM2M Object versioning label.",
+          "oma:id": 4001,
+          "writable": false,
+          "type": "string"
+        },
+        "Documentary_Description": {
+          "label": "Documentary Description",
+          "description": "Resource to hold a documentary text description of the object.",
+          "oma:id": 901,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 256
+        },
+        "Control_Function_Status": {
+          "label": "Control Function Status",
+          "description": "Current behaviour status of the control function:\\n* **0: disabled** (The control function is disabled (see Object_Enabled). The control logic is still enabled and processes incoming events and updates the current state, but doesn't create outgoing events. No sensor or actuator mimicking actions are performed when in disabled mode.)\\n* **1: normal** (The local control is fully operational, a superior control object can override the actual control using the northbound interface, but has no guarantee that a sensor or User Interface event overrides this without any warning.)\\n* **2: remote** (No actuator actions related to sensor signals received via the eastbound interface are performed. The Remote state is e.g. used to allow the superior control to handle the actuators individually through the westbound interface, using its own algorithms.)\\n* **3: local** (Set to local, a control object will no longer execute requests coming through the northbound interface. The sensor mimicking and the control status setting remains operational. This operating mode isolates the control object from superior control objects, and may be used e.g. to support troubleshooting and error triage handling.)\\n* **255: non responsive** (internal failure)",
+          "oma:id": 800,
+          "writable": false,
+          "type": "integer"
+        },
+        "Ghost_Status": {
+          "label": "Ghost Status",
+          "description": "Indicates if the control function is in ghost mode. In ghost mode, no actuator commands are sent out, all operation is kept internal. The northbound interface with the mimicked sensor and status values are provided. This ghost status may be used e.g. as a backup control object that can jump in when the operational control object fails and stops setting the superseded status.",
+          "oma:id": 812,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Control_Object_Mode": {
+          "label": "Control Object Mode",
+          "description": "Configures the mode of this control function instance, see Control_Function_Status.",
+          "oma:id": 801,
+          "type": "integer"
+        },
+        "Ghost_Configuration": {
+          "label": "Ghost Configuration",
+          "description": "Configures if this control function instance is in ghost mode (see Ghost_Status).",
+          "oma:id": 802,
+          "type": "boolean",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "Supersede_Heartbeat_Time": {
+          "label": "Supersede Heartbeat Time",
+          "description": "The default time another active controller is assumed to take over (see Supersede_Heartbeat).",
+          "oma:id": 813,
+          "type": "integer",
+          "unit": "s"
+        },
+        "Controlled_Application_Group_ID": {
+          "label": "Controlled Application Group ID",
+          "description": "Application Group ID of the controlled actuators.",
+          "oma:id": 803,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "Push-Button_Event_Configuration": {
+          "label": "Push-Button Event Configuration",
+          "description": "Configures the reaction on button events: Bitwise: 0 (LSB): switch-on, 1: switch-off, 2: darker, 3: brighter, 4: save \\n**Reaction on CLICK event:**\\n* If the switch-on and switch-off bits are not set, the CLICK event is ignored.\\n* If only the switch-on bit is set, the CLICK event always switches to On-State.\\n* If only the switch-off bit is set, the CLICK event always switches to Off-State.\\n* If the switch-on and switch-off bits are set, the CLICK event toggles between Off-State and On-State.\\n\\t\\t\\t\\t\\t\\n**Reaction on HOLD event:**\\n* If the darker and brighter bits are not set, the HOLD event is ignored.\\n* If only the darker bit is set, the HOLD event always starts a dim darker process.\\n* If only the brighter bit is set, the HOLD event always starts a dim brighter process.\\n* If the darker and brighter bits are set, the HOLD event is allowed to toggle the dimming direction for each new dimming process.\\n\\t\\t\\t\\t\\t\\n**Reaction on DOUBLE-CLICK event:**\\n* If the save bit is not set, the DOUBLE-CLICK event is ignored.\\n* If the save bit is set, the DOUBLE-CLICK event saves the current situation.",
+          "oma:id": 806,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 255
+        },
+        "Presence_Sensor_Event_Configuration": {
+          "label": "Presence Sensor Event Configuration",
+          "description": "Configures the reaction on presence sensor events: Bitwise: 0 (LSB): presence, 1: absence \\n* The presence bit enables or disables activities based on the presence event.  \\n *Note: This setting may allow to set the 'only off' behavior.*\\n* The absence bit enables or disables activities based on the absence event.",
+          "oma:id": 807,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 255
+        },
+        "Executing_Object": {
+          "label": "Executing Object",
+          "description": "Link to the Object Instance in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)",
+          "oma:id": 909,
+          "sdfRef": "oma:corelnk"
+        },
+        "Supersede_Heartbeat": {
+          "label": "Supersede Heartbeat",
+          "description": "This resource is used by active control functions (in the same application group) to take over the control functionality. By writing this resource, the IP address of the origin CoAP client is added to the Active-Controller-List.\\nIf no heartbeat is received after the specified time the not sending controller is taken out of the active controller list again, if there are no more active controllers this controller takes over: This is a fall-back to normal or local operation, if superseding control fails/gets lost.\\n\\t\\t\\t\\t\\nIf the Ghost Configuration is TRUE, the Control Function Status changes to 'ghost' if a controller is active.\\n\\t\\t\\t\\t\\nIf operation mode is set to remote, it will be reset to normal if the active controller list gets empty.",
+          "oma:id": 805,
+          "readable": false,
+          "minimum": 0,
+          "type": "integer",
+          "unit": "s",
+          "maximum": 65535
+        },
+        "Debug_Mode_Enabled": {
+          "label": "Debug Mode Enabled",
+          "description": "Enables the object test mode. The physical representation of the object will be disabled. Stimuli can be injected to test the object remotely using inject test event.",
+          "oma:id": 905,
+          "type": "boolean"
+        },
+        "Inject_Test_Event": {
+          "label": "Inject Test Event",
+          "description": "Defines the test event to be injected into the system when debug mode is enabled. Event definition is vendor specific.",
+          "oma:id": 906,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        },
+        "Object_Enabled": {
+          "label": "Object Enabled",
+          "description": "This resource allows to disable an object instance. \\nIf an object instance is disabled it does process incoming events but does not create outgoing events.",
+          "oma:id": 924,
+          "type": "boolean"
+        },
+        "Active-Controller-List": {
+          "label": "Active-Controller-List",
+          "description": "IP Address of the Controller that has taken over control. The list also contains the time the other control function is considered to be active. This time can be refreshed by periodic execution of the Ghost_Heartbeat.\\n\\t\\t\\t\\t\\nThis list only has entries if the control function is in ghost mode (see Control_Function_Status). When the Remaining_Active_Time of one entry expires, the entry is removed. If this results in an empty list, the Control_Function_Status changes the state to the mode configured in Control_Object_Mode if the state is not 'disabled'.",
+          "oma:id": 811,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "sdfType": "byte-string"
+          }
+        }
+      },
+      "sdfAction": {
+        "Execute_Inject": {
+          "label": "Execute Inject",
+          "description": "When executed, the test event defined in resource 906 will be injected",
+          "oma:id": 934
+        }
+      },
+      "sdfRequired": [
+        "Control_Function_Status",
+        "Ghost_Status",
+        "Control_Object_Mode",
+        "Supersede_Heartbeat_Time",
+        "Controlled_Application_Group_ID",
+        "Push-Button_Event_Configuration",
+        "Presence_Sensor_Event_Configuration",
+        "Executing_Object"
+      ]
+    }
+  }
+}

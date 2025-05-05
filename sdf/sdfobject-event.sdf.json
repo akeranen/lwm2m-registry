@@ -1,0 +1,70 @@
+{
+  "info": {
+    "title": "OMA LwM2M Event (Object ID 10335)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Event": {
+      "label": "Event",
+      "description": "Here lists all items of an event reported by the robot.",
+      "oma:id": "10335",
+      "sdfProperty": {
+        "Entity": {
+          "label": "Entity",
+          "description": "Contains the object ID and object instance ID/name, for example: </10320/2>.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string",
+          "minLength": 4,
+          "maxLength": 63
+        },
+        "Event_Type": {
+          "label": "Event Type",
+          "description": "The type of this event, for example: APP restart.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "Time": {
+          "label": "Time",
+          "description": "When was this event reported.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Sequence_No": {
+          "label": "Sequence No",
+          "description": "Sequence No of this event, used to detect event loss. A 63 bit value with range 0..2^63-1.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9223372036854776000
+        },
+        "Additional_Info": {
+          "label": "Additional Info",
+          "description": "The information related to this event.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Entity",
+        "Event_Type",
+        "Time",
+        "Sequence_No"
+      ]
+    }
+  }
+}

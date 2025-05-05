@@ -1,0 +1,56 @@
+{
+  "info": {
+    "title": "OMA LwM2M plmnSearchEvent (Object ID 3352)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "plmnSearchEvent": {
+      "label": "plmnSearchEvent",
+      "description": "List of all PLMNs found during the initial search/scan",
+      "oma:id": "3352",
+      "sdfProperty": {
+        "timeScanStart": {
+          "label": "timeScanStart",
+          "description": "Modem time when PLMN search is initiated",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        },
+        "plmnID": {
+          "label": "plmnID",
+          "description": "PLMN - mcc/mnc",
+          "oma:id": 6030,
+          "writable": false,
+          "type": "integer"
+        },
+        "BandIndicator": {
+          "label": "BandIndicator",
+          "description": "Band Indicator",
+          "oma:id": 6031,
+          "writable": false,
+          "type": "integer"
+        },
+        "dlEarfcn": {
+          "label": "dlEarfcn",
+          "description": "EARFCN - frequency",
+          "oma:id": 6032,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "timeScanStart",
+        "plmnID",
+        "BandIndicator",
+        "dlEarfcn"
+      ]
+    }
+  }
+}

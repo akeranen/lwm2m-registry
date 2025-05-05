@@ -1,0 +1,41 @@
+{
+  "info": {
+    "title": "OMA LwM2M LwM2M Gateway Routing (Object ID 26)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LwM2M_Gateway_Routing": {
+      "label": "LwM2M Gateway Routing",
+      "description": "This object is used by a LwM2M Gateway to maintain the routing table.",
+      "oma:id": "26",
+      "sdfProperty": {
+        "LwM2M_Object_ID": {
+          "label": "LwM2M Object ID",
+          "description": "This resource identifies mapping the LwM2M Object ID that is mapped with the Mapping Info Resource. It defines the source of the mapping.",
+          "oma:id": 0,
+          "writable": false,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "Mapping_Info": {
+          "label": "Mapping Info",
+          "description": "This resource defines the target of the mapping. This Resource may be empty in which case the mapping is the identity function.",
+          "oma:id": 1,
+          "writable": false,
+          "sdfRef": "oma:corelnk"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "LwM2M_Object_ID",
+        "Mapping_Info"
+      ]
+    }
+  }
+}

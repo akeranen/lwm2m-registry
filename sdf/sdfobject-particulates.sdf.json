@@ -1,0 +1,81 @@
+{
+  "info": {
+    "title": "OMA LwM2M Particulates (Object ID 10314)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019 OpenLX SP Ltd",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Particulates": {
+      "label": "Particulates",
+      "description": "This object should be used to report the concentration of particulates, for example a measurement of a particulates air quality sensor.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the particulate sensor. An example measurement unit is microgrammes per cubic metre ug/m3.",
+      "oma:id": "10314",
+      "sdfProperty": {
+        "Sensor_Value": {
+          "label": "Sensor Value",
+          "description": "Last or Current Measured Value from the Sensor.",
+          "oma:id": 5700,
+          "writable": false,
+          "type": "number"
+        },
+        "Min_Measured_Value": {
+          "label": "Min Measured Value",
+          "description": "The minimum value measured by the sensor since power ON or reset.",
+          "oma:id": 5601,
+          "writable": false,
+          "type": "number"
+        },
+        "Max_Measured_Value": {
+          "label": "Max Measured Value",
+          "description": "The maximum value measured by the sensor since power ON or reset.",
+          "oma:id": 5602,
+          "writable": false,
+          "type": "number"
+        },
+        "Max_Range_Value": {
+          "label": "Max Range Value",
+          "description": "The maximum value that can be measured by the sensor.",
+          "oma:id": 5604,
+          "writable": false,
+          "type": "number"
+        },
+        "Sensor_Units": {
+          "label": "Sensor Units",
+          "description": "Measurement Units Definition.",
+          "oma:id": 5701,
+          "writable": false,
+          "type": "string"
+        },
+        "Application_Type": {
+          "label": "Application Type",
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "oma:id": 5750,
+          "type": "string"
+        },
+        "Measured_Particle_Size": {
+          "label": "Measured Particle Size",
+          "description": "Size of the particle that the sensor is measuring",
+          "oma:id": 6043,
+          "writable": false,
+          "type": "number",
+          "unit": "m"
+        }
+      },
+      "sdfAction": {
+        "Reset_Min_and_Max_Measured_Values": {
+          "label": "Reset Min and Max Measured Values",
+          "description": "Reset the Min and Max Measured Values to Current Value.",
+          "oma:id": 5605
+        }
+      },
+      "sdfRequired": [
+        "Sensor_Value",
+        "Measured_Particle_Size"
+      ]
+    }
+  }
+}

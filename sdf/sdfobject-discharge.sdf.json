@@ -1,0 +1,56 @@
+{
+  "info": {
+    "title": "OMA LwM2M Discharge (Object ID 10498)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2024 South East Water Corporation.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Discharge": {
+      "label": "Discharge",
+      "description": "This LWM2M object provides water discharge events for a water tank monitoring device.",
+      "oma:id": "10498",
+      "sdfProperty": {
+        "Discharge_Level": {
+          "label": "Discharge Level",
+          "description": "The water level to discharge to in metres for a water level discharge event",
+          "oma:id": 0,
+          "type": "number",
+          "unit": "m"
+        },
+        "Discharge_Date_Time_Storm": {
+          "label": "Discharge Date Time Storm",
+          "description": "The date time for which a water level discharge event should occur",
+          "oma:id": 1,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Discharge_Volume": {
+          "label": "Discharge Volume",
+          "description": "The water volume to discharge in litres for a volume discharge event",
+          "oma:id": 2,
+          "type": "number",
+          "unit": "l"
+        },
+        "Discharge_Date_Time_Volume": {
+          "label": "Discharge Date Time Volume",
+          "description": "The date time for which a volume discharge event should occur",
+          "oma:id": 3,
+          "type": "number",
+          "sdfType": "unix-time"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Discharge_Level",
+        "Discharge_Date_Time_Storm",
+        "Discharge_Volume",
+        "Discharge_Date_Time_Volume"
+      ]
+    }
+  }
+}

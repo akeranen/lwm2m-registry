@@ -1,0 +1,75 @@
+{
+  "info": {
+    "title": "OMA LwM2M Periodic Sensor Upload (Object ID 10495)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Periodic_Sensor_Upload": {
+      "label": "Periodic Sensor Upload",
+      "description": "The autosen Periodic Sensor Upload object can be used to upload sampled sensor data at periodic intervals",
+      "oma:id": "10495",
+      "sdfProperty": {
+        "Sensor_Sampler_Path": {
+          "label": "Sensor Sampler Path",
+          "description": "Link to an object instance of the Periodic Sensor Sampler Object",
+          "oma:id": 0,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        },
+        "Upload_Start_Time": {
+          "label": "Upload Start Time",
+          "description": "Specifies the number of seconds after midnight UTC from which the upload should be started",
+          "oma:id": 1,
+          "type": "integer",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 86399
+        },
+        "Upload_Interval": {
+          "label": "Upload Interval",
+          "description": "Specifies the Interval at which the upload is to be repeated from the Upload Start Time.",
+          "oma:id": 2,
+          "type": "integer",
+          "unit": "s",
+          "minimum": 1,
+          "maximum": 86399
+        },
+        "Upload_Count": {
+          "label": "Upload Count",
+          "description": "Specifies the number of intervals to be performed in the upload interval, starting from the Upload Start Time",
+          "oma:id": 3,
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 86399
+        },
+        "Upload_Days_of_the_Week": {
+          "label": "Upload Days of the Week",
+          "description": "Specifies the days of the week when an upload should occur. The value is a single byte (bitmask), where Bit 0 = Sunday, Bit 1 = Monday, ..., Bit 6 = Saturday",
+          "oma:id": 4,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Upload_Recurrence": {
+          "label": "Upload Recurrence",
+          "description": "Specifies the Recurrence in days in which the Uploader will be executed. This works in combination with \"Sampling Days of the Week\" (ID 5),  \r\n        allowing finer control over when sampling occurs.",
+          "oma:id": 6,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Sensor_Sampler_Path",
+        "Upload_Start_Time",
+        "Upload_Interval"
+      ]
+    }
+  }
+}

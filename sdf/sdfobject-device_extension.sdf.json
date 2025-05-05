@@ -1,0 +1,136 @@
+{
+  "info": {
+    "title": "OMA LwM2M Device Extension (Object ID 3410)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Device_Extension": {
+      "label": "Device Extension",
+      "description": "The uCIFI device extension is an extension to the standard Lightweight M2M device (object ID 3) using the resource called \"ExtDevInfo\" (resource ID 22).",
+      "oma:id": "3410",
+      "sdfProperty": {
+        "GTIN_model_number": {
+          "label": "GTIN model number",
+          "description": "Standard global trade-in international number for the control device.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string"
+        },
+        "Manufacturer_identifier": {
+          "label": "Manufacturer identifier",
+          "description": "Unique identifier of the manufacturer of the control device, equivalent to IEEE's OUI (Organizational Unique Identifier). This value should be a Hexadecimal value. This value may be used by an online uCIFI product catalog server, for software modules to retrieve the data model of a device using this attribute associated with the model number on the \"Device\" (Id=3) object.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string"
+        },
+        "User-given_name": {
+          "label": "User-given name",
+          "description": "User-readable name of the device set by the user.",
+          "oma:id": 3,
+          "type": "string"
+        },
+        "Asset_identifier": {
+          "label": "Asset identifier",
+          "description": "Identifier of the asset (e.g. meter, luminaire, container) that is controlled by the device.",
+          "oma:id": 4,
+          "type": "string"
+        },
+        "Installation_date": {
+          "label": "Installation date",
+          "description": "Installation date of the device.",
+          "oma:id": 5,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Software_update": {
+          "label": "Software update",
+          "description": "Set to True while software within the device is being updated.",
+          "oma:id": 6,
+          "type": "boolean"
+        },
+        "Maintenance": {
+          "label": "Maintenance",
+          "description": "Set to True when the device is in maintenance mode.",
+          "oma:id": 7,
+          "type": "boolean"
+        },
+        "Device_operating_hours": {
+          "label": "Device operating hours",
+          "description": "Cumulated number of hours during which the device has been powered on.",
+          "oma:id": 9,
+          "writable": false,
+          "type": "integer",
+          "unit": "h"
+        },
+        "Additional_firmware_information": {
+          "label": "Additional firmware information",
+          "description": "Additional information about peripheral firmware versions. The format is left to the vendor.",
+          "oma:id": 10,
+          "writable": false,
+          "type": "string"
+        },
+        "DST_Start": {
+          "label": "DST Start",
+          "description": "The precise date and UTC time during the year when Daylight Saving Time begins, represented as Unix Time.",
+          "oma:id": 11,
+          "type": "array",
+          "items": {
+            "type": "number",
+            "sdfType": "unix-time"
+          },
+          "unit": "s"
+        },
+        "DST_End": {
+          "label": "DST End",
+          "description": "The precise date and UTC time during the year when Daylight Saving Time ends, represented as Unix Time.",
+          "oma:id": 12,
+          "type": "array",
+          "items": {
+            "type": "number",
+            "sdfType": "unix-time"
+          }
+        },
+        "DST_Offset": {
+          "label": "DST Offset",
+          "description": "The amount by which the UTC offset changes when Daylight Saving Time is in effect, represented as ISO 8601 time offset format. A DST offset of one hour is represented as \"01:00\"",
+          "oma:id": 13,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Uptime": {
+          "label": "Uptime",
+          "description": "Number of seconds since the last reboot of the device.",
+          "oma:id": 14,
+          "writable": false,
+          "type": "integer",
+          "unit": "s"
+        },
+        "RFD_device": {
+          "label": "RFD device",
+          "description": "Set to true if the device is a Reduce Functional Device running on battery.",
+          "oma:id": 15,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Configuration_reset": {
+          "label": "Configuration reset",
+          "description": "Reset the configuration parameters (and only the configuration parameters) of the device. It does not clear any counter (e.g. kWh counter or operating hour counter).",
+          "oma:id": 8
+        }
+      },
+      "sdfRequired": [
+        "Manufacturer_identifier"
+      ]
+    }
+  }
+}

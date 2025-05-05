@@ -1,0 +1,58 @@
+{
+  "info": {
+    "title": "OMA LwM2M oA Status Report Structure (Object ID 3406)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Zumtobel Group.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "oA_Status_Report_Structure": {
+      "label": "oA Status Report Structure",
+      "description": "The 'oA Status_Report_Structure' describes the content of the status reports. Its ID is always the first byte, the following bytes are defined by Keys.",
+      "oma:id": "3406",
+      "sdfProperty": {
+        "ObjectVersion": {
+          "label": "ObjectVersion",
+          "description": "LWM2M Object versioning label.",
+          "oma:id": 4001,
+          "writable": false,
+          "type": "string"
+        },
+        "Documentary_Description": {
+          "label": "Documentary Description",
+          "description": "Resource to hold a documentary text description of the object.",
+          "oma:id": 901,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 256
+        },
+        "Status_Report_Structure_ID": {
+          "label": "Status Report Structure ID",
+          "description": "The ID of the status report structure. It is always the first byte of the transmitted status report.\\nThis needs to be unique per receiving object. ID 255 is used to receive the 'go bootstrap' message.",
+          "oma:id": 850,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 255
+        },
+        "Keys": {
+          "label": "Keys",
+          "description": "Defines the list of keys that are part of the status report. Most keys are present in the form 'object ID/resource ID'.\\nThere is a simplified form that is used with status reports for objects. This reporting has implicit instance identification (it's the instance that creates reports, so no explicit instance identification is needed). This is using straight forward a list of resource contents that are determined by the list elements in their order.\\n\\t\\t\\t\\t\\nExample of a simple form:\\n- The key list for reporting ID 1 is: 4001/101; 4021/5850; 4021/100; 4021/102;\\n- The values are: 4001/101:0.5; 4021/5850:false; 4021/100:0.3; 4021/102:7\\n- The coded stream will be: 1; 0.5; false; 0.3; 7 with the first byte 1 the reporting ID.\\n\\t\\t\\t\\t\\nThe explicit form, that is used with device status reports, needs to explicitly name the instances the reported values are from. To allow for that two special keys are used:\\n- *NoOfInstances:* This key is to allow several object instances to report their status in the same report, e.g. a Device reports the status of all its light point objects.\\nThe block of keys following NoOfInstances, always starting with InstanceID, until the next NoOfInstances key is present in the status message for every instance, e.g. NoOfInstances=2 means the following block of keys is present twice.\\n- *InstanceID:* This key initiates the report of an object, is the first key before all the resource values. It defines the object instance that reports its status.\\n\\t\\t\\t\\t\\nExample of an explicit form:\\n- The key list for reporting ID 2 is: NoOfInstances; InstanceId; 4001/101; NoOfInstances; InstanceId; 4021/100\\n- The coded stream will be 2;2;0;0.5;1;0.7;1;0;0.5 with the first byte 2 the ID of the structure definition, the second byte the number of instances (2), the third the instance ID of the first (0) instance, the reported value, the instance ID of the second (1) instance, the reported value, the number of instances (1) for the next object, the ID of the instance (0) and the value.",
+          "oma:id": 851,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Status_Report_Structure_ID",
+        "Keys"
+      ]
+    }
+  }
+}

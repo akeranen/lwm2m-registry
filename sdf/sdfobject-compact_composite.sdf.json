@@ -1,0 +1,46 @@
+{
+  "info": {
+    "title": "OMA LwM2M Compact Composite (Object ID 511)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2022 Open Mobile Alliance",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Compact_Composite": {
+      "label": "Compact Composite",
+      "description": "This Object enables collecting a set of Resource values from other Objects into a single Resource representation.",
+      "oma:id": "511",
+      "sdfProperty": {
+        "Target_Links": {
+          "label": "Target Links",
+          "description": "One or more CoRE Links to Readable Single Resources and/or Resource Instances of Readable Multiple Resources in the same LwM2M Client, from which the values will be stored in the Compact Data array. Each link corresponds to an item in the Compact Data array: first link points to the resource instance with the value for the first array item, second link to the instance with the second array item, etc.",
+          "oma:id": 0,
+          "sdfRef": "oma:corelnk"
+        },
+        "Compact_Data": {
+          "label": "Compact Data",
+          "description": "CBOR array of resource values in the same order as the links in the Target Links resource. CBOR simple value of undefined should be used as the array item if an error occurs while reading the value for the corresponding resource (e.g., link pointing to a resource that doesn't exist or the resource is not allowed to be read because of access control rules).",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        },
+        "Description": {
+          "label": "Description",
+          "description": "Human-readable description of the Compact Data resulting from the Target Links.",
+          "oma:id": 2,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Target_Links",
+        "Compact_Data"
+      ]
+    }
+  }
+}

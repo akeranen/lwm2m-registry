@@ -1,0 +1,75 @@
+{
+  "info": {
+    "title": "OMA LwM2M MQTT Publication (Object ID 18831)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 IoTerop. All rights reserved.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "MQTT_Publication": {
+      "label": "MQTT Publication",
+      "description": "This LwM2M Object is used to configure data reporting over MQTT.",
+      "oma:id": "18831",
+      "sdfProperty": {
+        "Source": {
+          "label": "Source",
+          "description": "The source of the data to publish (e.g. </sensors/temp>, or </3303/0/5700>; </3336/0>). If this Resource is empty, the published data are implementation dependent.",
+          "oma:id": 0,
+          "sdfRef": "oma:corelnk"
+        },
+        "Broker": {
+          "label": "Broker",
+          "description": "A link to the MQTT Broker Object Instance (OMNA registered Object ID:18830) describing the MQTT Broker to use.",
+          "oma:id": 1,
+          "sdfRef": "oma:objlnk"
+        },
+        "Topic": {
+          "label": "Topic",
+          "description": "The MQTT topic to publish to.",
+          "oma:id": 2,
+          "type": "string"
+        },
+        "QoS": {
+          "label": "QoS",
+          "description": "The Quality of Service value to use when publishing.",
+          "oma:id": 3,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 2
+        },
+        "Retain": {
+          "label": "Retain",
+          "description": "The RETAIN flag value to use when publishing.",
+          "oma:id": 4,
+          "type": "boolean"
+        },
+        "Active": {
+          "label": "Active",
+          "description": "If true or if the Resource is not present, the Device publishes the data pointed by the Source Resource to the MQTT Broker pointed by the Broker Resource using the MQTT topic indicated in the Topic Resource. If false, the Device does nothing.",
+          "oma:id": 5,
+          "type": "boolean"
+        },
+        "Encoding": {
+          "label": "Encoding",
+          "description": "A CoAP Content-Format value used to encode the data in the MQTT Publish message. If this Resource is not present or equal to 65535, the encoding of the data is implementation dependent.",
+          "oma:id": 6,
+          "minimum": 0,
+          "type": "integer",
+          "maximum": 65535
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Source",
+        "Broker",
+        "Topic",
+        "QoS",
+        "Retain"
+      ]
+    }
+  }
+}

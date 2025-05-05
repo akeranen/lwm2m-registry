@@ -1,0 +1,60 @@
+{
+  "info": {
+    "title": "OMA LwM2M PM (Object ID 10357)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "PM": {
+      "label": "PM",
+      "description": "This LWM2M Object contains the referrence to all PM objects.",
+      "oma:id": "10357",
+      "sdfProperty": {
+        "Robot_PM": {
+          "label": "Robot PM",
+          "description": "Contains the reference to the Robot PM.",
+          "oma:id": 100,
+          "writable": false,
+          "sdfRef": "oma:objlnk"
+        },
+        "RCU_PM": {
+          "label": "RCU PM",
+          "description": "Contains the reference to the RCU PM.",
+          "oma:id": 101,
+          "writable": false,
+          "sdfRef": "oma:objlnk"
+        },
+        "CCU_PM": {
+          "label": "CCU PM",
+          "description": "Contains the reference to CCU PMs.",
+          "oma:id": 102,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        },
+        "SCA_PM": {
+          "label": "SCA PM",
+          "description": "Contains the reference to SCA PMs.",
+          "oma:id": 103,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Robot_PM",
+        "RCU_PM"
+      ]
+    }
+  }
+}

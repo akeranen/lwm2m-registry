@@ -1,0 +1,113 @@
+{
+  "info": {
+    "title": "OMA LwM2M Program Function (Object ID 3454)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Program_Function": {
+      "label": "Program Function",
+      "description": "Describes the behavior that controls the associated target based on time or sensor status.",
+      "oma:id": "3454",
+      "sdfProperty": {
+        "Function_Name": {
+          "label": "Function Name",
+          "description": "Mnemonic name of the function",
+          "oma:id": 0,
+          "type": "string"
+        },
+        "Run_Condition": {
+          "label": "Run Condition",
+          "description": "Conditions that would cause the function to be effective (if at least one condition is met).\r\nSyntax of each condition is as follows:\r\n<time>,<sensor #1>,<sensor #2>,…,<sensor #n>\r\n\r\nhh:mm or S(unset), sun(R)ise /- minute offset\r\nRanges are separated with a tilde character \"~\"\r\nOpen ranges can be written as start~ (value >= start) or ~end (value <= end)\r\n\r\nTime should be a range, eg 18:00~04:00 or S~R\r\nAnd each sensor can be either a specific value or a range of values\r\n\r\nIf omitted or not supported, function can be assumed to be effective 24/24",
+          "oma:id": 1,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Output_Filter": {
+          "label": "Output Filter",
+          "description": "Number of Output Filter object instances, each one being applied to the corresponding target output",
+          "oma:id": 3,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Time_Input_Array": {
+          "label": "Time Input Array",
+          "description": "Sequence of fixed time and/or astronomical events separated by semicolons\r\nEach resource instance is specified as a sequence that will target the corresponding output\r\nhh:mm = fixed time\r\nS+30 = sunset plus 30 minutes\r\nR-20 = sunrise minus 20 minutes",
+          "oma:id": 4,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Time_Output_Array": {
+          "label": "Time Output Array",
+          "description": "Sequence of arguments to be provided to the target.\r\nIf strings have to be provided, they must be enclosed in double quotes\r\ne.g. 10;50;24\r\n\"parking empty\";\"parking full\"\r\n\r\nAny spacing provided outside double quotes can be safely ignored",
+          "oma:id": 5,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Single_Sensor_Input_Array": {
+          "label": "Single Sensor Input Array",
+          "description": "Allows to define multiple conditions based on sensor value.\r\nOnly the first sensor is considered (in case multiple sensors are configured).\r\nThis resource shall be used in mutual exclusion with the multi sensor input array.",
+          "oma:id": 6,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Multi_Sensor_Input_Array": {
+          "label": "Multi Sensor Input Array",
+          "description": "Allows to define multiple conditions based on time and sensor values with a syntax similar to the one used for the Run condition\r\nEach condition shall be enclosed in brackets and separated by semicolons\r\n(<time>,<sensor #1>,<sensor #2>,…,<sensor #n>);(<time>,<sensor #1>,<sensor #2>,…,<sensor #n>);…\r\nThe first condition matching would take precedence over the ones following\r\nAny spacing provided outside double quotes can be safely ignored\r\nWhen multiple output targets have to be managed, additional conditions will be provided in a separate resource instance",
+          "oma:id": 7,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Sensor_Output_Array": {
+          "label": "Sensor Output Array",
+          "description": "Sequence of arguments to be provided to the target in a similar way of the time output array\r\nThe sensor arrays can be used in conjunction of the time arrays and, in this case, would take precedence in case of matching\r\nThis would allow to define both fixed time control and sensor based control in a single function\r\nIf both single sensor input array and multi sensor input array are both specified, the multi sensor one would take precedence",
+          "oma:id": 8,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Output_Filter_for_Time_Output": {
+          "label": "Output Filter for Time Output",
+          "description": "Sequence of arguments representing Output Filter instances to be applied to the corresponding target output\r\ne.g. 0;;1 means /3456/0;default;/3456/1\r\nIf resource or specific entry is not specified, the default output filter, if present, would be applied",
+          "oma:id": 9,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Output_Filter_for_Sensor_Output": {
+          "label": "Output Filter for Sensor Output",
+          "description": "Sequence of arguments representing Output Filter instances to be applied to the corresponding target output\r\ne.g. 0;;1 means 3456/0;default;3456/1\r\nIf resource or specific entry is not specified, the default output filter, if present, would be applied",
+          "oma:id": 10,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Time_Input_Array",
+        "Time_Output_Array"
+      ]
+    }
+  }
+}

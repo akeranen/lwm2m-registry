@@ -1,0 +1,55 @@
+{
+  "info": {
+    "title": "OMA LwM2M oA Receiving Object (Object ID 3402)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Zumtobel Group.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "oA_Receiving_Object": {
+      "label": "oA Receiving Object",
+      "description": "The 'oA Receiving Object' provides a resource for sensors/actuators to report their status message to. It is used with control objects as logical object that forwards the sensor and status data to the executing object.\\nIt is also used to receive the 'go bootstrap' message, using the Struct-ID 255, in OOTB mode.",
+      "oma:id": "3402",
+      "sdfProperty": {
+        "ObjectVersion": {
+          "label": "ObjectVersion",
+          "description": "LWM2M Object versioning label.",
+          "oma:id": 4001,
+          "writable": false,
+          "type": "string"
+        },
+        "Documentary_Description": {
+          "label": "Documentary Description",
+          "description": "Resource to hold a documentary text description of the object.",
+          "oma:id": 901,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 256
+        },
+        "Executing_Object": {
+          "label": "Executing Object",
+          "description": "Link to the Object Instance in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)",
+          "oma:id": 909,
+          "sdfRef": "oma:corelnk"
+        },
+        "Status_Report": {
+          "label": "Status Report",
+          "description": "The actuators and sensors report their status to this resource. It is also used to receive the 'go bootstrap' message, using the Struct-ID 255, in OOTB mode.",
+          "oma:id": 923,
+          "readable": false,
+          "type": "string",
+          "sdfType": "byte-string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Executing_Object",
+        "Status_Report"
+      ]
+    }
+  }
+}

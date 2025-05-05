@@ -1,0 +1,43 @@
+{
+  "info": {
+    "title": "OMA LwM2M Confidential Data (Object ID 10253)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Lab R&D Atos Pessac.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Confidential_Data": {
+      "label": "Confidential Data",
+      "description": "This LWM2M Object is used for reporting data, but in a confidential way",
+      "oma:id": "10253",
+      "sdfProperty": {
+        "Public_Key": {
+          "label": "Public Key",
+          "description": "Object public key provided from the server side",
+          "oma:id": 0,
+          "type": "string",
+          "sdfType": "byte-string",
+          "unit": "\r\n        "
+        },
+        "Application_Data": {
+          "label": "Application Data",
+          "description": "Application Data encrypted by the Public Key",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string",
+          "unit": "\r\n        "
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Public_Key",
+        "Application_Data"
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "info": {
+    "title": "OMA LwM2M scellID (Object ID 3353)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "scellID": {
+      "label": "scellID",
+      "description": "serving cell information that the RRC decides to camp on",
+      "oma:id": "3353",
+      "sdfProperty": {
+        "plmnID": {
+          "label": "plmnID",
+          "description": "PLMN - mcc/mnc",
+          "oma:id": 6030,
+          "writable": false,
+          "type": "integer"
+        },
+        "BandIndicator": {
+          "label": "BandIndicator",
+          "description": "Band Indicator",
+          "oma:id": 6031,
+          "writable": false,
+          "type": "integer"
+        },
+        "TrackingAreaCode": {
+          "label": "TrackingAreaCode",
+          "description": "Tracking Area Code",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "CellID": {
+          "label": "CellID",
+          "description": "Cell ID.",
+          "oma:id": 6033,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "plmnID",
+        "BandIndicator",
+        "TrackingAreaCode",
+        "CellID"
+      ]
+    }
+  }
+}

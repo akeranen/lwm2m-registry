@@ -1,0 +1,304 @@
+{
+  "info": {
+    "title": "OMA LwM2M LPWAN Mesh Connectivity (Object ID 3447)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LPWAN_Mesh_Connectivity": {
+      "label": "LPWAN Mesh Connectivity",
+      "description": "The uCIFI LPWAN Mesh Connectivity object enables monitoring and management of parameters related with the operation of 802.15.4-based LPWAN devices.",
+      "oma:id": "3447",
+      "sdfProperty": {
+        "Network_Type": {
+          "label": "Network Type",
+          "description": "Provides information on the type or set of specifications on which the mesh Connectivity is based. This information is encoded as string to provide flexibility in the adoption of future mesh technologies. Examples: \"802.15.4 proprietary\", \"Zigbee\", \"Bluetooth 5.0 Mesh\", \"Thread\", \"80215.4 6LowPAN\", \"Wi-SUN\".",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string"
+        },
+        "Device_class": {
+          "label": "Device class",
+          "description": "0: End-Device, 1: Router, 2: Repeater, 3: Border Router, 4: Bridge, 5: Gateway.",
+          "oma:id": 1,
+          "type": "integer"
+        },
+        "Operating_Frequency": {
+          "label": "Operating Frequency",
+          "description": "Frequency of the wireless communication used on the LPWAN network. Set as a Read-Writable attribute for those scenarios where the Radio can be configured to operate in different frequencies.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "number",
+          "unit": "MHz"
+        },
+        "Status": {
+          "label": "Status",
+          "description": "0: Disabled, 1: Connecting, 2: Connected, 3: Disconnecting, 4: Disconnected.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "Connection_Errors": {
+          "label": "Connection Errors",
+          "description": "Display’s information on current errors affecting mesh connectivity.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "string"
+        },
+        "Last_Error_timestamp": {
+          "label": "Last Error timestamp",
+          "description": "Represented in UTC.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Error_Counter": {
+          "label": "Error Counter",
+          "description": "Cumulative counter reporting on total observed errors.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer"
+        },
+        "Transmit_Power": {
+          "label": "Transmit Power",
+          "description": "Transmit power used by the IoT device on the LPWAN network.",
+          "oma:id": 8,
+          "type": "number",
+          "unit": "dBm"
+        },
+        "Data_Rate": {
+          "label": "Data Rate",
+          "description": "Data rate of the communication used on the LPWAN network.",
+          "oma:id": 9,
+          "type": "number",
+          "unit": "bit/s"
+        },
+        "Operation_Mode": {
+          "label": "Operation Mode",
+          "description": "Provides information on what mode of operation is in effect. The meaning of which is technology dependent.",
+          "oma:id": 10,
+          "type": "string"
+        },
+        "Operating_Channel": {
+          "label": "Operating Channel",
+          "description": "The current channel used for the transfer of data frames. The LwM2M client may update this field to reflect changes in frequency if a frequency hopping mechanism is in use.",
+          "oma:id": 11,
+          "type": "integer"
+        },
+        "Channel_Hopping_Function": {
+          "label": "Channel Hopping Function",
+          "description": "The current Frequency hopping function in use by the device: 0: disabled, 1: Pseudo-Random, 2: Adaptative.",
+          "oma:id": 12,
+          "type": "integer"
+        },
+        "Available_Channels": {
+          "label": "Available Channels",
+          "description": "Array of supported radio channels within the Regulatory Domain.",
+          "oma:id": 13,
+          "type": "string"
+        },
+        "Unicast_Channel_Plan": {
+          "label": "Unicast Channel Plan",
+          "description": "Defined for those technologies that make use of a specific subset of channels for Unicast Datagram transmission.",
+          "oma:id": 14,
+          "type": "string"
+        },
+        "Broadcast_Channel_Plan": {
+          "label": "Broadcast Channel Plan",
+          "description": "Defined for those technologies that make use of a specific subset of channels for Broadcast Datagram transmission.",
+          "oma:id": 15,
+          "type": "string"
+        },
+        "FEC": {
+          "label": "FEC",
+          "description": "Forward Error Correction may be enabled to improve datagram in noisy network conditions : 0: Disabled, 1: Enabled.",
+          "oma:id": 16,
+          "type": "boolean"
+        },
+        "Data_Whitening": {
+          "label": "Data Whitening",
+          "description": "Data whitening may be enabled to ensure smother power distribution over the occupied bandwidth and improve the quality of the RF link : 0: Disabled, 1: Enabled.",
+          "oma:id": 17,
+          "type": "boolean"
+        },
+        "Cipher_Suite": {
+          "label": "Cipher Suite",
+          "description": "Cipher suite string identifying the authentication and encryption algorithms used in mesh security. i.e:  TLS_ECDHE_ECDSA_WITH_AES_128_CCM.",
+          "oma:id": 18,
+          "type": "string"
+        },
+        "PAN_Identifier": {
+          "label": "PAN Identifier",
+          "description": "The 802.15.4 PAN ID used within the network.",
+          "oma:id": 19,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Network_Name": {
+          "label": "Network Name",
+          "description": "An operator defined network ID associated with the mesh cluster.",
+          "oma:id": 20,
+          "type": "string"
+        },
+        "Node_Rank": {
+          "label": "Node Rank",
+          "description": "The hierarchy of the mesh router/end-device within the network. It may be expressed as the number of hops between the node and the Border Router/gateway or as the computed cost of the path connecting the node to the Border-Router/gateway.",
+          "oma:id": 21,
+          "writable": false,
+          "type": "integer"
+        },
+        "Root_Address": {
+          "label": "Root Address",
+          "description": "Address or identifier of the Border Router/ Gateway node providing connectivity outside the mesh cluster.",
+          "oma:id": 22,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Parent_Address": {
+          "label": "Parent Address",
+          "description": "Address or identifier of the node selected as the next hop on the optimal path towards the mesh Root.",
+          "oma:id": 23,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Physical_interface": {
+          "label": "Physical interface",
+          "description": "The MAC address of the interface, in hexadecimal form.",
+          "oma:id": 24,
+          "type": "string"
+        },
+        "Logical_Address": {
+          "label": "Logical Address",
+          "description": "The IP addresses assigned to the connectivity interface. (e.g. IPv4, IPv6, etc.).",
+          "oma:id": 25,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "IP_Address": {
+          "label": "IP Address",
+          "description": "The IP addresses assigned to the connectivity interface. (e.g. IPv4, IPv6, etc.).",
+          "oma:id": 26,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Multicast_Group_Address": {
+          "label": "Multicast Group Address",
+          "description": "Group address from which the IoT device should accept incoming messages and/or commands.",
+          "oma:id": 27,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Multicast_group_key": {
+          "label": "Multicast group key",
+          "description": "Security key (e.g. AES128) to be shared with other members to be part of a multicast group. The opaque format enables to support non printable characters.",
+          "oma:id": 28,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "sdfType": "byte-string"
+          }
+        },
+        "Signal_to_noise_ratio": {
+          "label": "Signal to noise ratio",
+          "description": "Ratio of signal power to the noise power .",
+          "oma:id": 29,
+          "writable": false,
+          "type": "number",
+          "unit": "dB"
+        },
+        "Received_Signal_Strength_Indication": {
+          "label": "Received Signal Strength Indication",
+          "description": "Signal strength of the communication network measured by the device (a.k.a. RSSI).",
+          "oma:id": 30,
+          "writable": false,
+          "type": "number",
+          "unit": "dBm"
+        },
+        "Noise_Floor": {
+          "label": "Noise Floor",
+          "description": "Noise Floor of the communication network measured by the device.",
+          "oma:id": 31,
+          "writable": false,
+          "type": "number",
+          "unit": "dBm"
+        },
+        "Maximum_repeat_time": {
+          "label": "Maximum repeat time",
+          "description": "Maximum number of times a message should be repeated within a mesh network (e.g. number of CoAP retransmissions)",
+          "oma:id": 34,
+          "type": "integer"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {
+        "Error_Counter_Reset": {
+          "label": "Error Counter Reset",
+          "description": "Resets \"Error Counter\" to zero.",
+          "oma:id": 7
+        }
+      },
+      "sdfRequired": [
+        "Network_Type",
+        "Device_class",
+        "Operating_Frequency",
+        "Status",
+        "Physical_interface"
+      ]
+    }
+  }
+}

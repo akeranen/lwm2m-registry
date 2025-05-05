@@ -1,0 +1,91 @@
+{
+  "info": {
+    "title": "OMA LwM2M Program Monitor (Object ID 3458)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Program_Monitor": {
+      "label": "Program Monitor",
+      "description": "The uCIFI Program Monitor exports some useful information related to program execution.",
+      "oma:id": "3458",
+      "sdfProperty": {
+        "Program_Name": {
+          "label": "Program Name",
+          "description": "Name of the program",
+          "oma:id": 0,
+          "writable": false,
+          "type": "string"
+        },
+        "Status": {
+          "label": "Status",
+          "description": "Identifies the current status of the control program, taking the values: 0 - Disabled 1 - Inactive 2 - Running where 'Disabled' should be present whenever the CP has been administratively disabled. The state should be set to 'Inactive' if the calendar associated with the CP makes is NOT applicable for the current day. If the CP is administratively enabled, and either the associated calendar makes it valid for the current day or no Calendar is associated with it.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "Error_Conditions": {
+          "label": "Error Conditions",
+          "description": "Bitmap\r\nBit 0: Sensor syntax error\r\nBit 1: Time syntax error\r\nBit 2: Invalid program function \r\nBit 3..31: reserved for future use",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "Evaluation_Counter": {
+          "label": "Evaluation Counter",
+          "description": "Cumulative counter for the number of times the current control program has been evaluated",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer"
+        },
+        "Execution_Counter": {
+          "label": "Execution Counter",
+          "description": "Cumulative counter for the number of times the current control program has ben executed after evaluation, triggering the corresponding action and output. With 'Execution counter' less than or equal to 'Evaluation counter'",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer"
+        },
+        "Last_Execution": {
+          "label": "Last Execution",
+          "description": "Timestamp for the latest execution of the current CP",
+          "oma:id": 7,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Last_Control_Output": {
+          "label": "Last Control Output",
+          "description": "String identifying the control output enforced during last program execution. If the control program supports multiple ouputs, one instance of this resource should be created for each output.",
+          "oma:id": 8,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "sdfAction": {
+        "Clear_errors": {
+          "label": "Clear errors",
+          "description": "When executed, clears temporary error conditions.\r\nTo be noted that some of the errors may require to change the content of the corresponding program function object to be completely cleared.",
+          "oma:id": 3
+        },
+        "Counter_Reset": {
+          "label": "Counter Reset",
+          "description": "Reset all counters under the current object",
+          "oma:id": 6
+        }
+      },
+      "sdfRequired": [
+        "Program_Name",
+        "Status",
+        "Error_Conditions"
+      ]
+    }
+  }
+}

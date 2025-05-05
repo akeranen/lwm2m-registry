@@ -1,0 +1,50 @@
+{
+  "info": {
+    "title": "OMA LwM2M Output Filter (Object ID 3456)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Output_Filter": {
+      "label": "Output Filter",
+      "description": "The uCIFI Output Filter can be used to fine tune the output commands in order, for example, to achieve a prolonged fade. To be used in conjunction with a Program Scheduler.",
+      "oma:id": "3456",
+      "sdfProperty": {
+        "Operation": {
+          "label": "Operation",
+          "description": "This resource defines an operation to be performed between the value of the Control Program output and the value currently store in the LwM2M resource pointed by 'Target'. Possible operations: 1 - set 2 - min 3 - max 4 - add 5 - subtract 6 - multiply When operation or filter is not defined the default output operation is set",
+          "oma:id": 0,
+          "type": "integer"
+        },
+        "Delay": {
+          "label": "Delay",
+          "description": "When defined the control output is not immediately applied and transaction time = delay is implemented between the current target resource value and the value of the control program output.  This can be also associated to Fade Time in smart lighting scenario",
+          "oma:id": 1,
+          "type": "number",
+          "unit": "s"
+        },
+        "Transaction": {
+          "label": "Transaction",
+          "description": "Defines the type of progression to occur to  transition the current target resource value to the value defined by the of the control program output. Current options: 0 - Immediate 1 - linear 2 - exponential 3 - Device internal mechanism",
+          "oma:id": 2,
+          "type": "integer"
+        },
+        "Expiration_Time": {
+          "label": "Expiration Time",
+          "description": "Limit the time period for which the output command should be considered valid. This is to be used in scenarios where Control Programs are not under continuous re-evaluation and for which the output control action is not continuously re-calculated. In such scenarios, the expiration time resource can be used to limit the time frame that the control output should be applied to the target resource.",
+          "oma:id": 3,
+          "type": "number"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Operation"
+      ]
+    }
+  }
+}

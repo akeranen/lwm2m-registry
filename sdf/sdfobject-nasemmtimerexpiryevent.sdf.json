@@ -1,0 +1,32 @@
+{
+  "info": {
+    "title": "OMA LwM2M nasEmmTimerExpiryEvent (Object ID 3362)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "nasEmmTimerExpiryEvent": {
+      "label": "nasEmmTimerExpiryEvent",
+      "description": "NAS EMM timer expiry information",
+      "oma:id": "3362",
+      "sdfProperty": {
+        "NasEmmTimerExpiryEvent": {
+          "label": "NasEmmTimerExpiryEvent",
+          "description": "1 = t3410",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "NasEmmTimerExpiryEvent"
+      ]
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "info": {
+    "title": "OMA LwM2M oA Reporting Object (Object ID 3403)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Zumtobel Group.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "oA_Reporting_Object": {
+      "label": "oA Reporting Object",
+      "description": "The 'oA Reporting Object' packs several status messages available at the node into a single, size optimized message, as e.g. used with data collect or BMS interfacing.",
+      "oma:id": "3403",
+      "sdfProperty": {
+        "ObjectVersion": {
+          "label": "ObjectVersion",
+          "description": "LWM2M Object versioning label.",
+          "oma:id": 4001,
+          "writable": false,
+          "type": "string"
+        },
+        "Documentary_Description": {
+          "label": "Documentary Description",
+          "description": "Resource to hold a documentary text description of the object.",
+          "oma:id": 901,
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 256
+        },
+        "Reporting_Object_Instances": {
+          "label": "Reporting Object Instances",
+          "description": "List of links to the reporting Object Instances in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)",
+          "oma:id": 932,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:corelnk"
+          }
+        },
+        "Target_Resource": {
+          "label": "Target Resource",
+          "description": "Link to the target resource in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)\\nNote taht the default for this entry is always the receiving object /4009/#/923. When Group communication is applied, the /#/ is determined by the group handling mechanisms and can be omitted.",
+          "oma:id": 933,
+          "sdfRef": "oma:corelnk"
+        },
+        "Status_Resend_Time": {
+          "label": "Status Resend Time",
+          "description": "The time specified as status resend time is used to resend the actual status to the application group the object is a member of, even if nothing changed.\\nThe status resend time is restarted after every event. The actual interval is a random time with the maximum duration given by this resource. Randomization helps to avoid massive ongoing message collisions after system power up.\\nFor example: Status resend time is set to 10 seconds;\\n* 00:00 status is sent\\n* 00:05 status changes and is sent immediatly\\n* 00:15 (or before, depending on the randomization) status is sent even though it did not change",
+          "oma:id": 904,
+          "minimum": 1,
+          "type": "integer",
+          "unit": "s",
+          "maximum": 600
+        },
+        "Status_Report_Structure_ID": {
+          "label": "Status Report Structure ID",
+          "description": "The ID of the status resource structure that is used to code the cyclic status report. See object 4012 'oA Status Report Structure' for more information",
+          "oma:id": 919,
+          "minimum": 1,
+          "type": "integer",
+          "unit": "s",
+          "maximum": 600
+        },
+        "Application_Group_ID": {
+          "label": "Application Group ID",
+          "description": "The application group ID that the logical object is part of. This ID will define the application group the status reports are sent to. It is internally used as a pointer to the Group Object instance that hosts all the Group configurations.",
+          "oma:id": 903,
+          "minimum": 0,
+          "type": "integer",
+          "unit": "s",
+          "maximum": 65535
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Reporting_Object_Instances",
+        "Target_Resource",
+        "Status_Resend_Time",
+        "Status_Report_Structure_ID",
+        "Application_Group_ID"
+      ]
+    }
+  }
+}

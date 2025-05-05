@@ -1,0 +1,140 @@
+{
+  "info": {
+    "title": "OMA LwM2M Service Info (Object ID 10356)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Service_Info": {
+      "label": "Service Info",
+      "description": "This LWM2M Object contains the referrence to all objects containing service info.",
+      "oma:id": "10356",
+      "sdfProperty": {
+        "Robot_Service_Info": {
+          "label": "Robot Service Info",
+          "description": "Contains the reference to the Robot Service Info.",
+          "oma:id": 100,
+          "writable": false,
+          "sdfRef": "oma:objlnk"
+        },
+        "SCA_Info": {
+          "label": "SCA Info",
+          "description": "Contains the reference to SCAs of the Robot.",
+          "oma:id": 101,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        },
+        "Speaker_Info": {
+          "label": "Speaker Info",
+          "description": "Contains the reference to the Speaker of the Robot.",
+          "oma:id": 102,
+          "writable": false,
+          "sdfRef": "oma:objlnk"
+        },
+        "Camera_Info": {
+          "label": "Camera Info",
+          "description": "Contains the reference to Cameras of the Robot.",
+          "oma:id": 103,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        },
+        "Screen_Info": {
+          "label": "Screen Info",
+          "description": "Contains the reference to the Screen of the Robot.",
+          "oma:id": 104,
+          "writable": false,
+          "sdfRef": "oma:objlnk"
+        },
+        "Light_Info": {
+          "label": "Light Info",
+          "description": "Contains the reference to Lights of the Robot.",
+          "oma:id": 105,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        },
+        "Warning_Light_Info": {
+          "label": "Warning Light Info",
+          "description": "Contains the reference to the Warning Light of the Robot.",
+          "oma:id": 106,
+          "writable": false,
+          "sdfRef": "oma:objlnk"
+        },
+        "Door_Info": {
+          "label": "Door Info",
+          "description": "Contains the reference to the Door of the Robot.",
+          "oma:id": 107,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        },
+        "Thermal_Imager_Info": {
+          "label": "Thermal Imager Info",
+          "description": "Contains the reference to the Thermal Imager of the Robot.",
+          "oma:id": 108,
+          "writable": false,
+          "sdfRef": "oma:objlnk"
+        },
+        "Compressor_Info": {
+          "label": "Compressor Info",
+          "description": "Contains the reference to the Compressor of the Robot.",
+          "oma:id": 109,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        },
+        "Lock_Info": {
+          "label": "Lock Info",
+          "description": "Contains the reference to Lock Info of the Robot.",
+          "oma:id": 110,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        },
+        "Collision_Sensor_Info": {
+          "label": "Collision Sensor Info",
+          "description": "Contains the reference to Collision Sensor Info of the Robot.",
+          "oma:id": 111,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        },
+        "Drop_Sensor_Info": {
+          "label": "Drop Sensor Info",
+          "description": "Contains the reference to Drop Sensor Info of the Robot.",
+          "oma:id": 112,
+          "writable": false,
+          "type": "array",
+          "items": {
+            "sdfRef": "oma:objlnk"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Robot_Service_Info"
+      ]
+    }
+  }
+}

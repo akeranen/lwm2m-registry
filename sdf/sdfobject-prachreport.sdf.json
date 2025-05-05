@@ -1,0 +1,128 @@
+{
+  "info": {
+    "title": "OMA LwM2M PrachReport (Object ID 3380)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2018 GSMA.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "PrachReport": {
+      "label": "PrachReport",
+      "description": "PRACH report information",
+      "oma:id": "3380",
+      "sdfProperty": {
+        "sysFrameNumber": {
+          "label": "sysFrameNumber",
+          "description": "System Frame Number.",
+          "oma:id": 6037,
+          "writable": false,
+          "type": "integer"
+        },
+        "subFrameNumber": {
+          "label": "subFrameNumber",
+          "description": "Sub Frame Number.",
+          "oma:id": 6038,
+          "writable": false,
+          "type": "integer"
+        },
+        "rachTxPower": {
+          "label": "rachTxPower",
+          "description": "PRACH tx power in dB (-112..23)",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "zadOffSeqNum": {
+          "label": "zadOffSeqNum",
+          "description": "ZadOFF Sequence Number (0..837)",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "prachConfig": {
+          "label": "prachConfig",
+          "description": "Random access preamble timing for a range of preamble formats (0..64)",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer"
+        },
+        "preambleFormat": {
+          "label": "preambleFormat",
+          "description": "Preamble Format (0..4)",
+          "oma:id": 5,
+          "writable": false,
+          "type": "integer"
+        },
+        "maxTransmissionMsg3": {
+          "label": "maxTransmissionMsg3",
+          "description": "Max number of HARQ re-transmissions from UE for RACH message 3 (1..8)",
+          "oma:id": 6,
+          "writable": false,
+          "type": "integer"
+        },
+        "raResponseWindowSize": {
+          "label": "raResponseWindowSize",
+          "description": "Window size for reception of RACH message 2 (2..10)",
+          "oma:id": 7,
+          "writable": false,
+          "type": "integer"
+        },
+        "RachRequestResult": {
+          "label": "RachRequestResult",
+          "description": "RACH Request success/failure - 0=fail, 1=pass",
+          "oma:id": 8,
+          "writable": false,
+          "type": "boolean"
+        },
+        "ce_mode": {
+          "label": "ce_mode",
+          "description": "CE_mode",
+          "oma:id": 9,
+          "writable": false,
+          "type": "integer"
+        },
+        "ce_level": {
+          "label": "ce_level",
+          "description": "CE level",
+          "oma:id": 10,
+          "writable": false,
+          "type": "integer"
+        },
+        "num_prach_repetition": {
+          "label": "num_prach_repetition",
+          "description": "Number of PRACH Repetitions",
+          "oma:id": 11,
+          "writable": false,
+          "type": "integer"
+        },
+        "prach_repetition_seq": {
+          "label": "prach_repetition_seq",
+          "description": "PRACH Repetition seq",
+          "oma:id": 12,
+          "writable": false,
+          "type": "integer"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "sysFrameNumber",
+        "subFrameNumber",
+        "rachTxPower",
+        "zadOffSeqNum",
+        "prachConfig",
+        "preambleFormat",
+        "maxTransmissionMsg3",
+        "raResponseWindowSize",
+        "RachRequestResult",
+        "ce_mode",
+        "ce_level",
+        "num_prach_repetition",
+        "prach_repetition_seq"
+      ]
+    }
+  }
+}

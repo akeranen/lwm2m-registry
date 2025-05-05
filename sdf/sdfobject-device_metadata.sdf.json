@@ -1,0 +1,80 @@
+{
+  "info": {
+    "title": "OMA LwM2M Device Metadata (Object ID 10255)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2018 ARM.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Device_Metadata": {
+      "label": "Device Metadata",
+      "description": "This object provides a range of information related to device metadata",
+      "oma:id": "10255",
+      "sdfProperty": {
+        "Protocol_supported": {
+          "label": "Protocol supported",
+          "description": "Manifest protocol supported",
+          "oma:id": 0,
+          "writable": false,
+          "type": "integer",
+          "unit": "\r\n        "
+        },
+        "Bootloader_hash": {
+          "label": "Bootloader hash",
+          "description": "Hash of the bootloader. This is used for tracking the version of the bootloader used.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string",
+          "unit": "\r\n        "
+        },
+        "OEM_bootloader_hash": {
+          "label": "OEM bootloader hash",
+          "description": "If the end-user has modified the bootloader the hash of the modified bootloader is recorded here",
+          "oma:id": 2,
+          "writable": false,
+          "type": "string",
+          "sdfType": "byte-string",
+          "unit": "\r\n        "
+        },
+        "Vendor": {
+          "label": "Vendor",
+          "description": "Vendor Class UUID",
+          "oma:id": 3,
+          "writable": false,
+          "type": "string",
+          "unit": "\r\n        "
+        },
+        "Class": {
+          "label": "Class",
+          "description": "Class UUID",
+          "oma:id": 4,
+          "writable": false,
+          "type": "string",
+          "unit": "\r\n        "
+        },
+        "Device": {
+          "label": "Device",
+          "description": "Device UUID",
+          "oma:id": 5,
+          "writable": false,
+          "type": "string",
+          "unit": "\r\n        "
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Protocol_supported",
+        "Bootloader_hash",
+        "OEM_bootloader_hash",
+        "Vendor",
+        "Class",
+        "Device"
+      ]
+    }
+  }
+}

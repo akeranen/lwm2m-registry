@@ -1,0 +1,58 @@
+{
+  "info": {
+    "title": "OMA LwM2M Edge computing manager (Object ID 3436)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2020 uCIFI Alliance",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Edge_computing_manager": {
+      "label": "Edge computing manager",
+      "description": "The uCIFI edge computing manager object defines the capability of a device to run scripts on the device itself.",
+      "oma:id": "3436",
+      "sdfProperty": {
+        "Max_number_of_scripts": {
+          "label": "Max number of scripts",
+          "description": "Maximum number of scripts supported by the device.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "integer"
+        },
+        "Number_of_free_slots_for_scripts": {
+          "label": "Number of free slots for scripts",
+          "description": "Number of free slots to store new scripts.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "integer"
+        },
+        "Max_number_of_conditions": {
+          "label": "Max number of conditions",
+          "description": "Maximum number of conditions supported by the device.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "integer"
+        },
+        "Number_of_free_slots_for_conditions": {
+          "label": "Number of free slots for conditions",
+          "description": "Number of free slots to store new conditions.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "integer"
+        },
+        "Edge-computing_capabilities": {
+          "label": "Edge-computing capabilities",
+          "description": "Vendor-specific resource to share the capabilities of the devices as regards to edge computing.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": []
+    }
+  }
+}

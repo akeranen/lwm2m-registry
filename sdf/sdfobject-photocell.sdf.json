@@ -1,0 +1,62 @@
+{
+  "info": {
+    "title": "OMA LwM2M Photocell (Object ID 3419)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Photocell": {
+      "label": "Photocell",
+      "description": "A uCIFI photocell object is used for lighting control, particularly to identify when light should be switched ON/OFF.",
+      "oma:id": "3419",
+      "sdfProperty": {
+        "ON_lux_level": {
+          "label": "ON lux level",
+          "description": "Lux level below which the photocell switches its relay ON or sends a switch ON message on the network.",
+          "oma:id": 1,
+          "type": "number",
+          "unit": "lx"
+        },
+        "OFF_lux_level": {
+          "label": "OFF lux level",
+          "description": "Lux level above which the photocell switches its relay OFF or sends a switch OFF message on the network.",
+          "oma:id": 2,
+          "type": "number",
+          "unit": "lx"
+        },
+        "Photocell_status": {
+          "label": "Photocell status",
+          "description": "Set to True if lux level is below ON lux level. Set to False if lux level is above OFF lux.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": []
+    }
+  }
+}

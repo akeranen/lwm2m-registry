@@ -1,0 +1,73 @@
+{
+  "info": {
+    "title": "OMA LwM2M nuSIM Profile (Object ID 507)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2021 Open Mobile Alliance.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "nuSIM_Profile": {
+      "label": "nuSIM Profile",
+      "description": "This device management object contains the elements of a nuSIM profile package according to nuSIM Technical Specification NTS.01.",
+      "oma:id": "507",
+      "sdfProperty": {
+        "encP": {
+          "label": "encP",
+          "description": "Encrypted nuSIM profile",
+          "oma:id": 0,
+          "type": "string"
+        },
+        "mac": {
+          "label": "mac",
+          "description": "MAC value of encrypted nuSIM profile",
+          "oma:id": 1,
+          "type": "string"
+        },
+        "eKpubDP": {
+          "label": "eKpubDP",
+          "description": "Ephemeral DP public key",
+          "oma:id": 2,
+          "type": "string"
+        },
+        "SigEKpubDP": {
+          "label": "SigEKpubDP",
+          "description": "Signature of eKpubDP created with KpubDP",
+          "oma:id": 3,
+          "type": "string"
+        },
+        "KpubDP": {
+          "label": "KpubDP",
+          "description": "nuSIM DP public key",
+          "oma:id": 4,
+          "type": "string"
+        },
+        "SigKpubDP": {
+          "label": "SigKpubDP",
+          "description": "Signature of KpubDP created with KpubCI",
+          "oma:id": 5,
+          "type": "string"
+        },
+        "KpubCl": {
+          "label": "KpubCl",
+          "description": "nuSIM CI public key",
+          "oma:id": 6,
+          "type": "string"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "encP",
+        "mac",
+        "eKpubDP",
+        "SigEKpubDP",
+        "KpubDP",
+        "SigKpubDP",
+        "KpubCl"
+      ]
+    }
+  }
+}

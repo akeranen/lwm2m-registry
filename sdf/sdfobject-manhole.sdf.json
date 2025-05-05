@@ -1,0 +1,55 @@
+{
+  "info": {
+    "title": "OMA LwM2M Manhole (Object ID 10493)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2024 South East Water Corporation.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Manhole": {
+      "label": "Manhole",
+      "description": "This object provides site specific configuration for devices operating in a sewer manhole.",
+      "oma:id": "10493",
+      "sdfProperty": {
+        "Cover_level": {
+          "label": "Cover level",
+          "description": "The level of the manhole cover measured relative to a height datum eg. mAHD",
+          "oma:id": 0,
+          "type": "number"
+        },
+        "Sensor_face_level": {
+          "label": "Sensor face level",
+          "description": "The level of the freespace distance sensor relative to a height datum eg. mAHD",
+          "oma:id": 1,
+          "type": "number"
+        },
+        "Invert_level": {
+          "label": "Invert level",
+          "description": "The level of the manhole invert measured relative to a height datum eg. mAHD",
+          "oma:id": 2,
+          "type": "number"
+        },
+        "Static_object": {
+          "label": "Static object",
+          "description": "The level of a static object (eg. platform, ladder, etc.) in the manhole measured relative to a height datum eg. mAHD",
+          "oma:id": 3,
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Cover_level",
+        "Sensor_face_level",
+        "Invert_level",
+        "Static_object"
+      ]
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "info": {
+    "title": "OMA LwM2M Set Point (Object ID 3308)",
+    "version": "2025-05-05",
+    "copyright": "Copyright 2019 Open Mobile Alliance.",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Set_Point": {
+      "label": "Set Point",
+      "description": "This IPSO object should be used to set a desired value to a controller, such as a thermostat. A special resource is added to set the colour of an object.",
+      "oma:id": "3308",
+      "sdfProperty": {
+        "Set_Point_Value": {
+          "label": "Set Point Value",
+          "description": "The setpoint value.",
+          "oma:id": 5900,
+          "type": "number"
+        },
+        "Sensor_Units": {
+          "label": "Sensor Units",
+          "description": "Measurement Units Definition.",
+          "oma:id": 5701,
+          "writable": false,
+          "type": "string"
+        },
+        "Colour": {
+          "label": "Colour",
+          "description": "A string representing a value in some color space.",
+          "oma:id": 5706,
+          "type": "string"
+        },
+        "Application_Type": {
+          "label": "Application Type",
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "oma:id": 5750,
+          "type": "string"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "Set_Point_Value"
+      ]
+    }
+  }
+}

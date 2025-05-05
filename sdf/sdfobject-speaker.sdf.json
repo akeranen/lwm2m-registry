@@ -1,0 +1,53 @@
+{
+  "info": {
+    "title": "OMA LwM2M Speaker (Object ID 10338)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2019, Cloudminds",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Speaker": {
+      "label": "Speaker",
+      "description": "This LWM2M Object includes speaker information.",
+      "oma:id": "10338",
+      "sdfProperty": {
+        "Speaker_status": {
+          "label": "Speaker status",
+          "description": "If speaker is switched on or not, 1:On, 0:Off.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Voice_Warning": {
+          "label": "Voice Warning",
+          "description": "If Voice Warning is enabled or not, 1:Enabled, 0:Disabled.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "sdfAction": {
+        "Voice_Control": {
+          "label": "Voice Control",
+          "description": "Switch on/off voice: Parameter: 1:On, 0:Off",
+          "oma:id": 100
+        },
+        "Voice_Warning_Control": {
+          "label": "Voice Warning Control",
+          "description": "Enable/Disable Voice Warning: Parameter: 1:Enable, 0:Disable",
+          "oma:id": 101
+        }
+      },
+      "sdfRequired": [
+        "Speaker_status",
+        "Voice_Warning",
+        "Voice_Control",
+        "Voice_Warning_Control"
+      ]
+    }
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "info": {
+    "title": "OMA LwM2M Electrical monitor (Object ID 3418)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "Electrical_monitor": {
+      "label": "Electrical monitor",
+      "description": "The uCIFI electrical monitor object provides attributes related to the analysis of electrical consumption in an outdoor luminaire or in a streetlight cabinet. It also identifies electrical anomalies.",
+      "oma:id": "3418",
+      "sdfProperty": {
+        "Supply_voltage": {
+          "label": "Supply voltage",
+          "description": "Electrical voltage supplied to the device.",
+          "oma:id": 1,
+          "writable": false,
+          "type": "number",
+          "unit": "V"
+        },
+        "Supply_current": {
+          "label": "Supply current",
+          "description": "Electrical current supplied to the device.",
+          "oma:id": 2,
+          "writable": false,
+          "type": "number",
+          "unit": "A"
+        },
+        "Frequency": {
+          "label": "Frequency",
+          "description": "Frequency of the supply current to the device.",
+          "oma:id": 3,
+          "writable": false,
+          "type": "number",
+          "unit": "Hz"
+        },
+        "Active_power": {
+          "label": "Active power",
+          "description": "Active power consumed by the device and its electrical load.",
+          "oma:id": 4,
+          "writable": false,
+          "type": "number",
+          "unit": "W"
+        },
+        "Power_factor": {
+          "label": "Power factor",
+          "description": "Power factor is equal to active power divided by apparent power. The value is between -1 and  1.",
+          "oma:id": 5,
+          "writable": false,
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "Cumulated_active_energy": {
+          "label": "Cumulated active energy",
+          "description": "Cumulated number of Wh measured by the device and its load since last energy counter reset.",
+          "oma:id": 6,
+          "writable": false,
+          "type": "number",
+          "unit": "Wh"
+        },
+        "Low_power_factor_threshold": {
+          "label": "Low power factor threshold",
+          "description": "Threshold below which the device should trigger a low power factor event.",
+          "oma:id": 8,
+          "type": "number"
+        },
+        "Low_power_factor": {
+          "label": "Low power factor",
+          "description": "Set to True if the power factor is below threshold. This is an absolute value threshold.",
+          "oma:id": 9,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Low_power_threshold": {
+          "label": "Low power threshold",
+          "description": "Threshold below which the device should trigger a low power event.",
+          "oma:id": 10,
+          "type": "number",
+          "unit": "W"
+        },
+        "Low_power_threshold_at_low_dim_level": {
+          "label": "Low power threshold at low dim level",
+          "description": "Threshold below which the device should trigger a low power event. This is an addition to the low power threshold to allow a separated threshold when dim level is low.",
+          "oma:id": 11,
+          "type": "number",
+          "unit": "W"
+        },
+        "Low_power": {
+          "label": "Low power",
+          "description": "Set to True if the power is below threshold. Vendor may consider the Low power threshold at low dim level to set this resource to True, taking into account the lamp dim level.",
+          "oma:id": 12,
+          "writable": false,
+          "type": "boolean"
+        },
+        "High_power_threshold": {
+          "label": "High power threshold",
+          "description": "Threshold above which the device should trigger a high power event.",
+          "oma:id": 13,
+          "type": "number",
+          "unit": "W"
+        },
+        "High_power_threshold_at_low_dim_level": {
+          "label": "High power threshold at low dim level",
+          "description": "Threshold above which the device should trigger a high power event. This is an addition to the high power threshold to allow a separated threshold when dim level is low.",
+          "oma:id": 14,
+          "type": "number",
+          "unit": "W"
+        },
+        "High_power": {
+          "label": "High power",
+          "description": "Set to True if the power is above threshold. Vendor may consider the High power threshold at low dim level to set this resource to True, taking into account the lamp dim level.",
+          "oma:id": 15,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Low_current_threshold": {
+          "label": "Low current threshold",
+          "description": "Threshold below which the device should trigger a low current event.",
+          "oma:id": 16,
+          "type": "number",
+          "unit": "A"
+        },
+        "Low_current": {
+          "label": "Low current",
+          "description": "Set to True if the current is below threshold.",
+          "oma:id": 17,
+          "writable": false,
+          "type": "boolean"
+        },
+        "High_current_threshold": {
+          "label": "High current threshold",
+          "description": "Threshold above which the device should trigger a high current event.",
+          "oma:id": 18,
+          "type": "number",
+          "unit": "A"
+        },
+        "High_current": {
+          "label": "High current",
+          "description": "Set to True if the current is above threshold.",
+          "oma:id": 19,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Low_voltage_threshold": {
+          "label": "Low voltage threshold",
+          "description": "Threshold below which the device should trigger a low voltage event.",
+          "oma:id": 20,
+          "type": "number",
+          "unit": "V"
+        },
+        "Low_voltage": {
+          "label": "Low voltage",
+          "description": "Set to True if the voltage is below threshold.",
+          "oma:id": 21,
+          "writable": false,
+          "type": "boolean"
+        },
+        "High_voltage_threshold": {
+          "label": "High voltage threshold",
+          "description": "Threshold above which the device should trigger a high voltage event.",
+          "oma:id": 22,
+          "type": "number",
+          "unit": "V"
+        },
+        "High_voltage": {
+          "label": "High voltage",
+          "description": "Set to True if the voltage is above threshold.",
+          "oma:id": 23,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Critical_inrush_threshold": {
+          "label": "Critical inrush threshold",
+          "description": "Threshold above which the device should trigger a critical inrush event.",
+          "oma:id": 24,
+          "type": "number",
+          "unit": "A"
+        },
+        "Critical_inrush_current": {
+          "label": "Critical inrush current",
+          "description": "Set to True if the inrush current is above threshold.",
+          "oma:id": 25,
+          "writable": false,
+          "type": "boolean"
+        },
+        "Minimum_inrush_Current": {
+          "label": "Minimum inrush Current",
+          "description": "Minimum inrush current since last configuration.",
+          "oma:id": 26,
+          "writable": false,
+          "type": "number",
+          "unit": "A"
+        },
+        "Maximum_inrush_Current": {
+          "label": "Maximum inrush Current",
+          "description": "Maximum inrush current since last configuration.",
+          "oma:id": 27,
+          "writable": false,
+          "type": "number",
+          "unit": "A"
+        },
+        "Latest_inrush_Current": {
+          "label": "Latest inrush Current",
+          "description": "Latest inrush current measured since last time the relay switched ON.",
+          "oma:id": 28,
+          "writable": false,
+          "type": "number",
+          "unit": "A"
+        },
+        "Reactive_power": {
+          "label": "Reactive power",
+          "description": "Instantaneous reactive power measured by the device and its electrical load.",
+          "oma:id": 29,
+          "writable": false,
+          "type": "number",
+          "unit": "var"
+        },
+        "Reactive_energy": {
+          "label": "Reactive energy",
+          "description": "Cumulative reactive power measured by the device and its electrical load since last energy counter reset.",
+          "oma:id": 30,
+          "writable": false,
+          "type": "number",
+          "unit": "varh"
+        },
+        "Low_power_threshold_at_custom_dim_level": {
+          "label": "Low power threshold at custom dim level",
+          "description": "If the measured power when the dimming is between \"Custom dim level min range\" and \"Custom dim level max range\" is below this threshold, a low power alarm is set.",
+          "oma:id": 31,
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "unit": "W"
+        },
+        "High_power_threshold_at_custom_dim_level": {
+          "label": "High power threshold at custom dim level",
+          "description": "If the measured power when the dimming is between \"Custom dim level min range\" and \"Custom dim level max range\" is above this threshold, a high power alarm is set.",
+          "oma:id": 32,
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "unit": "W"
+        },
+        "Custom_dim_level_min_range": {
+          "label": "Custom dim level min range",
+          "description": "Custom dimming range (lower bound) to allow specification of finer grain thresholds and alarms.",
+          "oma:id": 33,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "/100"
+        },
+        "Custom_dim_level_max_range": {
+          "label": "Custom dim level max range",
+          "description": "Custom dimming range (upper bound) to allow specification of finer grain thresholds and alarms.",
+          "oma:id": 34,
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "unit": "/100"
+        },
+        "Dimming_level": {
+          "label": "Dimming level",
+          "description": "Dimming level associated to current measurement.",
+          "oma:id": 35,
+          "writable": false,
+          "type": "integer",
+          "unit": "/100"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "oma:id": 5518,
+          "writable": false,
+          "type": "number",
+          "sdfType": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "oma:id": 6050,
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Measurement_Quality_Indicator": {
+          "label": "Measurement Quality Indicator",
+          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "oma:id": 6042,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "Measurement_Quality_Level": {
+          "label": "Measurement Quality Level",
+          "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+          "oma:id": 6049,
+          "writable": false,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "sdfAction": {
+        "Energy_reset": {
+          "label": "Energy reset",
+          "description": "Reset both cumulated active and reactive energy counter.",
+          "oma:id": 7
+        }
+      },
+      "sdfRequired": []
+    }
+  }
+}
