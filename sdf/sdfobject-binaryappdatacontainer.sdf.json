@@ -27,9 +27,35 @@
         },
         "Data_Priority": {
           "label": "Data Priority",
-          "description": "Indicates the Application data priority:\r\n0:Immediate\r\n1:BestEffort\r\n2:Latest\r\n3-100: Reserved for future use.\r\n101-254: Proprietary mode.",
+          "description": "Indicates the Application data priority:",
           "oma:id": 1,
-          "type": "integer"
+          "type": "integer",
+          "sdfChoice": {
+            "option1": {
+              "description": "Immediate",
+              "const": 0
+            },
+            "option2": {
+              "description": "BestEffort",
+              "const": 1
+            },
+            "option3": {
+              "description": "Latest",
+              "const": 2
+            },
+            "option4": {
+              "description": "Reserved for future use.",
+              "minimum": 3,
+              "maximum": 100,
+              "type": "integer"
+            },
+            "option5": {
+              "description": "Proprietary mode.",
+              "minimum": 101,
+              "maximum": 254,
+              "type": "integer"
+            }
+          }
         },
         "Data_Creation_Time": {
           "label": "Data Creation Time",

@@ -36,12 +36,46 @@
         },
         "Measurement_Quality_Indicator": {
           "label": "Measurement Quality Indicator",
-          "description": "Measurement quality indicator reported by a smart sensor.\r\n0: UNCHECKED No quality checks were done because they do not exist or can not be applied.\r\n1: REJECTED WITH CERTAINTY The measured value is invalid.\r\n2: REJECTED WITH PROBABILITY The measured value is likely invalid.\r\n3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK.\r\n4: ACCEPTED The measured value is OK.\r\n5-15: Reserved for future extensions.\r\n16-23: Vendor specific measurement quality.",
+          "description": "Measurement quality indicator reported by a smart sensor.",
           "oma:id": 6042,
           "writable": false,
           "type": "integer",
           "minimum": 0,
-          "maximum": 23
+          "maximum": 23,
+          "sdfChoice": {
+            "UNCHECKED": {
+              "description": "No quality checks were done because they do not exist or can not be applied.",
+              "const": 0
+            },
+            "REJECTED WITH CERTAINTY": {
+              "description": "The measured value is invalid.",
+              "const": 1
+            },
+            "REJECTED WITH PROBABILITY": {
+              "description": "The measured value is likely invalid.",
+              "const": 2
+            },
+            "ACCEPTED BUT SUSPICIOUS": {
+              "description": "The measured value is likely OK.",
+              "const": 3
+            },
+            "ACCEPTED": {
+              "description": "The measured value is OK.",
+              "const": 4
+            },
+            "option6": {
+              "description": "Reserved for future extensions.",
+              "minimum": 5,
+              "maximum": 15,
+              "type": "integer"
+            },
+            "option7": {
+              "description": "Vendor specific measurement quality.",
+              "minimum": 16,
+              "maximum": 23,
+              "type": "integer"
+            }
+          }
         },
         "Measurement_Quality_Level": {
           "label": "Measurement Quality Level",

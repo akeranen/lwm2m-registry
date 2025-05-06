@@ -17,12 +17,96 @@
       "sdfProperty": {
         "Network_Bearer": {
           "label": "Network Bearer",
-          "description": "Indicates the network bearer used for the current LwM2M communication session from the network bearer list below. \r\nThe number range is split into three categories:\r\n0 - 20 are Cellular Bearers \r\n21 - 40 are Wireless Bearers \r\n41 - 50 are Wireline Bearers\r\nMore specifically: \r\n0: GSM cellular network\r\n1: TD-SCDMA cellular network\r\n2: WCDMA cellular network\r\n3: CDMA2000 cellular network\r\n4: WiMAX cellular network\r\n5: LTE-TDD cellular network\r\n6: LTE-FDD cellular network\r\n7: NB-IoT\r\n8: 5G-NR TDD\r\n9: 5G-NR FDD\r\n10 - 20: Reserved for other types of cellular network\r\n21: WLAN network\r\n22: Bluetooth network\r\n23: IEEE 802.15.4 network\r\n24 - 40: Reserved for other types of local wireless network\r\n41: Ethernet\r\n42: DSL\r\n43: PLC\r\n44 - 50: reserved for other types of wireline networks.",
+          "description": "Indicates the network bearer used for the current LwM2M communication session from the network bearer list below. \r\nThe number range is split into three categories:\r\n0 - 20 are Cellular Bearers \r\n21 - 40 are Wireless Bearers \r\n41 - 50 are Wireline Bearers\r\nMore specifically:",
           "oma:id": 0,
           "writable": false,
           "type": "integer",
           "minimum": 0,
-          "maximum": 50
+          "maximum": 50,
+          "sdfChoice": {
+            "GSM": {
+              "description": "cellular network",
+              "const": 0
+            },
+            "option2": {
+              "description": "TD-SCDMA cellular network",
+              "const": 1
+            },
+            "WCDMA": {
+              "description": "cellular network",
+              "const": 2
+            },
+            "option4": {
+              "description": "CDMA2000 cellular network",
+              "const": 3
+            },
+            "option5": {
+              "description": "WiMAX cellular network",
+              "const": 4
+            },
+            "option6": {
+              "description": "LTE-TDD cellular network",
+              "const": 5
+            },
+            "option7": {
+              "description": "LTE-FDD cellular network",
+              "const": 6
+            },
+            "option8": {
+              "description": "NB-IoT",
+              "const": 7
+            },
+            "option9": {
+              "description": "5G-NR TDD",
+              "const": 8
+            },
+            "option10": {
+              "description": "5G-NR FDD",
+              "const": 9
+            },
+            "option11": {
+              "description": "Reserved for other types of cellular network",
+              "minimum": 10,
+              "maximum": 20,
+              "type": "integer"
+            },
+            "WLAN": {
+              "description": "network",
+              "const": 21
+            },
+            "option13": {
+              "description": "Bluetooth network",
+              "const": 22
+            },
+            "IEEE": {
+              "description": "802.15.4 network",
+              "const": 23
+            },
+            "option15": {
+              "description": "Reserved for other types of local wireless network",
+              "minimum": 24,
+              "maximum": 40,
+              "type": "integer"
+            },
+            "option16": {
+              "description": "Ethernet",
+              "const": 41
+            },
+            "option17": {
+              "description": "DSL",
+              "const": 42
+            },
+            "option18": {
+              "description": "PLC",
+              "const": 43
+            },
+            "option19": {
+              "description": "reserved for other types of wireline networks.",
+              "minimum": 44,
+              "maximum": 50,
+              "type": "integer"
+            }
+          }
         },
         "Available_Network_Bearer": {
           "label": "Available Network Bearer",
