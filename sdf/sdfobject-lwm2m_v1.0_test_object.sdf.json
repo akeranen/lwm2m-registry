@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M LwM2M v1.0 Test Object (Object ID 3441)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "LwM2M_v1.0_Test_Object": {
       "label": "LwM2M v1.0 Test Object",
       "description": "This object is for use in interoperability tests of the LwM2M v1.0 technical specification. It contains resources for each available datatype.",
-      "oma:id": "3441",
+      "oma:id": 3441,
       "sdfProperty": {
         "Arguments_List": {
           "label": "Arguments List",
@@ -143,12 +143,12 @@
         },
         "Randomize_values": {
           "label": "Randomize values",
-          "description": "Set random value to all resources. For multi-instance resources, the number of resource instances is also randomized.\r\nRandomization should avoid to generate too big payload. We advice to limit value to something like :\r\n - 20 characters for String,\r\n - 20 bytes for Opaque,\r\n - 10 instances for multi-instance resources.",
+          "description": "Set random value to all resources. For multi-instance resources, the number of resource instances is also randomized.\r\nRandomization should avoid to generate too big payload. We advice to limit value to something like : \r\n - 20 characters for String,\r\n - 20 bytes for Opaque,\r\n - 10 instances for multi-instance resources.",
           "oma:id": 1
         },
         "Clear_values": {
           "label": "Clear values",
-          "description": "Clear all values :\r\n - all multiple resource as empty resource\r\n - all number to 0\r\n - String to empty string\r\n - boolean to false,\r\n - opaque to empty byte array,\r\n - time to an 1st, 1970 in the UTC time zone\r\n - objlink to null link",
+          "description": "Clear all values : \r\n - all multiple resource as empty resource\r\n - all number to 0\r\n - String to empty string\r\n - boolean to false,\r\n - opaque to empty byte array,\r\n - time to an 1st, 1970 in the UTC time zone\r\n - objlink to null link",
           "oma:id": 2
         },
         "Exec_With_Arguments": {

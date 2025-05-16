@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M DevCapMgmt (Object ID 15)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "DevCapMgmt": {
       "label": "DevCapMgmt",
       "description": "This LWM2M Object is dedicated to manage the device capabilities of a device e.g. sensors, communication, etc.",
-      "oma:id": "15",
+      "oma:id": 15,
       "sdfProperty": {
         "Property": {
           "label": "Property",

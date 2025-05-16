@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Edge computing manager (Object ID 3436)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2020 uCIFI Alliance",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Edge_computing_manager": {
       "label": "Edge computing manager",
       "description": "The uCIFI edge computing manager object defines the capability of a device to run scripts on the device itself.",
-      "oma:id": "3436",
+      "oma:id": 3436,
       "sdfProperty": {
         "Max_number_of_scripts": {
           "label": "Max number of scripts",

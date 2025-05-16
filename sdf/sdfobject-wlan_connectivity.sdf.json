@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M WLAN connectivity (Object ID 12)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "WLAN_connectivity": {
       "label": "WLAN connectivity",
       "description": "This object specifies resources to enable a device to connect to a WLAN bearer.",
-      "oma:id": "12",
+      "oma:id": 12,
       "sdfProperty": {
         "Interface_name": {
           "label": "Interface name",

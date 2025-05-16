@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M scellID (Object ID 3353)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "scellID": {
       "label": "scellID",
       "description": "serving cell information that the RRC decides to camp on",
-      "oma:id": "3353",
+      "oma:id": 3353,
       "sdfProperty": {
         "plmnID": {
           "label": "plmnID",

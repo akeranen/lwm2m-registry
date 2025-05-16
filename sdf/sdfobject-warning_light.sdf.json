@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Warning Light (Object ID 10353)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Warning_Light": {
       "label": "Warning Light",
       "description": "This LWM2M Object includes Warning Light information.",
-      "oma:id": "10353",
+      "oma:id": 10353,
       "sdfProperty": {
         "Light_Status": {
           "label": "Light Status",

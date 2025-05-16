@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M oA Basic Control (Object ID 3387)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Zumtobel Group.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "oA_Basic_Control": {
       "label": "oA Basic Control",
       "description": "The 'oA Basic Control' represents a common basic interface for a Control Function. This allows to have vendor specific (executing) control functions using diverse object numbers to be interfaced for the basic functionality in a common way. The object provides the basic functionality required for an OpenAIS control object.",
-      "oma:id": "3387",
+      "oma:id": 3387,
       "sdfProperty": {
         "ObjectVersion": {
           "label": "ObjectVersion",

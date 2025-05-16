@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Network Speed Test (Object ID 10481)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Network_Speed_Test": {
       "label": "Network Speed Test",
       "description": "This Object supports triggering a network speed test and records the results. Furthermore, it allows to configure the server address of the server used for the speed test.",
-      "oma:id": "10481",
+      "oma:id": 10481,
       "sdfProperty": {
         "Last_updated": {
           "label": "Last updated",

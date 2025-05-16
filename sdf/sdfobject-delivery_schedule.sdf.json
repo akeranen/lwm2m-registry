@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Delivery Schedule (Object ID 10264)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Delivery_Schedule": {
       "label": "Delivery Schedule",
       "description": "The Delivery Schedule object provides a means for controlling the periodic delivery of interval and event data to the LwM2M server.",
-      "oma:id": "10264",
+      "oma:id": 10264,
       "sdfProperty": {
         "Schedule_Start_Time": {
           "label": "Schedule Start Time",

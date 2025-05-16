@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Push button (Object ID 3347)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Push_button": {
       "label": "Push button",
       "description": "This IPSO object is used to report the state of a momentary action push button control and to count the number of times the control has been operated since the last observation.",
-      "oma:id": "3347",
+      "oma:id": 3347,
       "sdfProperty": {
         "Digital_Input_State": {
           "label": "Digital Input State",

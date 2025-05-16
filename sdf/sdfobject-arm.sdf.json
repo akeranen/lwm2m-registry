@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Arm (Object ID 10344)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Arm": {
       "label": "Arm",
       "description": "This LWM2M Object includes arm information.",
-      "oma:id": "10344",
+      "oma:id": 10344,
       "sdfProperty": {
         "Arm_Name": {
           "label": "Arm Name",

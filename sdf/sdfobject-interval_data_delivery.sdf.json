@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Interval Data Delivery (Object ID 10262)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Interval_Data_Delivery": {
       "label": "Interval Data Delivery",
       "description": "The Interval Data Delivery object provides an optimised means for managing the delivery of interval data from multiple Interval Data Object instances.",
-      "oma:id": "10262",
+      "oma:id": 10262,
       "sdfProperty": {
         "Name": {
           "label": "Name",

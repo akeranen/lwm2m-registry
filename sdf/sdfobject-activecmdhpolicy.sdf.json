@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M ActiveCmdhPolicy (Object ID 2049)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 oneM2M Partners.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "ActiveCmdhPolicy": {
       "label": "ActiveCmdhPolicy",
       "description": "This Object provides a link to the currently active set of CMDH policies",
-      "oma:id": "2049",
+      "oma:id": 2049,
       "sdfProperty": {
         "ActiveLink": {
           "label": "ActiveLink",

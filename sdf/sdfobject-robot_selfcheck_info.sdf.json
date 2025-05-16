@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Robot Selfcheck Info (Object ID 10332)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Robot_Selfcheck_Info": {
       "label": "Robot Selfcheck Info",
       "description": "This LWM2M Object includes robot selfcheck result.",
-      "oma:id": "10332",
+      "oma:id": 10332,
       "sdfProperty": {
         "Entity": {
           "label": "Entity",

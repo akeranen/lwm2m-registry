@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Device (Object ID 3)",
-    "version": "2025-05-05",
+    "version": "1.2",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Device": {
       "label": "Device",
       "description": "This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.",
-      "oma:id": "3",
+      "oma:id": 3,
       "sdfProperty": {
         "Manufacturer": {
           "label": "Manufacturer",

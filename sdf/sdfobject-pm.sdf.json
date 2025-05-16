@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M PM (Object ID 10357)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "PM": {
       "label": "PM",
       "description": "This LWM2M Object contains the referrence to all PM objects.",
-      "oma:id": "10357",
+      "oma:id": 10357,
       "sdfProperty": {
         "Robot_PM": {
           "label": "Robot PM",

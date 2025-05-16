@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M ECU (Object ID 10324)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "ECU": {
       "label": "ECU",
       "description": "This LWM2M Object includes ECU(End Control Unit) information.",
-      "oma:id": "10324",
+      "oma:id": 10324,
       "sdfProperty": {
         "ECU_ID": {
           "label": "ECU ID",

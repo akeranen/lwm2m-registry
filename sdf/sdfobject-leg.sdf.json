@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Leg (Object ID 10345)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Leg": {
       "label": "Leg",
       "description": "This LWM2M Object includes leg information.",
-      "oma:id": "10345",
+      "oma:id": 10345,
       "sdfProperty": {
         "Leg_Name": {
           "label": "Leg Name",

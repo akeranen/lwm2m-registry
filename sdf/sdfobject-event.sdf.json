@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Event (Object ID 10335)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Event": {
       "label": "Event",
       "description": "Here lists all items of an event reported by the robot.",
-      "oma:id": "10335",
+      "oma:id": 10335,
       "sdfProperty": {
         "Entity": {
           "label": "Entity",

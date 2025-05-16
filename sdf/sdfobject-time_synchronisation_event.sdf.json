@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Time Synchronisation Event (Object ID 10284)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Time_Synchronisation_Event": {
       "label": "Time Synchronisation Event",
       "description": "This alarm records the fact that a significant (e.g. >5mins) time adjustment was required on the device",
-      "oma:id": "10284",
+      "oma:id": 10284,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

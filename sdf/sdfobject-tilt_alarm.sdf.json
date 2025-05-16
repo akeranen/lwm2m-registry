@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Tilt Alarm (Object ID 10491)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2024 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Tilt_Alarm": {
       "label": "Tilt Alarm",
       "description": "This alarm is raised when the tilt/inclination of the device exceeds the specified threshold",
-      "oma:id": "10491",
+      "oma:id": 10491,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

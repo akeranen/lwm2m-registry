@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M LPWAN Communication (Object ID 3412)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2020 uCIFI Alliance",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "LPWAN_Communication": {
       "label": "LPWAN Communication",
       "description": "The uCIFI communication object provides attributes related to the communication on the LPWAN network, including multicast grouping.",
-      "oma:id": "3412",
+      "oma:id": 3412,
       "sdfProperty": {
         "Type_of_network": {
           "label": "Type of network",

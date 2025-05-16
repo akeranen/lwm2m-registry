@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M PM Threshold (Object ID 10333)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "PM_Threshold": {
       "label": "PM Threshold",
       "description": "Here defines all items needed in PM Threshold management.",
-      "oma:id": "10333",
+      "oma:id": 10333,
       "sdfProperty": {
         "Entity": {
           "label": "Entity",

@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M oA Reporting Object (Object ID 3403)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Zumtobel Group.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "oA_Reporting_Object": {
       "label": "oA Reporting Object",
       "description": "The 'oA Reporting Object' packs several status messages available at the node into a single, size optimized message, as e.g. used with data collect or BMS interfacing.",
-      "oma:id": "3403",
+      "oma:id": 3403,
       "sdfProperty": {
         "ObjectVersion": {
           "label": "ObjectVersion",

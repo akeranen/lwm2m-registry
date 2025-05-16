@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Global Navigation Satellite System (Object ID 3430)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Global_Navigation_Satellite_System": {
       "label": "Global Navigation Satellite System",
       "description": "More than a positioning object, the uCIFI global navigation satellite system object provides all the information required to calculate a position/location.",
-      "oma:id": "3430",
+      "oma:id": 3430,
       "sdfProperty": {
         "Fix_timestamp": {
           "label": "Fix timestamp",

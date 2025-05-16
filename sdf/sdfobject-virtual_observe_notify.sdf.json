@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Virtual Observe Notify (Object ID 22)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Virtual_Observe_Notify": {
       "label": "Virtual Observe Notify",
       "description": "The Virtual Observe Notify Object provides a main function to notify multiple resources to a LwM2M Server in one notification message whether the resources are in one object/object instance or across multiple objects. The Virtual Observe Notify Object also provides some functions to implement more efficient multi-resource report.",
-      "oma:id": "22",
+      "oma:id": 22,
       "sdfProperty": {
         "ObserveLinks": {
           "label": "ObserveLinks",

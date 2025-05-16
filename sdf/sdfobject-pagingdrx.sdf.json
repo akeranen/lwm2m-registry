@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M PagingDRX (Object ID 3375)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "PagingDRX": {
       "label": "PagingDRX",
       "description": "Paging DRX information",
-      "oma:id": "3375",
+      "oma:id": 3375,
       "sdfProperty": {
         "dlEarfcn": {
           "label": "dlEarfcn",

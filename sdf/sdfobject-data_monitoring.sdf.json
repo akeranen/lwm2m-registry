@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Data Monitoring (Object ID 10377)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Data_Monitoring": {
       "label": "Data Monitoring",
       "description": "Generic interface to set up data monitoring like sensor/log data and mechanism to receive alerts.",
-      "oma:id": "10377",
+      "oma:id": 10377,
       "sdfProperty": {
         "Monitoring_Name": {
           "label": "Monitoring Name",

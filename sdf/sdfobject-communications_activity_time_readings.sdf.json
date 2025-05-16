@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Communications Activity Time Readings (Object ID 10271)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Communications_Activity_Time_Readings": {
       "label": "Communications Activity Time Readings",
       "description": "Measures the total duration that the meter was activating its radio for packet transmission or receipt for the period. Used to monitor for excess poower usage over time.",
-      "oma:id": "10271",
+      "oma:id": 10271,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

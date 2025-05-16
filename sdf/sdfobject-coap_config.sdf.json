@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M CoAP Config (Object ID 500)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2020 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "CoAP_Config": {
       "label": "CoAP Config",
       "description": "This object is used to configure the CoAP transmission parameters (RFC7252) and other parameters that affect CoAP transmission.",
-      "oma:id": "500",
+      "oma:id": 500,
       "sdfProperty": {
         "Network_Bearer": {
           "label": "Network Bearer",

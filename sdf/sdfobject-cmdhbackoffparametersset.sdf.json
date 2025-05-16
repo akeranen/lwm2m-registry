@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M CmdhBackOffParametersSet (Object ID 2057)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 oneM2M Partners.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "CmdhBackOffParametersSet": {
       "label": "CmdhBackOffParametersSet",
       "description": "This Object defines set of parameters which can be referenced by a specific Instance of the CmdhNwAccessRule Object (ID: 2055)",
-      "oma:id": "2057",
+      "oma:id": 2057,
       "sdfProperty": {
         "NetworkAction": {
           "label": "NetworkAction",

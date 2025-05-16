@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Single-Phase Power Meter (Object ID 10243)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright 2019 Odins.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Single-Phase_Power_Meter": {
       "label": "Single-Phase Power Meter",
       "description": "This Object provides the information to represent a generic Single-Phase Power Meter.",
-      "oma:id": "10243",
+      "oma:id": 10243,
       "sdfProperty": {
         "Manufacturer": {
           "label": "Manufacturer",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Noise sensor (Object ID 3433)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Noise_sensor": {
       "label": "Noise sensor",
       "description": "The uCIFI noise sensor reports a noise measurement in decibel. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the noise sensor and some specific alarms resulting from noise analysis by the device.",
-      "oma:id": "3433",
+      "oma:id": 3433,
       "sdfProperty": {
         "Gunshot_detected": {
           "label": "Gunshot detected",

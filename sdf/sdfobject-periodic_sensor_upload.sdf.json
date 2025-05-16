@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Periodic Sensor Upload (Object ID 10495)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Periodic_Sensor_Upload": {
       "label": "Periodic Sensor Upload",
       "description": "The autosen Periodic Sensor Upload object can be used to upload sampled sensor data at periodic intervals",
-      "oma:id": "10495",
+      "oma:id": 10495,
       "sdfProperty": {
         "Sensor_Sampler_Path": {
           "label": "Sensor Sampler Path",

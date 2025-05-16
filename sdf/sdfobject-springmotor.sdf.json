@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M SpringMotor (Object ID 10368)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "SpringMotor": {
       "label": "SpringMotor",
       "description": "This LWM2M Object includes SpringMotor information.",
-      "oma:id": "10368",
+      "oma:id": 10368,
       "sdfProperty": {
         "SpringMotor_Name": {
           "label": "SpringMotor Name",

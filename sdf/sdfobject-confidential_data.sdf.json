@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Confidential Data (Object ID 10253)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Lab R&D Atos Pessac.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Confidential_Data": {
       "label": "Confidential Data",
       "description": "This LWM2M Object is used for reporting data, but in a confidential way",
-      "oma:id": "10253",
+      "oma:id": 10253,
       "sdfProperty": {
         "Public_Key": {
           "label": "Public Key",

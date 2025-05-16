@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M App Data Container (Object ID 10250)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018, Huawei",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "App_Data_Container": {
       "label": "App Data Container",
       "description": "This LWM2M Object is used for reporting application data of a device.",
-      "oma:id": "10250",
+      "oma:id": 10250,
       "sdfProperty": {
         "UL_data": {
           "label": "UL data",

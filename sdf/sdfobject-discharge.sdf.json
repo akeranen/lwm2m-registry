@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Discharge (Object ID 10498)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2024 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Discharge": {
       "label": "Discharge",
       "description": "This LWM2M object provides water discharge events for a water tank monitoring device.",
-      "oma:id": "10498",
+      "oma:id": 10498,
       "sdfProperty": {
         "Discharge_Level": {
           "label": "Discharge Level",

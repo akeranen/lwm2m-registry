@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Low Battery Alarm (Object ID 10281)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Low_Battery_Alarm": {
       "label": "Low Battery Alarm",
       "description": "This Alarm is raised when the battery voltage drops below a defined level",
-      "oma:id": "10281",
+      "oma:id": 10281,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M LwM2M SIM Provisioning (Object ID 505)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2022 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "LwM2M_SIM_Provisioning": {
       "label": "LwM2M SIM Provisioning",
       "description": "This is a device management object that should be used for Remote SIM Provisioning from a LwM2M server.",
-      "oma:id": "505",
+      "oma:id": 505,
       "sdfProperty": {
         "Current_SIM_Type": {
           "label": "Current SIM Type",

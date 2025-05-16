@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M AT&T Connectivity Extension (Object ID 10308)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright 2019 AT&T.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "AT&T_Connectivity_Extension": {
       "label": "AT&T Connectivity Extension",
       "description": "The AT&T Connectivity Extension Object will be used to gather information describing the UE and the operating state of the UE. The AT&T Connectivity Extension Object is an open and standard object used by AT&T.",
-      "oma:id": "10308",
+      "oma:id": 10308,
       "sdfProperty": {
         "ICCID": {
           "label": "ICCID",

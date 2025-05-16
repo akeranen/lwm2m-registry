@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Service Info (Object ID 10356)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Service_Info": {
       "label": "Service Info",
       "description": "This LWM2M Object contains the referrence to all objects containing service info.",
-      "oma:id": "10356",
+      "oma:id": 10356,
       "sdfProperty": {
         "Robot_Service_Info": {
           "label": "Robot Service Info",

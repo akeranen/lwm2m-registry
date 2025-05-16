@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Output Filter (Object ID 3456)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Output_Filter": {
       "label": "Output Filter",
       "description": "The uCIFI Output Filter can be used to fine tune the output commands in order, for example, to achieve a prolonged fade. To be used in conjunction with a Program Scheduler.",
-      "oma:id": "3456",
+      "oma:id": 3456,
       "sdfProperty": {
         "Operation": {
           "label": "Operation",

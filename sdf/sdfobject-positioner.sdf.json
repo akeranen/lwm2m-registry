@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Positioner (Object ID 3337)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Positioner": {
       "label": "Positioner",
       "description": "This IPSO object should be used with a generic position actuator with range from 0 to 100%. This object optionally allows setting the transition time for an operation that changes the position of the actuator, and for reading the remaining time of the currently active transition.",
-      "oma:id": "3337",
+      "oma:id": 3337,
       "sdfProperty": {
         "Current_Position": {
           "label": "Current Position",

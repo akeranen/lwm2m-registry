@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Trend Readings (Object ID 10489)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2024 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Trend_Readings": {
       "label": "Trend Readings",
       "description": "Periodic trend (rate of change) measurements",
-      "oma:id": "10489",
+      "oma:id": 10489,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

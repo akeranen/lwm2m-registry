@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Multi-state Selector (Object ID 3348)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Multi-state_Selector": {
       "label": "Multi-state Selector",
       "description": "This IPSO object is used to represent the state of a Multi-state selector switch with a number of fixed positions.",
-      "oma:id": "3348",
+      "oma:id": 3348,
       "sdfProperty": {
         "Multi-state_Input": {
           "label": "Multi-state Input",

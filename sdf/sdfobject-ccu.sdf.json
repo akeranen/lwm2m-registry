@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M CCU (Object ID 10320)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "CCU": {
       "label": "CCU",
       "description": "This LWM2M Object includes CCU(Central Control Unit) information and the link to CCU APPs.",
-      "oma:id": "10320",
+      "oma:id": 10320,
       "sdfProperty": {
         "CCU_ID": {
           "label": "CCU ID",

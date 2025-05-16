@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M volteCallStateChangeEvent (Object ID 3385)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "volteCallStateChangeEvent": {
       "label": "volteCallStateChangeEvent",
       "description": "VoLTE call status change",
-      "oma:id": "3385",
+      "oma:id": 3385,
       "sdfProperty": {
         "callStatus": {
           "label": "callStatus",

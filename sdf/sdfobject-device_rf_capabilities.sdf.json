@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Device RF Capabilities (Object ID 28)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Device_RF_Capabilities": {
       "label": "Device RF Capabilities",
       "description": "This is a device management object that should be used for capturing the RF capabilities of the device.",
-      "oma:id": "28",
+      "oma:id": 28,
       "sdfProperty": {
         "Supported_LTE_Band_Information": {
           "label": "Supported LTE Band Information",

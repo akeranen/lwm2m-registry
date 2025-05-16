@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Water Tank (Object ID 10502)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2024 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Water_Tank": {
       "label": "Water Tank",
       "description": "This object provides site specific configuration for devices operating in a water tank.",
-      "oma:id": "10502",
+      "oma:id": 10502,
       "sdfProperty": {
         "Valve_Type": {
           "label": "Valve Type",

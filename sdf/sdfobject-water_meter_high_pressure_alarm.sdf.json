@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Water Meter High Pressure Alarm (Object ID 10276)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Water_Meter_High_Pressure_Alarm": {
       "label": "Water Meter High Pressure Alarm",
       "description": "Where supported by the meter this is an alarm that should be raised if the meter detects pressure above a pre-configured threshold.",
-      "oma:id": "10276",
+      "oma:id": 10276,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

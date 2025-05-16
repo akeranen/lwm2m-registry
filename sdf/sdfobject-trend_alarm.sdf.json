@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Trend Alarm (Object ID 10492)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2024 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Trend_Alarm": {
       "label": "Trend Alarm",
       "description": "This alarm is raised when the trend (rate of change) of a sensor input exceeds a specified threshold.",
-      "oma:id": "10492",
+      "oma:id": 10492,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

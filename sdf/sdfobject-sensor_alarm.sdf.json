@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Sensor Alarm (Object ID 10496)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Sensor_Alarm": {
       "label": "Sensor Alarm",
       "description": "The autosen Sensor Alarm object can be used to set alarm conditions for sampled sensor data. If condition is true, an action could be triggered e.g. upload immediately",
-      "oma:id": "10496",
+      "oma:id": 10496,
       "sdfProperty": {
         "Sensor_Value_Path": {
           "label": "Sensor Value Path",

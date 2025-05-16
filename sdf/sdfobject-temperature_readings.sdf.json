@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Temperature Readings (Object ID 10268)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Temperature_Readings": {
       "label": "Temperature Readings",
       "description": "Periodic temperature measurements",
-      "oma:id": "10268",
+      "oma:id": 10268,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

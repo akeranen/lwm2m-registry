@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Tripod Head (Object ID 10339)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Tripod_Head": {
       "label": "Tripod Head",
       "description": "This LWM2M Object includes Tripod Head information.",
-      "oma:id": "10339",
+      "oma:id": 10339,
       "sdfProperty": {
         "Host_Device_Unique_ID": {
           "label": "Host Device Unique ID",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M CO Detector (Object ID 502)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2022 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "CO_Detector": {
       "label": "CO Detector",
       "description": "This is an alarm that should be raised if the sensor detects a higher than threshold CO level.",
-      "oma:id": "502",
+      "oma:id": 502,
       "sdfProperty": {
         "CO_Sensor_Location_Tag": {
           "label": "CO Sensor Location Tag",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Outdoor lamp controller (Object ID 3416)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Outdoor_lamp_controller": {
       "label": "Outdoor lamp controller",
       "description": "The uCIFI outdoor lamp controller object provides attributes to control, command and monitor outdoor luminaires in streets, in tunnels, on roads and for illumination of park and gardens.",
-      "oma:id": "3416",
+      "oma:id": 3416,
       "sdfProperty": {
         "Command": {
           "label": "Command",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Accelerometer (Object ID 3313)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Accelerometer": {
       "label": "Accelerometer",
       "description": "This IPSO object can be used to represent a 1-3 axis accelerometer.",
-      "oma:id": "3313",
+      "oma:id": 3313,
       "sdfProperty": {
         "X_Value": {
           "label": "X Value",

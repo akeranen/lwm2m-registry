@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Fire Alarm (Object ID 503)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2022 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Fire_Alarm": {
       "label": "Fire Alarm",
       "description": "This is an alarm that should be raised if the sensor(s) detect fire, based on the values reported from Temperature, Humidity, Smoke (CO2).",
-      "oma:id": "503",
+      "oma:id": 503,
       "sdfProperty": {
         "Temperature_Sensor_Location_Tag": {
           "label": "Temperature Sensor Location Tag",

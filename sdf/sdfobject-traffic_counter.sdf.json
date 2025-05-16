@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Traffic Counter (Object ID 3432)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Traffic_Counter": {
       "label": "Traffic Counter",
       "description": "The uCIFI traffic counter provides vehicle counting and traffic analysis data. A traffic counting device may implement multiple instances of this traffic counter object, each of them being in charge of counting different categories of vehicles (e.g. bikes, cars, trucks).",
-      "oma:id": "3432",
+      "oma:id": 3432,
       "sdfProperty": {
         "Vehicle_type": {
           "label": "Vehicle type",

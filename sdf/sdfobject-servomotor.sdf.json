@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Servomotor (Object ID 10346)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Servomotor": {
       "label": "Servomotor",
       "description": "This LWM2M Object includes Servomotor information.",
-      "oma:id": "10346",
+      "oma:id": 10346,
       "sdfProperty": {
         "Servomotor_Name": {
           "label": "Servomotor Name",

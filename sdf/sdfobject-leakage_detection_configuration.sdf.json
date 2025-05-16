@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Leakage Detection Configuration (Object ID 10509)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2025 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Leakage_Detection_Configuration": {
       "label": "Leakage Detection Configuration",
       "description": "This object provides timing and sampling frequency configuration for a vibration-based leakage detector",
-      "oma:id": "10509",
+      "oma:id": 10509,
       "sdfProperty": {
         "Sample_Times": {
           "label": "Sample Times",

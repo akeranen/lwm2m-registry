@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M powerupLog (Object ID 3351)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "powerupLog": {
       "label": "powerupLog",
       "description": "One time event sent by the device at power up.",
-      "oma:id": "3351",
+      "oma:id": 3351,
       "sdfProperty": {
         "deviceName": {
           "label": "deviceName",

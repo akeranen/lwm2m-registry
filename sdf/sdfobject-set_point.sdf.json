@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Set Point (Object ID 3308)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Set_Point": {
       "label": "Set Point",
       "description": "This IPSO object should be used to set a desired value to a controller, such as a thermostat. A special resource is added to set the colour of an object.",
-      "oma:id": "3308",
+      "oma:id": 3308,
       "sdfProperty": {
         "Set_Point_Value": {
           "label": "Set Point Value",

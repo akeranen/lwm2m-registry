@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M System Log (Object ID 10259)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Casa Systems.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "System_Log": {
       "label": "System Log",
       "description": "This object provides read access to log buffers as well as limited configuration of logging services.",
-      "oma:id": "10259",
+      "oma:id": 10259,
       "sdfProperty": {
         "Name": {
           "label": "Name",

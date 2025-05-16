@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Electrical monitor (Object ID 3418)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Electrical_monitor": {
       "label": "Electrical monitor",
       "description": "The uCIFI electrical monitor object provides attributes related to the analysis of electrical consumption in an outdoor luminaire or in a streetlight cabinet. It also identifies electrical anomalies.",
-      "oma:id": "3418",
+      "oma:id": 3418,
       "sdfProperty": {
         "Supply_voltage": {
           "label": "Supply voltage",

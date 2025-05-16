@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M LPWAN Mesh Connectivity (Object ID 3447)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "LPWAN_Mesh_Connectivity": {
       "label": "LPWAN Mesh Connectivity",
       "description": "The uCIFI LPWAN Mesh Connectivity object enables monitoring and management of parameters related with the operation of 802.15.4-based LPWAN devices.",
-      "oma:id": "3447",
+      "oma:id": 3447,
       "sdfProperty": {
         "Network_Type": {
           "label": "Network Type",

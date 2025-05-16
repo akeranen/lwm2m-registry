@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Rate (Object ID 3346)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Rate": {
       "label": "Rate",
       "description": "This object type should be used to report a rate measurement, for example the speed of a vehicle, or the rotational speed of a drive shaft. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is meters per second (m/s).",
-      "oma:id": "3346",
+      "oma:id": 3346,
       "sdfProperty": {
         "Sensor_Value": {
           "label": "Sensor Value",

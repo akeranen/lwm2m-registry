@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Robot Control (Object ID 10329)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Robot_Control": {
       "label": "Robot Control",
       "description": "This LWM2M Object includes all operations on robots.",
-      "oma:id": "10329",
+      "oma:id": 10329,
       "sdfProperty": {
         "Collision_Detection": {
           "label": "Collision Detection",

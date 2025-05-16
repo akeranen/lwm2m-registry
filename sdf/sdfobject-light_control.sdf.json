@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Light Control (Object ID 3311)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Light_Control": {
       "label": "Light Control",
       "description": "This Object is used to control a light source, such as a LED or other light.  It allows a light to be turned on or off and its dimmer setting to be control as a % between 0 and 100. An optional colour setting enables a string to be used to indicate the desired colour.",
-      "oma:id": "3311",
+      "oma:id": 3311,
       "sdfProperty": {
         "On_Off": {
           "label": "On/Off",

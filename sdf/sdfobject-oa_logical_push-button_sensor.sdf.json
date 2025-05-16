@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M oA Logical Push-Button Sensor (Object ID 3395)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Zumtobel Group.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "oA_Logical_Push-Button_Sensor": {
       "label": "oA Logical Push-Button Sensor",
       "description": "The 'oA Logical Push-Button Sensor' represents the logical part of a standard, normally open, push-button input. The corresponding physical device is a button with a spring that returns the button to the un-pushed state once it is released.\\nThe Object supports several events such as 'click', 'hold', 'double-click' and 'release'. It also indicates if the button is 'stuck'. For physical devices with multiple push-button inputs, an instance of this Object is required to map each input.",
-      "oma:id": "3395",
+      "oma:id": 3395,
       "sdfProperty": {
         "ObjectVersion": {
           "label": "ObjectVersion",

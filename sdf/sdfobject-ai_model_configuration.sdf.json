@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M AI Model Configuration (Object ID 513)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright Open Mobile Alliance 2025",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "AI_Model_Configuration": {
       "label": "AI Model Configuration",
       "description": "This object can be used to provision and configure AI Model capabilities. A new AI model is provisioned using the Model, Model URI, and/or Model Description resources. The Input and Input labels resources can be used to configure where the model reads the input data and the Output and Output labels resources are used to configure where the model writes the output data. When output of one model is used as input of another model, the models are chained together. Input and Output transform resources can be used to transform data before reading or writing.",
-      "oma:id": "513",
+      "oma:id": 513,
       "sdfProperty": {
         "Model": {
           "label": "Model",

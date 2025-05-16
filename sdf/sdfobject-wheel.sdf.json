@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Wheel (Object ID 10348)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Wheel": {
       "label": "Wheel",
       "description": "This LWM2M Object includes wheel information.",
-      "oma:id": "10348",
+      "oma:id": 10348,
       "sdfProperty": {
         "Wheel_Name": {
           "label": "Wheel Name",

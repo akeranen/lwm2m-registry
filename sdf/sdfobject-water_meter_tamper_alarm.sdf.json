@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Water Meter Tamper Alarm (Object ID 10275)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Water_Meter_Tamper_Alarm": {
       "label": "Water Meter Tamper Alarm",
       "description": "Detects interference from strong magnetic field or other electrical sources. If this is not relevant for ultrasonic meters then the tamper alarm may be used to indicate someone attempting to open the physical enclosure or other options the manufacturer may present.",
-      "oma:id": "10275",
+      "oma:id": 10275,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

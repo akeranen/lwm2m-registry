@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M 5GNR Connectivity (Object ID 27)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.2"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "5GNR_Connectivity": {
       "label": "5GNR Connectivity",
       "description": "This is a device management object that should be used for 5G-NR capable devices.",
-      "oma:id": "27",
+      "oma:id": 27,
       "sdfProperty": {
         "Connectivity_Option": {
           "label": "Connectivity Option",

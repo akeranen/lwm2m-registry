@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M PrachReport (Object ID 3380)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "PrachReport": {
       "label": "PrachReport",
       "description": "PRACH report information",
-      "oma:id": "3380",
+      "oma:id": 3380,
       "sdfProperty": {
         "sysFrameNumber": {
           "label": "sysFrameNumber",

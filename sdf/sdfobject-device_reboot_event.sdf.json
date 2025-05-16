@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Device Reboot Event (Object ID 10283)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Device_Reboot_Event": {
       "label": "Device Reboot Event",
       "description": "This event records the fact that the device has rebooted",
-      "oma:id": "10283",
+      "oma:id": 10283,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

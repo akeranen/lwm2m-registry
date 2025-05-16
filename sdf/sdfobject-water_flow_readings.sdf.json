@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Water Flow Readings (Object ID 10266)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Water_Flow_Readings": {
       "label": "Water Flow Readings",
       "description": "Measures the flow of water in regular intervals",
-      "oma:id": "10266",
+      "oma:id": 10266,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M MQTT Broker (Object ID 18830)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 IoTerop. All rights reserved.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "MQTT_Broker": {
       "label": "MQTT Broker",
       "description": "This LwM2M Object provides the information to connect to an MQTT Broker i.e. URI, configuration, and keying material.",
-      "oma:id": "18830",
+      "oma:id": 18830,
       "sdfProperty": {
         "URI": {
           "label": "URI",

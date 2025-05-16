@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Percentage (Object ID 3320)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Percentage": {
       "label": "Percentage",
       "description": "This IPSO object should can be used to report measurements relative to a 0-100% scale. For example it could be used to measure the level of a liquid in a vessel or container in units of %.",
-      "oma:id": "3320",
+      "oma:id": 3320,
       "sdfProperty": {
         "Sensor_Value": {
           "label": "Sensor Value",

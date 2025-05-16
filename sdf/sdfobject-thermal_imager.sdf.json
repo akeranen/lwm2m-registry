@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Thermal Imager (Object ID 10352)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Thermal_Imager": {
       "label": "Thermal Imager",
       "description": "This LWM2M Object includes the Thermal Imager information.",
-      "oma:id": "10352",
+      "oma:id": 10352,
       "sdfProperty": {
         "Highest_Temperature": {
           "label": "Highest Temperature",

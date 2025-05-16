@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Humidity (Object ID 3304)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Humidity": {
       "label": "Humidity",
       "description": "This IPSO object should be used with a humidity sensor to report a humidity measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the humidity sensor. An example measurement unit is relative humidity as a percentage.",
-      "oma:id": "3304",
+      "oma:id": 3304,
       "sdfProperty": {
         "Sensor_Value": {
           "label": "Sensor Value",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Reboot Status (Object ID 10371)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Reboot_Status": {
       "label": "Reboot Status",
       "description": "This object provides features allowing to monitor Reboot and Reset Factory operation from LWM2M Device object.",
-      "oma:id": "10371",
+      "oma:id": 10371,
       "sdfProperty": {
         "Reboot_State": {
           "label": "Reboot State",

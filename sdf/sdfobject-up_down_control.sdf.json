@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Up/Down Control (Object ID 3344)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Up_Down_Control": {
       "label": "Up/Down Control",
       "description": "This IPSO object is used to report the state of an up/down control element like a pair of push buttons or a rotary encoder. Counters for increase and decrease operations are provided for counting pulses from a quadrature encoder.",
-      "oma:id": "3344",
+      "oma:id": 3344,
       "sdfProperty": {
         "Increase_Input_State": {
           "label": "Increase Input State",

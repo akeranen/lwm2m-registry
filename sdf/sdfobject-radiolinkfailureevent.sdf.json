@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M radioLinkFailureEvent (Object ID 3356)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "radioLinkFailureEvent": {
       "label": "radioLinkFailureEvent",
       "description": "Radio Link Failure Event",
-      "oma:id": "3356",
+      "oma:id": 3356,
       "sdfProperty": {
         "timeRLF": {
           "label": "timeRLF",

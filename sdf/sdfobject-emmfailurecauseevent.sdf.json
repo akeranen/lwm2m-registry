@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M emmFailureCauseEvent (Object ID 3364)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "emmFailureCauseEvent": {
       "label": "emmFailureCauseEvent",
       "description": "Triggered at EMM failure - failure cause is logged",
-      "oma:id": "3364",
+      "oma:id": 3364,
       "sdfProperty": {
         "EMMCause": {
           "label": "EMMCause",

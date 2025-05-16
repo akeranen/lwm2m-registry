@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M LwM2M v1.1 Test Object (Object ID 3442)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "LwM2M_v1.1_Test_Object": {
       "label": "LwM2M v1.1 Test Object",
       "description": "This object aims to make easier to do interoperability tests about LWM2M v1.1. It contains resources for each available datatype.",
-      "oma:id": "3442",
+      "oma:id": 3442,
       "sdfProperty": {
         "Arguments_List": {
           "label": "Arguments List",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Program Manager (Object ID 3457)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Program_Manager": {
       "label": "Program Manager",
       "description": "The uCIFI Program Manager describes the scheduling capabilities of the device, referring to Program Schedulers, Program Functions, Calendar Rules and Filters.",
-      "oma:id": "3457",
+      "oma:id": 3457,
       "sdfProperty": {
         "Max_number_of_Program_Schedulers": {
           "label": "Max number of Program Schedulers",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Gas Readings (Object ID 10313)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Gas_Readings": {
       "label": "Gas Readings",
       "description": "Object to periodically log readings from any gas sensor (eg H2S, VOCx, methane etc)",
-      "oma:id": "10313",
+      "oma:id": 10313,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

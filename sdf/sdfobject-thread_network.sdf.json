@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Thread Network (Object ID 10483)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2023 Hydro-Québec.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Thread_Network": {
       "label": "Thread Network",
       "description": "This LWM2M object is used to describe and modify Thread network configurations",
-      "oma:id": "10483",
+      "oma:id": 10483,
       "sdfProperty": {
         "Network_Name": {
           "label": "Network Name",

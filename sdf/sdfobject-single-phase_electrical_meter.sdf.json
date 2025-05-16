@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Single-phase electrical meter (Object ID 3421)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Single-phase_electrical_meter": {
       "label": "Single-phase electrical meter",
       "description": "The uCIFI single-phase electrical meter measures the electrical consumption of loads on one electrical line, such as electrical cabinets in city infrastructures, street lighting networks, homes and buildings.",
-      "oma:id": "3421",
+      "oma:id": 3421,
       "sdfProperty": {
         "Voltage": {
           "label": "Voltage",

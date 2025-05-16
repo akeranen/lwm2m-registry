@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Edge Application Server Configuration (Object ID 10378)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2022 Ericsson.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Edge_Application_Server_Configuration": {
       "label": "Edge Application Server Configuration",
       "description": "This is used for UE to obtain information about suitable Edge Application Server in Edge Data Network, and to support service continuity for the UE to minimize service interruption.",
-      "oma:id": "10378",
+      "oma:id": 10378,
       "sdfProperty": {
         "Application_Client_ID": {
           "label": "Application Client ID",

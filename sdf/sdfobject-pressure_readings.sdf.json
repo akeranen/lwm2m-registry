@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Pressure Readings (Object ID 10269)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Pressure_Readings": {
       "label": "Pressure Readings",
       "description": "Periodic pressure measurements",
-      "oma:id": "10269",
+      "oma:id": 10269,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

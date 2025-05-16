@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Luminaire asset (Object ID 3417)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2020 uCIFI Alliance",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Luminaire_asset": {
       "label": "Luminaire asset",
       "description": "The uCIFI luminaire asset is an object that enables outdoor lighting control software to configure outdoor lamp controllers. It also enables outdoor lamp controllers to send Zhaga D4i or DALI attributes read from the control gears, to centrally managed outdoor lighting control software or asset management systems.",
-      "oma:id": "3417",
+      "oma:id": 3417,
       "sdfProperty": {
         "Asset_GTIN": {
           "label": "Asset GTIN",

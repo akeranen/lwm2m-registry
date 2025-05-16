@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Tilt Readings (Object ID 10488)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2024 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Tilt_Readings": {
       "label": "Tilt Readings",
       "description": "Periodic tilt measurements",
-      "oma:id": "10488",
+      "oma:id": 10488,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

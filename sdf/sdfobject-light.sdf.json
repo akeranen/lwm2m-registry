@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Light (Object ID 10350)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Light": {
       "label": "Light",
       "description": "This LWM2M Object includes light information.",
-      "oma:id": "10350",
+      "oma:id": 10350,
       "sdfProperty": {
         "Light_Name": {
           "label": "Light Name",

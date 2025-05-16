@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Discharge Status (Object ID 10501)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2024 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Discharge_Status": {
       "label": "Discharge Status",
       "description": "This event is recorded when a discharge event starts and stops.",
-      "oma:id": "10501",
+      "oma:id": 10501,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

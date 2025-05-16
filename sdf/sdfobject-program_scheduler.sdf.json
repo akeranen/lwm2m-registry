@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Program Scheduler (Object ID 3452)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Program_Scheduler": {
       "label": "Program Scheduler",
       "description": "Summary of the mapping between the various functions, eventual inputs and the target actuators, spanning multiple days or years.",
-      "oma:id": "3452",
+      "oma:id": 3452,
       "sdfProperty": {
         "Schedule_Name": {
           "label": "Schedule Name",

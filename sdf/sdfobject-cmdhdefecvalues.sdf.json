@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M CmdhDefEcValues (Object ID 2051)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 oneM2M Partners.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "CmdhDefEcValues": {
       "label": "CmdhDefEcValues",
       "description": "This Object represents default set of values for the Event Category parameter of an incoming request or response message.",
-      "oma:id": "2051",
+      "oma:id": 2051,
       "sdfProperty": {
         "Order": {
           "label": "Order",

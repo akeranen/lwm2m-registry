@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Program Function (Object ID 3454)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Program_Function": {
       "label": "Program Function",
       "description": "Describes the behavior that controls the associated target based on time or sensor status.",
-      "oma:id": "3454",
+      "oma:id": 3454,
       "sdfProperty": {
         "Function_Name": {
           "label": "Function Name",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Door (Object ID 10351)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Door": {
       "label": "Door",
       "description": "This LWM2M Object includes the door information.",
-      "oma:id": "10351",
+      "oma:id": 10351,
       "sdfProperty": {
         "Door_Name": {
           "label": "Door Name",

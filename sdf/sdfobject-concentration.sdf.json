@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Concentration (Object ID 3325)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Concentration": {
       "label": "Concentration",
       "description": "This IPSO object should be used to the particle concentration measurement of a medium. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is parts per million.",
-      "oma:id": "3325",
+      "oma:id": 3325,
       "sdfProperty": {
         "Sensor_Value": {
           "label": "Sensor Value",

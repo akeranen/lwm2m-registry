@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Edge computing script (Object ID 3437)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2020 uCIFI Alliance",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Edge_computing_script": {
       "label": "Edge computing script",
       "description": "The uCIFI edge computing scripts object defines a particular script to be executed by a device under a time or any other condition set by a \"Edge Computing Time Condition\" or \"Edge Computing Generic Condition\" object.",
-      "oma:id": "3437",
+      "oma:id": 3437,
       "sdfProperty": {
         "Name": {
           "label": "Name",

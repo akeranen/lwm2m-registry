@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M VehicleControlUnit (Object ID 10244)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "VehicleControlUnit": {
       "label": "VehicleControlUnit",
       "description": "This Object provides the information to represent a generic VCU(vehicle control unit).",
-      "oma:id": "10244",
+      "oma:id": 10244,
       "sdfProperty": {
         "Vehicle_UI_State": {
           "label": "Vehicle UI State",

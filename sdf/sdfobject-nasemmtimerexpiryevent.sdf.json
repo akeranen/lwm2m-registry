@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M nasEmmTimerExpiryEvent (Object ID 3362)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "nasEmmTimerExpiryEvent": {
       "label": "nasEmmTimerExpiryEvent",
       "description": "NAS EMM timer expiry information",
-      "oma:id": "3362",
+      "oma:id": 3362,
       "sdfProperty": {
         "NasEmmTimerExpiryEvent": {
           "label": "NasEmmTimerExpiryEvent",

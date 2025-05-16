@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Water Network Leak Alarm (Object ID 10280)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Water_Network_Leak_Alarm": {
       "label": "Water Network Leak Alarm",
       "description": "All meters must support the following default configuration. This alarm will be based on the frequency output of the vibration sensor/accelerometer on the SEW Daughter board. When a frequency is identified that has the characteristics of an upstream network leak, and its amplitude is above the defined threshold, the meter will report this as a network leak alarm.",
-      "oma:id": "10280",
+      "oma:id": 10280,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

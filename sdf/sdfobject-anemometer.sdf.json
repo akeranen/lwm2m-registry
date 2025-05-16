@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Anemometer (Object ID 3449)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Anemometer": {
       "label": "Anemometer",
       "description": "The uCIFI anemometer is a sensor used to record speed and direction of wind. It is designed following the IPSO object reference.",
-      "oma:id": "3449",
+      "oma:id": 3449,
       "sdfProperty": {
         "Sensor_Value": {
           "label": "Sensor Value",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Current Loop Output (Object ID 10258)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2017 World-Direct eBusiness solutions GmbH",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Current_Loop_Output": {
       "label": "Current Loop Output",
       "description": "This LWM2M Object provides a representation of a current loop source, which may be used to carry control signals.",
-      "oma:id": "10258",
+      "oma:id": 10258,
       "sdfProperty": {
         "Current_Loop_Output_Current_Value": {
           "label": "Current Loop Output Current Value",

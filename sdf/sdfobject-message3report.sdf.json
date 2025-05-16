@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Message3Report (Object ID 3377)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Message3Report": {
       "label": "Message3Report",
       "description": "RACH message 3 report information",
-      "oma:id": "3377",
+      "oma:id": 3377,
       "sdfProperty": {
         "tpc": {
           "label": "tpc",

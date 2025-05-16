@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M General Info (Object ID 10355)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "General_Info": {
       "label": "General Info",
       "description": "This LWM2M Object contains the referrence to all general info objects of the robot.",
-      "oma:id": "10355",
+      "oma:id": 10355,
       "sdfProperty": {
         "Robot_General_Info": {
           "label": "Robot General Info",

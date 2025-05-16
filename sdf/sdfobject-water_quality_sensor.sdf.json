@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Water quality sensor (Object ID 3426)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Water_quality_sensor": {
       "label": "Water quality sensor",
       "description": "The uCIFI water quality sensor measures the quality of the water in the drinkable water distribution network, in water tanks or in lakes and rivers.",
-      "oma:id": "3426",
+      "oma:id": 3426,
       "sdfProperty": {
         "pH": {
           "label": "pH",

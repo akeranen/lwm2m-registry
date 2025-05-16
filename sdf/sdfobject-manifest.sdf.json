@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Manifest (Object ID 10252)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 ARM.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Manifest": {
       "label": "Manifest",
       "description": "This object provides a range of information related to updating packages on a device",
-      "oma:id": "10252",
+      "oma:id": 10252,
       "sdfProperty": {
         "Manifest": {
           "label": "Manifest",

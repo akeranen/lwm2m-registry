@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Generic Sensor (Object ID 3300)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Generic_Sensor": {
       "label": "Generic Sensor",
       "description": "This IPSO object allows the description of a generic sensor. It is based on the description of a value and a unit according to the SenML specification. Thus, any type of value defined within this specification can be reported using this object. This object may be used as a generic object if a dedicated one does not exist.",
-      "oma:id": "3300",
+      "oma:id": 3300,
       "sdfProperty": {
         "Sensor_Value": {
           "label": "Sensor Value",

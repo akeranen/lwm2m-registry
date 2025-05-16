@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Power Factor (Object ID 3329)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Power_Factor": {
       "label": "Power Factor",
       "description": "This IPSO object should be used to report a measurement or calculation of the power factor of a reactive electrical load. Power Factor is normally the ratio of non-reactive power to total power. This object also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.",
-      "oma:id": "3329",
+      "oma:id": 3329,
       "sdfProperty": {
         "Sensor_Value": {
           "label": "Sensor Value",

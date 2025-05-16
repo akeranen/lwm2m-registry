@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Measurement Metadata (Object ID 509)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Measurement_Metadata": {
       "label": "Measurement Metadata",
       "description": "This object contains measurement metadata for sensor objects. The corresponding sensor is identified with an object link. If the LwM2M Client provides measurement quality information both inside the sensor objects and in the Measurement Metadata object, it MUST ensure that identical data is reported in corresponding object instances. The LwM2M Server SHOULD use the data from the Measurement Metadata object if both are available. The LwM2M Client also MUST ensure that no two Measurement Metadata object instances link to the same sensor object instance. If the LwM2M Server receives such non-conforming data, the Measurement Metadata object instance with largest Instance ID SHOULD be used.",
-      "oma:id": "509",
+      "oma:id": 509,
       "sdfProperty": {
         "Linked_Sensor": {
           "label": "Linked Sensor",

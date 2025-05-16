@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Distributed Sensor Group (Object ID 3459)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Distributed_Sensor_Group": {
       "label": "Distributed Sensor Group",
       "description": "The uCIFI Distributed Sensor Group allows to configure a device to publish or subscribe to device-to-device communication.",
-      "oma:id": "3459",
+      "oma:id": 3459,
       "sdfProperty": {
         "Group_State": {
           "label": "Group State",

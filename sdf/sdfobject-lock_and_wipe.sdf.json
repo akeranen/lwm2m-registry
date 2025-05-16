@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Lock and Wipe (Object ID 8)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Lock_and_Wipe": {
       "label": "Lock and Wipe",
       "description": "This LWM2M objects provides the resources needed to perform the lock and wipe operations.",
-      "oma:id": "8",
+      "oma:id": 8,
       "sdfProperty": {
         "State": {
           "label": "State",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M macRachAttemptEvent (Object ID 3366)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "macRachAttemptEvent": {
       "label": "macRachAttemptEvent",
       "description": "RACH information. Logged at RACH TX",
-      "oma:id": "3366",
+      "oma:id": 3366,
       "sdfProperty": {
         "rachAttemptCounter": {
           "label": "rachAttemptCounter",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M CCU Control (Object ID 10323)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "CCU_Control": {
       "label": "CCU Control",
       "description": "This LWM2M Object includes all operations on CCUs.",
-      "oma:id": "10323",
+      "oma:id": 10323,
       "sdfProperty": {},
       "sdfAction": {
         "CCU_Restart": {

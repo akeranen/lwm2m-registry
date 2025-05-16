@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M eSIM IoT (Object ID 3443)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "eSIM_IoT": {
       "label": "eSIM IoT",
       "description": "The interface between eIM and IPA as described in GSMA SGP.32.",
-      "oma:id": "3443",
+      "oma:id": 3443,
       "sdfProperty": {
         "State": {
           "label": "State",

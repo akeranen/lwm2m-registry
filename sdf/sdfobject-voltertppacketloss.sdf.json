@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M VoLTErtpPacketLoss (Object ID 3386)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "VoLTErtpPacketLoss": {
       "label": "VoLTErtpPacketLoss",
       "description": "Log is generated at the receiving end of RTP flow when newReceivedSequenceNumber - lastReceivedSequenceNumber > 1",
-      "oma:id": "3386",
+      "oma:id": 3386,
       "sdfProperty": {
         "ssrc": {
           "label": "ssrc",

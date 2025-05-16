@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Colour (Object ID 3335)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Colour": {
       "label": "Colour",
       "description": "This IPSO object should be used to report the measured value of a colour sensor in some colour space described by the units resource.",
-      "oma:id": "3335",
+      "oma:id": 3335,
       "sdfProperty": {
         "Colour": {
           "label": "Colour",

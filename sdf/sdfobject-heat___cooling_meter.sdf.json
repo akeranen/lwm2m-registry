@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Heat / Cooling meter (Object ID 10257)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2017 Comsel System Ltd",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Heat___Cooling_meter": {
       "label": "Heat / Cooling meter",
       "description": "This Object provides the information to represent a generic (district) heat or cooling meter",
-      "oma:id": "10257",
+      "oma:id": 10257,
       "sdfProperty": {
         "Manufacturer": {
           "label": "Manufacturer",

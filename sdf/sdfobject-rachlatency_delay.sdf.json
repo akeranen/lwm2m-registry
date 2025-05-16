@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M rachLatency_delay (Object ID 3365)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "rachLatency_delay": {
       "label": "rachLatency_delay",
       "description": "RACH Latency & delay information",
-      "oma:id": "3365",
+      "oma:id": 3365,
       "sdfProperty": {
         "sysFrameNumber": {
           "label": "sysFrameNumber",

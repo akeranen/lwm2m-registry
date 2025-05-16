@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Voltage Logging (Object ID 10290)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Voltage_Logging": {
       "label": "Voltage Logging",
       "description": "Periodic voltage measurements that are logged into CBOR structure payload",
-      "oma:id": "10290",
+      "oma:id": 10290,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

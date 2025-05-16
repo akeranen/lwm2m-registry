@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M radioLinkMonitoring (Object ID 3374)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "radioLinkMonitoring": {
       "label": "radioLinkMonitoring",
       "description": "Radio Link monitoring information maintained by RRC",
-      "oma:id": "3374",
+      "oma:id": 3374,
       "sdfProperty": {
         "sysFrameNumber": {
           "label": "sysFrameNumber",

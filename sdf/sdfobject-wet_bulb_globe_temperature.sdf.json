@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Wet Bulb Globe Temperature (Object ID 3450)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Wet_Bulb_Globe_Temperature": {
       "label": "Wet Bulb Globe Temperature",
       "description": "The uCIFI Wet Bulb Globe Temperature is a temperature sensor that extends the standard IPSO Temperature object reference and can be used to record apparent temperature based on WBGT calculation. The measure comes from applying specific formula that take into account environmental measurements, such as temperature, humidity, wind speed, radiation.",
-      "oma:id": "3450",
+      "oma:id": 3450,
       "sdfProperty": {
         "Estimation_type": {
           "label": "Estimation type",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Actuation (Object ID 3306)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Actuation": {
       "label": "Actuation",
       "description": "This IPSO object is dedicated to remote actuation such as ON/OFF action or dimming. A multi-state output can also be described as a string. This is useful to send pilot wire orders for instance. It also provides a resource to reflect the time that the device has been switched on.",
-      "oma:id": "3306",
+      "oma:id": 3306,
       "sdfProperty": {
         "On_Off": {
           "label": "On/Off",

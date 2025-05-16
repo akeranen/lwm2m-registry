@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M RDB (Object ID 10260)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright 2019 Casa Systems.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "RDB": {
       "label": "RDB",
       "description": "This object allows manipulation of Runtime Database variables.",
-      "oma:id": "10260",
+      "oma:id": 10260,
       "sdfProperty": {
         "Key": {
           "label": "Key",

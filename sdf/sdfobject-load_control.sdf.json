@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Load Control (Object ID 3310)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Load_Control": {
       "label": "Load Control",
       "description": "This Object is used for demand-response load control and other load control in automation application (not limited to power).",
-      "oma:id": "3310",
+      "oma:id": 3310,
       "sdfProperty": {
         "Event_Identifier": {
           "label": "Event Identifier",

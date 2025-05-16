@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Device Metadata (Object ID 10255)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 ARM.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Device_Metadata": {
       "label": "Device Metadata",
       "description": "This object provides a range of information related to device metadata",
-      "oma:id": "10255",
+      "oma:id": 10255,
       "sdfProperty": {
         "Protocol_supported": {
           "label": "Protocol supported",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Irrigation valve (Object ID 3425)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Irrigation_valve": {
       "label": "Irrigation valve",
       "description": "The uCIFI irrigation valve provides a way to control and monitor an irrigation valve.",
-      "oma:id": "3425",
+      "oma:id": 3425,
       "sdfProperty": {
         "Default_status": {
           "label": "Default status",

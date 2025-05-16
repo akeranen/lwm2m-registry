@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M uCIFI data bridge (Object ID 3414)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "uCIFI_data_bridge": {
       "label": "uCIFI data bridge",
       "description": "The uCIFI data bridge object may be used to transport data from a 3rd party device, operating a proprietary network or protocol, over a LwM2M compliant network.",
-      "oma:id": "3414",
+      "oma:id": 3414,
       "sdfProperty": {
         "Payload": {
           "label": "Payload",

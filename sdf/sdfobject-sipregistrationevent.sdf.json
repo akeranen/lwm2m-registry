@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M SipRegistrationEvent (Object ID 3382)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "SipRegistrationEvent": {
       "label": "SipRegistrationEvent",
       "description": "SIP Registration status",
-      "oma:id": "3382",
+      "oma:id": 3382,
       "sdfProperty": {
         "registrationType": {
           "label": "registrationType",

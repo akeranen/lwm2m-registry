@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M VolteCallEvent (Object ID 3381)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "VolteCallEvent": {
       "label": "VolteCallEvent",
       "description": "VoLTE call status",
-      "oma:id": "3381",
+      "oma:id": 3381,
       "sdfProperty": {
         "callStatus": {
           "label": "callStatus",

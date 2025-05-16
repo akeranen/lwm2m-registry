@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Battery (Object ID 3411)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Battery": {
       "label": "Battery",
       "description": "The uCIFI battery object provides attributes to monitor battery level and activity.",
-      "oma:id": "3411",
+      "oma:id": 3411,
       "sdfProperty": {
         "Battery_level": {
           "label": "Battery level",

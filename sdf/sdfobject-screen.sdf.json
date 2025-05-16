@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Screen (Object ID 10347)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Screen": {
       "label": "Screen",
       "description": "This LWM2M Object includes robot screen information.",
-      "oma:id": "10347",
+      "oma:id": 10347,
       "sdfProperty": {
         "Screen_Status": {
           "label": "Screen Status",

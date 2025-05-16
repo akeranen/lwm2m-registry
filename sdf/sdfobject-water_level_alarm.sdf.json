@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Water Level Alarm (Object ID 10490)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2024 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Water_Level_Alarm": {
       "label": "Water Level Alarm",
       "description": "This alarm is raised when the water level in a tank, manhole, etc. exceeds the specified threshold",
-      "oma:id": "10490",
+      "oma:id": 10490,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

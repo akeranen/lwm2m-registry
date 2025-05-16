@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M LED color light (Object ID 3420)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2020 uCIFI Alliance",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "LED_color_light": {
       "label": "LED color light",
       "description": "The uCIFI LED color light enables to control light colors of a LED luminaire.",
-      "oma:id": "3420",
+      "oma:id": 3420,
       "sdfProperty": {
         "RGB_value": {
           "label": "RGB value",

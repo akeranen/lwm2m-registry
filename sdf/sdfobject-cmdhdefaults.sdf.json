@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M CmdhDefaults (Object ID 2050)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 oneM2M Partners.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "CmdhDefaults": {
       "label": "CmdhDefaults",
       "description": "Defines which CMDH related parameters will be used by default.",
-      "oma:id": "2050",
+      "oma:id": 2050,
       "sdfProperty": {
         "DefaultEcRules": {
           "label": "DefaultEcRules",

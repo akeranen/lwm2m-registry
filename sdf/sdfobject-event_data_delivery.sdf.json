@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Event Data Delivery (Object ID 10263)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Event_Data_Delivery": {
       "label": "Event Data Delivery",
       "description": "The Event Data Delivery object provides a simple means for managing the delivery of event data from multiple Event Data Object instances.",
-      "oma:id": "10263",
+      "oma:id": 10263,
       "sdfProperty": {
         "Name": {
           "label": "Name",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Water meter (Object ID 3424)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Water_meter": {
       "label": "Water meter",
       "description": "The uCIFI water meter measures water volume that was distributed through a water meter, in pulse count as well as in m3. It also detects anomalies in the water meter.",
-      "oma:id": "3424",
+      "oma:id": 3424,
       "sdfProperty": {
         "Cumulated_water_volume": {
           "label": "Cumulated water volume",

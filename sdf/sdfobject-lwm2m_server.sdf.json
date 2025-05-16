@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M LwM2M Server (Object ID 1)",
-    "version": "2025-05-05",
+    "version": "1.2",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.2"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "LwM2M_Server": {
       "label": "LwM2M Server",
       "description": "This LwM2M Objects provides the data related to a LwM2M Server. A Bootstrap-Server has no such an Object Instance associated to it.",
-      "oma:id": "1",
+      "oma:id": 1,
       "sdfProperty": {
         "Short_Server_ID": {
           "label": "Short Server ID",

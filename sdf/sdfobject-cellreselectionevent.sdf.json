@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M cellReselectionEvent (Object ID 3354)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "cellReselectionEvent": {
       "label": "cellReselectionEvent",
       "description": "cell reselection event information",
-      "oma:id": "3354",
+      "oma:id": 3354,
       "sdfProperty": {
         "timeReselectionStart": {
           "label": "timeReselectionStart",

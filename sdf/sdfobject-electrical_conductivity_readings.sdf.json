@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Electrical Conductivity Readings (Object ID 10507)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2025 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Electrical_Conductivity_Readings": {
       "label": "Electrical Conductivity Readings",
       "description": "Periodic electrical conductivity measurements",
-      "oma:id": "10507",
+      "oma:id": 10507,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

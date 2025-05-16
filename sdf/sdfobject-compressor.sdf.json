@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Compressor (Object ID 10327)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Compressor": {
       "label": "Compressor",
       "description": "This LWM2M Object includes the Compressor information.",
-      "oma:id": "10327",
+      "oma:id": 10327,
       "sdfProperty": {
         "Compressor_Name": {
           "label": "Compressor Name",

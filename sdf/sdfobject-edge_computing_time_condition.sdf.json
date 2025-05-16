@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Edge computing time condition (Object ID 3438)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2020 uCIFI Alliance",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Edge_computing_time_condition": {
       "label": "Edge computing time condition",
       "description": "The uCIFI edge computing time condition object defines the day/time (defined as a CRON rule) at which a particular script should be executed by a device.",
-      "oma:id": "3438",
+      "oma:id": 3438,
       "sdfProperty": {
         "Execution_time_day": {
           "label": "Execution time/day",

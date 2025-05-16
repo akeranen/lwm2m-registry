@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Voltage Transient (Object ID 10291)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Voltage_Transient": {
       "label": "Voltage Transient",
       "description": "Object for sampling high frequency values (in this case Voltage readings) in order to aggregate them and summarize them (Avg, Max, Min) and to then time-stamp and log these aggregates for packaging and transmission to the server. This allows for efficient data transfer of high frequency data, without the need to send huge amounts of raw data over the air.",
-      "oma:id": "10291",
+      "oma:id": 10291,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

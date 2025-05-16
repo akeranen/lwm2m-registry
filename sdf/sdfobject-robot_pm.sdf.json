@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Robot PM (Object ID 10326)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Robot_PM": {
       "label": "Robot PM",
       "description": "This LWM2M Object includes PM(counter and gauge) supported by all robots.",
-      "oma:id": "10326",
+      "oma:id": 10326,
       "sdfProperty": {
         "Battery_Level": {
           "label": "Battery Level",

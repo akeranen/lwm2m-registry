@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M oA Logical Presence Sensor (Object ID 3394)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Zumtobel Group.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "oA_Logical_Presence_Sensor": {
       "label": "oA Logical Presence Sensor",
       "description": "The 'oA Logical Presence Sensor' represents the logical part of a presence sensor. The corresponding physical device is a sensor that detects presence in its detection area. \\nThe Object supports two states 'presence' and 'absence'.",
-      "oma:id": "3394",
+      "oma:id": 3394,
       "sdfProperty": {
         "ObjectVersion": {
           "label": "ObjectVersion",

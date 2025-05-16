@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M oA Logical Light-Point Actuator (Object ID 3393)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Zumtobel Group.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "oA_Logical_Light-Point_Actuator": {
       "label": "oA Logical Light-Point Actuator",
       "description": "The 'oA Logical Light Point Actuator' represents the logical part of an actuator model for a dimmable light point. The corresponding physical device is a light channel and associated gear (e.g. LED driver).\\nThe Object (module) supports several interactions that include basic On/Off as well as Up/Down dimming. Several device configuration parameters are mapped, which relate to behaviour or describe device limitations. For multi-channel luminaires where the configuration per channel may vary significantly (e.g. different max/min values), multiple instances of this Object should be used.",
-      "oma:id": "3393",
+      "oma:id": 3393,
       "sdfProperty": {
         "ObjectVersion": {
           "label": "ObjectVersion",

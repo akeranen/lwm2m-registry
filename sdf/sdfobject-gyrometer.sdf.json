@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Gyrometer (Object ID 3334)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Gyrometer": {
       "label": "Gyrometer",
       "description": "This IPSO Object is used to report the current reading of a gyrometer sensor in 3 axes. It provides tracking of the minimum and maximum angular rate in all 3 axes. An example unit of measure is radians per second.",
-      "oma:id": "3334",
+      "oma:id": 3334,
       "sdfProperty": {
         "X_Value": {
           "label": "X Value",

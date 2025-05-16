@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M oA Receiving Object (Object ID 3402)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Zumtobel Group.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "oA_Receiving_Object": {
       "label": "oA Receiving Object",
       "description": "The 'oA Receiving Object' provides a resource for sensors/actuators to report their status message to. It is used with control objects as logical object that forwards the sensor and status data to the executing object.\\nIt is also used to receive the 'go bootstrap' message, using the Struct-ID 255, in OOTB mode.",
-      "oma:id": "3402",
+      "oma:id": 3402,
       "sdfProperty": {
         "ObjectVersion": {
           "label": "ObjectVersion",

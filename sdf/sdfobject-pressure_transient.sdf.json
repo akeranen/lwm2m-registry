@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Pressure Transient (Object ID 10292)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Pressure_Transient": {
       "label": "Pressure Transient",
       "description": "Object for measuring high frequency pressure readings and summarizing/logging them at defined intervals. This way, the raw data does not need to be sent over the air, and instead just the Average , Maximum and Minimum values for the interval",
-      "oma:id": "10292",
+      "oma:id": 10292,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

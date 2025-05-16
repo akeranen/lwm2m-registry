@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Analog Output (Object ID 3203)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Analog_Output": {
       "label": "Analog Output",
       "description": "This IPSO object is a generic object that can be used with any kind of analog output interface.",
-      "oma:id": "3203",
+      "oma:id": 3203,
       "sdfProperty": {
         "Analog_Output_Current_Value": {
           "label": "Analog Output Current Value",

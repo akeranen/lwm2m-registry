@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Network Info (Object ID 10330)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Network_Info": {
       "label": "Network Info",
       "description": "This LWM2M Object includes network status related information.",
-      "oma:id": "10330",
+      "oma:id": 10330,
       "sdfProperty": {
         "IMEI": {
           "label": "IMEI",

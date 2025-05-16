@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Particulates (Object ID 10314)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019 OpenLX SP Ltd",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Particulates": {
       "label": "Particulates",
       "description": "This object should be used to report the concentration of particulates, for example a measurement of a particulates air quality sensor.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the particulate sensor. An example measurement unit is microgrammes per cubic metre ug/m3.",
-      "oma:id": "10314",
+      "oma:id": 10314,
       "sdfProperty": {
         "Sensor_Value": {
           "label": "Sensor Value",

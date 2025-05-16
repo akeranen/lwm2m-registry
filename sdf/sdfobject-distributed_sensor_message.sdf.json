@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Distributed Sensor Message (Object ID 3460)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Distributed_Sensor_Message": {
       "label": "Distributed Sensor Message",
       "description": "The uCIFI Distributed Sensor Message provides the format of data being exchanged within the Distributed Sensor Group communication.",
-      "oma:id": "3460",
+      "oma:id": 3460,
       "sdfProperty": {
         "Group_ID": {
           "label": "Group ID",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Dimmer (Object ID 3343)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Dimmer": {
       "label": "Dimmer",
       "description": "This IPSO object should be used with a dimmer or level control to report the state of the control.",
-      "oma:id": "3343",
+      "oma:id": 3343,
       "sdfProperty": {
         "Level": {
           "label": "Level",

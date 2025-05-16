@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M emmStateValue (Object ID 3361)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "emmStateValue": {
       "label": "emmStateValue",
       "description": "EMM context information",
-      "oma:id": "3361",
+      "oma:id": 3361,
       "sdfProperty": {
         "EmmState": {
           "label": "EmmState",

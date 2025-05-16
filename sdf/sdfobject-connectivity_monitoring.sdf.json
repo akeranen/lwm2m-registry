@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Connectivity Monitoring (Object ID 4)",
-    "version": "2025-05-05",
+    "version": "1.3",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Connectivity_Monitoring": {
       "label": "Connectivity Monitoring",
       "description": "This LwM2M Object enables monitoring of parameters related to network connectivity.\r\nIn this general connectivity Object, the Resources are limited to the most general cases common to most network bearers. It is recommended to read the description, which refers to relevant standard development organizations (e.g. 3GPP, IEEE).\r\nThe goal of the Connectivity Monitoring Object is to carry information reflecting the more up to date values of the current connection for monitoring purposes. Resources such as Link Quality, Radio Signal Strength, Cell ID are retrieved during connected mode at least for cellular networks.",
-      "oma:id": "4",
+      "oma:id": 4,
       "sdfProperty": {
         "Network_Bearer": {
           "label": "Network Bearer",

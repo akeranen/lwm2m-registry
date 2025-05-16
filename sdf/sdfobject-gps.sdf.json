@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M GPS (Object ID 10341)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "GPS": {
       "label": "GPS",
       "description": "This LWM2M Object includes GPS information.",
-      "oma:id": "10341",
+      "oma:id": 10341,
       "sdfProperty": {
         "Host_Device_Unique_ID": {
           "label": "Host Device Unique ID",

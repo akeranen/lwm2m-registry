@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Rain Gauge (Object ID 3446)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Rain_Gauge": {
       "label": "Rain Gauge",
       "description": "The uCIFI rain gauge is a device that measures the quantity of rain fall.",
-      "oma:id": "3446",
+      "oma:id": 3446,
       "sdfProperty": {
         "Cumulated_water_value_": {
           "label": "Cumulated water value ",

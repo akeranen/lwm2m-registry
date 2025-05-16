@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M RCU Control (Object ID 10319)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "RCU_Control": {
       "label": "RCU Control",
       "description": "This LWM2M Object includes all operations on RCUs.",
-      "oma:id": "10319",
+      "oma:id": 10319,
       "sdfProperty": {
         "RCU_Diagnostics_Mode": {
           "label": "RCU Diagnostics Mode",

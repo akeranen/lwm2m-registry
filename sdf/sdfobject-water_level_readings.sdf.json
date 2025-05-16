@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Water Level Readings (Object ID 10487)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2024 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Water_Level_Readings": {
       "label": "Water Level Readings",
       "description": "Periodic water level measurements",
-      "oma:id": "10487",
+      "oma:id": 10487,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Air quality (Object ID 3428)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Air_quality": {
       "label": "Air quality",
       "description": "The uCIFI air quality sensor reports measurement required to calculate Air Quality Index (AIQ. It also provides resources for average calculation as per the IQ index calculation.",
-      "oma:id": "3428",
+      "oma:id": 3428,
       "sdfProperty": {
         "PM10": {
           "label": "PM10",

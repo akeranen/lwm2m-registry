@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Presence Alarm (Object ID 10285)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2023 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Presence_Alarm": {
       "label": "Presence Alarm",
       "description": "Where supported by the device this is an alarm that should be raised if the device detects presence above a pre-configured threshold.",
-      "oma:id": "10285",
+      "oma:id": 10285,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

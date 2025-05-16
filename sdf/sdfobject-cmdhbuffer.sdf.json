@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M CmdhBuffer (Object ID 2056)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 oneM2M Partners.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "CmdhBuffer": {
       "label": "CmdhBuffer",
       "description": "This Object defines limits in usage of buffers for temporarily storing information that needs to be forwarded to other CSEs during processing of CMDH-related requests in a CSE.",
-      "oma:id": "2056",
+      "oma:id": 2056,
       "sdfProperty": {
         "ApplicableEventCategory": {
           "label": "ApplicableEventCategory",

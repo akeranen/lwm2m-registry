@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Vendor Specific Measurement Quality Reason (Object ID 510)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Vendor_Specific_Measurement_Quality_Reason": {
       "label": "Vendor Specific Measurement Quality Reason",
       "description": "This object contains description for vendor specific measurement quality reason codes provided in a Measurement Metadata (509) object. Instances of this object define the mapping of vendor specific reason codes to reason description in the scope of an individual device.",
-      "oma:id": "510",
+      "oma:id": 510,
       "sdfProperty": {
         "Vendor_Specific_Quality_Reason_Code": {
           "label": "Vendor Specific Quality Reason Code",

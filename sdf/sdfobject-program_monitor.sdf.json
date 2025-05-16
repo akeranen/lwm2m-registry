@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Program Monitor (Object ID 3458)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Program_Monitor": {
       "label": "Program Monitor",
       "description": "The uCIFI Program Monitor exports some useful information related to program execution.",
-      "oma:id": "3458",
+      "oma:id": 3458,
       "sdfProperty": {
         "Program_Name": {
           "label": "Program Name",

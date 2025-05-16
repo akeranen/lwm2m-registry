@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M oA OGC-Security (Object ID 3405)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Zumtobel Group.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "oA_OGC-Security": {
       "label": "oA OGC-Security",
       "description": "The 'OGC Security' provides the appropriate keying material for a specific OGC Application group in the context of OGC. The keying material will be provided by a key distribution server, and must not be readable by any instance outside the local node.",
-      "oma:id": "3405",
+      "oma:id": 3405,
       "sdfProperty": {
         "ObjectVersion": {
           "label": "ObjectVersion",

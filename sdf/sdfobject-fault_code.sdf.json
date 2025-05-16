@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Fault Code (Object ID 10497)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2024 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Fault_Code": {
       "label": "Fault Code",
       "description": "This object reports device specific fault codes",
-      "oma:id": "10497",
+      "oma:id": 10497,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

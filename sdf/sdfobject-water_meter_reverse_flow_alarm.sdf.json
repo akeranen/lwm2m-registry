@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Water Meter Reverse Flow Alarm (Object ID 10273)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Water_Meter_Reverse_Flow_Alarm": {
       "label": "Water Meter Reverse Flow Alarm",
       "description": "An alarm indicating reverse flow through the pipe. Also supports delivery of the approximate volume of water flowing in the reverse direction in the preceding period.",
-      "oma:id": "10273",
+      "oma:id": 10273,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

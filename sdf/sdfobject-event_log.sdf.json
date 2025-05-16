@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Event Log (Object ID 20)",
-    "version": "2025-05-05",
+    "version": "2.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Event_Log": {
       "label": "Event Log",
       "description": "The Event Log Object is a multiple Instances Object defined for logging data in a straightforward and generic way.\r\nThe Resources of that Object are based on the OMA LwM2M set of reusable Resources dedicated to logging event activity.",
-      "oma:id": "20",
+      "oma:id": 20,
       "sdfProperty": {
         "LogClass": {
           "label": "LogClass",

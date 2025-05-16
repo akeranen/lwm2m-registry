@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Power Control (Object ID 3312)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Power_Control": {
       "label": "Power Control",
       "description": "This Object is used to control a power source, such as a Smart Plug.  It allows a power relay to be turned on or off and its dimmer setting to be control as a % between 0 and 100.",
-      "oma:id": "3312",
+      "oma:id": 3312,
       "sdfProperty": {
         "On_Off": {
           "label": "On/Off",

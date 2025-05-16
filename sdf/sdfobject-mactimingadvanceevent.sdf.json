@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M macTimingAdvanceEvent (Object ID 3369)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "macTimingAdvanceEvent": {
       "label": "macTimingAdvanceEvent",
       "description": "Timing advance information",
-      "oma:id": "3369",
+      "oma:id": 3369,
       "sdfProperty": {
         "timerValue": {
           "label": "timerValue",

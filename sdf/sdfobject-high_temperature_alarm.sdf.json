@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M High Temperature Alarm (Object ID 10278)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "High_Temperature_Alarm": {
       "label": "High Temperature Alarm",
       "description": "Where supported by the meter this is an alarm that should be raised if the meter detects temperature above a pre-configured threshold. When the temperature drops below the clear threshold, the alarm should be cleared.",
-      "oma:id": "10278",
+      "oma:id": 10278,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

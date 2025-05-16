@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Valve Alarm (Object ID 10500)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2024 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Valve_Alarm": {
       "label": "Valve Alarm",
       "description": "This alarm is raised when the valve state fails to change after a given period of time. This alarm only applies to valves with the status feedback feature.",
-      "oma:id": "10500",
+      "oma:id": 10500,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

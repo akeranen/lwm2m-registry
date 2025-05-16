@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Digital Output (Object ID 3201)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Digital_Output": {
       "label": "Digital Output",
       "description": "Generic digital output for non-specific actuators",
-      "oma:id": "3201",
+      "oma:id": 3201,
       "sdfProperty": {
         "Digital_Output_State": {
           "label": "Digital Output State",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M CmdhNetworkAccessRules (Object ID 2054)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 oneM2M Partners.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "CmdhNetworkAccessRules": {
       "label": "CmdhNetworkAccessRules",
       "description": "This Object defines the usage of underlying networks for forwarding information to other CSEs during processing of CMDH-related requests in a CSE.",
-      "oma:id": "2054",
+      "oma:id": 2054,
       "sdfProperty": {
         "ApplicableEventCategories": {
           "label": "ApplicableEventCategories",

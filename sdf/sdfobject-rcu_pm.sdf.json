@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M RCU PM (Object ID 10318)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "RCU_PM": {
       "label": "RCU PM",
       "description": "This LWM2M Object includes RCU(Robotic Control Unit) PM information(counter and guage).",
-      "oma:id": "10318",
+      "oma:id": 10318,
       "sdfProperty": {
         "CPU_Usage": {
           "label": "CPU Usage",

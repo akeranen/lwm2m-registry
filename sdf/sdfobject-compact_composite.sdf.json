@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Compact Composite (Object ID 511)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2022 Open Mobile Alliance",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Compact_Composite": {
       "label": "Compact Composite",
       "description": "This Object enables collecting a set of Resource values from other Objects into a single Resource representation.",
-      "oma:id": "511",
+      "oma:id": 511,
       "sdfProperty": {
         "Target_Links": {
           "label": "Target Links",

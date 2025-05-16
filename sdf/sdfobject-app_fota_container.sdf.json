@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M App Fota Container (Object ID 10286)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "App_Fota_Container": {
       "label": "App Fota Container",
       "description": "This LWM2M Object is used to download the firmware package of a device's application.",
-      "oma:id": "10286",
+      "oma:id": 10286,
       "sdfProperty": {
         "UL_data": {
           "label": "UL data",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M sipPublishEvent (Object ID 3383)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "sipPublishEvent": {
       "label": "sipPublishEvent",
       "description": "SIP Publish status",
-      "oma:id": "3383",
+      "oma:id": 3383,
       "sdfProperty": {
         "publishResult": {
           "label": "publishResult",

@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M oA Scene (Object ID 3404)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Zumtobel Group.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "oA_Scene": {
       "label": "oA Scene",
       "description": "The 'oA Scene' represents a scene model. The scene holds defined values for each actuator in one group.",
-      "oma:id": "3404",
+      "oma:id": 3404,
       "sdfProperty": {
         "ObjectVersion": {
           "label": "ObjectVersion",

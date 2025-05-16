@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Manhole Cover (Object ID 3408)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Manhole_Cover": {
       "label": "Manhole Cover",
       "description": "Describe the status of a manhole cover.",
-      "oma:id": "3408",
+      "oma:id": 3408,
       "sdfProperty": {
         "Safety_Angle_Threshold": {
           "label": "Safety Angle Threshold",

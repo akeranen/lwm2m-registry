@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Thread Neighbor Information (Object ID 10485)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2023 Hydro-Québec.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Thread_Neighbor_Information": {
       "label": "Thread Neighbor Information",
       "description": "This LwM2M Object provides diagnostic information about Thread neighbors",
-      "oma:id": "10485",
+      "oma:id": 10485,
       "sdfProperty": {
         "Neighbor_Role": {
           "label": "Neighbor Role",

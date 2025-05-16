@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M CrowdBox Measurements (Object ID 10246)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Vodafone Group.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "CrowdBox_Measurements": {
       "label": "CrowdBox Measurements",
       "description": "This LWM2M Object provides CrowdBox-related measurements such as serving cell parameters, backhaul timing advance, and neighbour cell reports.",
-      "oma:id": "10246",
+      "oma:id": 10246,
       "sdfProperty": {
         "Serving_Cell_ID": {
           "label": "Serving Cell ID",

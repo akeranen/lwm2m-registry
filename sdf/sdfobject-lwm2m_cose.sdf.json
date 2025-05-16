@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M LwM2M COSE (Object ID 23)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.2"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "LwM2M_COSE": {
       "label": "LwM2M COSE",
       "description": "This Object provides the keying material and related information for use with COSE.",
-      "oma:id": "23",
+      "oma:id": 23,
       "sdfProperty": {
         "KID": {
           "label": "KID",

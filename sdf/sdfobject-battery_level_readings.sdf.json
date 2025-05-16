@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Battery Level Readings (Object ID 10270)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Battery_Level_Readings": {
       "label": "Battery Level Readings",
       "description": "Periodic battery level measurements",
-      "oma:id": "10270",
+      "oma:id": 10270,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Shareparkinglot (Object ID 10309)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019 XiangYiIOT Technologies Co., Ltd.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Shareparkinglot": {
       "label": "Shareparkinglot",
       "description": "This LwM2M Object provides the keying material of our technology product-ShareParkingLock.",
-      "oma:id": "10309",
+      "oma:id": 10309,
       "sdfProperty": {
         "LockID": {
           "label": "LockID",

@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Thread Commissioning (joiner add) (Object ID 10484)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2023 Hydro-Québec.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Thread_Commissioning_(joiner_add)": {
       "label": "Thread Commissioning (joiner add)",
       "description": "This LwM2M Object enables commissioning (commissioner joiner add) of Thread devices on the Network. The target device must be have the \"commissioner\" and \"joiner router\" roles. Ex: \"Border Router\"",
-      "oma:id": "10484",
+      "oma:id": 10484,
       "sdfProperty": {
         "Joiner_eui64___discerner": {
           "label": "Joiner eui64 / discerner",

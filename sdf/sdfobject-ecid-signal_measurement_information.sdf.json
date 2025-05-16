@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M ECID-Signal Measurement Information (Object ID 10256)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2017, Huawei",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "ECID-Signal_Measurement_Information": {
       "label": "ECID-Signal Measurement Information",
       "description": "This LWM2M Object provides ECID signal measurements of a device.",
-      "oma:id": "10256",
+      "oma:id": 10256,
       "sdfProperty": {
         "physCellId": {
           "label": "physCellId",

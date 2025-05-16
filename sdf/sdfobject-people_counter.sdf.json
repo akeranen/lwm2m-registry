@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M People counter (Object ID 3434)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "People_counter": {
       "label": "People counter",
       "description": "The uCIFI people counter provides people counting information using Bluetooth beacon or any other method.",
-      "oma:id": "3434",
+      "oma:id": 3434,
       "sdfProperty": {
         "Actual_number_of_persons": {
           "label": "Actual number of persons",

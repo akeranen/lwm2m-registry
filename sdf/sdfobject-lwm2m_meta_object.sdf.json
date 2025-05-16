@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M LWM2M Meta Object (Object ID 10300)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Tampere University.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "LWM2M_Meta_Object": {
       "label": "LWM2M Meta Object",
       "description": "Use this meta object to provide one or more locations hosting XML data\r\n\t  model definitions for reusable or private and vendor-specific devices,\r\n\t  such as those in the range 26241-42768.",
-      "oma:id": "10300",
+      "oma:id": 10300,
       "sdfProperty": {
         "ObjectID": {
           "label": "ObjectID",

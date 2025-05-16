@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M MCU (Object ID 10369)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "MCU": {
       "label": "MCU",
       "description": "This LWM2M Object includes MCU information.",
-      "oma:id": "10369",
+      "oma:id": 10369,
       "sdfProperty": {
         "Host_Device_Unique_ID": {
           "label": "Host Device Unique ID",

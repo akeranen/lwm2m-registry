@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Relay Management (Object ID 10245)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Vodafone Group.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Relay_Management": {
       "label": "Relay Management",
       "description": "This LWM2M Object provides a range of eNB related measurements and parameters of which several are changeable. Furthermore, it includes Resources to enable/disable the eNB.",
-      "oma:id": "10245",
+      "oma:id": 10245,
       "sdfProperty": {
         "eNB_Availability": {
           "label": "eNB Availability",

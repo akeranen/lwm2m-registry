@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M oA Logical Illuminance Sensor (Object ID 3392)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Zumtobel Group.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "oA_Logical_Illuminance_Sensor": {
       "label": "oA Logical Illuminance Sensor",
       "description": "The 'oA Logical Illuminance Sensor' represents the logical part of an illuminance sensor. The corresponding physical device is a sensor that detects illuminance in its detection area.",
-      "oma:id": "3392",
+      "oma:id": 3392,
       "sdfProperty": {
         "ObjectVersion": {
           "label": "ObjectVersion",

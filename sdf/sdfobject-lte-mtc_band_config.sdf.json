@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M LTE-MTC Band Config (Object ID 501)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2020 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "LTE-MTC_Band_Config": {
       "label": "LTE-MTC Band Config",
       "description": "This object is used to configure the cellular band used by the device as well as to change the band. It is intended to be used on LTE bands, as in NB-IoT and LTE Cat M1 frequency bands.",
-      "oma:id": "501",
+      "oma:id": 501,
       "sdfProperty": {
         "EARFCN": {
           "label": "EARFCN",

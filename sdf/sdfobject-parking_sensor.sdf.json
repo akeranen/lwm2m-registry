@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Parking Sensor (Object ID 3431)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Parking_Sensor": {
       "label": "Parking Sensor",
       "description": "The uCIFI parking sensor provides actual and cumulated occupancy duration as well as forbidden parking detection.",
-      "oma:id": "3431",
+      "oma:id": 3431,
       "sdfProperty": {
         "Occupancy": {
           "label": "Occupancy",

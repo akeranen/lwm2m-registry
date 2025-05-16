@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Gas meter (Object ID 3423)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Gas_meter": {
       "label": "Gas meter",
       "description": "The uCIFI gas meter measures the volume of gas that was distributed through the gas meter, in pulse count and/or in m3. It also detects anomalies in the gas meter.",
-      "oma:id": "3423",
+      "oma:id": 3423,
       "sdfProperty": {
         "Cumulated_gas_volume": {
           "label": "Cumulated gas volume",

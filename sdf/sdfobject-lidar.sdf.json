@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M LiDAR (Object ID 10343)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "LiDAR": {
       "label": "LiDAR",
       "description": "This LWM2M Object includes LiDAR information.",
-      "oma:id": "10343",
+      "oma:id": 10343,
       "sdfProperty": {
         "LiDAR_Name": {
           "label": "LiDAR Name",

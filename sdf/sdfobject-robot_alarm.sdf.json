@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Robot Alarm (Object ID 10334)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Robot_Alarm": {
       "label": "Robot Alarm",
       "description": "Here lists all items of an alarm reported by the robot.",
-      "oma:id": "10334",
+      "oma:id": 10334,
       "sdfProperty": {
         "Entity": {
           "label": "Entity",

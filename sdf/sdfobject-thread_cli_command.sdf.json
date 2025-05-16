@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Thread CLI Command (Object ID 10486)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2023 Hydro-Québec.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Thread_CLI_Command": {
       "label": "Thread CLI Command",
       "description": "This LwM2M Object provides access to issuing custom CLI commands to Thread devices",
-      "oma:id": "10486",
+      "oma:id": 10486,
       "sdfProperty": {
         "CLI_version": {
           "label": "CLI version",

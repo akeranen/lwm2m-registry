@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M HostDevice (Object ID 10299)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Verizon Wireless.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "HostDevice": {
       "label": "HostDevice",
       "description": "This LWM2M Object provides a range of host device related information which can be queried by the LWM2M Server. The host device is any integrated device with an embedded cellular radio module.",
-      "oma:id": "10299",
+      "oma:id": 10299,
       "sdfProperty": {
         "Manufacturer": {
           "label": "Manufacturer",

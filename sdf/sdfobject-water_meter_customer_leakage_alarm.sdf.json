@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Water Meter Customer Leakage Alarm (Object ID 10272)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Water_Meter_Customer_Leakage_Alarm": {
       "label": "Water Meter Customer Leakage Alarm",
       "description": "A binary flag indicating continual usage (e.g. greater than 5 L/h for 24 hours and the flow never returning to zero at any time).",
-      "oma:id": "10272",
+      "oma:id": 10272,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

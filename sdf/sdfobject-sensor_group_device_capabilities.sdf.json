@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Sensor Group Device Capabilities (Object ID 3461)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Sensor_Group_Device_Capabilities": {
       "label": "Sensor Group Device Capabilities",
       "description": "This object is used to notify the user about the capabilities supported by the device in respect to Distributed Sensot Group functionality.",
-      "oma:id": "3461",
+      "oma:id": 3461,
       "sdfProperty": {
         "Remote_Sensor_Management_capabilities": {
           "label": "Remote Sensor Management capabilities",

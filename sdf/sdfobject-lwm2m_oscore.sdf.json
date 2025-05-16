@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M LWM2M OSCORE (Object ID 21)",
-    "version": "2025-05-05",
+    "version": "2.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "LWM2M_OSCORE": {
       "label": "LWM2M OSCORE",
       "description": "This LwM2M Object provides the keying material and related information of a LwM2M Client appropriate to access a specified LwM2M Server using OSCORE. One Object Instance MAY address a LwM2M Bootstrap-Server. These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.\r\nInstances of this Object are linked from Instances of Object 0 using the OSCORE Security Mode Resource of Object 0. Instances of this Object MUST NOT be linked from more than one Instance of Object 0.",
-      "oma:id": "21",
+      "oma:id": 21,
       "sdfProperty": {
         "OSCORE_Master_Secret": {
           "label": "OSCORE Master Secret",

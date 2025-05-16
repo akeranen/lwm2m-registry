@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Event Profile (Object ID 10379)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2023 Itron.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Event_Profile": {
       "label": "Event Profile",
       "description": "The Event Profile object manages capture of Events and Alarms based on related Event Codes. The Event Profile object also acts as an efficient aggregator for Events and Alarms, that can help to optimize their delivery. \r\nNote: this object does not intent to manage deliveries of Events and Alarms.",
-      "oma:id": "10379",
+      "oma:id": 10379,
       "sdfProperty": {
         "Events_to_Capture": {
           "label": "Events to Capture",

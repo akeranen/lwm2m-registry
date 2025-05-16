@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M DYM IoT edge commands and data protocols (Object ID 10482)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2016-2023 DYM Labs (Debug Your Mind Labs LLP).",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "DYM_IoT_edge_commands_and_data_protocols": {
       "label": "DYM IoT edge commands and data protocols",
       "description": "This LWM2M object is used between IoT Platform and Edge IoT Device Manager for control command and data exchange",
-      "oma:id": "10482",
+      "oma:id": 10482,
       "sdfProperty": {
         "Plugin_Management": {
           "label": "Plugin Management",

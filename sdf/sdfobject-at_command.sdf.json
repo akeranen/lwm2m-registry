@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M AT Command (Object ID 10251)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2017, Cisco",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "AT_Command": {
       "label": "AT Command",
       "description": "Used to execute an AT command on a cellular modem",
-      "oma:id": "10251",
+      "oma:id": 10251,
       "sdfProperty": {
         "Command": {
           "label": "Command",

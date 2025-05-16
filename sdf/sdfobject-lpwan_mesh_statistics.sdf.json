@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M LPWAN Mesh Statistics (Object ID 3448)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "LPWAN_Mesh_Statistics": {
       "label": "LPWAN Mesh Statistics",
       "description": "The uCIFI LPWAN Mesh Statistics object enables the client to collect statistical information specifically tailored to monitor performance of 805.15.4 mesh networks. The object encompasses resources that provide visibility over both MAC layer and Network Layer statistics, the applicability of which is dependent on the specific 802.15.4 technology.",
-      "oma:id": "3448",
+      "oma:id": 3448,
       "sdfProperty": {
         "Tx_Packets_Total": {
           "label": "Tx Packets Total",

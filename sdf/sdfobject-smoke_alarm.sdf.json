@@ -1,9 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Smoke Alarm (Object ID 3407)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 ICA.",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "oma:lwm2mVersion": "1.1"
   },
   "namespace": {
     "oma": "https://models.openmobilealliance.org/"
@@ -13,7 +14,7 @@
     "Smoke_Alarm": {
       "label": "Smoke Alarm",
       "description": "This is an alarm that should be raised if the meter detects CO2 concentration above a pre-configured threshold.",
-      "oma:id": "3407",
+      "oma:id": 3407,
       "sdfProperty": {
         "Battery_Percentage": {
           "label": "Battery Percentage",

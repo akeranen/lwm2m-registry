@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Current Logging (Object ID 10288)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Current_Logging": {
       "label": "Current Logging",
       "description": "Periodic current measurements that are logged into CBOR structure payload",
-      "oma:id": "10288",
+      "oma:id": 10288,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Camera (Object ID 10340)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Camera": {
       "label": "Camera",
       "description": "This LWM2M Object includes camera information.",
-      "oma:id": "10340",
+      "oma:id": 10340,
       "sdfProperty": {
         "Camera_Name": {
           "label": "Camera Name",

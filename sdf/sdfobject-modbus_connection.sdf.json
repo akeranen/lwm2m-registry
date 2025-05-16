@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Modbus Connection (Object ID 10374)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Modbus_Connection": {
       "label": "Modbus Connection",
       "description": "This LwM2M Object is used to configure a Modbus protocol connection.",
-      "oma:id": "10374",
+      "oma:id": 10374,
       "sdfProperty": {
         "Address": {
           "label": "Address",

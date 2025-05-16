@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Daughter Board Failure Alarm (Object ID 10282)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Daughter_Board_Failure_Alarm": {
       "label": "Daughter Board Failure Alarm",
       "description": "This binary status should indicate that the meter MCU can no longer communicate with a daughter board",
-      "oma:id": "10282",
+      "oma:id": 10282,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

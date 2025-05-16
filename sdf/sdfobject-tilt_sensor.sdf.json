@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Tilt sensor (Object ID 3429)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Tilt_sensor": {
       "label": "Tilt sensor",
       "description": "The uCIFI tilt sensor provides the angle between the object's internal vertical and the perpendicular to the earth.",
-      "oma:id": "3429",
+      "oma:id": 3429,
       "sdfProperty": {
         "Angle": {
           "label": "Angle",

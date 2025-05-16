@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Neighbour Cell Report (Object ID 10247)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 Vodafone Group.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Neighbour_Cell_Report": {
       "label": "Neighbour Cell Report",
       "description": "This LWM2M Object provides the neighbour cell report. The CrowdBox Measurements Object and the Connected UE Report Object have both Objlnk Resources pointing to this Object.",
-      "oma:id": "10247",
+      "oma:id": 10247,
       "sdfProperty": {
         "Neighbour_PCI": {
           "label": "Neighbour PCI",

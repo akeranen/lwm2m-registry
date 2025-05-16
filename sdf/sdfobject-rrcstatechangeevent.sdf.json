@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M rrcStateChangeEvent (Object ID 3357)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "rrcStateChangeEvent": {
       "label": "rrcStateChangeEvent",
       "description": "Current RRC state change information, including the event that triggered the state change",
-      "oma:id": "3357",
+      "oma:id": 3357,
       "sdfProperty": {
         "rrcState": {
           "label": "rrcState",

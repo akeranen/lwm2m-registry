@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M nuSIM Profile (Object ID 507)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2021 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "nuSIM_Profile": {
       "label": "nuSIM Profile",
       "description": "This device management object contains the elements of a nuSIM profile package according to nuSIM Technical Specification NTS.01.",
-      "oma:id": "507",
+      "oma:id": 507,
       "sdfProperty": {
         "encP": {
           "label": "encP",

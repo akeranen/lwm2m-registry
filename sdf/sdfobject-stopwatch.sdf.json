@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Stopwatch (Object ID 3350)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Stopwatch": {
       "label": "Stopwatch",
       "description": "An ascending timer that counts how long time has passed since the timer was started after reset.",
-      "oma:id": "3350",
+      "oma:id": 3350,
       "sdfProperty": {
         "Cumulative_Time": {
           "label": "Cumulative Time",

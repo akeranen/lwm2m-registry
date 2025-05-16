@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Discharge Alarm (Object ID 10499)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2024 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Discharge_Alarm": {
       "label": "Discharge Alarm",
       "description": "This alarm is raised when the water level fails to change within a given period of time after a discharge event is started.",
-      "oma:id": "10499",
+      "oma:id": 10499,
       "sdfProperty": {
         "Event_Type": {
           "label": "Event Type",

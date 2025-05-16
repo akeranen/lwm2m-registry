@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Ultrasonic Sensor (Object ID 10360)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2019, Cloudminds",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Ultrasonic_Sensor": {
       "label": "Ultrasonic Sensor",
       "description": "This LWM2M Object includes Ultrasonic Sensor information.",
-      "oma:id": "10360",
+      "oma:id": 10360,
       "sdfProperty": {
         "Name": {
           "label": "Name",

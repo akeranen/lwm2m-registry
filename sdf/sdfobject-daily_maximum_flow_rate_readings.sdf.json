@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Daily Maximum Flow Rate Readings (Object ID 10267)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 South East Water Corporation.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Daily_Maximum_Flow_Rate_Readings": {
       "label": "Daily Maximum Flow Rate Readings",
       "description": "Measures the maximum flow rate and its time stamp for specified period",
-      "oma:id": "10267",
+      "oma:id": 10267,
       "sdfProperty": {
         "Interval_Period": {
           "label": "Interval Period",

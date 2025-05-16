@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M sipSubscriptionEvent (Object ID 3384)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "sipSubscriptionEvent": {
       "label": "sipSubscriptionEvent",
       "description": "SIP Subscription status",
-      "oma:id": "3384",
+      "oma:id": 3384,
       "sdfProperty": {
         "eventType": {
           "label": "eventType",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M pucchPowerControl (Object ID 3379)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2018 GSMA.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "pucchPowerControl": {
       "label": "pucchPowerControl",
       "description": "PUCCH TX power control information",
-      "oma:id": "3379",
+      "oma:id": 3379,
       "sdfProperty": {
         "sysFrameNumber": {
           "label": "sysFrameNumber",

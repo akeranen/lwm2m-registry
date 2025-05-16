@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M BinaryAppDataContainer (Object ID 19)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019-2024 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "BinaryAppDataContainer": {
       "label": "BinaryAppDataContainer",
       "description": "This LwM2M Objects provides the application service data related to a LwM2M Server, eg. Water meter data. \r\nThere are several methods to create instance to indicate the message direction based on the negotiation between Application and LwM2M. The Client and Server should negotiate the instance(s) used to exchange the data. For example:\r\n - Using a single instance for both directions communication, from Client to Server and from Server to Client.\r\n - Using an instance for communication from Client to Server and another one for communication from Server to Client\r\n - Using several instances",
-      "oma:id": "19",
+      "oma:id": 19,
       "sdfProperty": {
         "Data": {
           "label": "Data",

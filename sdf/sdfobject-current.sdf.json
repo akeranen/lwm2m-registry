@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Current (Object ID 3317)",
-    "version": "2025-05-05",
+    "version": "1.1",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Current": {
       "label": "Current",
       "description": "This IPSO object should be used with an ammeter to report measured electric current in amperes. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is ampere.",
-      "oma:id": "3317",
+      "oma:id": 3317,
       "sdfProperty": {
         "Sensor_Value": {
           "label": "Sensor Value",

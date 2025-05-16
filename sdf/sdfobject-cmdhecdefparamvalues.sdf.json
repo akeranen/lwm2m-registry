@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M CmdhEcDefParamValues (Object ID 2052)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 oneM2M Partners.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "CmdhEcDefParamValues": {
       "label": "CmdhEcDefParamValues",
       "description": "This Object represents a specific set of default values for the CMDH related parameters Request Expiration Timestamp, Result Expiration Timestamp, Operational Execution Time, Result Persistence and Delivery Aggregation that are applicable for a given Event Category if these parameters are not specified in the message.",
-      "oma:id": "2052",
+      "oma:id": 2052,
       "sdfProperty": {
         "ApplicableEventCategory_": {
           "label": "ApplicableEventCategory ",

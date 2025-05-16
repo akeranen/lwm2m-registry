@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M CmdhPolicy (Object ID 2048)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright 2019 oneM2M Partners.",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "CmdhPolicy": {
       "label": "CmdhPolicy",
       "description": "This Object provides links to a set of rules associated with a specific CSE that governs the behavior of that CSE regarding rejecting, buffering and sending request or response messages via the Mcc reference point.",
-      "oma:id": "2048",
+      "oma:id": 2048,
       "sdfProperty": {
         "Name": {
           "label": "Name",

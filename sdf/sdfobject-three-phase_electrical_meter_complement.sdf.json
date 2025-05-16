@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Three-phase electrical meter complement (Object ID 3422)",
-    "version": "2025-05-05",
+    "version": "1.0",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "BSD-3-Clause"
   },
@@ -13,7 +13,7 @@
     "Three-phase_electrical_meter_complement": {
       "label": "Three-phase electrical meter complement",
       "description": "The uCIFI three-phase electrical meter complement gathers all the measures, events, threshold and other resources required to create a full three-phase electrical meter together with three additional uCIFI single-phase electrical meters.",
-      "oma:id": "3422",
+      "oma:id": 3422,
       "sdfProperty": {
         "L1-L2_Voltage": {
           "label": "L1-L2 Voltage",
