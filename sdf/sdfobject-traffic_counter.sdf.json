@@ -51,9 +51,9 @@
           "oma:id": 4,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "s"
+            "type": "integer",
+            "unit": "s"
+          }
         },
         "Measuring_period_2": {
           "label": "Measuring period 2",
@@ -61,9 +61,9 @@
           "oma:id": 5,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "s"
+            "type": "integer",
+            "unit": "s"
+          }
         },
         "Measuring_period_3": {
           "label": "Measuring period 3",
@@ -71,9 +71,9 @@
           "oma:id": 6,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "s"
+            "type": "integer",
+            "unit": "s"
+          }
         },
         "Cumulated_number_during_last_period_1": {
           "label": "Cumulated number during last period 1",

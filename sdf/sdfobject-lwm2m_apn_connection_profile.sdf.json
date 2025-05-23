@@ -101,10 +101,10 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 111
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 111
+          }
         },
         "Connection_end_time_(1)": {
           "label": "Connection end time (1)",
@@ -276,10 +276,10 @@
           "oma:id": 32,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 15
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 15
+          }
         },
         "RDS_Source_Port": {
           "label": "RDS Source Port",
@@ -287,10 +287,10 @@
           "oma:id": 33,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 15
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 15
+          }
         }
       },
       "sdfAction": {},

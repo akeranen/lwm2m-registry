@@ -70,10 +70,10 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 1
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1
+          }
         }
       },
       "sdfAction": {},

@@ -75,10 +75,10 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 5
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          }
         },
         "Firmware_Update_Delivery_Method": {
           "label": "Firmware Update Delivery Method",

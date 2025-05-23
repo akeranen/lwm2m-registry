@@ -45,10 +45,10 @@
           "oma:id": 3,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 1,
-          "maximum": 2
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 2
+          }
         }
       },
       "sdfAction": {},

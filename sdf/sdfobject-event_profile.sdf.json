@@ -80,9 +80,9 @@
           "oma:id": 9,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "s"
+            "type": "integer",
+            "unit": "s"
+          }
         }
       },
       "sdfAction": {

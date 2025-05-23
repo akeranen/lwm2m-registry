@@ -243,10 +243,10 @@
           "oma:id": 35,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 13
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 13
+          }
         },
         "Nominal_Lamp_wattage": {
           "label": "Nominal Lamp wattage",

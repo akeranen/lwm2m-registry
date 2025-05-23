@@ -30,10 +30,10 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 1023
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1023
+          }
         },
         "Measurement_Quality_Indicator": {
           "label": "Measurement Quality Indicator",

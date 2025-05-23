@@ -22,10 +22,10 @@
           "oma:id": 0,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 100
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          }
         },
         "Acceptable_RSSI_(GSM)": {
           "label": "Acceptable RSSI (GSM)",

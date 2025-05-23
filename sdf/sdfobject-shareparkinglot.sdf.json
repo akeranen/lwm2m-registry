@@ -46,11 +46,11 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "dBm",
-          "minimum": -30,
-          "maximum": -120
+            "type": "integer",
+            "unit": "dBm",
+            "minimum": -30,
+            "maximum": -120
+          }
         },
         "BatteryCapacity": {
           "label": "BatteryCapacity",
@@ -59,11 +59,11 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "number"
-          },
-          "unit": "%EL",
-          "minimum": 0,
-          "maximum": 100
+            "type": "number",
+            "unit": "%EL",
+            "minimum": 0,
+            "maximum": 100
+          }
         },
         "DataUpTime": {
           "label": "DataUpTime",

@@ -235,9 +235,9 @@
           "oma:id": 31,
           "type": "array",
           "items": {
-            "type": "number"
-          },
-          "unit": "W"
+            "type": "number",
+            "unit": "W"
+          }
         },
         "High_power_threshold_at_custom_dim_level": {
           "label": "High power threshold at custom dim level",
@@ -245,9 +245,9 @@
           "oma:id": 32,
           "type": "array",
           "items": {
-            "type": "number"
-          },
-          "unit": "W"
+            "type": "number",
+            "unit": "W"
+          }
         },
         "Custom_dim_level_min_range": {
           "label": "Custom dim level min range",
@@ -255,9 +255,9 @@
           "oma:id": 33,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "/100"
+            "type": "integer",
+            "unit": "/100"
+          }
         },
         "Custom_dim_level_max_range": {
           "label": "Custom dim level max range",
@@ -265,9 +265,9 @@
           "oma:id": 34,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "/100"
+            "type": "integer",
+            "unit": "/100"
+          }
         },
         "Dimming_level": {
           "label": "Dimming level",

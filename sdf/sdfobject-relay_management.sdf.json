@@ -67,10 +67,10 @@
           "oma:id": 6,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 65535
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+          }
         },
         "Cumulative_Measurement_Window": {
           "label": "Cumulative Measurement Window",
@@ -120,11 +120,11 @@
           "oma:id": 13,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "dB",
-          "minimum": -24,
-          "maximum": 24
+            "type": "integer",
+            "unit": "dB",
+            "minimum": -24,
+            "maximum": 24
+          }
         },
         "Neighbour_CrowdBox_EARFCN": {
           "label": "Neighbour CrowdBox EARFCN",
@@ -132,10 +132,10 @@
           "oma:id": 14,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 66635
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 66635
+          }
         },
         "Neighbour_CrowdBox_q-OffsetFreq": {
           "label": "Neighbour CrowdBox q-OffsetFreq",
@@ -143,11 +143,11 @@
           "oma:id": 15,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "dB",
-          "minimum": -24,
-          "maximum": 24
+            "type": "integer",
+            "unit": "dB",
+            "minimum": -24,
+            "maximum": 24
+          }
         },
         "Serving_Macro_eNB_cellIndividualOffset": {
           "label": "Serving Macro eNB cellIndividualOffset",

@@ -169,11 +169,11 @@
           "oma:id": 6057,
           "type": "array",
           "items": {
-            "type": "number"
-          },
-          "unit": "s",
-          "minimum": 0,
-          "maximum": 86400
+            "type": "number",
+            "unit": "s",
+            "minimum": 0,
+            "maximum": 86400
+          }
         },
         "Sample_Frequency": {
           "label": "Sample Frequency",

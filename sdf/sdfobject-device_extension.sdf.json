@@ -82,9 +82,9 @@
           "type": "array",
           "items": {
             "type": "number",
-            "sdfType": "unix-time"
-          },
-          "unit": "s"
+            "sdfType": "unix-time",
+            "unit": "s"
+          }
         },
         "DST_End": {
           "label": "DST End",

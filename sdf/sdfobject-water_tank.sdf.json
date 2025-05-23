@@ -88,9 +88,9 @@
           "oma:id": 10,
           "type": "array",
           "items": {
-            "type": "number"
-          },
-          "unit": "m"
+            "type": "number",
+            "unit": "m"
+          }
         },
         "Static_Objects_Count": {
           "label": "Static Objects Count",

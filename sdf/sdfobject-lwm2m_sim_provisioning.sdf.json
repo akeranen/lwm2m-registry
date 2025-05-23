@@ -31,10 +31,10 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 3
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          }
         },
         "Service_Provider_Name": {
           "label": "Service Provider Name",
@@ -102,10 +102,10 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 3
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          }
         },
         "Profile_Update_Delivery_Method": {
           "label": "Profile Update Delivery Method",

@@ -63,9 +63,9 @@
           "oma:id": 6,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "ms"
+            "type": "integer",
+            "unit": "ms"
+          }
         },
         "LimitsResultExpTime": {
           "label": "LimitsResultExpTime",
@@ -73,9 +73,9 @@
           "oma:id": 7,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "ms"
+            "type": "integer",
+            "unit": "ms"
+          }
         },
         "LimitsOptExpTime": {
           "label": "LimitsOptExpTime",
@@ -83,9 +83,9 @@
           "oma:id": 8,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "ms"
+            "type": "integer",
+            "unit": "ms"
+          }
         },
         "LimitsRespPersistence": {
           "label": "LimitsRespPersistence",
@@ -93,9 +93,9 @@
           "oma:id": 9,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "ms"
+            "type": "integer",
+            "unit": "ms"
+          }
         },
         "LimitsDelAggregation": {
           "label": "LimitsDelAggregation",

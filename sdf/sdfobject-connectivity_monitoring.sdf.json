@@ -32,10 +32,10 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 50
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 50
+          }
         },
         "Radio_Signal_Strength": {
           "label": "Radio Signal Strength",

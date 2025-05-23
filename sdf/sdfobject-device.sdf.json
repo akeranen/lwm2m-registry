@@ -51,10 +51,10 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 7
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 7
+          }
         },
         "Power_Source_Voltage": {
           "label": "Power Source Voltage",
@@ -100,10 +100,10 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "minimum": 0,
-          "maximum": 32
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 32
+          }
         },
         "Current_Time": {
           "label": "Current Time",

@@ -50,9 +50,9 @@
           "oma:id": 4,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "ms"
+            "type": "integer",
+            "unit": "ms"
+          }
         }
       },
       "sdfAction": {},

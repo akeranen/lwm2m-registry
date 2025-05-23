@@ -68,9 +68,9 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "number"
-          },
-          "unit": "W"
+            "type": "number",
+            "unit": "W"
+          }
         },
         "Cumulative_active_power": {
           "label": "Cumulative active power",

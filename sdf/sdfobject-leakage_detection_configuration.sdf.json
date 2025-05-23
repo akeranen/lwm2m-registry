@@ -61,9 +61,9 @@
           "oma:id": 5,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "s"
+            "type": "integer",
+            "unit": "s"
+          }
         },
         "AUC_Lower_Frequency": {
           "label": "AUC Lower Frequency",

@@ -47,9 +47,9 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "integer"
-          },
-          "unit": "dBm"
+            "type": "integer",
+            "unit": "dBm"
+          }
         },
         "Last_RSSI": {
           "label": "Last RSSI",

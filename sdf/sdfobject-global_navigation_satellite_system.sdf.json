@@ -153,9 +153,9 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "number"
-          },
-          "unit": "deg"
+            "type": "number",
+            "unit": "deg"
+          }
         },
         "Satellite_azimuth": {
           "label": "Satellite azimuth",
@@ -164,9 +164,9 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "number"
-          },
-          "unit": "deg"
+            "type": "number",
+            "unit": "deg"
+          }
         },
         "Almanac": {
           "label": "Almanac",
@@ -192,9 +192,9 @@
           "writable": false,
           "type": "array",
           "items": {
-            "type": "number"
-          },
-          "unit": "dB"
+            "type": "number",
+            "unit": "dB"
+          }
         },
         "GNSS": {
           "label": "GNSS",
